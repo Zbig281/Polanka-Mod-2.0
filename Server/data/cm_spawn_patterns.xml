@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <spawn_patterns cluster_size = "32" initial_spawn_rating = "50">
-	<pattern probability = "4" substances = "7 8 9 25" >
-		<family name = "GrouseData" count = "1 1" quality = "50 70" />
-	</pattern>
-	<pattern probability = "12" substances = "7 8 25" >
-		<family name = "GrouseData" count = "2 2" quality = "30 50" />
-	</pattern>
-	<pattern probability = "1" substances = "7" >
-		<family name = "GrouseData" count = "3 3" quality = "20 60" />
-	</pattern>
-	<pattern probability = "10" substances = "7 8 9 25" >
-		<family name = "HareData" count = "1 1" quality = "50 70" />
-	</pattern>
-	<pattern probability = "8" substances = "7 8 125 145" >
-		<family name = "HareData" count = "2 2" quality = "20 60" />
-	</pattern>
-	<pattern probability = "1" substances = "7 125 145" >
-		<family name = "HareData" count = "3 3" quality = "20 60" />
-	</pattern>
-	<pattern probability = "7" substances = "7 8 26 175 145 135" >
+	<pattern probability = "10" substances = "7 8 9 10 26 27 175 145 135" >
+		<family name = "TribeBData" count = "1 1" quality = "100" /> 
+        <family name = "TribeCData" count = "1 1" quality = "100" />
+        <family name = "TribeHData" count = "1 1" quality = "100" />
+        <family name = "TribeMData" count = "1 1" quality = "100" />
+		<family name = "TribeWData" count = "1 1" quality = "100" />      
+    </pattern>	
+	<pattern probability = "7" substances = "7 8 175 145 135" >
 		<family name = "BoarData" count = "1 1" quality = "30 70" />
 	</pattern>
 	<pattern probability = "10" substances = "7 8 175 145 135" >
 		<family name = "BoarData" count = "1 1" quality = "20 60" />
 		<family name = "SowData" count = "1 1" quality = "20 60" />
-	</pattern>
+	</pattern>	
 	<pattern probability = "3" substances = "7" >
 		<family name = "BoarData" count = "1 1" quality = "60 60" />
 		<family name = "SowData" count = "2 2" quality = "10 50" />
 	</pattern>
-	<pattern probability = "4" substances = "2 26 9 10 7 8 25" >
+	<pattern probability = "4" substances = "2 9 10 7 8 25" >
 		<family name = "DeerMaleData" count = "1 1" quality = "25 65" />
 	</pattern>		
-	<pattern probability = "3" substances = "2 26 9 10 7 8 25" >
+	<pattern probability = "3" substances = "2 9 10 7 8 25" >
 		<family name = "DeerMaleData" count = "1 1" quality = "30 50" />
 		<family name = "HindData" count = "1 1" quality = "30 50" />
 	</pattern>

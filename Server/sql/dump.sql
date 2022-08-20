@@ -10,7 +10,7 @@ DELETE FROM `skill_type`;
 -- 
 -- MySQL dump 10.13  Distrib 5.7.8-rc, for Win32 (AMD64)
 --
--- Host: 195.9.172.106    Database: cm
+-- Host: 127.0.0.1    Database: lif_1
 -- ------------------------------------------------------
 -- Server version	5.5.45-MariaDB
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1927,8 +1927,17 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (2003,76,'Dropped Object',1,1,0,0,0,0,0,1000000,10,0,1000,'art\\images\\universal',0,0,0,0,0,0,'','',0,120,0,0),
 (2004,1491,'Banner',0,0,0,0,0,0,0,0,4,1,200,'',0,0,0,0,0,0,'art\\2D\\Items\\flag_game_12.png','Wearable flag with heraldry',50000,NULL,0,0),
 (2005,1457,'Starting Island Idols',0,0,0,0,0,0,0,0,0,0,0,'',0,0,0,0,0,0,'','',NULL,NULL,0,0),
-(2006,478,'Amulet from Illa-Newydd',0,0,0,0,0,0,0,0,2,1,100,'',0,0,0,0,0,0,'art\\2D\\Items\\gold_and_silver_amulet.png','Elder\'s gift for helping the villagers.',6000,NULL,0,0);
-
+(2006,478,'Amulet from Illa-Newydd',0,0,0,0,0,0,0,0,2,1,100,'',0,0,0,0,0,0,'art\\2D\\Items\\gold_and_silver_amulet.png','Elder\'s gift for helping the villagers.',6000,NULL,0,0),
+(3000,751,'Tribe Bear',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3001,59,'Tribe Bear Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
+(3002,751,'Tribe Chieftain',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3003,59,'Tribe Chieftain Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
+(3004,751,'Tribe Hunter',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3005,59,'Tribe Hunter Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
+(3006,751,'Tribe Mole',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3007,59,'Tribe Mole Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
+(3008,751,'Tribe Witch',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0);
 --
 -- Dumping data for table `objects_conversions`
 --
@@ -3020,7 +3029,12 @@ INSERT INTO `recipe` (`ID`, `Name`, `Description`, `StartingToolsID`, `SkillType
 (1083,'Altar Jode (colored)','',NULL,62,0,1896,10,1,0,0,'art\\2D\\Recipes\\BAltarJode.png'),
 (1084,'Altar Kallente (colored)','',NULL,62,0,1897,10,1,0,0,'art\\2D\\Recipes\\BAltarKallente.png'),
 (1085,'Altar Velent (colored)','',NULL,62,0,1898,10,1,0,0,'art\\2D\\Recipes\\BAltarVelent.png'),
-(1086,'Banner','Wearable flag with heraldry',295,25,0,2004,50,1,0,0,'art\\2D\\Items\\flag_game_12.png');
+(1086,'Banner','Wearable flag with heraldry',295,25,0,2004,50,1,0,0,'art\\2D\\Items\\flag_game_12.png'),
+(3001,'Tribe Bear Sack','',36,8,500,3001,0,1,0,0,''),
+(3003,'Tribe Chieftain Sack','',36,8,500,3003,0,1,0,0,''),
+(3005,'Tribe Hunter Sack','',36,8,500,3005,0,1,0,0,''),
+(3007,'Tribe Mole Sack','',36,8,500,3007,0,1,0,0,''),
+(3009,'Tribe Witch Sack','',36,8,500,3009,0,1,0,0,'');
 
 --
 -- Dumping data for table `recipe_requirement`
@@ -6398,7 +6412,12 @@ INSERT INTO `recipe_requirement` (`ID`, `RecipeID`, `MaterialObjectTypeID`, `Qua
 (4257,1057,32,0,10,20,0),
 (4258,1086,295,0,10,40,0),
 (4259,1086,261,0,30,1,0),
-(4260,1086,237,0,10,2,0);
+(4260,1086,237,0,10,2,0),
+(4261,3001,237,0,0,1,0),
+(4262,3003,237,0,0,1,0),
+(4263,3005,237,0,0,1,0),
+(4264,3007,237,0,0,1,0),
+(4265,3009,237,0,0,1,0);
 
 --
 -- Dumping data for table `effects`
@@ -6733,3 +6752,6 @@ INSERT INTO `skill_type` (`ID`, `Name`, `Description`, `Parent`, `Group`, `Prima
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2018-09-10 14:36:41
+ALTER TABLE `objects_types` ALTER `ID` DROP DEFAULT;
+ALTER TABLE `objects_types`	CHANGE COLUMN `ID` `ID` INT(10) UNSIGNED NOT NULL FIRST;
+ALTER TABLE `recipe` AUTO_INCREMENT=1087;
