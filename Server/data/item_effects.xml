@@ -2,18 +2,23 @@
 <items>
     <item id="303"> <!-- Blacksmith's Outfit -->
         <effect id="21">1 20</effect>
+        <effect id="9">5 20</effect>
     </item>
     <item id="304"> <!-- Carpenter's Outfit -->
         <effect id="22">1 20</effect>
+        <effect id="9">5 20</effect>
     </item>
     <item id="305"> <!-- Alchemist's Outfit -->
+        <effect id="9">5 20</effect>
         <effect id="23">1 20</effect>
     </item>
     <item id="306"> <!-- Engineer's Outfit -->
         <effect id="24">1 20</effect>
+        <effect id="9">5 20</effect>
     </item>
     <item id="307"> <!-- Cook's Outfit -->
         <effect id="25">1 20</effect>
+        <effect id="9">5 20</effect>
     </item>
     <item id="479"> <!-- Silver Ring -->
         <effect id="26">1 5.0</effect>
@@ -23,39 +28,56 @@
     </item>
     <item id="488"> <!-- Gold and Silver Amulet -->
         <effect id="26">3 15.0</effect>
+        <effect id="11">20</effect>
     </item>
     <item id="489"> <!-- Silver Jeweled Necklace -->
         <effect id="26">4 20.0</effect>
+        <effect id="11">25</effect>
     </item>
     <item id="490"> <!-- Gold Jeweled Necklace -->
         <effect id="26">5 25.0</effect>
+         <effect id="11">30</effect>
     </item>
     <item id="491"> <!-- Exceptional Gold and Silver Amulet -->
         <effect id="26">6 30.0</effect>
+<effect id="7">5</effect>
+<effect id="8">5</effect>
+<effect id="9">5</effect>
+<effect id="10">5</effect>
+<effect id="11">5</effect>
     </item>
     <item id="492"> <!-- Silver Amethyst Ring -->
         <effect id="26">2.3 11.5</effect>
+<effect id="28">0.5 2</effect>
     </item>
     <item id="493"> <!-- Silver Garnet Ring -->
         <effect id="26">2.3 11.5</effect>
+<effect id="29">0.5 2</effect>
     </item>
     <item id="494"> <!-- Silver Ruby Ring -->
         <effect id="26">2.8 14.0</effect>
+<effect id="27">0.5 2</effect>
     </item>
     <item id="495"> <!-- Gold Emerald Ring -->
         <effect id="26">3 15.0</effect>
+<effect id="33">0.5 2</effect>
     </item>
     <item id="496"> <!-- Gold Sapphire Ring -->
         <effect id="26">3 15.0</effect>
+<effect id="31">0.5 2</effect>
     </item>
     <item id="497"> <!-- Gold Diamond Ring -->
         <effect id="26">3 15.0</effect>
+<effect id="35">0.5 2</effect>
     </item>
     <item id="498"> <!-- Exceptional Gold and Silver Ring -->
         <effect id="26">4 20.0</effect>
+<effect id="2">1 3</effect>
+<effect id="9">15</effect>
     </item>
     <item id="499"> <!-- Gold and Silver Ring -->
         <effect id="26">2.2 11.0</effect>
+        <effect id="9">10</effect>
     </item>
     <item id="547"> <!-- Full plate helm -->
         <effect id="35">1 3</effect>
@@ -669,5 +691,16 @@
         <effect id="26">3 15</effect>
         <effect id="19">1</effect>
         <effect id="37">1</effect>
+    </item>
+    <item id="1376"> <!-- Tabard -->
+        <effect id="19">1</effect>
+        <effect id="37">1</effect>   
+    </item>
+    <item id="299"> <!-- Simple Clothes -->
+<effect id="9">5 20</effect>
+    </item>
+     <item id="49"> <!-- Hardened steel pickaxe  -->
+<effect id="9">10</effect>
+<effect id="26">2 10</effect>
     </item>
 </items>
