@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- WARNING -->
+<!-- DO NOT FORGET TO SYNCHRONIZE THIS FILE IN CM_SERVER AND CM_YO_SERVER PROJECTS -->
+
+<node name = "root" class = "Selector">
+	<node name = "IsStopped" class = "Stopped" />
+	<node name = "FollowOwner" class = "FollowOwner" />
+</node>

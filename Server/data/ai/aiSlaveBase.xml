@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- WARNING -->
+<!-- DO NOT FORGET TO SYNCHRONIZE THIS FILE IN CM_SERVER AND CM_YO_SERVER PROJECTS -->
+
+<node name="root" class="DynSelector">
+    <node name="DeathHandler" class="Sequence">
+        <node name="HpLessCheck" class="HpLessCheck" value="0"/>
+		<node name="DeathAnim" class="PlayAnimation" value="Death"/>
+        <node name="Death" class="Death"/>
+    </node>
+	<node name="AttackedSequence" class="Sequence">
+		<node name="HpLessCheck" class="HpLessCheck" value="95"/>
+		<node name="Yield_down" class="PlayAnimation" value="iYield_down"/>
+		<node name="Yield_root" class="PlayAnimationTimed" value="iYield_root 10"/>
+		<node name="Yield_up" class="PlayAnimation" value="iYield_Up"/>
+	</node>
+	<node name="OrdinaryAction" class="RandomSelector" value="1 1">
+		<node name="Stand" class="PlayAnimationTimed" value="idle_stand 10"/>
+		<node name="Perform" class="PlayAnimationTimed" value="Perform 30"/>
+	</node>
+</node>

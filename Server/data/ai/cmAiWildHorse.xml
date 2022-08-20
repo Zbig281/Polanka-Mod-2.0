@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- WARNING -->
+<!-- DO NOT FORGET TO SYNCHRONIZE THIS FILE IN CM_SERVER AND CM_YO_SERVER PROJECTS -->
+<node name="root" class="DynSelector">
+	<node name="DeathHandler" class="Sequence">
+		<node name="HpLessCheck" class="HpLessCheck" value="0"/>
+		<node name="DeathAnim" class="PlayAnimation" value="Death"/>
+		<node name="Death" class="Death"/>
+	</node>
+	<node name="ThreatValueManager" decorator="Failurator" class="Selector">
+		<node name="InAggressionStateThreatChanges" class="Sequence">
+			<node name="AggressionStateCheck" class="AggressionStateCheck" value="aggressive"/>
+			<node name="ThreatChangeSelect" class="Selector">
+				<node name="ThreatReduce" class="Sequence">
+					<node name="EnemyInAlertnessRange" decorator="Inverter" class="EnemyInRange" value="10 20"/>
+					<node name="ThreatValueChangeNotAlert" class="ThreatValueChange" value="-40 20"/>
+				</node>
+				<node name="ThreatReduce" class="Sequence">
+					<node name="EnemyInAggressionRange" decorator="Inverter" class="EnemyInRange" value="5 10"/>
+					<node name="ThreatValueChangeNotAggression" class="ThreatValueChange" value="-100 20"/>
+				</node>
+			</node>
+		</node>
+		<node name="IncreaseThreatValueIfDamagedSequence" class="Sequence">
+			<node name="Damaged" class="Damaged" />
+			<node name="ThreatValueFromDamage" class="ThreatValueChange" value="1000"/>
+		</node>
+		<node name="IncreaseThreatValueInAggressionRangeSequence" class="Sequence">
+			<node name="EnemyInAggressionRange" class="EnemyInRange" value="5 10"/>
+			<node name="ThreatValueAggressionRange" class="ThreatValueChange" value="50 10"/>
+		</node>
+		<node name="IncreaseThreatValueInAlertnessRangeSequence" class="Sequence">
+			<node name="EnemyInAlertnessRange" class="EnemyInRange" value="10 20"/>
+			<node name="ThreatValueAlertnessRange" class="ThreatValueChange" value="10 40"/>
+		</node>
+		<node name="DecreaseThreatValueOutOfAlertnessRangeSequence" class="Sequence">
+			<node name="BecomePassive" class="ThreatValueGreater" value="0"/>
+			<node name="EnemyNotInAlertnessRange" decorator="Inverter" class="EnemyInRange" value="10 20"/>
+			<node name="ReduceAlert" class="ThreatValueChange" value="-30 10"/>
+		</node>
+		<node name="DecreaseThreatValueOutOfAggressionRangeSequence" class="Sequence">
+			<node name="BecomePassive" class="ThreatValueGreater" value="0"/>
+			<node name="EnemyNotInAggressionRange" decorator="Inverter" class="EnemyInRange" value="10 20"/>
+			<node name="ReduceAlert" class="ThreatValueChange" value="-30 10"/>
+		</node>
+	</node>
+	<node name="AggressionStateManager" class="Selector">
+		<!-- if we are not frightened -> check damage and become frightened -->
+		<node name="BecomeFrigtenedSequence" class="Sequence">
+			<node name="IsNotFrightened" decorator="Inverter" class="AggressionStateCheck" value="frightened"/>
+			<node name="FrighetenedReasonSelector" class="Selector">
+				<node name="LastReceivedDamageType" class="LastReceivedDamageType" value="siege"/>
+				<node name="Sequence" class="Sequence">
+					<node name="HPMore30" decorator="Inverter" class="HpLessCheck" value="30"/>
+					<node name="ThreatValueGreater300" class="ThreatValueGreater" value="300"/>
+				</node>
+				<node name="IsStandingOnProhibitedLand" class="IsStandingOnProhibitedLand"/>
+			</node>
+			<node name="BecomeFrightened" class="SetAggressionState" value="frightened"/>
+		</node>
+		<!-- if we are peaceful or alerted -> check threat value and become aggressive -->
+		<node name="BecomeAggressiveSequence" class="Sequence">
+			<node name="IsAlertedOrPeacefulOrFrightened" class="Selector">
+				<node name="AggressionStateCheck" class="AggressionStateCheck" value="peaceful"/>
+				<node name="AggressionStateCheck" class="AggressionStateCheck" value="alerted"/>
+				<node name="AggressionStateCheck" class="AggressionStateCheck" value="frightened"/>
+			</node>
+			<node name="LastReceivedDamageType" decorator="Inverter" class="LastReceivedDamageType" value="siege"/>
+			<node name="HpLess30" class="HpLessCheck" value="30"/>
+			<node name="ThreatValueGreater300" class="ThreatValueGreater" value="300"/>
+			<node name="BecomeAggressive" class="SetAggressionState" value="aggressive"/>
+			<!-- <node name="Roar" class="PlayAnimation" value="Roar" /> -->
+		</node>
+		<!-- if we are peaceful -> check threat value and become alerted -->
+		<node name="BecomeAlertedSequence" class="Sequence">
+			<node name="ShouldSwitchToAlerted" class="Selector">
+				<node name="FromPeacefulToAlerted" class="Sequence">
+					<node name="AggressionStateCheck" class="AggressionStateCheck" value="peaceful"/>
+					<node name="ThreatValueGreater200" class="ThreatValueGreater" value="100"/>
+				</node>
+				<node name="FromAggressiveToAlerted" class="Sequence">
+					<node name="AggressionStateCheck" class="AggressionStateCheck" value="aggressive"/>
+					<node name="ThreatValueGreater200" decorator = "Inverter" class="ThreatValueGreater" value="100"/>
+				</node>
+			</node>
+			<node name="BecomeAlerted" class="SetAggressionState" value="alerted"/>
+		</node>
+		<!-- if we are not peaceful -> check threat value below 0 and become peaceful -->
+		<node name="ThreatReduceSequence" class="Sequence">
+			<node name="ThreatValueLess0" decorator="Inverter" class="ThreatValueGreater" value="0"/>
+			<node name="AggressionStateCheck" decorator="Inverter" class="AggressionStateCheck" value="peaceful"/>
+			<node name="BecomePeaceful" class="SetAggressionState" value="peaceful"/>
+			<node name="ClearEnemyInteractions" class="ClearEnemyInteractions"/>
+		</node>
+	</node>
+	<node name="ActionManager" class="Selector">
+		<node name="PeacefulActions" class="Sequence">
+			<node name="AggressionStateCheck" class="AggressionStateCheck" value="peaceful"/>
+			<node name="IdleRndSelection" class="RandomSelector" value="1 5 1 1 2">
+				<node name="Sleep" class="Sequence">
+					<node name="LayDown" class="PlayAnimation" value="Idle_Sleep_Down"/>
+					<node name="Sleep" class="PlayAnimationTimed" value="Idle_Sleep 30 180"/>
+					<node name="RiseUp" class="PlayAnimation" value="Idle_Sleep_Up"/>
+				</node>
+				<node name="Eat" class="PlayAnimationTimed" value="Idle_Eat 30 60"/>
+				<node name="Stand" class="PlayAnimationTimed" value="Idle_Stand 10 30"/>
+				<node name="Walk" class="Move" value="0 15 40"/>
+				<node name="Run" class="Move" value="1 15 40"/>
+			</node>
+		</node>
+		<node name="Alerted" class="Sequence">
+			<node name="AggressionStateCheck" class="AggressionStateCheck" value="alerted"/>
+			<node name="AimAtClosestEnemy" class="AimAtClosestEnemy"/>
+			<node name="Threat" class="PlayAnimation" value="Threatened"/>
+		</node>
+		<node name="Aggressive" class="Sequence">
+			<node name="AggressionStateCheck" class="AggressionStateCheck" value="aggressive"/>
+			<node name="Selector" class="Selector">
+				<node name="Sequence" class="Sequence">
+					<node name="EnemyOutOfReach" class="EnemyOutOfReach"/>
+					<node name="FleeProcess" class="DynSelector">
+						<node name="EnemyInFleeRange" decorator="Inverter" class="EnemyInRange" value="50 70"/>
+						<node name="EnemyOutOfReach" decorator="Inverter" class="EnemyOutOfReach"/>
+						<node name="Flee" class="Flee" value="100"/>
+					</node>
+				</node>
+				<node name="Sequence" class="Sequence">
+					<node name="IsEnemyInAttackSector" decorator="Inverter" class="EnemyInAttackSector"/>
+					<node name="ChaseProcess" class="DynSelector">
+						<node name="IsEnemyInAttackSector" class="EnemyInAttackSector"/>
+						<node name="EnemyOutOfReach" class="EnemyOutOfReach"/>
+						<node name="ChaseEnemy" class="ChaseEnemy"/>
+					</node>
+				</node>
+				<node name="IsAttackPossibleSeq" class="Sequence">
+					<node name="IsEnemyInAttackSector" class="EnemyInAttackSector"/>
+					<node name="AttackProcess" class="DynSelector">
+						<node name="IsEnemyInAttackSector" decorator="Inverter" class="EnemyInAttackSector"/>
+						<node name="AttackSelection" class="RandomSelector" value="50 50">
+							<node name="FastAttack" class="Attack" value="Fast"/>
+							<node name="ChaseAndAttack" class="Sequence">
+								<node name="ChaseEnemyNoAnimation" class="ChaseEnemyNoAnimation"/>
+								<node name="PowerAttack" class="Attack" value="Power"/>
+							</node>
+						</node>
+					</node>
+				</node>
+			</node>
+		</node>
+		<node name="Frightened" class="Sequence">
+			<node name="AggressionStateCheck" class="AggressionStateCheck" value="frightened"/>
+			<node name="FleeProcess" class="DynSelector">
+				<node name="EnemyInFleeRange" decorator="Inverter" class="EnemyInRange" value="50 70"/>
+				<node name="Flee" class="Flee"/>
+			</node>
+		</node>
+	</node>
+</node>

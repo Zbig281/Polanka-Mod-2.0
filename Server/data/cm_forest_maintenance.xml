@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ForestMaintenance>
+	<TreeAgingSpeed>1</TreeAgingSpeed> <!-- Determines how many age units a tree will gain after a single maintenance run. Allows to speed up tree growth by making them age faster. To keep the forest in a balanced state increased values of this variable will result in more trees being planted and killed during each maintenance (which also means increased database load). Values of 1..10 should work as intended, greater values will likely result in inability to reach the balanced forest state -->
+
+	<terrain id="442"> <!-- ДУБОВАЯ РОЩА С ВЯЗОМ И ШЕЛКОМ -->
+		<BiomesCount>6</BiomesCount> <!-- Amount of biomes per terrain. Minimal allowed value is 1 -->
+		<MaxBiomeDensity>0.5</MaxBiomeDensity> <!-- 0..1 value that determines maximum amount of trees (of all types in total) allowed on a specific substance type (the same value applies to every substance type separately). Aimed to regulate the existance of too dense forest regions for every tree type and soil type at once, to achieve more preferable performance and has nothing to do with how the forest actually looks -->
+		<AgeDeathBorder>220</AgeDeathBorder> <!-- At this age (and above it) trees will have a non-zero death probability chance during maintenance (note that the number of deaths is capped by ChangeLimit setting). Speed at which this age will be reached is affected by TreeAgingSpeed -->
+		<MaxAge>330</MaxAge> <!-- At this age (and above it) tree death probability chance will be 1 (note that the number of deaths is capped by ChangeLimit setting). Speed at which this age will be reached is affected by TreeAgingSpeed -->
+		<Substance name="forestsoil"> <!-- A block that describes forest settings for a single substance -->
+			<!-- 'density' setting determines how much cells of the target soil type will be covered by trees of the target type on the target terrain -->
+			<!-- For any soil type, total sum of densities for all tree types should be less than 1 -->
+			<!-- 'mean' is the 0..1 mean value of beta distribution used for choosing tree qualities -->
+			<!-- 'maxBiomeOvergrowth' is the 0..1 value that indicates how much denser then 'density' ANY forest biome can be compared to the whole forest on the target terrain (since biome size in most cases is smaller then a single terrain, this can be used to create forests that are more evenly spread across terrain (lower 'maxBiomeOvergrowth' value) or with bigger number of small areas that are denser then average) -->
+			<!-- In the single 'tree' node several tree types may be stated, separated by a space character. Each of these tree types will be assigned with the given 'density', 'mean' and 'maxBiomeOvergrowth' (these parameters will NOT be equally split among the specified tree types) -->
+			<tree density="0.009" mean="0.4" maxBiomeOvergrowth="0.05">oak elm</tree>
+			<tree density="0.002" mean="0.4" maxBiomeOvergrowth="0">apple</tree>
+			<tree density="0.012" mean="0.4" maxBiomeOvergrowth="0.5">mulberry</tree>
+			<!--summ 0.032-->
+		</Substance>
+	</terrain>
+
+	<terrain id="443"> <!-- ЮЖНЫЙ ЛЕС -->
+		<BiomesCount>4</BiomesCount>
+		<MaxBiomeDensity>0.5</MaxBiomeDensity>
+		<AgeDeathBorder>220</AgeDeathBorder>
+		<MaxAge>330</MaxAge>
+		<Substance name="forestsoil">
+			<tree density="0.0125" mean="0.4" maxBiomeOvergrowth="0.05">mulberry maple</tree>
+			<tree density="0.005" mean="0.4" maxBiomeOvergrowth="0">apple</tree>
+			<tree density="0.045" mean="0.4" maxBiomeOvergrowth="0">hazel</tree>
+			<tree density="0.055" mean="0.4" maxBiomeOvergrowth="0">spinny</tree>
+			<!--summ 0.13-->
+		</Substance>
+	</terrain>
+
+	<terrain id="444"> <!-- СМЕШАННЫЙ ШИРОКОЛИСТВЕННЫЙ ЛЕС -->
+		<BiomesCount>4</BiomesCount>
+		<MaxBiomeDensity>0.5</MaxBiomeDensity>
+		<AgeDeathBorder>220</AgeDeathBorder>
+		<MaxAge>330</MaxAge>
+		<Substance name="forestsoil">
+			<tree density="0.01" mean="0.4" maxBiomeOvergrowth="0.25">oak apple maple</tree>
+			<tree density="0.055" mean="0.4" maxBiomeOvergrowth="0.4">birch aspen</tree>
+			<tree density="0.06" mean="0.4" maxBiomeOvergrowth="0">spinny</tree>
+			<!--summ 0.2-->
+		</Substance>
+	</terrain>
+
+	<terrain id="445"> <!-- ШИРОКОЛИСТВЕННЫЙ ЛЕС -->
+		<BiomesCount>4</BiomesCount>
+		<MaxBiomeDensity>0.5</MaxBiomeDensity>
+		<AgeDeathBorder>220</AgeDeathBorder>
+		<MaxAge>330</MaxAge>
+		<Substance name="forestsoil">
+			<tree density="0.0075" mean="0.4" maxBiomeOvergrowth="0.25">elm oak apple maple</tree>
+			<tree density="0.045" mean="0.4" maxBiomeOvergrowth="0">hazel</tree>
+			<tree density="0.055" mean="0.4" maxBiomeOvergrowth="0">spinny</tree>
+			<!--summ 0.13-->
+		</Substance>
+	</terrain>
+
+	<terrain id="446"> <!-- СМЕШАННЫЙ ЛЕС -->
+		<BiomesCount>4</BiomesCount>
+		<MaxBiomeDensity>0.5</MaxBiomeDensity>
+		<AgeDeathBorder>220</AgeDeathBorder>
+		<MaxAge>330</MaxAge>
+		<Substance name="forestsoil">
+			<tree density="0.07" mean="0.4" maxBiomeOvergrowth="0.25">spruce birch pine</tree>
+			<tree density="0.04" mean="0.4" maxBiomeOvergrowth="0">spinny</tree>
+			<tree density="0.005" mean="0.4" maxBiomeOvergrowth="0">apple</tree>
+			<!--summ 0.255-->
+		</Substance>
+	</terrain>
+
+	<terrain id="447"> <!-- КИСЛЫЙ ЛЕС -->
+		<BiomesCount>8</BiomesCount>
+		<MaxBiomeDensity>0.5</MaxBiomeDensity>
+		<AgeDeathBorder>220</AgeDeathBorder>
+		<MaxAge>330</MaxAge>
+		<Substance name="forestsoil">
+			<tree density="0.025" mean="0.4" maxBiomeOvergrowth="0.36">birch pine</tree>
+			<tree density="0.1" mean="0.4" maxBiomeOvergrowth="0.36">aspen</tree>
+			<tree density="0.01" mean="0.4" maxBiomeOvergrowth="0.12">spruce</tree>
+			<tree density="0.1"  mean="0.4" maxBiomeOvergrowth="0">spinny</tree>
+			<tree density="0.005" mean="0.4" maxBiomeOvergrowth="0">apple</tree>
+			<!--summ 0.265-->
+		</Substance>
+	</terrain>
+
+	<terrain id="448"> <!-- ТАЙГА -->
+		<BiomesCount>4</BiomesCount>
+		<MaxBiomeDensity>0.5</MaxBiomeDensity>
+		<AgeDeathBorder>220</AgeDeathBorder>
+		<MaxAge>330</MaxAge>
+		<Substance name="forestsoil">
+			<tree density="0.03" mean="0.4" maxBiomeOvergrowth="0.3">pine juniper spruce birch</tree>
+			<tree density="0.14" mean="0.4" maxBiomeOvergrowth="0">spinny</tree>
+			<!--summ 0.26-->
+		</Substance>
+	</terrain>
+
+	<terrain id="449"> <!-- ТАЙГА -->
+		<BiomesCount>4</BiomesCount>
+		<MaxBiomeDensity>0.5</MaxBiomeDensity>
+		<AgeDeathBorder>220</AgeDeathBorder>
+		<MaxAge>330</MaxAge>
+		<Substance name="forestsoil">
+			<tree density="0.03" mean="0.4" maxBiomeOvergrowth="0.3">pine juniper spruce birch</tree>
+			<tree density="0.14" mean="0.4" maxBiomeOvergrowth="0">spinny</tree>
+			<!--summ 0.26-->
+		</Substance>
+	</terrain>
+
+	<terrain id="450"> <!-- СОСНОВЫЙ БОР -->
+		<BiomesCount>16</BiomesCount>
+		<MaxBiomeDensity>0.5</MaxBiomeDensity>
+		<AgeDeathBorder>220</AgeDeathBorder>
+		<MaxAge>330</MaxAge>
+		<Substance name="forestsoil">
+			<tree density="0.14" mean="0.4" maxBiomeOvergrowth="0.4">pine</tree>
+			<tree density="0.02" mean="0.4" maxBiomeOvergrowth="0.2">juniper</tree>
+			<tree density="0.04" mean="0.4" maxBiomeOvergrowth="0.1">birch</tree>
+			<!--summ 0.2-->
+		</Substance>
+	</terrain>
+
+</ForestMaintenance>

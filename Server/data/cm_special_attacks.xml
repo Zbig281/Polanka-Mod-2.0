@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- WARNING -->
+<!-- DO NOT FORGET TO SYNCHRONIZE THIS FILE IN CM_SERVER AND CM_YO_SERVER PROJECTS -->
+
+<special_attacks>
+    <events> <!-- Gameplay events data -->
+        <event id="0"  priority="0" timeout="2000"/> <!-- successful block -->
+        <event id="1"  priority="0" timeout="2000"/> <!-- successful parry -->
+        <event id="2"  priority="0" timeout="3000"/> <!-- drawn weapon from back -->
+        <event id="3"  priority="0" timeout="3000"/> <!-- drawn weapon from belt -->
+        <event id="4"  priority="0" timeout="5000"/> <!-- NOT IN USE: stunned -->
+        <event id="5"  priority="0" timeout="0"/>    <!-- NOT IN USE: power strike effect -->
+        <event id="6"  priority="0" timeout="2000"/> <!-- hit a horse -->
+        <event id="7"  priority="0" timeout="2000"/> <!-- knocked down target -->
+        <event id="8"  priority="0" timeout="2000"/> <!-- target successfully blocked -->
+        <event id="9"  priority="0" timeout="2000"/> <!-- target successfully parried -->
+        <event id="10" priority="0" timeout="2000"/> <!-- target is stunned -->
+    </events>
+    
+    <attacks> <!-- Attacks data -->
+        <!--
+            Please, see attack example below for description.
+            
+            AttackType (ShapeBaseImageData::AttackTypes) enum copy-paste:
+                Attack_oneHanded             = 0,
+                Attack_twoHandedSword        = 1, // not only sword
+                Attack_twoHandedWeapon       = 2,
+                Attack_pike                  = 3,
+                Attack_one_twoHandedSword    = 4, // shouldn't be used as it is not used in animation picking
+                Attack_bow                   = 5,
+                Attack_crossbow              = 6,
+                Attack_throwing              = 7,
+                Attack_sling                 = 8,
+                Attack_unarmed               = 9,
+                Attack_spear                 = 10
+                
+            HitDirection enum copy-paste:
+                ForwardHit     = 0,
+                UpToDownHit    = 1,
+                RightToLeftHit = 2,
+                LeftToRightHit = 3,
+        end of big comment -->
+        <attack_example> <!-- This is an example, it would be skipped from loading. Proper name for element is "attack" -->
+            <prerequisites> <!-- here we describe all unique attack prerequisites: event type, attack type, hit direction and required skill -->
+            <!-- There should not be two attacks with identical prerequisites since one of them would overwrite the other -->
+                <event>0</event> <!-- successful block -->
+                    <attack_type>0</attack_type> <!-- one handed -->
+                    <hit_direction>1</hit_direction> <!-- overhead -->
+                <skill id="38" level="30"/> <!-- Swordsman skill -->
+            </prerequisites>
+            
+            <consequences> <!-- here we describe how successful special attack will affect some battle aspects -->
+                <damage_scale value="1.5"/> <!-- damage increase/decrease coefficient which is applied to current attack (raw value that does not take speed bonus into account) -->
+                <effect id="40" duration="0" magnitude="100"/> <!-- effect applied on target after successful hit with current attack -->
+                <animation name="hit1H_power_thrust_prefire" power="0" scale="0.6"/> <!-- name of corresponding PREFIRE animation sequence (fire and postfire animations should be defined immediately after prefire in code) -->
+            </consequences>
+        </attack_example>
+    <!-- unarmed -->
+    <attack>
+        <prerequisites>
+            <event>1</event>
+            <attack_type>9</attack_type>
+            <hit_direction>0</hit_direction>
+            <skill id="33" level="90"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.8"/>
+            <animation name="unarmed_fast_thrust_prefire" power="1" scale="0.7"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>10</event>
+            <attack_type>9</attack_type>
+            <hit_direction>0</hit_direction>
+            <skill id="33" level="60"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.5"/>
+            <animation name="unarmed_appercut_prefire" power="1" scale="0.7"/>
+        </consequences>
+    </attack>
+    <!-- spears -->
+    <attack>
+        <prerequisites>
+            <event>7</event>
+            <attack_type>10</attack_type>
+            <hit_direction>0</hit_direction>
+            <skill id="34" level="90"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.5"/>
+            <animation name="hit1H_finishing_overhead_prefire" power="1" scale="0.7"/>
+        </consequences>
+    </attack>
+    <!-- polearms -->
+    <attack>
+        <prerequisites>
+            <event>9</event>
+            <attack_type>2</attack_type>
+            <hit_direction>0</hit_direction>
+            <skill id="35" level="60"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.8"/>
+            <animation name="hit2H_power_thrust_spear_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>6</event>
+            <attack_type>2</attack_type>
+            <hit_direction>3</hit_direction>
+            <skill id="35" level="60"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="2"/>
+            <animation name="hit2H_countermount_slash_spear_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <!-- 2H weapon -->
+    <attack>
+        <prerequisites>
+            <event>7</event>
+            <attack_type>2</attack_type>
+            <hit_direction>1</hit_direction>
+            <skill id="44" level="30"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.5"/>
+            <animation name="hit2H_finishing_overhead_spear_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>1</event>
+            <attack_type>2</attack_type>
+            <hit_direction>3</hit_direction>
+            <skill id="44" level="90"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.2"/>
+            <animation name="hit2H_counter_slash_spear_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>10</event>
+            <attack_type>2</attack_type>
+            <hit_direction>1</hit_direction>
+            <skill id="44" level="30"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.2"/>
+            <animation name="hit2H_power_oh_spear_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <!-- 1H swords-->
+    <attack>
+        <prerequisites>
+            <event>3</event>
+            <attack_type>0</attack_type>
+            <hit_direction>1</hit_direction>
+            <skill id="38" level="90"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.1"/>
+            <animation name="hit1H_power_thrust_prefire" power="1" scale="0.7"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>0</event>
+            <attack_type>0</attack_type>
+            <hit_direction>1</hit_direction>
+            <skill id="38" level="30"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="2.2"/>
+            <animation name="hit1H_over_myshield_thrust_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>8</event>
+            <attack_type>0</attack_type>
+            <hit_direction>0</hit_direction>
+            <skill id="38" level="60"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.9"/>
+            <animation name="hit1H_over_shield_thrust_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>7</event>
+            <attack_type>0</attack_type>
+            <hit_direction>0</hit_direction>
+            <skill id="38" level="60"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="2.2"/>
+            <animation name="hit1H_finishing_overhead_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <!-- 1H maces-->
+    <attack>
+        <prerequisites>
+            <event>10</event>
+            <attack_type>0</attack_type>
+            <hit_direction>1</hit_direction>
+            <skill id="40" level="30"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.5"/>
+            <animation name="hit1H_power_slash_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>0</event>
+            <attack_type>0</attack_type>
+            <hit_direction>1</hit_direction>
+            <skill id="40" level="60"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.3"/>
+            <animation name="hit1H_power_slash_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <!-- 2H Sword -->
+    <attack>
+        <prerequisites>
+            <event>1</event>
+            <attack_type>1</attack_type>
+            <hit_direction>2</hit_direction>
+            <skill id="43" level="30"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.4"/>
+            <animation name="hit2H_counter_slash_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>2</event>
+            <attack_type>1</attack_type>
+            <hit_direction>1</hit_direction>
+            <skill id="43" level="90"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.1"/>
+            <animation name="hit2H_power_oh_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+    <attack>
+        <prerequisites>
+            <event>9</event>
+            <attack_type>1</attack_type>
+            <hit_direction>0</hit_direction>
+            <skill id="43" level="60"/>
+        </prerequisites>
+        <consequences>
+            <damage_scale value="1.6"/>
+            <animation name="hit2H_power_thrust_prefire" power="1" scale="0.5"/>
+        </consequences>
+    </attack>
+
+</attacks>
+</special_attacks>

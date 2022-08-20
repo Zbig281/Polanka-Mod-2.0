@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spawn_patterns cluster_size = "32" initial_spawn_rating = "50">
+	<pattern probability = "4" substances = "7 8 9 25" >
+		<family name = "GrouseData" count = "1 1" quality = "50 70" />
+	</pattern>
+	<pattern probability = "12" substances = "7 8 25" >
+		<family name = "GrouseData" count = "2 2" quality = "30 50" />
+	</pattern>
+	<pattern probability = "1" substances = "7" >
+		<family name = "GrouseData" count = "3 3" quality = "20 60" />
+	</pattern>
+	<pattern probability = "10" substances = "7 8 9 25" >
+		<family name = "HareData" count = "1 1" quality = "50 70" />
+	</pattern>
+	<pattern probability = "8" substances = "7 8 125 145" >
+		<family name = "HareData" count = "2 2" quality = "20 60" />
+	</pattern>
+	<pattern probability = "1" substances = "7 125 145" >
+		<family name = "HareData" count = "3 3" quality = "20 60" />
+	</pattern>
+	<pattern probability = "7" substances = "7 8 26 175 145 135" >
+		<family name = "BoarData" count = "1 1" quality = "30 70" />
+	</pattern>
+	<pattern probability = "10" substances = "7 8 175 145 135" >
+		<family name = "BoarData" count = "1 1" quality = "20 60" />
+		<family name = "SowData" count = "1 1" quality = "20 60" />
+	</pattern>
+	<pattern probability = "3" substances = "7" >
+		<family name = "BoarData" count = "1 1" quality = "60 60" />
+		<family name = "SowData" count = "2 2" quality = "10 50" />
+	</pattern>
+	<pattern probability = "4" substances = "2 26 9 10 7 8 25" >
+		<family name = "DeerMaleData" count = "1 1" quality = "25 65" />
+	</pattern>		
+	<pattern probability = "3" substances = "2 26 9 10 7 8 25" >
+		<family name = "DeerMaleData" count = "1 1" quality = "30 50" />
+		<family name = "HindData" count = "1 1" quality = "30 50" />
+	</pattern>
+	<pattern probability = "2" substances = "2 9 7 25" >
+		<family name = "DeerMaleData" count = "1 1" quality = "60 60" />
+		<family name = "HindData" count = "2 2" quality = "35 55" />
+	</pattern>
+	<pattern probability = "5" substances = "3 9 10 103 104 105 106 153 155" >
+		<family name = "MuttonData" count = "1 1" quality = "40 80" />
+	</pattern>		
+	<pattern probability = "4" substances = "3 9 10 103 104 105 106 153 155" >
+		<family name = "MuttonData" count = "2 2" quality = "40 80" />
+	</pattern>		
+	<pattern probability = "4" substances = "7 9 10 27 105" >
+		<family name = "WildHorseData" count = "1 1" quality = "10 50" />
+	</pattern>		
+	<pattern probability = "1" substances = "7 9 10 27" >
+		<family name = "WildHorseData" count = "2 2" quality = "10 50" />
+	</pattern>		
+	<pattern probability = "3" substances = "7 8 9 10 153 154 155 156 105" >
+		<family name = "AurochsBullData" count = "1 1" quality = "20 40" />
+	</pattern>		
+	<pattern probability = "2" substances = "3 8 9 10 153 154 155 156 105 25" >
+		<family name = "AurochsBullData" count = "1 1" quality = "30 70" />
+		<family name = "AurochsCowData" count = "1 1" quality = "25 45" />
+	</pattern>		
+	<pattern probability = "1" substances = "3 8 9 10 153 154 155 156 105 25" >
+		<family name = "AurochsBullData" count = "1 1" quality = "50 70" />
+		<family name = "AurochsCowData" count = "2 2" quality = "10 30" />
+	</pattern>		
+	<pattern probability = "5" substances = "7 8" >
+		<family name = "BearData" count = "1 1" quality = "40 80" />
+	</pattern>		
+	<pattern probability = "5" substances = "7 8" >
+		<family name = "MooseData" count = "1 1" quality = "40 80" />
+	</pattern>		
+	<pattern probability = "6" substances = "7 8 9 10 3 11" >
+		<family name = "WolfData" count = "1 1" quality = "20 40" />
+	</pattern>		
+	<pattern probability = "4" substances = "7 8 9 10 3 11" >
+		<family name = "WolfData" count = "3 3" quality = "60 60" />
+	</pattern>		
+</spawn_patterns>

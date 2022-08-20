@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<lands>
+    <land>
+        <name>abellaCentral</name>
+        <allowed>
+            <ability>90</ability>  <!-- Skin -->
+            <ability>108</ability> <!-- Special Look in Inventory -->
+            <ability>110</ability> <!-- Drop from Inventory -->
+            <ability>144</ability> <!-- Special Open/Close Door -->
+            <ability>212</ability> <!-- Special Open/Close the Gate -->
+            <ability>226</ability> <!-- Special Get Off -->
+            <ability>294</ability> <!-- Trade -->
+            <ability>347</ability> <!-- Praise the God! -->
+        </allowed>
+        <restricted>
+            <ability>8</ability>   <!-- Pour on the Ground -->
+        </restricted>
+    </land>
+    <land>
+        <name>newbieWholeArea</name>
+        <allowed>
+            <ability>6</ability>   <!-- Gather a Flint Stone -->
+            <ability>8</ability>   <!-- Pour on the Ground -->
+            <ability>21</ability>  <!-- Gather a Branch -->
+            <ability>34</ability>  <!-- Special Cut Down -->
+            <ability>36</ability>  <!-- Special Cut Down -->
+            <ability>37</ability>  <!-- Saw out a Billet -->
+            <ability>38</ability>  <!-- Saw out a Board -->
+            <ability>39</ability>  <!-- Saw out a Building Log -->
+            <ability>45</ability>  <!-- Gather Plant Fiber -->
+            <ability>46</ability>  <!-- Look for Herbs -->
+            <ability>50</ability>  <!-- Gather Mushrooms -->
+            <ability>51</ability>  <!-- Gather Berries -->
+            <ability>52</ability>  <!-- Special Gather Herbs -->
+            <ability>63</ability>  <!-- Special Manage Kiln -->
+            <ability>68</ability>  <!-- Gather Wild Plants -->
+            <ability>89</ability>  <!-- Fish -->
+            <ability>90</ability>  <!-- Skin -->
+            <ability>98</ability>  <!-- Gather Apples -->
+            <ability>100</ability> <!-- Special Manage Furnace -->
+            <ability>102</ability> <!-- Special Smelt -->
+            <ability>103</ability> <!-- Interface Use Furnace Bellows -->
+            <ability>104</ability> <!-- Special Recycle -->
+            <ability>108</ability> <!-- Special Look in Inventory -->
+            <ability>109</ability> <!-- Special Get Water -->
+            <ability>110</ability> <!-- Drop from Inventory -->
+            <ability>112</ability> <!-- Special Add Some Fuel -->
+            <ability>118</ability> <!-- Special Pull Out of the Kiln -->
+            <ability>149</ability> <!-- Mine Iron Ore -->
+            <ability>179</ability> <!-- Gather Ammo for Sling -->
+            <ability>210</ability> <!-- Special Repair -->
+            <ability>213</ability> <!-- Special Use Kiln Bellows -->
+            <ability>268</ability> <!-- Special Light the Fire -->
+            <ability>325</ability> <!-- Look for Materials -->
+            <ability>326</ability> <!-- Look for Edibles -->
+            <ability>334</ability> <!-- Search for Wild Plants -->
+            <ability>347</ability> <!-- Praise the God! -->
+        </allowed>
+    </land>
+    <land>
+        <name>newbieVillage</name>
+        <allowed>
+            <ability>6</ability>   <!-- Gather a Flint Stone -->
+            <ability>21</ability>  <!-- Gather a Branch -->
+            <ability>37</ability>  <!-- Saw out a Billet -->
+            <ability>38</ability>  <!-- Saw out a Board -->
+            <ability>39</ability>  <!-- Saw out a Building Log -->
+            <ability>45</ability>  <!-- Gather Plant Fiber -->
+            <ability>46</ability>  <!-- Look for Herbs -->
+            <ability>50</ability>  <!-- Gather Mushrooms -->
+            <ability>51</ability>  <!-- Gather Berries -->
+            <ability>52</ability>  <!-- Special Gather Herbs -->
+            <ability>63</ability>  <!-- Special Manage Kiln -->
+            <ability>68</ability>  <!-- Gather Wild Plants -->
+            <ability>89</ability>  <!-- Fish -->
+            <ability>90</ability>  <!-- Skin -->
+            <ability>98</ability>  <!-- Gather Apples -->
+            <ability>100</ability> <!-- Special Manage Furnace -->
+            <ability>102</ability> <!-- Special Smelt -->
+            <ability>103</ability> <!-- Interface Use Furnace Bellows -->
+            <ability>104</ability> <!-- Special Recycle -->
+            <ability>108</ability> <!-- Special Look in Inventory -->
+            <ability>109</ability> <!-- Special Get Water -->
+            <ability>110</ability> <!-- Drop from Inventory -->
+            <ability>112</ability> <!-- Special Add Some Fuel -->
+            <ability>118</ability> <!-- Special Pull Out of the Kiln -->
+            <ability>149</ability> <!-- Mine Iron Ore -->
+            <ability>179</ability> <!-- Gather Ammo for Sling -->
+            <ability>210</ability> <!-- Special Repair -->
+            <ability>213</ability> <!-- Special Use Kiln Bellows -->
+            <ability>268</ability> <!-- Special Light the Fire -->
+            <ability>325</ability> <!-- Look for Materials -->
+            <ability>326</ability> <!-- Look for Edibles -->
+            <ability>334</ability> <!-- Search for Wild Plants -->
+            <ability>347</ability> <!-- Praise the God! -->
+        </allowed>
+        <restricted>
+            <ability>8</ability>   <!-- Pour on the Ground -->
+        </restricted>
+    </land>
+    <land>
+        <name>newbieQuestCoops</name>
+        <allowed>
+            <ability>6</ability>   <!-- Gather a Flint Stone -->
+            <ability>21</ability>  <!-- Gather a Branch -->
+            <ability>34</ability>  <!-- Special Cut Down -->
+            <ability>36</ability>  <!-- Special Cut Down -->
+            <ability>37</ability>  <!-- Saw out a Billet -->
+            <ability>38</ability>  <!-- Saw out a Board -->
+            <ability>39</ability>  <!-- Saw out a Building Log -->
+            <ability>45</ability>  <!-- Gather Plant Fiber -->
+            <ability>46</ability>  <!-- Look for Herbs -->
+            <ability>50</ability>  <!-- Gather Mushrooms -->
+            <ability>51</ability>  <!-- Gather Berries -->
+            <ability>52</ability>  <!-- Special Gather Herbs -->
+            <ability>63</ability>  <!-- Special Manage Kiln -->
+            <ability>68</ability>  <!-- Gather Wild Plants -->
+            <ability>89</ability>  <!-- Fish -->
+            <ability>90</ability>  <!-- Skin -->
+            <ability>98</ability>  <!-- Gather Apples -->
+            <ability>100</ability> <!-- Special Manage Furnace -->
+            <ability>102</ability> <!-- Special Smelt -->
+            <ability>103</ability> <!-- Interface Use Furnace Bellows -->
+            <ability>104</ability> <!-- Special Recycle -->
+            <ability>108</ability> <!-- Special Look in Inventory -->
+            <ability>109</ability> <!-- Special Get Water -->
+            <ability>110</ability> <!-- Drop from Inventory -->
+            <ability>112</ability> <!-- Special Add Some Fuel -->
+            <ability>118</ability> <!-- Special Pull Out of the Kiln -->
+            <ability>149</ability> <!-- Mine Iron Ore -->
+            <ability>179</ability> <!-- Gather Ammo for Sling -->
+            <ability>210</ability> <!-- Special Repair -->
+            <ability>213</ability> <!-- Special Use Kiln Bellows -->
+            <ability>268</ability> <!-- Special Light the Fire -->
+            <ability>325</ability> <!-- Look for Materials -->
+            <ability>326</ability> <!-- Look for Edibles -->
+            <ability>334</ability> <!-- Search for Wild Plants -->
+            <ability>347</ability> <!-- Praise the God! -->
+        </allowed>
+        <restricted>
+            <ability>8</ability>   <!-- Pour on the Ground -->
+        </restricted>
+    </land>
+    <land>
+        <name>newbieQuestSanctuary</name>
+        <allowed>
+            <ability>6</ability>   <!-- Gather a Flint Stone -->
+            <ability>21</ability>  <!-- Gather a Branch -->
+            <ability>34</ability>  <!-- Special Cut Down -->
+            <ability>36</ability>  <!-- Special Cut Down -->
+            <ability>37</ability>  <!-- Saw out a Billet -->
+            <ability>38</ability>  <!-- Saw out a Board -->
+            <ability>39</ability>  <!-- Saw out a Building Log -->
+            <ability>45</ability>  <!-- Gather Plant Fiber -->
+            <ability>46</ability>  <!-- Look for Herbs -->
+            <ability>50</ability>  <!-- Gather Mushrooms -->
+            <ability>51</ability>  <!-- Gather Berries -->
+            <ability>52</ability>  <!-- Special Gather Herbs -->
+            <ability>63</ability>  <!-- Special Manage Kiln -->
+            <ability>68</ability>  <!-- Gather Wild Plants -->
+            <ability>89</ability>  <!-- Fish -->
+            <ability>90</ability>  <!-- Skin -->
+            <ability>98</ability>  <!-- Gather Apples -->
+            <ability>100</ability> <!-- Special Manage Furnace -->
+            <ability>102</ability> <!-- Special Smelt -->
+            <ability>103</ability> <!-- Interface Use Furnace Bellows -->
+            <ability>104</ability> <!-- Special Recycle -->
+            <ability>108</ability> <!-- Special Look in Inventory -->
+            <ability>109</ability> <!-- Special Get Water -->
+            <ability>110</ability> <!-- Drop from Inventory -->
+            <ability>112</ability> <!-- Special Add Some Fuel -->
+            <ability>118</ability> <!-- Special Pull Out of the Kiln -->
+            <ability>149</ability> <!-- Mine Iron Ore -->
+            <ability>179</ability> <!-- Gather Ammo for Sling -->
+            <ability>210</ability> <!-- Special Repair -->
+            <ability>213</ability> <!-- Special Use Kiln Bellows -->
+            <ability>268</ability> <!-- Special Light the Fire -->
+            <ability>325</ability> <!-- Look for Materials -->
+            <ability>326</ability> <!-- Look for Edibles -->
+            <ability>330</ability> <!-- Erect an Idol -->
+            <ability>334</ability> <!-- Search for Wild Plants -->
+            <ability>347</ability> <!-- Praise the God! -->
+        </allowed>
+    </land>
+    <land>
+        <name>newbieArena</name>
+        <allowed>
+            <ability>90</ability>  <!-- Skin -->
+            <ability>96</ability>  <!-- Lift Object -->
+            <ability>108</ability> <!-- Look in Inventory -->
+        </allowed>
+        <restricted>
+            <ability>8</ability>   <!-- Pour on the Ground -->
+        </restricted>
+    </land>
+    <land>
+        <name>newbieFerryman</name>
+        <allowed>
+            <ability>6</ability>   <!-- Gather a Flint Stone -->
+            <ability>21</ability>  <!-- Gather a Branch -->
+            <ability>37</ability>  <!-- Saw out a Billet -->
+            <ability>38</ability>  <!-- Saw out a Board -->
+            <ability>39</ability>  <!-- Saw out a Building Log -->
+            <ability>45</ability>  <!-- Gather Plant Fiber -->
+            <ability>46</ability>  <!-- Look for Herbs -->
+            <ability>50</ability>  <!-- Gather Mushrooms -->
+            <ability>51</ability>  <!-- Gather Berries -->
+            <ability>52</ability>  <!-- Special Gather Herbs -->
+            <ability>68</ability>  <!-- Gather Wild Plants -->
+            <ability>90</ability>  <!-- Skin -->
+            <ability>98</ability>  <!-- Gather Apples -->
+            <ability>108</ability> <!-- Special Look in Inventory -->
+            <ability>109</ability> <!-- Special Get Water -->
+            <ability>110</ability> <!-- Drop from Inventory -->
+            <ability>179</ability> <!-- Gather Ammo for Sling -->
+            <ability>210</ability> <!-- Special Repair -->
+            <ability>325</ability> <!-- Look for Materials -->
+            <ability>326</ability> <!-- Look for Edibles -->
+            <ability>334</ability> <!-- Search for Wild Plants -->
+            <ability>347</ability> <!-- Praise the God! -->
+        </allowed>
+        <restricted>
+            <ability>8</ability>   <!-- Pour on the Ground -->
+        </restricted>
+    </land>
+    <land>
+        <name>newbieQuestMine</name>
+        <allowed>
+            <ability>6</ability>   <!-- Gather a Flint Stone -->
+            <ability>12</ability>  <!-- Dig a Tunnel Forward -->
+            <ability>13</ability>  <!-- Dig a Tunnel Downward -->
+            <ability>14</ability>  <!-- Dig a Tunnel Upward -->
+            <ability>21</ability>  <!-- Gather a Branch -->
+            <ability>37</ability>  <!-- Saw out a Billet -->
+            <ability>38</ability>  <!-- Saw out a Board -->
+            <ability>39</ability>  <!-- Saw out a Building Log -->
+            <ability>45</ability>  <!-- Gather Plant Fiber -->
+            <ability>46</ability>  <!-- Look for Herbs -->
+            <ability>50</ability>  <!-- Gather Mushrooms -->
+            <ability>51</ability>  <!-- Gather Berries -->
+            <ability>52</ability>  <!-- Special Gather Herbs -->
+            <ability>63</ability>  <!-- Special Manage Kiln -->
+            <ability>68</ability>  <!-- Gather Wild Plants -->
+            <ability>89</ability>  <!-- Fish -->
+            <ability>90</ability>  <!-- Skin -->
+            <ability>98</ability>  <!-- Gather Apples -->
+            <ability>100</ability> <!-- Special Manage Furnace -->
+            <ability>102</ability> <!-- Special Smelt -->
+            <ability>103</ability> <!-- Interface Use Furnace Bellows -->
+            <ability>104</ability> <!-- Special Recycle -->
+            <ability>108</ability> <!-- Special Look in Inventory -->
+            <ability>109</ability> <!-- Special Get Water -->
+            <ability>110</ability> <!-- Drop from Inventory -->
+            <ability>112</ability> <!-- Special Add Some Fuel -->
+            <ability>118</ability> <!-- Special Pull Out of the Kiln -->
+            <ability>149</ability> <!-- Mine Iron Ore -->
+            <ability>179</ability> <!-- Gather Ammo for Sling -->
+            <ability>210</ability> <!-- Special Repair -->
+            <ability>213</ability> <!-- Special Use Kiln Bellows -->
+            <ability>268</ability> <!-- Special Light the Fire -->
+            <ability>325</ability> <!-- Look for Materials -->
+            <ability>326</ability> <!-- Look for Edibles -->
+            <ability>334</ability> <!-- Search for Wild Plants -->
+            <ability>347</ability> <!-- Praise the God! -->
+        </allowed>
+    </land>
+</lands>

@@ -1,0 +1,4162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<events>
+	<event id="1" msgid="1534">
+		<triggers>
+			<trigger name="onWalk" probability="0.1"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="2" msgid="1535">
+		<triggers>
+			<trigger name="onWalk" probability="0.5"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="3" msgid="1536">
+		<triggers>
+			<trigger name="onWalk" probability="0.5"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="4" msgid="1537">
+		<triggers>
+			<trigger name="onAbility" probability="0.3"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="5" msgid="1538">
+		<triggers>
+			<trigger name="onWalk" probability="0.4"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="6" msgid="1539">
+		<triggers>
+			<trigger name="onAbility" probability="0.5"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="7" msgid="1540">
+		<triggers>
+			<trigger name="onWalk" probability="0.5"/>
+		</triggers>
+		<effects>
+			<wound type="wound">leftleg</wound>
+		</effects>
+	</event>
+	<event id="8" msgid="1541">
+		<triggers>
+			<trigger name="onAbility" probability="0.5"/>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="9" msgid="1542">
+		<triggers>
+			<trigger name="onAbility" probability="0.5"/>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="10" msgid="1543">
+		<triggers>
+			<trigger name="onAbility" probability="0.5"/>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="11" msgid="1544">
+		<triggers>
+			<trigger name="onWalk" probability="0.5"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="12" msgid="1545">
+		<triggers>
+			<trigger name="onWalk" probability="0.3"/>
+		</triggers>
+		<effects>
+			<change type="HardStam">-5</change>
+		</effects>
+	</event>
+	<event id="13" msgid="1546">
+		<triggers>
+			<trigger name="onWalk" probability="0.5"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="14" msgid="1547">
+		<triggers>
+			<trigger name="onAbility" probability="0.5"/>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="15" msgid="1548">
+		<triggers>
+			<trigger name="onWalk" probability="0.1"/>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+		</effects>
+	</event>
+	<event id="16" msgid="1549">
+		<triggers>
+			<trigger name="onWalk" probability="0.3"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="17" msgid="1550">
+		<triggers>
+			<trigger name="onWalk" probability="0.4"/>
+		</triggers>
+		<effects>
+			<animation>fright</animation>
+		</effects>
+	</event>
+	<event id="18" msgid="1551">
+		<triggers>
+			<trigger name="onAbility" probability="0.3"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="19" msgid="1552">
+		<triggers>
+			<trigger name="onWalk" probability="0.5"/>
+		</triggers>
+		<effects>
+			<animation>fright</animation>
+		</effects>
+	</event>
+	<event id="20" msgid="1553">
+		<triggers>
+			<trigger name="onWalk" probability="0.1"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="21" msgid="1554">
+		<triggers>
+			<trigger name="onWalk" probability="0.5"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="22" msgid="1555">
+		<triggers>
+			<trigger name="onAbility" probability="0.5"/>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="23" msgid="1556">
+		<triggers>
+			<trigger name="onAbility" probability="0.2"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="24" msgid="1557">
+		<triggers>
+			<trigger name="onWalk" probability="0.5"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="25" msgid="1558">
+		<triggers>
+			<trigger name="onWalk" probability="0.3"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="26" msgid="1559">
+		<triggers>
+			<trigger name="onWalk" probability="0.3"/>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="27" msgid="1560">
+		<triggers>
+			<trigger name="onAbility" probability="0.5"/>
+		</triggers>
+		<effects>
+			<change type="HardStam">-5</change>
+		</effects>
+	</event>
+	<event id="28" msgid="1561">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects>
+			<wound type="wound">rightarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="29" msgid="1562">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="30" msgid="1563">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects>
+			<addeffect duration="60" magnitude="5">22</addeffect>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="31" msgid="1564">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-5</change>
+		</effects>
+	</event>
+	<event id="32" msgid="1565">
+		<triggers>
+			<trigger name="onAbility" probability="0.6">98 21 33 34</trigger>
+		</triggers>
+		<effects>
+			<wound type="wound">leftarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="33" msgid="1566">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="34" msgid="1567">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="35" msgid="1568">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="36" msgid="1569">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">98</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="37" msgid="1570">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">98</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+		</effects>
+	</event>
+	<event id="38" msgid="1571">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="39" msgid="1572">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">33 34 35 36 37 38 39 98</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-1</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="40" msgid="1573">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="41" msgid="1574">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="42" msgid="1575">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">98</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="20" quantity="5">1026</addItem>
+		</effects>
+	</event>
+	<event id="43" msgid="1576">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects>
+			<animation>laughter</animation>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="44" msgid="1577">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="45" msgid="1578">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="46" msgid="1579">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">98</trigger>
+		</triggers>
+		<effects>
+			<addeffect duration="60" magnitude="1">52</addeffect>
+		</effects>
+	</event>
+	<event id="47" msgid="1580">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="48" msgid="1581">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="49" msgid="1582">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-5</change>
+		</effects>
+	</event>
+	<event id="50" msgid="1583">
+		<triggers>
+			<trigger name="onAbility" probability="0.001">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="33" quantity="1">418</addItem>
+		</effects>
+	</event>
+	<event id="51" msgid="1584">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="52" msgid="1585">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<damageTool>1000</damageTool>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="53" msgid="1586">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<wound type="fracture">rightarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="54" msgid="1587">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<damageTool>5000</damageTool>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="55" msgid="1588">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="56" msgid="1589">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9 10 11 12 13 14</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="57" msgid="1590">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<wound type="wound">leftarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="58" msgid="1591">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-10</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="59" msgid="1592">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-5</change>
+		</effects>
+	</event>
+	<event id="60" msgid="1593">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="61" msgid="1594">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<animation>disapproval</animation>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="62" msgid="1595">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-20</change>
+		</effects>
+	</event>
+	<event id="63" msgid="1596">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-10</change>
+		</effects>
+	</event>
+	<event id="64" msgid="1597">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="65" msgid="1598">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="66" msgid="1599">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="67" msgid="1600">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">12 13 14</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-5</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="68" msgid="1601">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="69" msgid="1602">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="70" msgid="1603">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="71" msgid="1604">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="72" msgid="1605">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="73" msgid="1606">
+		<triggers>
+			<trigger name="onAbility" probability="0.4">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-5</change>
+		</effects>
+	</event>
+	<event id="74" msgid="1607">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<damageTool>2000</damageTool>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="75" msgid="1608">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<addeffect duration="30" magnitude="1">12</addeffect>
+			<addeffect duration="30" magnitude="1">24</addeffect>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="76" msgid="1609">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="77" msgid="1610">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">-5</change>
+		</effects>
+	</event>
+	<event id="78" msgid="1611">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="79" msgid="1612">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="80" msgid="1613">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="81" msgid="1614">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<wound type="wound">head</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="82" msgid="1615">
+		<triggers>
+			<trigger name="onAbility" probability="0.001">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="15" quantity="1">490</addItem>
+		</effects>
+	</event>
+	<event id="83" msgid="1616">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects>
+			<animation>approval</animation>
+		</effects>
+	</event>
+	<event id="84" msgid="1617">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="85" msgid="1618">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="86" msgid="1619">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="87" msgid="1620">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">7 8 9</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="88" msgid="1621">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="89" msgid="1622">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="90" msgid="1623">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects>
+			<wound type="wound">leftleg</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="91" msgid="1624">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects>
+			<wound type="fracture">head</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="92" msgid="1625">
+		<triggers>
+			<trigger name="onAbility" probability="1">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="93" msgid="1626">
+		<triggers>
+			<trigger name="onAbility" probability="1">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="94" msgid="1627">
+		<triggers>
+			<trigger name="onAbility" probability="1">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="95" msgid="1628">
+		<triggers>
+			<trigger name="onAbility" probability="1">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="96" msgid="1629">
+		<triggers>
+			<trigger name="onAbility" probability="1">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="97" msgid="1630">
+		<triggers>
+			<trigger name="onAbility" probability="1">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="98" msgid="1631">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects>
+			<addeffect duration="30" magnitude="1">12</addeffect>
+			<addeffect duration="30" magnitude="1">24</addeffect>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="99" msgid="1632">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="100" msgid="1633">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects>
+			<animation>disapproval</animation>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="101" msgid="1634">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="95" quantity="1">346</addItem>
+		</effects>
+	</event>
+	<event id="102" msgid="1635">
+		<triggers>
+			<trigger name="onAbility" probability="0.4">79</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-2</change>
+		</effects>
+	</event>
+	<event id="103" msgid="1636">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="104" msgid="1637">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="105" msgid="1638">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="106" msgid="1639">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects>
+			<animation>fright</animation>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="107" msgid="1640">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="108" msgid="1641">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">79</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="109" msgid="1642">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">1</change>
+		</effects>
+	</event>
+	<event id="110" msgid="1643">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="111" msgid="1644">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="112" msgid="1645">
+		<triggers>
+			<trigger name="onAbility" probability="1">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="113" msgid="1646">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="114" msgid="1647">
+		<triggers>
+			<trigger name="onAbility" probability="1">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="115" msgid="1648">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="116" msgid="1649">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="117" msgid="1650">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="118" msgid="1651">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="119" msgid="1652">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">-5</change>
+		</effects>
+	</event>
+	<event id="120" msgid="1653">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="121" msgid="1654">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">leftarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="122" msgid="1655">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="123" msgid="1656">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="124" msgid="1657">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="125" msgid="1658">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="126" msgid="1659">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-10</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="127" msgid="1660">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">176</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="128" msgid="1661">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="129" msgid="1662">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="130" msgid="1663">
+		<triggers>
+			<trigger name="onAbility" probability="0.3">73</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="131" msgid="1664">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="132" msgid="1665">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="133" msgid="1666">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="134" msgid="1667">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="135" msgid="1668">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="136" msgid="1669">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects>
+			<wound type="wound">head</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="137" msgid="1670">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="138" msgid="1671">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="139" msgid="1672">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="140" msgid="1673">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="141" msgid="1674">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="142" msgid="1675">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">73</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="143" msgid="1676">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="144" msgid="1677">
+		<triggers>
+			<trigger name="onAbility" probability="0.02">89</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="15" quantity="1">262</addItem>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="145" msgid="1678">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">89</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="146" msgid="1679">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">89</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="147" msgid="1680">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="148" msgid="1681">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="149" msgid="1682">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="150" msgid="1683">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="151" msgid="1684">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">5</change>
+		</effects>
+	</event>
+	<event id="152" msgid="1685">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="153" msgid="1686">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="154" msgid="1687">
+		<triggers>
+			<trigger name="onAbility" probability="0.4">89</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-2</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="155" msgid="1688">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">89</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="156" msgid="1689">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="157" msgid="1690">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="158" msgid="1691">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="159" msgid="1692">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="160" msgid="1693">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-5</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="161" msgid="1694">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">89</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="162" msgid="1695">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="163" msgid="1696">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="164" msgid="1697">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="165" msgid="1698">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="166" msgid="1699">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="167" msgid="1700">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="168" msgid="1701">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="169" msgid="1702">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="170" msgid="1703">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="171" msgid="1704">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="172" msgid="1705">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="173" msgid="1706">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="174" msgid="1707">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="175" msgid="1708">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="176" msgid="1709">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="177" msgid="1710">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="178" msgid="1711">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="179" msgid="1712">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="180" msgid="1713">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">145</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="181" msgid="1714">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="182" msgid="1715">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="183" msgid="1716">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="184" msgid="1717">
+		<triggers>
+			<trigger name="onAbility" probability="0.3">21 22</trigger>
+		</triggers>
+		<effects>
+			<animation>laughter</animation>
+		</effects>
+	</event>
+	<event id="185" msgid="1718">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="186" msgid="1719">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-3</change>
+			<addeffect duration="60" magnitude="3">25</addeffect>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="187" msgid="1720">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="188" msgid="1721">
+		<triggers>
+			<trigger name="onAbility" probability="0.3">21 22</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="15" quantity="3">338</addItem>
+		</effects>
+	</event>
+	<event id="189" msgid="1722">
+		<triggers>
+			<trigger name="onAbility" probability="0.4">21 22</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="190" msgid="1723">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">21 22</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-2</change>
+		</effects>
+	</event>
+	<event id="191" msgid="1724">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="192" msgid="1725">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="193" msgid="1726">
+		<triggers>
+			<trigger name="onAbility" probability="0.005">21 22</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="40" quantity="1">479</addItem>
+		</effects>
+	</event>
+	<event id="194" msgid="1728">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="195" msgid="1729">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="196" msgid="1730">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-1</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="197" msgid="1731">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="198" msgid="1732">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects>
+			<wound type="wound">head</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="199" msgid="1733">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="200" msgid="1734">
+		<triggers>
+			<trigger name="onAbility" probability="0.6">21 22</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="201" msgid="1735">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">3</change>
+		</effects>
+	</event>
+	<event id="202" msgid="1736">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">2</change>
+		</effects>
+	</event>
+	<event id="203" msgid="1737">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="204" msgid="1738">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="205" msgid="1739">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="206" msgid="1740">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">3</change>
+		</effects>
+	</event>
+	<event id="207" msgid="1741">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="208" msgid="1742">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="209" msgid="1743">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">1.5</change>
+		</effects>
+	</event>
+	<event id="210" msgid="1744">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="211" msgid="1745">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="212" msgid="1746">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-3</change>
+		</effects>
+	</event>
+	<event id="213" msgid="1747">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="214" msgid="1748">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">2</change>
+		</effects>
+	</event>
+	<event id="215" msgid="1749">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">rightarm</wound>
+		</effects>
+	</event>
+	<event id="216" msgid="1750">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="217" msgid="1751">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="218" msgid="1752">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">1.5</change>
+		</effects>
+	</event>
+	<event id="219" msgid="1753">
+		<triggers>
+			<trigger name="onAbility" probability="0.5">44</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="220" msgid="1754">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">6</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="221" msgid="1755">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">rightarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="222" msgid="1756">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="223" msgid="1757">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="224" msgid="1758">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">1.5</change>
+		</effects>
+	</event>
+	<event id="225" msgid="1759">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">1.5</change>
+		</effects>
+	</event>
+	<event id="226" msgid="1760">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="227" msgid="1761">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="228" msgid="1762">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="229" msgid="1763">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="230" msgid="1764">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="231" msgid="1765">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="232" msgid="1766">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="233" msgid="1767">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="234" msgid="1768">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="235" msgid="1769">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="236" msgid="1770">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="237" msgid="1771">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="238" msgid="1772">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="239" msgid="1773">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+		</effects>
+	</event>
+	<event id="240" msgid="1774">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">6</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="100" quantity="1">656 657 660</addItem>
+		</effects>
+	</event>
+	<event id="241" msgid="1775">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="242" msgid="1776">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="243" msgid="1777">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="244" msgid="1778">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="245" msgid="1779">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="246" msgid="1780">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="247" msgid="1781">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="248" msgid="1782">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-4</change>
+		</effects>
+	</event>
+	<event id="249" msgid="1783">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="250" msgid="1784">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="251" msgid="1785">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="252" msgid="1786">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">5</change>
+		</effects>
+	</event>
+	<event id="253" msgid="1787">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="254" msgid="1788">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="255" msgid="1789">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="256" msgid="1790">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects>
+			<addeffect duration="60" magnitude="2">23</addeffect>
+		</effects>
+	</event>
+	<event id="257" msgid="1791">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="258" msgid="1792">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="259" msgid="1793">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">5</change>
+		</effects>
+	</event>
+	<event id="260" msgid="1794">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">109</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="261" msgid="1795">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="262" msgid="1796">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="263" msgid="1797">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="264" msgid="1798">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="265" msgid="1799">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-2</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="266" msgid="1800">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="267" msgid="1801">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects>
+			<addeffect duration="60" magnitude="2">23</addeffect>
+		</effects>
+	</event>
+	<event id="268" msgid="1802">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="269" msgid="1803">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="270" msgid="1804">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="271" msgid="1805">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="272" msgid="1806">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="273" msgid="1807">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="274" msgid="1808">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="275" msgid="1809">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="276" msgid="1810">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="277" msgid="1811">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="278" msgid="1812">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-2</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="279" msgid="1813">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">21 25</trigger>
+		</triggers>
+		<effects>
+			<addeffect duration="60" magnitude="1">23</addeffect>
+		</effects>
+	</event>
+	<event id="280" msgid="1814">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="281" msgid="1815">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="282" msgid="1816">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">leftarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="283" msgid="1817">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="284" msgid="1818">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="285" msgid="1819">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="286" msgid="1820">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-2</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="287" msgid="1821">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-2</change>
+		</effects>
+	</event>
+	<event id="288" msgid="1822">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="289" msgid="1823">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="290" msgid="1824">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="291" msgid="1825">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="292" msgid="1826">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="293" msgid="1827">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="294" msgid="1828">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="295" msgid="1829">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="296" msgid="1830">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="297" msgid="1831">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="298" msgid="1832">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">33</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="299" msgid="1833">
+		<triggers>
+			<trigger name="onAbility" probability="0.05">35 36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="300" msgid="1834">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35 36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="301" msgid="1835">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35 36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="302" msgid="1836">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35 36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="303" msgid="1837">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35 36</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-4</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="304" msgid="1838">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35 36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="305" msgid="1839">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35 36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="306" msgid="1840">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35 36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="307" msgid="1841">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">36</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="308" msgid="1842">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">36</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="309" msgid="1843">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="310" msgid="1844">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="311" msgid="1845">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="312" msgid="1846">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">36</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="313" msgid="1847">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="314" msgid="1848">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">36</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="315" msgid="1849">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">36</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="316" msgid="1850">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="317" msgid="1851">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-3</change>
+		</effects>
+	</event>
+	<event id="318" msgid="1852">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="319" msgid="1853">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="320" msgid="1854">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="321" msgid="1855">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="322" msgid="1856">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="323" msgid="1857">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="324" msgid="1858">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="325" msgid="1859">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">35</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="326" msgid="1860">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="327" msgid="1861">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="328" msgid="1862">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="329" msgid="1863">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">rightarm</wound>
+		</effects>
+	</event>
+	<event id="330" msgid="1864">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects>
+			<damageTool>200</damageTool>
+		</effects>
+	</event>
+	<event id="331" msgid="1865">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-1</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="332" msgid="1866">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="333" msgid="1867">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects>
+			<damageTool>500</damageTool>
+		</effects>
+	</event>
+	<event id="334" msgid="1868">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="335" msgid="1869">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="336" msgid="1870">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-2</change>
+		</effects>
+	</event>
+	<event id="337" msgid="1871">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">leftarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="338" msgid="1872">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="339" msgid="1873">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="340" msgid="1874">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="341" msgid="1875">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="342" msgid="1876">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">37 38 39</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="343" msgid="1877">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="344" msgid="1878">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="345" msgid="1879">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="346" msgid="1880">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="347" msgid="1881">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="348" msgid="1882">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="349" msgid="1883">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="350" msgid="1884">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="351" msgid="1885">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="352" msgid="1886">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-1</change>
+		</effects>
+	</event>
+	<event id="353" msgid="1887">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="354" msgid="1888">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="355" msgid="1889">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="356" msgid="1890">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="357" msgid="1891">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="358" msgid="1892">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="70" quantity="1">660 656 657 658 659</addItem>
+		</effects>
+	</event>
+	<event id="359" msgid="1893">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">26 27 28 29 30 31 32</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="360" msgid="1894">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<wound type="wound">rightarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="361" msgid="1895">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="70" quantity="1">289 290 291</addItem>
+		</effects>
+	</event>
+	<event id="362" msgid="1896">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<addeffect duration="30" magnitude="1">12</addeffect>
+			<addeffect duration="30" magnitude="1">24</addeffect>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="363" msgid="1897">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="364" msgid="1898">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="365" msgid="1899">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="366" msgid="1900">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="367" msgid="1901">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="368" msgid="1902">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">rightarm</wound>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="369" msgid="1903">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="370" msgid="1904">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="371" msgid="1905">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="372" msgid="1906">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="373" msgid="1907">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="374" msgid="1908">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="375" msgid="1909">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="376" msgid="1910">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<addeffect duration="30" magnitude="1">12</addeffect>
+			<addeffect duration="30" magnitude="1">24</addeffect>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="377" msgid="1911">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">50 51 52</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">2</change>
+		</effects>
+	</event>
+	<event id="378" msgid="1912">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="379" msgid="1913">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="380" msgid="1914">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-3</change>
+		</effects>
+	</event>
+	<event id="381" msgid="1915">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="382" msgid="1916">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">leftarm</wound>
+		</effects>
+	</event>
+	<event id="383" msgid="1917">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">1</change>
+		</effects>
+	</event>
+	<event id="384" msgid="1918">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">4</change>
+		</effects>
+	</event>
+	<event id="385" msgid="1919">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="386" msgid="1920">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="100" quantity="1">530 531 532 533 534 535 536 537 538 539 540 541 670 672 673 674 675 676 677 678 679 680 681</addItem>
+		</effects>
+	</event>
+	<event id="387" msgid="1921">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-5</change>
+		</effects>
+	</event>
+	<event id="388" msgid="1922">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="389" msgid="1923">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="390" msgid="1924">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="391" msgid="1925">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="392" msgid="1926">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="393" msgid="1927">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">52</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="394" msgid="1928">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="395" msgid="1929">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="396" msgid="1930">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="397" msgid="1931">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="398" msgid="1932">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">1</change>
+		</effects>
+	</event>
+	<event id="399" msgid="1933">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="400" msgid="1934">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="401" msgid="1935">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="402" msgid="1936">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="100" quantity="1">945 946 947 948 949 950</addItem>
+		</effects>
+	</event>
+	<event id="403" msgid="1937">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="404" msgid="1938">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+		</effects>
+	</event>
+	<event id="405" msgid="1939">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="406" msgid="1940">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">rightarm</wound>
+		</effects>
+	</event>
+	<event id="407" msgid="1941">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="408" msgid="1942">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="409" msgid="1943">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="410" msgid="1944">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="411" msgid="1945">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">45</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="412" msgid="1946">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="413" msgid="1947">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="414" msgid="1948">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-6</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="415" msgid="1949">
+		<triggers>
+			<trigger name="onAbility" probability="0.02">25</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="100" quantity="1">460 461 458 459 476 348 886 887 895 839 864 896</addItem>
+		</effects>
+	</event>
+	<event id="416" msgid="1950">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="417" msgid="1951">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="418" msgid="1952">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="419" msgid="1953">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects>
+			<animation>laughter</animation>
+		</effects>
+	</event>
+	<event id="420" msgid="1954">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="421" msgid="1955">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-3</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="422" msgid="1956">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="423" msgid="1957">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="424" msgid="1958">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="425" msgid="1959">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="426" msgid="1960">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="427" msgid="1961">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="428" msgid="1962">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-4</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="429" msgid="1963">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="100" quantity="1">237</addItem>
+		</effects>
+	</event>
+	<event id="430" msgid="1964">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">5</change>
+		</effects>
+	</event>
+	<event id="431" msgid="1965">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-5</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="432" msgid="1966">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">25</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="433" msgid="1967">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="434" msgid="1968">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="435" msgid="1969">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="436" msgid="1970">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="437" msgid="1971">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="438" msgid="1972">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="439" msgid="1973">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="440" msgid="1974">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="441" msgid="1975">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="442" msgid="1976">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="443" msgid="1977">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">5</change>
+		</effects>
+	</event>
+	<event id="444" msgid="1978">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="445" msgid="1979">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-2</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="446" msgid="1980">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="447" msgid="1981">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="448" msgid="1982">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="449" msgid="1983">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="450" msgid="1984">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">99</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="451" msgid="1985">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="452" msgid="1986">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="453" msgid="1987">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="454" msgid="1988">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="455" msgid="1989">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="456" msgid="1990">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="457" msgid="1991">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="458" msgid="1992">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="459" msgid="1993">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="460" msgid="1994">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="461" msgid="1995">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="462" msgid="1996">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="463" msgid="1997">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="464" msgid="1998">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="465" msgid="1999">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="466" msgid="2000">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="467" msgid="2001">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="468" msgid="2002">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">54 55 56 57 58</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="469" msgid="2003">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="470" msgid="2004">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">5</change>
+		</effects>
+	</event>
+	<event id="471" msgid="2005">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="472" msgid="2006">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="473" msgid="2007">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="474" msgid="2008">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="475" msgid="2009">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="476" msgid="2010">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="477" msgid="2011">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="478" msgid="2012">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="479" msgid="2013">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="480" msgid="2014">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="481" msgid="2015">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="482" msgid="2016">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="483" msgid="2017">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects>
+			<animation>approval</animation>
+		</effects>
+	</event>
+	<event id="484" msgid="2018">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-5</change>
+		</effects>
+	</event>
+	<event id="485" msgid="2019">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects>
+			<animation>Welcome</animation>
+		</effects>
+	</event>
+	<event id="486" msgid="2020">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="487" msgid="2021">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">182</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-2</change>
+		</effects>
+	</event>
+	<event id="488" msgid="2022">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="489" msgid="2023">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="490" msgid="2024">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="491" msgid="2025">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="492" msgid="2026">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="493" msgid="2027">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="494" msgid="2028">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="495" msgid="2029">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="496" msgid="2030">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="497" msgid="2031">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="498" msgid="2032">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="499" msgid="2033">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="500" msgid="2034">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="501" msgid="2035">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="502" msgid="2036">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-5</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="503" msgid="2037">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="504" msgid="2038">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="505" msgid="2039">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="506" msgid="2040">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">170 173</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="507" msgid="2041">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="508" msgid="2042">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="509" msgid="2043">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="510" msgid="2044">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="511" msgid="2045">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="512" msgid="2046">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-5</change>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="513" msgid="2047">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<wound type="wound">leftleg</wound>
+		</effects>
+	</event>
+	<event id="514" msgid="2048">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="515" msgid="2049">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<animation>fright</animation>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="516" msgid="2050">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<animation>provocation</animation>
+		</effects>
+	</event>
+	<event id="517" msgid="2051">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<animation>disapproval</animation>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="518" msgid="2052">
+		<triggers>
+			<trigger name="onAbility" probability="0.002">91</trigger>
+		</triggers>
+		<effects>
+			<addItem quality="40" quantity="1">417 418</addItem>
+		</effects>
+	</event>
+	<event id="519" msgid="2053">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="520" msgid="2054">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<animation>dance</animation>
+		</effects>
+	</event>
+	<event id="521" msgid="2055">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+		</effects>
+	</event>
+	<event id="522" msgid="2056">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="523" msgid="2057">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">91</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+		</effects>
+	</event>
+	<event id="524" msgid="2058">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="525" msgid="2059">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="526" msgid="2060">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="527" msgid="2061">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="528" msgid="2062">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="529" msgid="2063">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="530" msgid="2064">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects>
+			<knockdown>1</knockdown>
+		</effects>
+	</event>
+	<event id="531" msgid="2065">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="532" msgid="2066">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="533" msgid="2067">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="534" msgid="2068">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="535" msgid="2069">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="536" msgid="2070">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="537" msgid="2071">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="538" msgid="2072">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="539" msgid="2073">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="540" msgid="2074">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="541" msgid="2075">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="542" msgid="2076">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">92</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="543" msgid="2077">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="544" msgid="2078">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">6</change>
+		</effects>
+	</event>
+	<event id="545" msgid="2079">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="546" msgid="2080">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="547" msgid="2081">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="548" msgid="2082">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="549" msgid="2083">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<interrupt>1</interrupt>
+		</effects>
+	</event>
+	<event id="550" msgid="2084">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="551" msgid="2085">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="552" msgid="2086">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<wound type="bleeding">leftarm</wound>
+		</effects>
+	</event>
+	<event id="553" msgid="2087">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="554" msgid="2088">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="555" msgid="2089">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="556" msgid="2090">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="557" msgid="2091">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="558" msgid="2092">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="559" msgid="2093">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="560" msgid="2094">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">80 90</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-5</change>
+		</effects>
+	</event>
+	<event id="561" msgid="2095">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="562" msgid="2096">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="563" msgid="2097">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="564" msgid="2098">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="565" msgid="2099">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="566" msgid="2100">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="567" msgid="2101">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="568" msgid="2102">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="569" msgid="2103">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="570" msgid="2104">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">18 19 20</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">4</change>
+		</effects>
+	</event>
+	<event id="571" msgid="2105">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="572" msgid="2106">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="573" msgid="2107">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="574" msgid="2108">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="575" msgid="2109">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="576" msgid="2110">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="577" msgid="2111">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects>
+			<change type="Skill">3</change>
+		</effects>
+	</event>
+	<event id="578" msgid="2112">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="579" msgid="2113">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="580" msgid="2114">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">18 19 20</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="581" msgid="2115">
+		<triggers>
+			<trigger name="onWalk" probability="0.1"/>
+		</triggers>
+		<effects>
+			<change type="Hunger">-2</change>
+		</effects>
+	</event>
+	<event id="582" msgid="2116">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="583" msgid="2117">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="584" msgid="2118">
+		<triggers>
+			<trigger name="onAbility" probability="0.05">43</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="585" msgid="2119">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">-3</change>
+		</effects>
+	</event>
+	<event id="586" msgid="2120">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="587" msgid="2121">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-3</change>
+		</effects>
+	</event>
+	<event id="588" msgid="2122">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="589" msgid="2123">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-3</change>
+		</effects>
+	</event>
+	<event id="590" msgid="2124">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">-3</change>
+		</effects>
+	</event>
+	<event id="591" msgid="2125">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects>
+			<change type="HardStam">5</change>
+		</effects>
+	</event>
+	<event id="592" msgid="2126">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects/>
+	</event>
+	<event id="593" msgid="2127">
+		<triggers>
+			<trigger name="onWalk" probability="0.1"/>
+		</triggers>
+		<effects>
+			<change type="Hunger">-2</change>
+		</effects>
+	</event>
+	<event id="594" msgid="2128">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">2</change>
+		</effects>
+	</event>
+	<event id="595" msgid="2129">
+		<triggers>
+			<trigger name="onAbility" probability="0.2">43</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">1</change>
+		</effects>
+	</event>
+	<event id="596" msgid="2130">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects>
+			<change type="hardHP">5</change>
+		</effects>
+	</event>
+	<event id="597" msgid="2131">
+		<triggers>
+			<trigger name="onAbility" probability="0.1">43</trigger>
+		</triggers>
+		<effects>
+			<change type="Hunger">5</change>
+		</effects>
+	</event>
+</events>

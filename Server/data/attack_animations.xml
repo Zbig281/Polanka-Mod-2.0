@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- WARNING -->
+<!-- DO NOT FORGET TO SYNCHRONIZE THIS FILE IN CM_CLIENT, CM_SERVER AND CM_YO_SERVER PROJECTS -->
+
+<!-- look for aliases in AttackAnimationManager ctor (Fight/attackAnimations.cpp) -->
+<!-- feel free to add your own if you did not find it there -->
+<animations>
+	<animation alias="unarmed_leftright_prefire" correction="left"/>
+	<animation alias="unarmed_leftright_fire" correction="right"/>
+	<animation alias="unarmed_leftright_recoil" correction="none"/>
+	<animation alias="unarmed_rightleft_prefire" correction="right"/>
+	<animation alias="unarmed_rightleft_fire" correction="left"/>
+	<animation alias="unarmed_rightleft_recoil" correction="none"/>
+	<animation alias="unarmed_thrust_prefire" correction="right"/>
+	<animation alias="unarmed_thrust_fire" correction="left"/> <!-- none-->
+	<animation alias="unarmed_thrust_recoil" correction="none"/>
+	<animation alias="unarmed_overhead_prefire" correction="right"/> <!-- none-->
+	<animation alias="unarmed_overhead_fire" correction="left"/> <!-- none-->
+	<animation alias="unarmed_overhead_recoil" correction="none"/>
+	<animation alias="hit1H_shield_leftright_prefire" correction="left"/>
+	<animation alias="hit1H_shield_leftright_fire" correction="right"/> <!-- none-->
+	<animation alias="hit1H_shield_leftright_recoil" correction="none"/>
+	<animation alias="hit1H_shield_rightleft_prefire" correction="right"/> 
+	<animation alias="hit1H_shield_rightleft_fire" correction="left"/> <!-- none-->
+	<animation alias="hit1H_shield_rightleft_recoil" correction="none"/>
+	<animation alias="hit1H_shield_thrust_prefire" correction="right"/> <!-- none-->
+	<animation alias="hit1H_shield_thrust_fire" correction="left"/> <!-- none-->
+	<animation alias="hit1H_shield_thrust_recoil" correction="none"/>
+	<animation alias="hit1H_shield_overhead_prefire" correction="left"/> <!-- none-->
+	<animation alias="hit1H_shield_overhead_fire" correction="right"/> <!-- none-->
+	<animation alias="hit1H_shield_overhead_recoil" correction="none"/>
+	<animation alias="hit1H_rightleft_prefire" correction="right"/>
+	<animation alias="hit1H_rightleft_fire" correction="left"/>
+	<animation alias="hit1H_rightleft_recoil" correction="none"/>
+	<animation alias="hit1H_leftright_prefire" correction="left"/>
+	<animation alias="hit1H_leftright_fire" correction="right"/>
+	<animation alias="hit1H_leftright_recoil" correction="none"/>
+	<animation alias="hit1H_thrust_prefire" correction="right"/>
+	<animation alias="hit1H_thrust_fire" correction="left"/>
+	<animation alias="hit1H_thrust_recoil" correction="none"/>
+	<animation alias="hit1H_overhead_prefire" correction="right"/>
+	<animation alias="hit1H_overhead_fire" correction="none"/>
+	<animation alias="hit1H_overhead_recoil" correction="none"/>
+	<animation alias="hit2H_rightleft_prefire" correction="right"/>
+	<animation alias="hit2H_rightleft_fire" correction="left"/>
+	<animation alias="hit2H_rightleft_recoil" correction="none"/>
+	<animation alias="hit2H_leftright_prefire" correction="left"/>
+	<animation alias="hit2H_leftright_fire" correction="right"/>
+	<animation alias="hit2H_leftright_recoil" correction="none"/>
+	<animation alias="hit2H_thrust_prefire" correction="right"/>
+	<animation alias="hit2H_thrust_fire" correction="left"/>
+	<animation alias="hit2H_thrust_recoil" correction="right"/>
+	<animation alias="hit2H_overhead_prefire" correction="none"/>
+	<animation alias="hit2H_overhead_fire" correction="none"/>
+	<animation alias="hit2H_overhead_recoil" correction="none"/>
+	<animation alias="hit2H_rightleft_spear_prefire" correction="right"/>
+	<animation alias="hit2H_rightleft_spear_fire" correction="left"/>
+	<animation alias="hit2H_rightleft_spear_recoil" correction="none"/>
+	<animation alias="hit2H_leftright_spear_prefire" correction="left"/>
+	<animation alias="hit2H_leftright_spear_fire" correction="right"/>
+	<animation alias="hit2H_leftright_spear_recoil" correction="none"/>
+	<animation alias="hit2H_overhead_spear_prefire" correction="none"/>
+	<animation alias="hit2H_overhead_spear_fire" correction="none"/>
+	<animation alias="hit2H_overhead_spear_recoil" correction="none"/>
+	<animation alias="hit2H_thrust_spear_prefire" correction="right"/>
+	<animation alias="hit2H_thrust_spear_fire" correction="none"/>
+	<animation alias="hit2H_thrust_spear_recoil" correction="none"/>
+	<animation alias="Shieldblock" correction="none"/>
+	<animation alias="ShieldBlockroot" correction="right"/>
+	<animation alias="ShieldBash" correction="right"/>
+	
+	<animation alias="Idle_fatigue" correction="none"/>
+	<animation alias="hit1H_over_myshield_thrust_fb_prefire" correction="none"/>
+	<animation alias="hit1H_over_myshield_thrust_fb_fire" correction="none"/>
+	<animation alias="hit1H_over_myshield_thrust_fb_recoil" correction="none"/>
+	<animation alias="hit1H_over_myshield_thrust_prefire" correction="right"/>
+	<animation alias="hit1H_over_myshield_thrust_fire" correction="left"/>
+	<animation alias="hit1H_over_myshield_thrust_recoil" correction="none"/>
+	<animation alias="hit1H_over_shield_thrust_fb_prefire" correction="none"/>
+	<animation alias="hit1H_over_shield_thrust_fb_fire" correction="none"/>
+	<animation alias="hit1H_over_shield_thrust_fb_recoil" correction="none"/>
+	<animation alias="hit1H_over_shield_thrust_prefire" correction="right"/>
+	<animation alias="hit1H_over_shield_thrust_fire" correction="left"/>
+	<animation alias="hit1H_over_shield_thrust_recoil" correction="none"/>
+	<animation alias="hit1H_power_thrust_fb_prefire" correction="none"/>
+	<animation alias="hit1H_power_thrust_fb_fire" correction="none"/>
+	<animation alias="hit1H_power_thrust_fb_recoil" correction="none"/>
+	<animation alias="hit1H_power_thrust_prefire" correction="right"/>
+	<animation alias="hit1H_power_thrust_fire" correction="left"/>
+	<animation alias="hit1H_power_thrust_recoil" correction="none"/>
+	<animation alias="hit1H_power_slash_fb_prefire" correction="none"/>
+	<animation alias="hit1H_power_slash_fb_fire" correction="none"/>
+	<animation alias="hit1H_power_slash_fb_recoil" correction="none"/>
+	<animation alias="hit1H_power_slash_prefire" correction="right"/>
+	<animation alias="hit1H_power_slash_fire" correction="left"/>
+	<animation alias="hit1H_power_slash_recoil" correction="none"/>
+	<animation alias="hit1H_finishing_overhead_fb_prefire" correction="none"/>
+	<animation alias="hit1H_finishing_overhead_fb_fire" correction="none"/>
+	<animation alias="hit1H_finishing_overhead_fb_recoil" correction="none"/>
+	<animation alias="hit1H_finishing_overhead_prefire" correction="none"/>
+	<animation alias="hit1H_finishing_overhead_fire" correction="none"/>
+	<animation alias="hit1H_finishing_overhead_recoil" correction="none"/>
+	<animation alias="hit2H_counter_slash_fb_prefire" correction="none"/>
+	<animation alias="hit2H_counter_slash_fb_fire" correction="none"/>
+	<animation alias="hit2H_counter_slash_fb_recoil" correction="none"/>
+	<animation alias="hit2H_counter_slash_prefire" correction="right"/>
+	<animation alias="hit2H_counter_slash_fire" correction="left"/>
+	<animation alias="hit2H_counter_slash_recoil" correction="none"/>
+	<animation alias="hit2H_power_oh_fb_prefire" correction="none"/>
+	<animation alias="hit2H_power_oh_fb_fire" correction="none"/>
+	<animation alias="hit2H_power_oh_fb_recoil" correction="none"/>
+	<animation alias="hit2H_power_oh_prefire" correction="none"/>
+	<animation alias="hit2H_power_oh_fire" correction="none"/>
+	<animation alias="hit2H_power_oh_recoil" correction="none"/>
+	<animation alias="hit2H_power_thrust_fb_prefire" correction="none"/>
+	<animation alias="hit2H_power_thrust_fb_fire" correction="none"/>
+	<animation alias="hit2H_power_thrust_fb_recoil" correction="none"/>
+	<animation alias="hit2H_power_thrust_prefire" correction="right"/>
+	<animation alias="hit2H_power_thrust_fire" correction="none"/>
+	<animation alias="hit2H_power_thrust_recoil" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_fb_prefire" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_fb_fire" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_fb_recoil" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_prefire" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_fire" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_recoil" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_spear_fb_prefire" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_spear_fb_fire" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_spear_fb_recoil" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_spear_prefire" correction="none"/>
+	<animation alias="hit2H_finishing_overhead_spear_fire" correction="right"/>
+	<animation alias="hit2H_finishing_overhead_spear_recoil" correction="none"/>
+	<animation alias="hit2H_counter_slash_spear_fb_prefire" correction="none"/>
+	<animation alias="hit2H_counter_slash_spear_fb_fire" correction="none"/>
+	<animation alias="hit2H_counter_slash_spear_fb_recoil" correction="none"/>
+	<animation alias="hit2H_counter_slash_spear_prefire" correction="none"/>
+	<animation alias="hit2H_counter_slash_spear_fire" correction="right"/>
+	<animation alias="hit2H_counter_slash_spear_recoil" correction="none"/>
+	<animation alias="hit2H_power_oh_spear_fb_prefire" correction="none"/>
+	<animation alias="hit2H_power_oh_spear_fb_fire" correction="none"/>
+	<animation alias="hit2H_power_oh_spear_fb_recoil" correction="none"/>
+	<animation alias="hit2H_power_oh_spear_prefire" correction="none"/>
+	<animation alias="hit2H_power_oh_spear_fire" correction="right"/>
+	<animation alias="hit2H_power_oh_spear_recoil" correction="none"/>
+	<animation alias="hit2H_power_thrust_spear_fb_prefire" correction="none"/>
+	<animation alias="hit2H_power_thrust_spear_fb_fire" correction="none"/>
+	<animation alias="hit2H_power_thrust_spear_fb_recoil" correction="none"/>
+	<animation alias="hit2H_power_thrust_spear_prefire" correction="right"/>
+	<animation alias="hit2H_power_thrust_spear_fire" correction="none"/>
+	<animation alias="hit2H_power_thrust_spear_recoil" correction="none"/>
+	<animation alias="hit2H_countermount_slash_spear_fb_prefire" correction="none"/>
+	<animation alias="hit2H_countermount_slash_spear_fb_fire" correction="none"/>
+	<animation alias="hit2H_countermount_slash_spear_fb_recoil" correction="none"/>
+	<animation alias="hit2H_countermount_slash_spear_prefire" correction="left"/>
+	<animation alias="hit2H_countermount_slash_spear_fire" correction="right"/>
+	<animation alias="hit2H_countermount_slash_spear_recoil" correction="none"/>
+	<animation alias="unarmed_fast_thrust_fb_prefire" correction="none"/>
+	<animation alias="unarmed_fast_thrust_fb_fire" correction="none"/>
+	<animation alias="unarmed_fast_thrust_fb_recoil" correction="none"/>
+	<animation alias="unarmed_fast_thrust_prefire" correction="none"/>
+	<animation alias="unarmed_fast_thrust_fire" correction="right"/>
+	<animation alias="unarmed_fast_thrust_recoil" correction="none"/>
+	<animation alias="unarmed_appercut_fb_prefire" correction="none"/>
+	<animation alias="unarmed_appercut_fb_fire" correction="none"/>
+	<animation alias="unarmed_appercut_fb_recoil" correction="none"/>
+	<animation alias="unarmed_appercut_prefire" correction="none"/>
+	<animation alias="unarmed_appercut_fire" correction="left"/>
+	<animation alias="unarmed_appercut_recoil" correction="none"/>
+	<animation alias="unarmed_karate_fb_prefire" correction="none"/>
+	<animation alias="unarmed_karate_fb_fire" correction="none"/>
+	<animation alias="unarmed_karate_fb_recoil" correction="none"/>
+</animations>
