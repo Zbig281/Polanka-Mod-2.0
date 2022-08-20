@@ -1941,7 +1941,17 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (2410,72,'Wooden Church',0,0,1,0,0,1,0,0,4,0,20000000,'',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\wooden_church.png','Object from Jorvik MOD pack',2400,120,0,0),
 (2411,61,'Wooden Pier T',0,0,1,0,0,0,0,0,3,0,5000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\pier_T.png','Object from Jorvik MOD pack',5200,NULL,0,0),
 (2412,61,'Wooden Pier L',0,0,1,0,0,0,0,0,3,0,5000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\pier_L.png','Object from Jorvik MOD pack',5200,NULL,0,0),
-(2413,61,'Stone tomb with cross',0,0,1,0,0,0,0,0,3,0,3000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\stone_tomb_with_cross.png','Object from Jorvik MOD pack',5200,NULL,0,0);
+(2413,61,'Stone tomb with cross',0,0,1,0,0,0,0,0,3,0,3000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\stone_tomb_with_cross.png','Object from Jorvik MOD pack',5200,NULL,0,0),
+(3000,751,'Tribe Bear',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3001,59,'Tribe Bear Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
+(3002,751,'Tribe Chieftain',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3003,59,'Tribe Chieftain Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
+(3004,751,'Tribe Hunter',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3005,59,'Tribe Hunter Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
+(3006,751,'Tribe Mole',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3007,59,'Tribe Mole Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
+(3008,751,'Tribe Witch',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
+(3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0);
 --
 -- Dumping data for table `objects_conversions`
 --
@@ -3046,7 +3056,12 @@ INSERT INTO `recipe` (`ID`, `Name`, `Description`, `StartingToolsID`, `SkillType
 (1096,'Wooden Church','Object from Jorvik MOD pack',32,19,60,2410,35,1,0,0,'art\\2D\\Recipes\\mods\JorvikMod\\art\\2D\\recipes\\wooden_church.png'),
 (1097,'Wooden Pier T','Object from Jorvik MOD pack',32,18,60,2411,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_T.png'),
 (1098,'Wooden Pier L','Object from Jorvik MOD pack',32,18,60,2412,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_L.png'),
-(1099,'Stone tomb with cross','Object from Jorvik MOD pack',32,19,60,2413,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_tomb_with_cross.png');
+(1099,'Stone tomb with cross','Object from Jorvik MOD pack',32,19,60,2413,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_tomb_with_cross.png'),
+(3001,'Tribe Bear Sack','',36,8,500,3001,0,1,0,0,''),
+(3003,'Tribe Chieftain Sack','',36,8,500,3003,0,1,0,0,''),
+(3005,'Tribe Hunter Sack','',36,8,500,3005,0,1,0,0,''),
+(3007,'Tribe Mole Sack','',36,8,500,3007,0,1,0,0,''),
+(3009,'Tribe Witch Sack','',36,8,500,3009,0,1,0,0,'');
 
 --
 -- Dumping data for table `recipe_requirement`
@@ -6471,7 +6486,12 @@ INSERT INTO `recipe_requirement` (`ID`, `RecipeID`, `MaterialObjectTypeID`, `Qua
 (4304,1098,32,0,10,50,0),
 (4305,1098,281,0,10,80,0),
 (4306,1099,269,0,30,50,0),
-(4307,1099,528,0,20,20,0);
+(4307,1099,528,0,20,20,0),
+(4308,3001,237,0,0,1,0),
+(4309,3003,237,0,0,1,0),
+(4310,3005,237,0,0,1,0),
+(4311,3007,237,0,0,1,0),
+(4312,3009,237,0,0,1,0);
 
 --
 -- Dumping data for table `effects`

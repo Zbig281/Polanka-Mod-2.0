@@ -30340,7 +30340,6 @@
 		<Quantity>2</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------------ Wooden Cross -------------------->
 	<row>
 		<ID>4261</ID>
 		<RecipeID>1087</RecipeID>
@@ -30368,7 +30367,6 @@
 		<Quantity>1</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------ Wooden Bridge ---------------->
 	<row>
 		<ID>4264</ID>
 		<RecipeID>1088</RecipeID>
@@ -30414,7 +30412,6 @@
 		<Quantity>40</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------------- Stone Bridge----------------->
 	<row>
 		<ID>4269</ID>
 		<RecipeID>1089</RecipeID> 
@@ -30451,7 +30448,6 @@
 		<Quantity>40</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!----------- small_wooden_shed ----------->
 	<row>
 		<ID>4273</ID>
 		<RecipeID>1090</RecipeID>
@@ -30488,9 +30484,6 @@
 		<Quantity>10</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	
-	<!--------- Metal Cage --------------->
-	
 	<row>
 		<ID>4277</ID>
 		<RecipeID>1091</RecipeID>
@@ -30509,7 +30502,6 @@
 		<Quantity>2</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------ Wooden Pier ---------------->
 	<row>
 		<ID>4279</ID>
 		<RecipeID>1092</RecipeID>
@@ -30546,7 +30538,6 @@
 		<Quantity>40</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------ Wooden Barricade ---------------->
 	<row>
 		<ID>4283</ID>
 		<RecipeID>1093</RecipeID> 
@@ -30565,7 +30556,6 @@
 		<Quantity>4</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------------- Stone Altar----------------->
 	<row>
 		<ID>4285</ID>
 		<RecipeID>1094</RecipeID> 
@@ -30602,7 +30592,6 @@
 		<Quantity>4</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------ Wooden house with tower ---------------->
 	<row>
 		<ID>4289</ID>
 		<RecipeID>1095</RecipeID>
@@ -30639,7 +30628,6 @@
 		<Quantity>230</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------ Wooden Church ---------------->
 	<row>
 		<ID>4293</ID>2
 		<RecipeID>1096</RecipeID>
@@ -30685,7 +30673,6 @@
 		<Quantity>280</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------ Wooden Pier T ---------------->
 	<row>
 		<ID>4298</ID>
 		<RecipeID>1097</RecipeID>
@@ -30722,7 +30709,6 @@
 		<Quantity>80</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------ Wooden Pier L ---------------->
 	<row>
 		<ID>4302</ID>
 		<RecipeID>1098</RecipeID>
@@ -30759,7 +30745,6 @@
 		<Quantity>80</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
-	<!------------------- Stone tomb with cross ----------------->
 	<row>
 		<ID>4306</ID>
 		<RecipeID>1099</RecipeID> 
@@ -30776,6 +30761,51 @@
 		<Quality>0</Quality>
 		<Influence>20</Influence>
 		<Quantity>20</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4308</ID>
+		<RecipeID>3001</RecipeID>
+		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>0</Influence>
+		<Quantity>1</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4309</ID>
+		<RecipeID>3003</RecipeID>
+		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>0</Influence>
+		<Quantity>1</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4310</ID>
+		<RecipeID>3005</RecipeID>
+		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>0</Influence>
+		<Quantity>1</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4311</ID>
+		<RecipeID>3007</RecipeID>
+		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>0</Influence>
+		<Quantity>1</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4312</ID>
+		<RecipeID>3009</RecipeID>
+		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>0</Influence>
+		<Quantity>1</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
 </table>
