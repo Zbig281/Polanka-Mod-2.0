@@ -8,10 +8,10 @@
 
 SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
-CREATE TRIGGER `tribeloot_beer` BEFORE INSERT ON `movable_objects` FOR EACH ROW BEGIN
+CREATE TRIGGER `tribeloot` BEFORE INSERT ON `movable_objects` FOR EACH ROW BEGIN
 DECLARE _rnd int DEFAULT 0;
 
-IF new.ObjectTypeID =2501 THEN   
+IF new.ObjectTypeID = (3001,3003,3005,3007,3009) THEN   
    
    Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
 		VALUES (new.RootContainerID, 1060, 20, 50, 0, 0);
