@@ -3673,9 +3673,7 @@ datablock WeaponData(BalancedStaff : BaseMeleeWeapon)
    BaseFireAnimTime = 1.05;
    BaseRecoilAnimTime = 1.0;
 };
-
 //bear Axe
-
 datablock WeaponData(Bearaxe : BaseMeleeWeapon)
 {
    id = 33;
@@ -3710,7 +3708,7 @@ datablock WeaponData(Bearaxe : BaseMeleeWeapon)
    BaseFireAnimTime = 1.0;
    BaseRecoilAnimTime = 1.2;
 };
-
+//Chieftain sword
 datablock WeaponData(Chieftainsword : BaseMeleeWeapon)
 {
    id = 26;

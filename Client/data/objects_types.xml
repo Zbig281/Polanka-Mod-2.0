@@ -36652,4 +36652,23 @@
 		<FaceImage></FaceImage>
 		<Description></Description>
 	</row>
+	<row>
+		<ID>3012</ID>
+		<ParentID>196</ParentID>
+		<Name>Hunter Bow</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>3</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>2000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\Items\composite_bow.png</FaceImage>
+		<Description></Description>
+	</row>
 </table>
