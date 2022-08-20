@@ -26214,6 +26214,801 @@
             </state>
         </states>
     </object>
+	<object id="2400" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1">
+    <!--name = Wooden Cross -->
+        <lockedCells>
+            <cell x="0" y="0" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/idols/wooden_cross.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+			<state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/idols/wooden_cross.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+              <particleEmitters>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_fire_medium</emitter>
+                      <offset x="0" y="0" z="1.5571" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_sparks_medium</emitter>
+                      <offset x="0" y="0" z="1.5571" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_smoke_medium</emitter>
+                      <offset x="0" y="0" z="2.1455" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+              </particleEmitters>
+              <soundEmitters>
+                  <emitter>
+                      <profile>env_fire</profile>
+                      <offset x="0" y="1" z="2.1455" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+              </soundEmitters>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2401" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1" noDecay="0">
+        <!--name = Wooden Bridge-->
+        <lockedCells>
+            <cell x="0" y="0" />
+			<cell x="-1" y="0" />
+			<cell x="4" y="0" />
+			<cell x="5" y="0" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/wooden_bridge.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/wooden_bridge_damaged.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+              <particleEmitters>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_fire_medium</emitter>
+                      <offset x="1.22" y="0" z="0.5571" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_sparks_medium</emitter>
+                      <offset x="1.22" y="0" z="0.5571" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_smoke_medium</emitter>
+                      <offset x="1.22" y="0" z="1.1455" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_smoke_big</emitter>
+                      <offset x="10.63667" y="0.69489" z="0.5571" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_fire_big</emitter>
+                      <offset x="10.63667" y="0.69489" z="0.5571" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_sparks_big</emitter>
+                      <offset x="10.63667" y="0.69489" z="1.1455" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+              </particleEmitters>
+              <soundEmitters>
+                  <emitter>
+                      <profile>env_fire</profile>
+                      <offset x="0" y="1" z="0.5571" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+              </soundEmitters>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/wooden_bridge_construct.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2402" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="0" noDecay="0">
+        <!--name = Stone Bridge-->
+        <lockedCells>
+            <cell x="0" y="0" />
+			<cell x="0" y="1" />
+			<cell x="1" y="0" />
+			<cell x="1" y="1" />
+			<cell x="5" y="0" />
+			<cell x="5" y="1" />
+			<cell x="6" y="0" />
+			<cell x="6" y="1" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/stone_bridge.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/stone_bridge_damaged.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/stone_bridge_construct.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2403" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="3">
+      <!--name = Small Wooden Shed -->
+      <lockedCells>
+          <cell x="0" y="0" />
+          <cell x="1" y="0" />
+      </lockedCells>
+      <states>
+            <state type="Complete">
+              <shapes>
+                  <shape>
+                      <shapeName>mods/JorvikMod/art/models/construction/storage/small_wooden_shed.dts</shapeName>
+                      <offset x="0" y="0" z="0" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                      <scale x="1" y="1" z="1" />
+                  </shape>
+              </shapes>
+			</state>
+            <state type="Damaged">
+              <shapes>
+                  <shape>
+                      <shapeName>mods/JorvikMod/art/models/construction/storage/small_wooden_shed_damaged.dts</shapeName>
+                      <offset x="0" y="0" z="0" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                      <scale x="1" y="1" z="1" />
+                  </shape>
+              </shapes>
+			  <particleEmitters>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_fire_medium</emitter>
+                      <offset x="1" y="0" z="1.5571" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_sparks_medium</emitter>
+                      <offset x="1" y="0" z="1.5571" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_smoke_medium</emitter>
+                      <offset x="1" y="0" z="2.1455" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+            </particleEmitters>
+              <soundEmitters>
+                  <emitter>
+                      <profile>env_fire</profile>
+                      <offset x="1" y="0" z="2.1455" />
+                      <rot x="0" y="0" z="1" angle="0" />
+                  </emitter>
+              </soundEmitters>
+          </state>
+          <state type="Incomplete">
+              <shapes>
+                  <shape>
+                      <shapeName>mods/JorvikMod/art/models/construction/storage/small_wooden_shed_construct.dts</shapeName>
+                      <offset x="0" y="0" z="0" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                      <scale x="1" y="1" z="1" />
+                  </shape>
+              </shapes>
+          </state>
+      </states>
+  </object>
+  <object id="2404" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="2" noRuins="1">
+        <!--name = Metal Cage -->
+        <lockedCells>
+            <cell x="0" y="0" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape isDoor="1">
+                        <shapeName>mods/JorvikMod/art/models/construction/residence/metal_cage.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/residence/metal_cage.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2405" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1" noDecay="0">
+        <!--name = Wooden Pier -->
+        <lockedCells>
+            <cell x="0" y="0" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/pier.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/pier.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/pier_construct.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2406" isUnflattenAllowed="1" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1" noDecay="0">
+        <!--name = Wooden Barricade -->
+        <lockedCells>
+            <cell x="0" y="0" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/fortifications/wooden_barricade.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="0.9" y="0.9" z="0.9" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/fortifications/wooden_barricade.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="0.9" y="0.9" z="0.9" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2408" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="0" noDecay="0">
+        <!--name = Stone Altar -->
+        <lockedCells>
+            <cell x="-1" y="0" />
+			<cell x="-1" y="-1" />
+			<cell x="0" y="-1" />
+			<cell x="1" y="-1" />
+			<cell x="1" y="0" />
+			<cell x="1" y="1" />
+			<cell x="0" y="1" />
+			<cell x="-1" y="1" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/stone_altar.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/stone_altar_construct.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/stone_altar_construct.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2409" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="0" noDecay="0">
+        <!--name = Wooden House with Tower -->
+		<lockedCells>
+			<cell x="-4" y="5" />
+			<cell x="-4" y="4" />
+			<cell x="-4" y="3" />
+			<cell x="-4" y="2" />
+			<cell x="-4" y="1" />
+			<cell x="-4" y="0" />
+			<cell x="-4" y="-1" />
+			<cell x="-4" y="-2" />
+			<cell x="-3" y="5" />
+			<cell x="-3" y="4" />
+			<cell x="-3" y="3" />
+			<cell x="-3" y="2" />
+			<cell x="-3" y="1" />
+			<cell x="-3" y="0" />
+			<cell x="-3" y="-1" />
+			<cell x="-3" y="-2" />
+			<cell x="-2" y="5" />
+			<cell x="-2" y="4" />
+			<cell x="-2" y="3" />
+			<cell x="-2" y="2" />
+			<cell x="-2" y="1" />
+			<cell x="-2" y="0" />
+			<cell x="-2" y="-1" />
+			<cell x="-2" y="-2" />
+			<cell x="-1" y="5" />
+			<cell x="-1" y="4" />
+			<cell x="-1" y="3" />
+			<cell x="-1" y="2" />
+			<cell x="-1" y="1" />
+			<cell x="-1" y="0" />
+			<cell x="-1" y="-1" />
+			<cell x="-1" y="-2" />
+			<cell x="0" y="5" />
+			<cell x="0" y="4" />
+			<cell x="0" y="3" />
+			<cell x="0" y="2" />
+			<cell x="0" y="1" />
+			<cell x="0" y="0" />
+			<cell x="0" y="-1" />
+			<cell x="0" y="-2" />
+			<cell x="1" y="5" />
+			<cell x="1" y="4" />
+			<cell x="1" y="3" />
+			<cell x="1" y="2" />
+			<cell x="1" y="1" />
+			<cell x="1" y="0" />
+			<cell x="1" y="-1" />
+			<cell x="1" y="-2" />
+			<cell x="2" y="5" />
+			<cell x="2" y="4" />
+			<cell x="2" y="3" />
+			<cell x="2" y="2" />
+			<cell x="2" y="1" />
+			<cell x="2" y="0" />
+			<cell x="2" y="-1" />
+			<cell x="2" y="-2" />
+			<cell x="3" y="5" />
+			<cell x="3" y="4" />
+			<cell x="3" y="3" />
+			<cell x="3" y="2" />
+			<cell x="3" y="1" />
+			<cell x="3" y="0" />
+			<cell x="3" y="-1" />
+			<cell x="3" y="-2" />
+			<cell x="4" y="5" />
+			<cell x="4" y="4" />
+			<cell x="4" y="3" />
+			<cell x="4" y="2" />
+			<cell x="4" y="1" />
+			<cell x="4" y="0" />
+			<cell x="4" y="-1" />
+			<cell x="4" y="-2" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape isDoor="1">
+                        <shapeName>mods/JorvikMod/art/models/construction/residence/wooden_house_with_tower.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/residence/wooden_house_with_tower_damaged.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+				<particleEmitters>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_fire_medium</emitter>
+                      <offset x="9" y="12" z="11.5571" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_sparks_medium</emitter>
+                      <offset x="9" y="12" z="11.5571" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_smoke_medium</emitter>
+                      <offset x="9" y="12" z="11.1455" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+				  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_fire_medium</emitter>
+                      <offset x="-9" y="12" z="22.5571" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_sparks_medium</emitter>
+                      <offset x="-9" y="12" z="22.5571" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_smoke_medium</emitter>
+                      <offset x="-9" y="12" z="22.1455" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+				</particleEmitters>
+				<soundEmitters>
+                  <emitter>
+                      <profile>env_fire</profile>
+                      <offset x="9" y="12" z="22.1455" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+				  <emitter>
+                      <profile>env_fire</profile>
+                      <offset x="-9" y="12" z="20.1455" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+				</soundEmitters>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/residence/wooden_house_with_tower_construct.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2410" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="0" noDecay="0">
+        <!--name = Wooden Church -->
+        <lockedCells>
+		<cell x="-1" y="6" />	<cell x="0" y="6" />	<cell x="1" y="6" />		
+		<cell x="-1" y="5" />	<cell x="0" y="5" />	<cell x="1" y="5" />		
+		<cell x="-1" y="4" />	<cell x="0" y="4" />	<cell x="1" y="4" />		
+		<cell x="-2" y="3" />	<cell x="-1" y="3" />	<cell x="0" y="3" />	<cell x="1" y="3" />	<cell x="2" y="3" />
+		<cell x="-2" y="2" />	<cell x="-1" y="2" />	<cell x="0" y="2" />	<cell x="1" y="2" />	<cell x="2" y="2" />
+		<cell x="-2" y="1" />	<cell x="-1" y="1" />	<cell x="0" y="1" />	<cell x="1" y="1" />	<cell x="2" y="1" />
+		<cell x="-2" y="0" />	<cell x="-1" y="0" />	<cell x="0" y="0" />	<cell x="1" y="0" />	<cell x="2" y="0" />
+		<cell x="-2" y="-1" />	<cell x="-1" y="-1" />	<cell x="0" y="-1" />	<cell x="1" y="-1" />	<cell x="2" y="-1" />
+		<cell x="-2" y="-2" />	<cell x="-1" y="-2" />	<cell x="0" y="-2" />	<cell x="1" y="-2" />	<cell x="2" y="-2" />
+		<cell x="-2" y="-3" />	<cell x="-1" y="-3" />	<cell x="0" y="-3" />	<cell x="1" y="-3" />	<cell x="2" y="-3" />
+		<cell x="-2" y="-4" />	<cell x="-1" y="-4" />	<cell x="0" y="-4" />	<cell x="1" y="-4" />	<cell x="2" y="-4" />
+		<cell x="-1" y="-5" />	<cell x="0" y="-5" />	<cell x="1" y="-5" />		
+		<cell x="-1" y="-6" />	<cell x="0" y="-6" />	<cell x="1" y="-6" />		
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape isDoor="1">
+                        <shapeName>mods/JorvikMod/art/models/construction/residence/wooden_church.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/residence/wooden_church_damaged.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+				<particleEmitters>
+				  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_fire_medium</emitter>
+                      <offset x="0" y="-11" z="21" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_sparks_medium</emitter>
+                      <offset x="0" y="-11" z="21" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_smoke_medium</emitter>
+                      <offset x="0" y="-11" z="21" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+				  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_fire_medium</emitter>
+                      <offset x="-5" y="1" z="15" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_sparks_medium</emitter>
+                      <offset x="-5" y="1" z="15" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+                  <emitter>
+                      <datablock>LiFEmitterNodeData</datablock>
+                      <emitter>Conflagration_smoke_medium</emitter>
+                      <offset x="-5" y="1" z="15" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+				</particleEmitters>
+				<soundEmitters>
+                  <emitter>
+                      <profile>env_fire</profile>
+                      <offset x="0" y="-11" z="21" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+				  <emitter>
+                      <profile>env_fire</profile>
+                      <offset x="-5" y="1" z="15" />
+                      <rot x="0" y="0" z="0" angle="0" />
+                  </emitter>
+				</soundEmitters>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/residence/wooden_church_construct.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2411" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1" noDecay="0">
+        <!--name = Wooden Pier T -->
+        <lockedCells>
+            <cell x="0" y="0" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/pier_T.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/pier_T.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/pier_T_construct.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2412" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1" noDecay="0">
+        <!--name = Wooden Pier L -->
+        <lockedCells>
+            <cell x="0" y="0" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/pier_L.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/pier_L.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/bridges/pier_L_construct.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+	<object id="2413" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="0" noDecay="0">
+        <!--name = Stone tomb with cross -->
+        <lockedCells>
+            <cell x="0" y="0" />
+			<cell x="0" y="1" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/stone_tomb_with_cross.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>mods/JorvikMod/art/models/construction/stone_tomb_with_cross.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="0" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
     <object id="3001" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1" fastDecay="1">
         <!--name = Tribe Bear Corpse-->
         <lockedCells>
