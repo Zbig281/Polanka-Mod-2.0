@@ -240,6 +240,7 @@
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="FALSE" RemovedOnDeath="TRUE" />
         <description>2630</description>
         <parameter type="RESTING" applytype="INCREASE" />
+		<parameter type="HARD_HP_REGEN_SPEED" applytype="MULTIPLY" value="5" ignore_magnitude="1" />
         <icon>art/2D/Effects/Resting.png</icon>
     </effect>
     <effect id="42" name="Bed Rest (Wounds)">
