@@ -14,11 +14,7 @@ DECLARE _rnd int DEFAULT 0;
 IF new.ObjectTypeID =2501 THEN   
    
    Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-		VALUES (new.RootContainerID, 1060, 100, 50, 0, 0);
-   Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-		VALUES (new.RootContainerID, 2510, 50, 1, 0, 0);				  
-   Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-		VALUES (new.RootContainerID, 3354, 100, 1, 0, 0);			
+		VALUES (new.RootContainerID, 1060, 20, 50, 0, 0);
 
 		set _rnd = FLOOR(RAND()*100);				  
 		if _rnd > 89 then 
@@ -100,13 +96,7 @@ DECLARE _rnd int DEFAULT 0;
 
    IF new.ObjectTypeID =2503 THEN       
       Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 1060, 100, 50, 0, 0);
-      Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 2511, 50, 1, 0, 0);				  
-      Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 3351, 100, 1, 0, 0);
-   Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-		VALUES (new.RootContainerID, 3354, 100, 1, 0, 0);	
+				  VALUES (new.RootContainerID, 1060, 20, 100, 0, 0);	
 				  
 		set _rnd = FLOOR(RAND()*100);				  
 		if _rnd > 89 then 
@@ -190,11 +180,7 @@ DECLARE _rnd int DEFAULT 0;
    IF new.ObjectTypeID =2505 THEN     
 		
       Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-			VALUES (new.RootContainerID, 660, 80, 15, 0, 0);
-      Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-			VALUES (new.RootContainerID, 3103, 60, 15, 0, 0);				  
-   	Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-			VALUES (new.RootContainerID, 3354, 100, 1, 0, 0);	
+			VALUES (new.RootContainerID, 1060, 20, 100, 0, 0);
 				  
 		set _rnd = FLOOR(RAND()*100);				  
 		if _rnd > 84 then 
@@ -297,12 +283,8 @@ DECLARE _rnd int DEFAULT 0;
    IF new.ObjectTypeID =2507 THEN  
 	     
       Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 241, 100, 19, 0, 0);
-      Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 3832, 50, 1, 0, 0);				  
-   	Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				VALUES (new.RootContainerID, 3354, 100, 1, 0, 0);	
-				
+				  VALUES (new.RootContainerID, 1060, 20, 100, 0, 0);
+
 		set _rnd = FLOOR(RAND()*100);				  
 		if _rnd > 79 then 
       	Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
@@ -361,11 +343,8 @@ DECLARE _rnd int DEFAULT 0;
 
    IF new.ObjectTypeID =2509 THEN       
       Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 285, 90, 1, 0, 0);
-      Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 4011, 90, 1, 0, 0);	
-   	Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				VALUES (new.RootContainerID, 3354, 100, 1, 0, 0);		  
+				  VALUES (new.RootContainerID, 1060, 20, 100, 0, 0);
+	  
 				  
 		set _rnd = FLOOR(RAND()*100);				  
 		if _rnd > 79 then 
