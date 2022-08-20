@@ -3673,3 +3673,75 @@ datablock WeaponData(BalancedStaff : BaseMeleeWeapon)
    BaseFireAnimTime = 1.05;
    BaseRecoilAnimTime = 1.0;
 };
+
+//bear Axe
+
+datablock WeaponData(Bearaxe : BaseMeleeWeapon)
+{
+   id = 33;
+   Object_typeID = 3010;
+   
+   shapefile = "art/models/3d-2d/weapons/Tribe/bearaxe.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack2HWeapon;
+   WeaponType = Weapon2HAxe;
+   weaponMaterial = Wooden;
+   hitGroupType[0] =  Slashing;
+   hitGroupDmgLevel[0] = 2.8;
+   hitGroupType[1] =  Chopping;
+   hitGroupDmgLevel[1] = 3.0;
+   hitGroupType[2] =  Slashing;
+   hitGroupDmgLevel[2] = 1.8;
+   hitDirection[0] = "0"; // Thrust
+   hitDirection[1] = "1 2"; // Overhead
+   hitDirection[2] = "1 2"; // RightToLeftHit
+   hitDirection[3] = "1 2"; // LeftToRightHit
+   WoundMultiplier = 1.6;
+   FractureMultiplier = 0.5;
+   StunMultiplier = 0.06;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = PracticeMaulItem;
+   BasePrefireAnimTime = 1.2;
+   BaseFireAnimTime = 1.0;
+   BaseRecoilAnimTime = 1.2;
+};
+
+datablock WeaponData(Chieftainsword : BaseMeleeWeapon)
+{
+   id = 26;
+   Object_typeID = 3011;
+   
+   shapefile = "art/models/3d-2d/weapons/Tribe/chieftainsword.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack2HSword;
+   WeaponType = Weapon2HSword;
+   weaponMaterial = Metal;
+   hitGroupType[0] = Piercing;
+   hitGroupDmgLevel[0] = 1.55;
+   hitGroupType[1] =  Slashing;
+   hitGroupDmgLevel[1] = 1.62;
+   hitGroupType[2] =  Blunt;
+   hitGroupDmgLevel[2] = 0.5;
+   hitDirection[0] = "0 2"; // Thrust
+   hitDirection[1] = "1"; // Overhead
+   hitDirection[2] = "1"; // RightToLeftHit
+   hitDirection[3] = "1"; // LeftToRightHit
+   WoundMultiplier = 1.5;
+   FractureMultiplier = 0.7;
+   StunMultiplier = 0.0;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = FlambergeItem;
+   BasePrefireAnimTime = 1.2;
+   BaseFireAnimTime = 1.1;
+   BaseRecoilAnimTime = 1.15;
+};
