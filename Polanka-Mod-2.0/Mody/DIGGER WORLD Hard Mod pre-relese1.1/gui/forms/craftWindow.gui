@@ -1,0 +1,534 @@
+//-----------------------------------------------------------------------------
+// Craftsman & Marksman: Life is feudal
+//-----------------------------------------------------------------------------
+
+singleton GuiControlProfile( GuiCraftWindowBlacknessProfile : GuiBaseTextProfile ) {
+	opaque = true;
+	fillColor = "0 0 0";
+};
+
+singleton GuiControlProfile( GuiCraftWindowButtonProfile : GuiBaseTextProfile ) {
+	globalImageIndex = "atlas2";
+	fontSize = 24;
+	fontColor = "204 204 204";
+	fontColorHL = "204 204 204";
+	fontColorNA = "204 204 204";
+	fontColorSEL = "204 204 204";
+	justify = "center";
+	textOffset = "0 -2";
+	border = "none";
+};
+
+singleton GuiControlProfile( GuiCraftWindowTabTextProfile : GuiBaseCaptionProfile ) {
+	globalImageIndex = "atlas1";
+	fontSize = 27;
+	fontColor = "102 102 102";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "center";
+};
+
+singleton GuiControlProfile( GuiCraftWindowRecipeItemTextProfile : GuiBaseCaptionProfile ) {
+	fontSize = 27;
+	fontColor = "204 204 204";
+	justify = "center";
+};
+
+singleton GuiControlProfile( GuiCraftWindowNoBlueprintsProfile : GuiBaseTextProfile ) {
+	fontSize = 19;
+	fontColor = "204 204 204";
+	justify = "left";
+};
+
+singleton GuiControlProfile( GuiCraftRecipeListItemProfile : GuiBaseTextProfile ) {
+	fontSize = 19;
+	fontColor = "255 255 255";
+	fontColorNA = "154 154 154";
+	justify = "left";
+	fillColorHL = "255 255 255 0";
+	fillColor = "255 255 255 0";
+};
+
+function createCraftWindow()
+{
+	%wnd = new GuiCraftToolInventory(GuiCraftWindows) {
+		text = GetMessageIDText(1351); // Craft
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		canCollapse = "0";
+		edgeSnap = "1";
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		position = "116 60";
+		extent = "1038 772";
+		minExtent = "1038 772";
+		maxExtent = "1038 772";
+		horizSizing = "center";
+		vertSizing = "center";
+		profile = "GuiCursorEscWindowProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		canSave = "0";
+		canSaveDynamicFields = "0";
+		closeCommand ="";
+
+		new GuiContainer() {
+			docking = Top;
+			extent = "1024 82";
+			internalName = "inventoryToolsTabBar";
+
+			new GuiBitmapCtrl() {
+				position = "0 0";
+				extent = "1024 82";
+				profile = "GuiAtlas1ImageProfile";
+				imageIndex = "InventoryCraftBackground";
+			};
+
+			
+		};
+
+		new GuiContainer() {
+			docking = Client;
+			extent = "1024 690";
+			enabled = true;
+			canSave = true;
+			visible = true;
+
+			new GuiContainer() {
+				docking = Left;
+				extent = "432 690";
+				profile = "GuiCraftWindowBlacknessProfile";
+
+				new GuiContainer() {
+					docking = Top;
+					extent = "432 82";
+					internalName = "recipesBlueprintsTabBar";
+
+					new GuiBitmapCtrl() {
+						position = "0 0";
+						extent = "430 82";
+						profile = "GuiAtlas1ImageProfile";
+						wrap = true;
+						imageIndex = "CharWndTabBackground";
+
+						new GuiStackControl() {
+							position = "0 2";
+							extent = "430 77";
+							changeChildSizeToFit = false;
+							changeChildPosition = true;
+							stackingType = "Horizontal";
+							padding = 0;
+
+							new guiHorzTilingButtonCtrl() {
+								text = GetMessageIDText(4026); // Recipes
+								position = "0 0";
+								extent = "215 77";
+								profile = "GuiCraftWindowTabTextProfile";
+								groupNum = "1";
+								buttonType = "RadioButton";
+								useManualIndex = true;
+								depressedImageIndex = CharWndTabSelected;
+								mouseOverImageIndex = CharWndTabNormal;
+								imageIndex = CharWndTabNormal;
+								class = GuiCraftWindowTabButton;
+								internalName = "recipesTabButton";
+							};
+
+							new guiHorzTilingButtonCtrl() {
+								text = GetMessageIDText(2454); // Blueprints
+								position = "215 0";
+								extent = "215 77";
+								profile = "GuiCraftWindowTabTextProfile";
+								groupNum = "1";
+								buttonType = "RadioButton";
+								useManualIndex = true;
+								depressedImageIndex = CharWndTabSelected;
+								mouseOverImageIndex = CharWndTabNormal;
+								imageIndex = CharWndTabNormal;
+								class = GuiCraftWindowTabButton;
+								internalName = "blueprintsTabButton";
+							};
+						};
+					};
+				};
+
+				new GuiContainer() {
+					docking = Client;
+					extent = "432 608";
+
+					new GuiMLTextCtrl() {
+						position = "40 40";
+						extent = "344 400";
+						profile = "GuiCraftWindowNoBlueprintsProfile";
+						canHit = false;
+						rightOffset = 0;
+						text = "<just:left>" @ GetMessageIDText(4028);
+						internalName = "noBlueprintsInfo";
+					};
+
+					new GuiScrollCtrl() {
+						position = "0 0";
+						vertSizing = "height";
+						extent = "432 536";
+						vScrollBar = "alwaysOn";
+						hScrollBar = "alwaysOff";
+						profile = "GuiEagleScrollBarProfile";
+						constantThumbHeight = true;
+						childMargin = "8 0";
+						trackOffset = 12;
+						addContentWidth = 29;
+						arrowSadowSize = -10;
+						internalName = "recipesScrollPanel";
+
+						new GuiStackControl() {
+							position = "10 0";
+							extent = "422 100";
+							dynamicSize = true;
+							changeChildPosition = false;
+							changeChildSizeToFit = false;
+							stackingType = "Vertical";
+							internalName = "recipeList";
+						};
+					};
+
+					new GuiControl() { // 3px line between
+						position = "9 537";
+						vertSizing = "top";
+						extent = "414 3";
+						profile = "GuiAtlas3TiledImageProfile";
+
+						leftIndex0 = "BlackSlimHLineLeft";
+						backgroundIndex = "BlackSlimHLineCenter";
+						rightIndex0 = "BlackSlimHLineRight";
+					};
+
+					new guiHorzTilingButtonCtrl() {
+						text = GetMessageIDText(1351); // Craft
+						buttonType = "PushButton";
+						useMouseEvents = false;
+						position = "137 552";
+						vertSizing = "top";
+						extent = "158 44";
+						profile = "GuiCraftWindowButtonProfile";
+						visible = true;
+						active = true;
+						command = "GuiCraftWindows.craftClick();";
+						imageIndex = "H44Btn";
+						internalName = "craftButton";
+					};
+
+					new guiHorzTilingButtonCtrl() {
+						text = GetMessageIDText(2452); // Draw
+						buttonType = "PushButton";
+						useMouseEvents = false;
+						position = "224 552";
+						vertSizing = "top";
+						extent = "158 44";
+						profile = "GuiCraftWindowButtonProfile";
+						visible = false;
+						active = true;
+						command = "GuiCraftWindows.returnBlueprintClick();";
+						imageIndex = "H44Btn";
+						internalName = "drawBlueprintButton";
+					};
+				};
+			};
+
+			new GuiContainer() {
+				docking = Client;
+				extent = "592 690";
+				profile = "GuiAtlas3TiledImageProfile";
+				backgroundIndex = "LearningWindowBackground";
+
+				new GuiBitmapCtrl() {
+					position = "0 0";
+					extent = "36 1080";
+					profile = "GuiAtlas1ImageProfile";
+					imageIndex = FringeLeftShadow;
+					wrap = true;
+				};
+
+				new GuiControl() {
+					extent = "516 564";
+					horizSizing = "center";
+					vertSizing = "center";
+					internalName = "componentsPnl";
+
+					new GuiBitmapCtrl() {
+						position = "42 0";
+						extent = "432 498";
+						bitmap = "gui/images/craft_ornament.png";
+						profile = "GuiContentProfile";
+					};
+
+					new GuiBitmapCtrl() {
+						position = "199 6";
+						extent = "118 118";
+						canHit = false;
+						profile = "GuiAtlas1ImageProfile";
+						imageIndex = "CraftResourceSlot";
+					};
+
+					new GuiBitmapTooltip() {
+						position = "193 0";
+						extent = "130 130";
+						canHit = true;
+						centered = true;
+						internalName = "craftingResultIcon";
+					};
+
+					new GuiMLTextCtrl() {
+						position = "0 124";
+						extent = "516 60";
+						profile = "GuiCraftWindowRecipeItemTextProfile";
+						canHit = false;
+						rightOffset = 0;
+						internalName = "craftingResultName";
+					};
+				};
+			};
+		};
+
+		new GuiControl(GuiCraftWindowSelectedTabDecor) {
+			extent = "100 77";
+			Profile = "GuiAtlas1TiledImageProfile";
+			visible = false;
+			BottomLeftIndex = "CharWndTabSelectLineLeft";
+			BottomIndex0 = "CharWndTabSelectLineCenter";
+			BottomRightIndex = "CharWndTabSelectLineRight";
+
+			new GuiBitmapCtrl() {
+				position = "0 61";
+				extent = "26 12";
+				profile = "GuiAtlas1ImageProfile";
+				imageIndex = "CharWndTabSelectArrow";
+				horizSizing = "center";
+				vertSizing = "top";
+			};
+		};
+	};
+
+	%wnd.selectedTabDecor = GuiCraftWindowSelectedTabDecor;
+
+	%components = createCraftingComponentsPanel();
+	%wnd-->componentsPnl.add(%components);
+	%components.setPosition(0, 188);
+
+	PlayGui.add(%wnd);
+
+	if(isObject(ClientMissionCleanupSet))
+		ClientMissionCleanupSet.add(%wnd);
+
+	return %wnd;
+}
+
+function GuiCraftWindows::init(%this, %isInventoryCraft)
+{
+	%this.isInventoryCraft = %isInventoryCraft;
+	%this.isBlueprints = -1;
+	%this-->recipesBlueprintsTabBar.setVisible(!%isInventoryCraft);
+	%this-->inventoryToolsTabBar.setVisible(%isInventoryCraft);
+
+	// reparent so it does not get deleted on tools stack clear
+	%this.add(GuiCraftWindowSelectedTabDecor);
+	GuiCraftWindowSelectedTabDecor.setVisible(false);
+
+	%this-->inventoryToolsStack.clear();
+}
+
+function GuiCraftWindows::addRecipeListItem(%this, %recipeId, %abilityId, %name, %image)
+{
+	%gui = new GuiButtonCtrl() {
+		extent = "422 70";
+		buttonType = "RadioButton";
+		groupNum = 1;
+		profile = "GuiCraftRecipeListItemProfile";
+		class = GuiCraftRecipeListItem;
+		command = %this.getId() @ ".selectRecipe(" @ %recipeId @ "," @ %abilityId @ ");";
+
+		new GuiTilingBitmapOverlap() {
+			position = "0 15";
+			extent = "370 40";
+			profile = "GuiAtlas3ImageProfile";
+			visible = false;
+			canHit = false;
+
+			internalName = "highlighPanel";
+
+			TopLeftIndex = ThickMenuItemMouseOverLeft;
+			TopIndex0 = ThickMenuItemMouseOverCenter0;
+			TopIndexN = ThickMenuItemMouseOverCenter1;
+			TopRightIndex = ThickMenuItemMouseOverRight;
+		};
+
+		new GuiBitmapCtrl() {
+			position = "10 5";
+			extent = "60 60";
+			canHit = false;
+			visible = "true";
+			centered = "true";
+			bitmap = %image;
+		};
+
+		new GuiTextCtrl() {
+			position = "90 25";
+			extent = "360 20";
+			profile = "GuiCraftRecipeListItemProfile";
+			canHit = false;
+			text = %name;
+			internalName = "text";
+		};
+	};
+
+	%gui.createTextTooltip(%name);
+	%this-->recipeList.add(%gui);
+	%this-->recipesScrollPanel.setVisible(true);
+}
+
+function GuiCraftWindows::selectRecipeByIndex(%this, %idx)
+{
+	if (%idx >= %this-->recipeList.getCount())
+		return;
+
+	%obj = %this-->recipeList.getObject(%idx);
+	%obj.performClick();
+}
+
+function GuiCraftWindows::clearRecipeList(%this)
+{
+	%this-->recipeList.clear();
+	%this-->recipeList.updateStack();
+}
+
+function GuiCraftWindows::setCurrentRecipeInfo(%this, %text, %itemTypeId)
+{
+	%this-->craftingResultName.setText("<just:center>" @ %text);
+	%this-->craftingResultIcon.setObjectTypeId(%itemTypeId);
+}
+
+function GuiCraftWindows::addInventoryToolButton(%this, %objectTypeId, %image, %active, %selected)
+{
+	%btn = new guiHorzTilingButtonCtrl() {
+		extent = "88 77";
+		profile = "GuiCraftWindowTabTextProfile";
+		groupNum = "1";
+		buttonType = "RadioButton";
+		useManualIndex = true;
+		depressedImageIndex = CharWndTabSelected;
+		mouseOverImageIndex = CharWndTabNormal;
+		disabledImageIndex = CharWndTabNormal;
+		imageIndex = CharWndTabNormal;
+		class = GuiCraftWindowToolsTabButton;
+		active = %active;
+		defaultState = %selected;
+		command = %this.getId() @ ".selectInventoryTool(" @ %objectTypeId @ ");";
+
+		new GuiBitmapCtrl() {
+			position = "11 10";
+			extent = "66 66";
+			canHit = false;
+			visible = "true";
+			centered = "true";
+			internalName = "image";
+		};
+	};
+
+	if (!%active)
+	{
+		%pos = strrchrpos(%image, ".");
+		if (%pos > 0)
+			%image = getSubStr(%image, 0, %pos) @ "_i" @ getSubStr(%image, %pos);
+	}
+	%btn-->image.bitmap = %image;
+
+	%this-->inventoryToolsStack.add(%btn);
+	if (%selected)
+		%this._setTabHighlight(%btn);
+}
+
+function GuiCraftWindows::onRefreshRecipeList(%this)
+{
+	%hasRecipes = %this-->recipeList.getCount() > 0;
+	%this-->drawBlueprintButton.setActive(%this.isBlueprints && %hasRecipes);
+	%this-->recipesScrollPanel.setVisible(%hasRecipes);
+	%this-->noBlueprintsInfo.setVisible(%this.isBlueprints && !%hasRecipes);
+}
+
+function GuiCraftWindows::_setTabHighlight(%this, %tabButton)
+{
+	%tabButton.add(GuiCraftWindowSelectedTabDecor);
+	GuiCraftWindowSelectedTabDecor.setExtent(%tabButton.getExtent());
+	GuiCraftWindowSelectedTabDecor.setVisible(true);
+}
+
+function GuiCraftRecipeListItem::onStateChanged(%this, %state)
+{
+	if (%state)
+		%this-->highlighPanel.opacity = 1;
+	%this-->text.setActive(%state);
+	%this-->highlighPanel.setVisible(%state);
+}
+
+function GuiCraftRecipeListItem::onMouseOverChanged(%this, %state)
+{
+	%onState = %this.getStateOn();
+	%this-->highlighPanel.setVisible(%onState || %state);
+	if (%state && !%onState)
+		%this-->highlighPanel.opacity = 0.5;
+}
+
+function GuiCraftWindowTabButton::onStateChanged(%this, %state)
+{
+	if (%state && !GuiCraftWindows.isInventoryCraft)
+		GuiCraftWindows._setTabHighlight(%this);
+	GuiCraftWindows._handleRecipesBlueprintsStateChange();
+}
+
+function GuiCraftWindowTabButton::onClick()
+{
+	%isBlueprints = GuiCraftWindows-->blueprintsTabButton.getStateOn();
+	if (%isBlueprints == GuiCraftWindows.isBlueprints)
+		return;
+
+	GuiCraftWindows.isBlueprints = %isBlueprints;
+	GuiCraftWindows-->drawBlueprintButton.setVisible(%isBlueprints);
+	GuiCraftWindows-->craftButton.position.x = %isBlueprints ? 50 : 137;
+
+	GuiCraftWindows.refreshRecipesList();
+}
+
+function GuiCraftWindowToolsTabButton::onStateChanged(%this, %state)
+{
+	if (%state)
+		GuiCraftWindows._setTabHighlight(%this);
+}
+
+function toggleGuiCraftWindow(%val)
+{
+	if (%val)
+	{
+		if (isObject(GuiCraftWindows))
+		{
+			PlayGui.remove(%wnd);
+			if(isObject(ClientMissionCleanupSet))
+			{
+				ClientMissionCleanupSet.remove(%wnd);
+			}
+			GuiCraftWindows.safeDeleteObject();
+		}
+		else
+		{
+			CreateCraftToolWindow();
+		}
+	}
+}

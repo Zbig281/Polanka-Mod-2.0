@@ -1,0 +1,1000 @@
+//-----------------------------------------------------------------------------
+// Craftsman & Marksman: Life is feudal
+//-----------------------------------------------------------------------------
+
+singleton GuiControlProfile(BtnItemRecipeProfile: GuiBaseTextProfile)
+{
+	justify = "center";
+	fontSize = 24;
+	fontColor = "213 167 0";
+	fontColorNA = "81 81 80";
+	textOffset = "0 0";
+};
+
+singleton GuiControlProfile(BtnActiveItemRecipeProfile: BtnItemRecipeProfile)
+{
+	fontColorNA = "195 129 0";
+};
+
+singleton GuiControlProfile(GuiSkillInfoDescProfile: GuiBaseTextProfile)
+{
+
+	fontSize = 19;
+	fontColor = "103 103 103";
+	fontColorHL = "103 103 103";
+	fontColorNA = "103 103 103";
+	fontColorSEL= "103 103 103";
+	textOffset = "0 0";
+};
+
+singleton GuiControlProfile(GuiSkillInfoStatTextProfile: GuiBaseTextProfile)
+{
+	fontSize = 17;
+	fontColor = "103 103 103";
+	fontColorHL = "103 103 103";
+	fontColorNA = "103 103 103";
+	fontColorSEL= "103 103 103";
+	textOffset = "0 0";
+	autoSizeWidth = true;
+};
+
+singleton GuiControlProfile(GuiSkillInfoUnknownLvlNumProfile: GuiAtlas1ImageProfile)
+{
+	justify = "center";
+	fontSize = 24;
+	fontColor = "103 103 103";
+	fontColorNA = "103 103 103";
+	fontColorHL = "103 103 103";
+	fontColorSEL = "103 103 103";
+};
+
+singleton GuiControlProfile(GuiSkillInfoKnownLvlNumProfile: GuiSkillInfoUnknownLvlNumProfile)
+{
+	fontColor = "206 206 206";
+	fontColorNA = "206 206 206";
+	fontColorHL = "206 206 206";
+	fontColorSEL = "206 206 206";
+};
+
+singleton GuiControlProfile(GuiSkillInfoNameProfile: GuiBaseCaptionProfile)
+{
+	fontSize = 30;
+	fontColor = "165 112 19";
+};
+
+singleton GuiControlProfile(GuiSkillInfoValueProfile: GuiBaseTextProfile)
+{
+	justify = "right";
+	fontSize = 32;
+	fontColor = "165 112 19";
+	fontColorNA = "165 112 19";
+	fontColorHL = "165 112 19";
+	fontColorSEL = "165 112 19";
+};
+
+singleton GuiControlProfile(GuiSkillInfoAbilNameProfile: GuiBaseTextProfile)
+{
+	fontSize = 24;
+	fontColor = "155 155 155";
+};
+
+singleton GuiControlProfile(GuiSkillInfoItemProfile: GuiBaseTextProfile)
+{
+};
+
+function SkillInfoAddItem(%skillInfo, %icon)
+{
+	%table = %skillInfo-->itemsIconPnl;
+	if (isObject(%table))
+	{
+		%gui = new GuiControl()
+		{
+			position = "0 0";
+			extent = "65 145";
+			visible = "true";
+			profile = "GuiBaseTextProfile";
+			canHit = "1";
+
+			new GuiBitmapCtrl() 
+			{
+				position = "0 0";
+				extent = "65 145";
+				visible = "true";
+				profile = "GuiSkillInfoItemProfile";
+				centered = true;
+				bitmap = %icon;
+				internalName = "itemIcon";
+			};
+		};
+
+		%table.add(%gui);
+		return %gui-->itemIcon;   // return itemIcon for create tooltip only for this icon
+	}
+
+	return 0;
+}
+
+function createRecipeItemsTable(%skillInfo)
+{
+	%gui = new GuiStackControl()
+	{
+		position = "0 0";
+		minExtent = "0 0";
+		extent = "339 252";
+		profile = "GuiBaseTextProfile";
+		changeChildSizeToFit = true;
+		dynamicNonStackExtent = false;
+		stackingType = "Vertical";
+		changeChildPosition = true;
+		TopIndent = 26;
+		internalName = RecipeItemsTable;
+
+		new GuiControl()
+		{
+			position = "0 0";
+			extent = "339 42";
+			minExtent = "8 8";
+			profile = "GuiBaseTextProfile";
+	
+			new GuiButtonCtrl()
+			{
+				position = "0 0";
+				extent = "165 42";
+				visible = "true";
+				profile = "GuiSkillInfoUnknownLvlNumProfile";
+				useManualIndex = true;
+				buttonType = RadioButton;
+				groupNum = 2;
+				text = "";
+				command = "UsableItemsClick(" @ %skillInfo @ ");";
+				class = "SkillInfoRecipeItemsBtn";
+				SkillPnl = %skillInfo;
+				internalName = UsableItems;
+
+				new GuiControl() 
+				{
+					position = "0 0";
+					extent = "165 42";
+					minExtent = "8 8";
+					profile = "GuiAtlas3TiledImageProfile";
+					BackgroundIndex = LearningWindowBackgroundTransparent;
+					canHit = "false";
+				};
+	
+				new GuiControl() 
+				{
+					position = "0 0";
+					extent = "165 42";
+					minExtent = "8 8";
+					profile = "GuiAtlas1TiledImageProfile";
+					TopIndex0 = FringeTopShadow;
+					canHit = "false";
+				};
+	
+				new GuiTextCtrl()
+				{
+					position = "0 0";
+					extent = "165 42";
+					Profile = "BtnItemRecipeProfile";
+					text = GetMessageIDText(4893); // "Usable items"
+					canHit = "false";
+					internalName = textCtrl;
+					active = false;
+				};
+			};
+	
+			new GuiButtonCtrl()
+			{
+				position = "168 0";
+				extent = "165 42";
+				visible = "true";
+				profile = "GuiSkillInfoUnknownLvlNumProfile";
+				useManualIndex = true;
+				buttonType = RadioButton;
+				groupNum = 2;
+				text = "";
+				command = "RecipesClick(" @ %skillInfo @ ");";
+				class = "SkillInfoRecipeItemsBtn";
+				SkillPnl = %skillInfo;
+	
+				new GuiControl() 
+				{
+					position = "0 0";
+					extent = "165 42";
+					minExtent = "8 8";
+					profile = "GuiAtlas3TiledImageProfile";
+					BackgroundIndex = LearningWindowBackgroundTransparent;
+					canHit = "false";
+				};
+	
+				new GuiControl() 
+				{
+					position = "0 0";
+					extent = "165 42";
+					minExtent = "8 8";
+					profile = "GuiAtlas1TiledImageProfile";
+					TopIndex0 = FringeTopShadow;
+					canHit = "false";
+				};
+	
+				new GuiTextCtrl()
+				{
+					position = "0 0";
+					extent = "165 42";
+					Profile = "BtnItemRecipeProfile";
+					text = GetMessageIDText(4894); // "Recipes"
+					canHit = "false";
+					internalName = textCtrl;
+					active = false;
+				};
+			};
+		};
+
+		new GuiDynamicCtrlArrayControl()
+		{
+			position = "0 42";
+			extent = "339 210";
+			minExtent = "339 210";
+			profile = "GuiAtlas3TiledImageProfile";
+			BackgroundIndex = LearningWindowBackgroundTransparent;
+			dynamicSize = true;
+			internalName = "itemsIconPnl";
+			autoCellSize = true;
+			rowSpacing = 0;
+			colSpacing = 0;
+			padding = "0 0 0 0";
+		};
+	};
+	%gui-->UsableItems.setStateOn(true);
+	%skillInfo.showItemsList();
+	%skillInfo-->skillInfoScrollControl.add(%gui);
+}
+
+function createAbilityInfoControl(%skillInfo, %id, %icon, %name, %desc)
+{
+	%isDragAndDrop = true;
+	%index = UnavailableIndex;
+	%resize = false;
+	if (%icon $= "")
+	{
+		%index = TaskCheckBoxDisabled;
+		%resize = true;
+		%isDragAndDrop = false;
+	}
+
+	%gui = new GuiStackControl()
+	{
+		position = "0 0";
+		extent = "379 45";
+		minExtent = "8 8";
+		profile = "GuiBaseTextProfile";
+		changeChildSizeToFit = false;
+		dynamicNonStackExtent = true;
+		stackingType = "Horizontal";
+		changeChildPosition = false;
+		padding = 5;
+	};
+
+	%iconPnl = 0;
+	if (%isDragAndDrop)
+	{
+		%iconPnl= new GuiMouseEventCtrl() 
+		{
+			position = "0 0";
+			extent = "45 45";
+			minExtent = "8 8";
+			profile = "GuiBaseTextProfile";
+			class = "SkillAbilPnl";
+		};
+	}
+	else
+	{
+		%iconPnl= new GuiControl() 
+		{
+			position = "0 0";
+			extent = "45 45";
+			minExtent = "8 8";
+			profile = "GuiBaseTextProfile";
+		};
+	}
+	%gui.add(%iconPnl);
+
+	%icon = new GuiBitmapCtrl() 
+	{
+		position = "0 0";
+		extent = "45 45";
+		visible = "true";
+		profile = "GuiAtlas3ImageProfile";
+		bitmap = %icon;
+		imageIndex = %index;
+		horizSizing = "center";
+		vertSizing = "center";
+		resize = %resize;
+		canHit = "false";
+		internalName = "AbilIcon";
+		AbilID = %id;
+	};
+	%iconPnl.add(%icon);
+
+	%namePnl =new GuiStackControl()
+	{
+		position = "0 0";
+		minExtent = "0 0";
+		extent = "304 21";
+		profile = "GuiBaseTextProfile";
+		changeChildSizeToFit = true;
+		dynamicNonStackExtent = false;
+		stackingType = "Vertical";
+		changeChildPosition = true;
+		TopIndent = 11;
+
+		new GuiMLTextCtrl()
+		{
+			position = "0 0";
+			extent = "375 21";
+			Profile = "GuiSkillInfoAbilNameProfile";
+			text = %name;
+		};
+
+		new GuiMLTextCtrl()
+		{
+			lineSpacing = "0";
+			allowColorChars = "0";
+			maxChars = "-1";
+			text = "";
+			useURLMouseCursor = "0";
+			position = "0 0";
+			extent = "334 0";
+			minExtent = "8 0";
+			profile = "GuiSkillInfoDescProfile";
+			text = %desc;
+			visible = (%desc !$= "");
+		};
+	};
+	%gui.add(%namePnl);
+
+	%skillInfo-->guiSkillAbilityPanel.add(%gui);
+}
+
+function createSkillLvlControl(%skillInfo)
+{
+	%gui = new GuiControl()
+	{
+		position = "0 28";
+		extent = "431 76";
+		Profile = "GuiBaseTextProfile";
+
+		new GuiBitmapCtrl() 
+		{
+			position = "21 15";
+			extent = "392 46";
+			canHit = "false";
+			visible = "true";
+			profile = "GuiAtlas1ImageProfile";
+			imageIndex = SkillBranch;
+
+			new GuiBitmapCtrl()
+			{
+				position = "45 23";
+				extent = "42 2";
+				canHit = "false";
+				visible = "false";
+				profile = "GuiAtlas1ImageProfile";
+				imageIndex = KnownSkillLine;
+				internalName = "KnownSkillLineLvl0";
+			};
+
+			new GuiBitmapCtrl()
+			{
+				position = "131 23";
+				extent = "42 2";
+				canHit = "false";
+				visible = "false";
+				profile = "GuiAtlas1ImageProfile";
+				imageIndex = KnownSkillLine;
+				internalName = "KnownSkillLineLvl30";
+			};
+
+			new GuiBitmapCtrl()
+			{
+				position = "217 23";
+				extent = "42 2";
+				canHit = "false";
+				visible = "false";
+				profile = "GuiAtlas1ImageProfile";
+				imageIndex = KnownSkillLine;
+				internalName = "KnownSkillLineLvl60";
+			};
+
+			new GuiBitmapCtrl()
+			{
+				position = "304 23";
+				extent = "42 2";
+				canHit = "false";
+				visible = "false";
+				profile = "GuiAtlas1ImageProfile";
+				imageIndex = KnownSkillLine;
+				internalName = "KnownSkillLineLvl90";
+			};
+		};
+
+		new GuiButtonCtrl()
+		{
+			position = "21 15";
+			extent = "46 46";
+			visible = "true";
+			profile = "GuiSkillInfoUnknownLvlNumProfile";
+			useManualIndex = true;
+			buttonType = RadioButton;
+			groupNum = 1;
+			internalName = "BtnSkillLvl0";
+			text = "0";
+			command = "SkillLvl0Click(" @ %skillInfo @ ");";
+			class = "SkillLvlBtn";
+			SkillPnl = %skillInfo;
+		};
+
+		new GuiButtonCtrl()
+		{
+			position = "106 15";
+			extent = "46 46";
+			visible = "true";
+			profile = "GuiSkillInfoUnknownLvlNumProfile";
+			useManualIndex = true;
+			buttonType = RadioButton;
+			groupNum = 1;
+			internalName = "BtnSkillLvl30";
+			text = "30";
+			command = "SkillLvl30Click(" @ %skillInfo @ ");";
+			class = "SkillLvlBtn";
+			SkillPnl = %skillInfo;
+		};
+
+		new GuiButtonCtrl()
+		{
+			position = "192 15";
+			extent = "46 46";
+			visible = "true";
+			profile = "GuiSkillInfoUnknownLvlNumProfile";
+			useManualIndex = true;
+			buttonType = RadioButton;
+			groupNum = 1;
+			internalName = "BtnSkillLvl60";
+			text = "60";
+			command = "SkillLvl60Click(" @ %skillInfo @ ");";
+			class = "SkillLvlBtn";
+			SkillPnl = %skillInfo;
+		};
+
+		new GuiButtonCtrl()
+		{
+			position = "280 15";
+			extent = "46 46";
+			visible = "true";
+			profile = "GuiSkillInfoUnknownLvlNumProfile";
+			useManualIndex = true;
+			buttonType = RadioButton;
+			groupNum = 1;
+			internalName = "BtnSkillLvl90";
+			text = 90;
+			command = "SkillLvl90Click(" @ %skillInfo @ ");";
+			class = "SkillLvlBtn";
+			SkillPnl = %skillInfo;
+		};
+
+		new GuiButtonCtrl()
+		{
+			position = "366 15";
+			extent = "46 46";
+			visible = "true";
+			profile = "GuiSkillInfoUnknownLvlNumProfile";
+			useManualIndex = true;
+			buttonType = RadioButton;
+			groupNum = 1;
+			internalName = "BtnSkillLvl100";
+			text = 100;
+			command = "SkillLvl100Click(" @ %skillInfo @ ");";
+			class = "SkillLvlBtn";
+			SkillPnl = %skillInfo;
+		};
+
+		new GuiBitmapCtrl()
+		{
+			position = "0 0";
+			extent = "76 76";
+			canHit = "false";
+			visible = "false";
+			profile = "GuiAtlas1ImageProfile";
+			imageIndex = KnownSkillInfoPnlMouseOver;
+			internalName = "skillLvlMouseOverBorder";
+		};
+
+		new GuiBitmapCtrl()
+		{
+			position = "0 0";
+			extent = "76 76";
+			canHit = "false";
+			visible = "false";
+			profile = "GuiAtlas1ImageProfile";
+			imageIndex = KnownSkillInfoPnlMouseOver;
+			internalName = "skillLvlActiveBorder";
+		};
+	};
+
+	%container = %skillInfo-->SkillInfoClientContainer;
+	%container.add(%gui);
+}
+
+function createSkillInfo()
+{
+	%gui = new GuiSkillInfo()
+	{
+		Profile = "GuiBaseTextProfile";
+		position = "2 2";
+		extent = "431 610";
+		MinExtent = "8 8";
+		canSave = "1";
+		Visible = "1";
+		internalName = skillInfoPanel;
+		docking = Client;
+
+		new GuiContainer()
+		{
+			docking = Top;
+			position = "0 0";
+			extent = "431 44";
+			Profile = "GuiBaseTextProfile";
+			horizSizing = "width";
+
+			new CmGuiDoubleValTextCtrl()
+			{
+				position = "207 14";
+				extent = "200 30";
+				Profile = "GuiSkillInfoValueProfile";
+				internalName = "ValueCtrl";
+			};
+
+			new GuiMLTextCtrl()
+			{
+				position = "22 14";
+				extent = "230 30";
+				Profile = "GuiSkillInfoNameProfile";
+				internalName = "NameCtrl";
+				class = "SkillInfoName";
+			};
+		};
+
+		new GuiContainer()
+		{
+			docking = Client;
+			position = "0 44";
+			extent = "431 566";
+			Profile = "GuiBaseTextProfile";
+			horizSizing = "width";
+			internalName = "SkillInfoClientContainer";
+
+			new GuiStackControl()
+			{
+				position = "22 -3";
+				extent = "300 30";
+				minExtent = "8 8";
+				profile = "GuiBaseTextProfile";
+				stackingType = "Horizontal";
+				changeChildSizeToFit = false;
+				padding = 21;
+				visible = "true";
+				mChangeChildPosition = true;
+	
+				new GuiStackControl()
+				{
+					position = "0 0";
+					extent = "150 30";
+					minExtent = "8 8";
+					profile = "GuiBaseTextProfile";
+					stackingType = "Horizontal";
+					changeChildSizeToFit = false;
+					padding = 5;
+					visible = "true";
+	
+					new GuiTextCtrl()
+					{
+						position = "0 0";
+						extent = "100 30";
+						Profile = "GuiSkillInfoStatTextProfile";
+						text = GetMessageIDText(1378) @ ":"; //Primary
+					};
+	
+					new GuiBitmapCtrl()
+					{
+						profile = "GuiAtlas1ImageProfile";
+						extent = "14 30";
+						position = "0 0";
+						canHit = false;
+						VertSizing = "center";
+						centered = true;
+						internalName = "PrimaryValueCtrl";
+					};
+				};
+	
+				//Secondary
+				new GuiStackControl()
+				{
+					position = "0 0";
+					extent = "150 30";
+					minExtent = "8 8";
+					horizSizing = "width";
+					profile = "GuiBaseTextProfile";
+					stackingType = "Horizontal";
+					changeChildSizeToFit = false;
+					padding = 5;
+					visible = "true";
+		
+					new GuiTextCtrl()
+					{
+						position = "0 0";
+						extent = "100 30";
+						Profile = "GuiSkillInfoStatTextProfile";
+						text = GetMessageIDText(1379) @ ":"; //Secondary
+					};
+	
+					new GuiBitmapCtrl()
+					{
+						profile = "GuiAtlas1ImageProfile";
+						extent = "14 30";
+						position = "0 0";
+						canHit = false;
+						centered = true;
+						VertSizing = "center";
+						internalName = "SecondaryValueCtrl";
+					};
+				};
+			};
+
+			// Top line for scroll
+			new GuiControl() 
+			{
+				position = "21 104";
+				extent = "379 1";
+				minExtent = "1 1";
+				profile = "GuiAtlas3TiledImageProfile";
+				TopIndex0 = HLine1;
+				TopIndexN = HLine4;
+				canHit = "false";
+				horizSizing = "width";
+			};
+
+			//Bottom line for scroll
+			new GuiControl() 
+			{
+				position = "21 540";
+				extent = "379 1";
+				minExtent = "1 1";
+				profile = "GuiAtlas3TiledImageProfile";
+				TopIndex0 = HLine1;
+				TopIndexN = HLine4;
+				canHit = "false";
+				horizSizing = "width";
+				vertSizing = "bottom";
+			};
+
+			new GuiScrollCtrl() {
+				hScrollBar = "alwaysOff";
+				position = "0 105";
+				extent = "424 448";
+				horizSizing = "width";
+				vertSizing = "height";
+				profile = "GuiEagleScrollBarProfile";
+				childMargin = "0 0";
+				visible = "true";
+				constantThumbHeight = true;
+				trackOffset = 12;
+				arrowSadowSize = 0;
+				addContentWidth = 10;
+	
+				new GuiStackControl() {
+					position = "0 0";
+					extent = "354 253";
+					minExtent = "8 8";
+					profile = "GuiBaseTextProfile";
+					LeftIndent = 21;
+					internalName = guiSkillLvlPanel;
+					TopIndent = 3;
+					changeChildSizeToFit = true;
+					stackingType = "Vertical";
+					changeChildPosition = true;
+					internalName = skillInfoScrollControl;
+	
+					new GuiMLTextCtrl()
+					{
+						lineSpacing = "0";
+						allowColorChars = "0";
+						maxChars = "-1";
+						text = "";
+						useURLMouseCursor = "0";
+						position = "0 0";
+						extent = "293 0";
+						minExtent = "8 2";
+						profile = "GuiSkillInfoDescProfile";
+						visible = "1";
+						active = "1";
+						isContainer = "0";
+						canSave = "1";
+						canSaveDynamicFields = "0";
+						internalName = TextCtrlLvl;
+					};
+	
+					new GuiStackControl() {
+						position = "0 0";
+						extent = "379 45";
+						minExtent = "8 8";
+						profile = "GuiBaseTextProfile";
+						TopIndent = 7;
+						internalName = guiSkillAbilityPanel;
+						changeChildSizeToFit = true;
+						stackingType = "Vertical";
+						changeChildPosition = true;
+						padding = 6;
+					};
+				};
+			};
+		};
+	};
+
+	createSkillLvlControl(%gui);
+	createRecipeItemsTable(%gui);
+
+	return %gui;
+}
+
+function setKnownSkillBorder(%btnSkillLvl)
+{
+	%btnSkillLvl.setProfile("GuiSkillInfoKnownLvlNumProfile");
+	%btnSkillLvl.depressedImageIndex = KnownSkillBorder;
+	%btnSkillLvl.mouseOverImageIndex = KnownSkillBorder;
+	%btnSkillLvl.imageIndex = KnownSkillBorder;
+
+	if (%btnSkillLvl.getStateOn())
+	{
+		%btnSkillLvl.onStateChanged(true);
+	}
+
+}
+
+function setUnknownSkillBorder(%btnSkillLvl)
+{
+	%btnSkillLvl.setProfile("GuiSkillInfoUnknownLvlNumProfile");
+	%btnSkillLvl.depressedImageIndex = UnavailableIndex;
+	%btnSkillLvl.mouseOverImageIndex = UnavailableIndex;
+	%btnSkillLvl.imageIndex = UnavailableIndex;
+
+	if (%btnSkillLvl.getStateOn())
+	{
+		%btnSkillLvl.onStateChanged(true);
+	}
+}
+
+function GuiSkillInfo::onSkillChange(%this)
+{
+	%btn = %this-->BtnSkillLvl0;
+	if (isObject(%btn))
+	{
+		%btn.setStateOn(true);
+		%this.changeSkillLvl(0);
+	}
+}
+
+function GuiSkillInfo::onAddAbility(%this, %id, %icon, %name, %desc)
+{
+	createAbilityInfoControl(%this, %id, %icon, %name, %desc);
+}
+
+function GuiSkillInfo::onSkillValChange(%this, %val)
+{
+	if (%val>= 0)
+	{
+		%this-->KnownSkillLineLvl0.setVisible(true);
+		setKnownSkillBorder(%this-->BtnSkillLvl0);
+	}
+	else
+	{
+		%this-->KnownSkillLineLvl0.setVisible(false);
+		setUnknownSkillBorder(%this-->BtnSkillLvl0);
+	}
+
+	if (%val>= 30)
+	{
+		%this-->KnownSkillLineLvl30.setVisible(true);
+		setKnownSkillBorder(%this-->BtnSkillLvl30);
+	}
+	else
+	{
+		%this-->KnownSkillLineLvl30.setVisible(false);
+		setUnknownSkillBorder(%this-->BtnSkillLvl30);
+	}
+
+	if (%val>= 60)
+	{
+		%this-->KnownSkillLineLvl60.setVisible(true);
+		setKnownSkillBorder(%this-->BtnSkillLvl60);
+	}
+	else
+	{
+		%this-->KnownSkillLineLvl60.setVisible(false);
+		setUnknownSkillBorder(%this-->BtnSkillLvl60);
+	}
+
+	if (%val>= 90)
+	{
+		%this-->KnownSkillLineLvl90.setVisible(true);
+		setKnownSkillBorder(%this-->BtnSkillLvl90);
+	}
+	else
+	{
+		%this-->KnownSkillLineLvl90.setVisible(false);
+		setUnknownSkillBorder(%this-->BtnSkillLvl90);
+	}
+
+	if (%val == 100)
+	{
+		setKnownSkillBorder(%this-->BtnSkillLvl100);
+	}
+	else
+	{
+		setUnknownSkillBorder(%this-->BtnSkillLvl100);
+	}
+}
+
+function SkillLvl0Click(%skillPnl)
+{
+	%skillPnl.changeSkillLvl(0);
+}
+
+function SkillLvl30Click(%skillPnl)
+{
+	%skillPnl.changeSkillLvl(30);
+}
+
+function SkillLvl60Click(%skillPnl)
+{
+	%skillPnl.changeSkillLvl(60);
+}
+
+function SkillLvl90Click(%skillPnl)
+{
+	%skillPnl.changeSkillLvl(90);
+}
+
+function SkillLvl100Click(%skillPnl)
+{
+	%skillPnl.changeSkillLvl(100);
+}
+
+function SkillLvlBtn::onStateChanged(%this, %state)
+{
+	%skillPnl = %this.SkillPnl;
+	if (isObject(%skillPnl) == false)
+		return;
+
+	%activeBitmap = %skillPnl-->skillLvlActiveBorder;
+	if (isObject(%activeBitmap) == false)
+		return;
+
+	if (%state)
+	{
+		if (%this.imageIndex $= "KnownSkillBorder")
+		{
+			%activeBitmap.imageIndex = KnownSkillInfoPnlMouseOver;
+		}
+		else
+		{
+			%activeBitmap.imageIndex = UnknownSkillInfoPnlMouseOver;
+		}
+		%center = %this.getCenter();
+		%activeBitmap.setCenter(%center.x, %center.y);
+
+		%mouseBitmap = %skillPnl-->skillLvlMouseOverBorder;
+		if (isObject(%mouseBitmap))
+		{
+			%mouseBitmap.setVisible(false);
+		}
+	}
+	%activeBitmap.setVisible(%state);
+}
+
+function SkillLvlBtn::onMouseOverChanged(%this, %mouse_over)
+{
+	%skillPnl = %this.SkillPnl;
+	if (isObject(%skillPnl) == false)
+		return;
+
+	%mouseBitmap = %skillPnl-->skillLvlMouseOverBorder;
+	if (isObject(%mouseBitmap) == false)
+		return;
+
+	if (%mouse_over)
+	{
+		if (%this.imageIndex $= "KnownSkillBorder")
+		{
+			%mouseBitmap.imageIndex = KnownSkillInfoPnlMouseOver;
+		}
+		else
+		{
+			%mouseBitmap.imageIndex = UnknownSkillInfoPnlMouseOver;
+		}
+		%center = %this.getCenter();
+		%mouseBitmap.setCenter(%center.x, %center.y);
+	}
+	%mouseBitmap.setVisible(%mouse_over && !%this.getStateOn());
+}
+
+function SkillInfoRecipeItemsBtn::onMouseOverChanged(%this, %mouse_over)
+{
+	%this-->textCtrl.setActive(%mouse_over);
+}
+
+function SkillInfoRecipeItemsBtn::onStateChanged(%this, %state)
+{
+	if (%state)
+	{
+		%ext = %this.getExtent();
+		%this.setExtent(%ext.x, 42);
+		%this-->textCtrl.setProfile("BtnActiveItemRecipeProfile");
+	}
+	else
+	{
+		%ext = %this.getExtent();
+		%this.setExtent(%ext.x, 39);
+		%this-->textCtrl.setProfile("BtnItemRecipeProfile");
+	}
+	%this-->textCtrl.setActive(%state);
+}
+
+function UsableItemsClick(%skillInfo)
+{
+	%skillInfo.showItemsList();
+}
+
+function RecipesClick(%skillInfo)
+{
+	%skillInfo.showRecipeList();
+}
+
+function SkillAbilPnl::onMouseDragged(%this)
+{
+	echo("SkillAbilPnl::onMouseDragged");
+	%abilIcon = %this-->AbilIcon;
+
+	%payload = new GuiBitmapCtrl();
+	%payload.assignFieldsFrom(%abilIcon);
+	%payload.position = "0 0";
+	%payload.dragSourceControl = %abilIcon;
+
+	%xOffset = getWord(%payload.extent, 0 ) / 2;
+	%yOffset = getWord( %payload.extent, 1 ) / 2;
+
+	%cursorpos = Canvas.getCursorPos();
+	%xPos = getWord( %cursorpos, 0 ) - %xOffset;
+	%yPos = getWord( %cursorpos, 1 ) - %yOffset;
+
+	%ctrl = new GuiDragAndDropControl()
+	{
+		Profile = "GuiBaseTextProfile";
+		Position = %xPos SPC %yPos;
+		extent = %payload.extent;
+		deleteOnMouseUp = true;
+	};
+	%ctrl.add( %payload );
+
+	Canvas.getContent().add(%ctrl);
+	%ctrl.startDragging(%xOffset, %yOffset);
+
+}
+
+function SkillInfoName::onResize(%this,%width, %maxY)
+{
+	%parent = %this.getParent();
+	%pos = %this.getPosition();
+
+	%parentExt = %parent.getExtent();
+	%parent.setExtent(%parentExt.x, %pos.y + %maxY);
+}

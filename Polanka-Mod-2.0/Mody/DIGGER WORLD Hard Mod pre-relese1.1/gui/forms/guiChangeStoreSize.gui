@@ -1,0 +1,582 @@
+//-----------------------------------------------------------------------------
+// ◦ Craftsman & Marksman: Life is feudal ◦ 
+//-----------------------------------------------------------------------------
+function createChangeStoreSizeDialog(%storeWeight, %storeSize)
+{
+	createTradePostProfiles();
+
+	%change_store_size_dialog = new GuiControl(ChangeStoreSizeContent) 
+	{
+		position = "0 0";
+		extent = "100% 100%";
+		minExtent = "8 2";
+		horizSizing = "center";
+		vertSizing = "center";
+		profile = "GuiDefaultProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		canSave = "1";
+		canSaveDynamicFields = "1";
+		storeWeight = %storeWeight;
+		storeSize = %storeSize;
+
+		new GuiWindowCtrl(ChangeStoreSizeContentDialog) 
+		{
+			position = "296 274";
+			extent = "574 380";
+			minExtent = "8 2";
+			horizSizing = "center";
+			vertSizing = "center";
+			profile = "GuiWindowProfile";
+			visible = "1";
+			active = "1";
+			isContainer = "1";
+			canSave = "1";
+			canSaveDynamicFields = "1";
+			resizeWidth = "0";
+			resizeHeight = "0";
+			canMove = "1";
+			canClose = "1";
+			canMinimize = "0";
+			canMaximize = "0";
+			canCollapse = "0";
+			text = GetMessageIDText(4895); // "Change store size";
+			closeCommand ="ChangeStoreSizeContent.onCancelClick();";
+
+			// client area
+			new GuiContainer()
+			{
+				docking = Client;
+				position = "0 0"; //"8 43";
+				extent = "1 1";
+				canSaveDynamicFields = "0";
+				enabled = "1";
+				profile = "TradePostWindowStoreCapacityInfoAreaProfile";
+				canSave = "1";
+				visible = "1";
+				canHit = "true";
+
+				// button for decrease store size
+				new GuiButtonCtrl()
+				{
+					text = "";
+					groupNum = "-1";
+					buttonType = "PushButton";
+					useMouseEvents = "0";
+					position = "25 25";
+					extent = "47 46";
+					minExtent = "8 2";
+					imageIndex = "BtnTriangleDownNormal";
+					profile = "GuiAtlas3ImageProfile";
+					visible = "1";
+					active = "1";
+					command = "ChangeStoreSizeContent.onDecreaseStoreSizeClick();";
+				};
+
+				// button for increase store size
+				new GuiButtonCtrl()
+				{
+					text = "";
+					groupNum = "-1";
+					buttonType = "PushButton";
+					useMouseEvents = "0";
+					position = "82 25";
+					extent = "47 46";
+					minExtent = "8 2";
+					imageIndex = "BtnTriangleUpNormal";
+					profile = "GuiAtlas3ImageProfile";
+					visible = "1";
+					active = "1";
+					command = "ChangeStoreSizeContent.onIncreaseStoreSizeClick();";
+				};
+
+				new GuiTextCtrl()
+				{
+					position = "292 25";
+					extent = "240 24";
+					minExtent = "8 2";
+					profile = "TradePostTextProfile9";
+					visible = "1";
+					active = "1";
+					canHit = "false"; 
+					text = GetMessageIDText(2854); // Store payment (coins):
+					internalName = "storePaymentCoins";
+				};
+
+				new GuiTextCtrl()
+				{
+					position = "232 50";
+					extent = "300 24";
+					minExtent = "8 2";
+					profile = "TradePostTextProfile9";
+					visible = "1";
+					active = "1";
+					canHit = "false"; 
+					text = GetMessageIDText(2855); // Store payment (Gods Favor):
+					internalName = "storePaymentGodsFavor";
+				};
+
+				// контрол размера хранилища
+				new GuiControl()
+				{
+					position = "25 80";
+					extent = "510 100";
+					minExtent = "8 2";
+					visible = "1";
+					active = "1";
+					canHit = "0";
+					profile = "GuiDefaultProfile";
+
+					// бордер
+					new GuiControl()
+					{
+						position = "4 31";
+						extent = "506 22";
+						minExtent = "8 2";
+						visible = "1";
+						active = "1";
+						canHit = "0";
+						profile = "TradePostWindowWorkAreaProfile";
+						LeftIndex0 = "TradePostStoreBackgroundLineLeft";
+						BackgroundIndex = "TradePostStoreBackgroundLineBackground";
+						RightIndex0 = "TradePostStoreBackgroundLineRight";
+						internalName = "storeBackgroundLine";
+					};
+
+					// полоска размера хранилища
+					new GuiControl()
+					{
+						position = "4 31";
+						extent = "304 22";
+						minExtent = "8 2";
+						visible = "1";
+						active = "1";
+						canHit = "0";
+						profile = "TradePostWindowWorkAreaProfile";
+						LeftIndex0 = "TradePostStoreSizeLineLeft";
+						BackgroundIndex = "TradePostStoreSizeLineBackground";
+						RightIndex0 = "TradePostStoreSizeLineRight";
+						internalName = "storeSizeLine";
+					};
+
+					// полоска занимаемого места
+					new GuiControl()
+					{
+						position = "4 31";
+						extent = "200 22";
+						minExtent = "8 2";
+						visible = "1";
+						active = "1";
+						canHit = "0";
+						profile = "TradePostWindowWorkAreaProfile";
+						LeftIndex0 = "TradePostStoreWeightLineLeft";
+						BackgroundIndex = "TradePostStoreWeightLineBackground";
+						RightIndex0 = "TradePostStoreWeightLineRight";
+						internalName = "storeWeightLine";
+					};
+
+					// ограничитель размера хранилища
+					new GuiControl()
+					{
+						position = "301 22";
+						extent = "19 40";
+						minExtent = "8 2";
+						visible = "1";
+						active = "1";
+						canHit = "0";
+						profile = "TradePostWindowWorkAreaProfile";
+						BackgroundIndex = "TradePostStoreSizeLimit";
+						internalName = "storeSizeLimitCtrl";
+					};
+
+					// полоска неуменьшаемого объема
+					new GuiControl()
+					{
+						position = "-7 21";
+						extent = "75 43";
+						minExtent = "8 2";
+						visible = "1";
+						active = "1";
+						canHit = "0";
+						profile = "TradePostWindowWorkAreaProfile";
+						BackgroundIndex = "TradePostStoreMinCapacity";
+					};
+
+					// ограничитель объема занимаемого места
+					new GuiControl()
+					{
+						position = "197 10";
+						extent = "19 51";
+						minExtent = "8 2";
+						visible = "1";
+						active = "1";
+						canHit = "0";
+						profile = "TradePostWindowWorkAreaProfile";
+						BackgroundIndex = "TradePostStoreWeightLimit";
+						internalName = "storeWeightLimitCtrl";
+					};
+
+					// надписи на шкале
+					new GuiTextCtrl()
+					{
+						position = "-19 58";
+						extent = "50 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile1";
+						visible = "1";
+						active = "1";
+						text = "0";
+						internalName = "scaleLimit0";
+					};
+						
+					new GuiTextCtrl()
+					{
+						position = "38 58";
+						extent = "50 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile1";
+						visible = "1";
+						active = "1";
+						text = "100";
+						internalName = "scaleLimit100";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "90 58";
+						extent = "30 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile2";
+						visible = "1";
+						active = "1";
+						text = "200";
+						internalName = "scaleLimit200";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "132 58";
+						extent = "30 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile2";
+						visible = "1";
+						active = "1";
+						text = "300";
+						internalName = "scaleLimit300";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "174 58";
+						extent = "30 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile2";
+						visible = "1";
+						active = "1";
+						text = "400";
+						internalName = "scaleLimit400";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "216 58";
+						extent = "30 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile2";
+						visible = "1";
+						active = "1";
+						text = "500";
+						internalName = "scaleLimit500";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "258 58";
+						extent = "30 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile5";
+						visible = "1";
+						active = "1";
+						text = "600";
+						internalName = "scaleLimit600";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "300 58";
+						extent = "30 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile3";
+						visible = "1";
+						active = "1";
+						text = "750";
+						internalName = "scaleLimit750";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "342 58";
+						extent = "30 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile3";
+						visible = "1";
+						active = "1";
+						text = "1000";
+						internalName = "scaleLimit1000";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "384 58";
+						extent = "30 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile3";
+						visible = "1";
+						active = "1";
+						text = "2500";
+						internalName = "scaleLimit2500";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "426 58";
+						extent = "30 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile3";
+						visible = "1";
+						active = "1";
+						text = "5000";
+						internalName = "scaleLimit5000";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "461 58";
+						extent = "50 12";
+						minExtent = "8 2";
+						profile = "TradePostScaleTextProfile4";
+						visible = "1";
+						active = "1";
+						text = "10000";
+						internalName = "scaleLimit10000";
+					};
+				};
+
+				new GuiMLTextCtrl() 
+				{
+					text = GetMessageIDText(2853); // ATTENTION: Storage capacity will be changed at the next maintenance
+					lineSpacing = "0";
+					allowColorChars = "0";
+					maxChars = "-1";
+					useURLMouseCursor = "0";
+					isContainer = "0";
+					Profile = "TradePostTextProfile8";
+					position = "25 160";
+					extent = "510 0";
+					MinExtent = "8 8";
+					canSave = "1";
+					Visible = "1";
+					canSaveDynamicFields = "0";
+				};
+
+				// button Cancel
+				new guiHorzTilingButtonCtrl()
+				{
+					text = GetMessageIDText(1113); // Cancel
+					groupNum = "-1";
+					buttonType = "PushButton";
+					useMouseEvents = "0";
+					extent = "140 40";
+					position = "244 225";
+					minExtent = "8 2";
+					profile = "CreateCharButtonProfile";
+					visible = "1";
+					active = "1";
+					imageIndex = "H44Btn";
+					command = "ChangeStoreSizeContent.onCancelClick();";
+				};
+				
+				// button Ok
+				new guiHorzTilingButtonCtrl()
+				{
+					text = GetMessageIDText(1218); // Ok
+					groupNum = "-1";
+					buttonType = "PushButton";
+					useMouseEvents = "0";
+					minExtent = "8 2";
+					profile = "CreateCharButtonProfile";
+					visible = "1";
+					active = "1";
+					position = "394 225";
+					extent = "140 40";
+					imageIndex = "H44Btn";
+					command = "ChangeStoreSizeContent.onOkClick();";
+				};
+
+			};
+		};
+	};
+
+	ChangeStoreSizeContent.updateStoreSize();
+	Canvas.pushDialog(%change_store_size_dialog);
+}
+//-----------------------------------------------------------------------------
+function ChangeStoreSizeContent::calcWeightPos(%this, $allWeight, $calcMinimum)
+{
+	$begin1 = 0;
+	$begin2 = 0;
+	$end1 = 0;
+	$end2 = 0;
+
+	if ($allWeight <= 100)
+	{
+		if ($calcMinimum)
+		{
+			$begin1 = 0;
+			$begin2 = %this-->scaleLimit0.position.x + %this-->scaleLimit0.extent.x / 2;
+		}
+		else
+		{
+			$begin1 = $allWeight - 1;
+			$begin2 = %this-->scaleLimit100.position.x + %this-->scaleLimit100.extent.x / 2 - 1;
+		}
+
+		$end1 = 100;
+		$end2 = %this-->scaleLimit100.position.x + %this-->scaleLimit100.extent.x / 2;
+	}
+	else if ($allWeight <= 200)
+	{
+		$begin1 = 100;
+		$end1 = 200;
+
+		$begin2 = %this-->scaleLimit100.position.x + %this-->scaleLimit100.extent.x / 2;
+		$end2 = %this-->scaleLimit200.position.x + %this-->scaleLimit200.extent.x / 2;
+	}
+	else if ($allWeight <= 300)
+	{
+		$begin1 = 200;
+		$end1 = 300;
+
+		$begin2 = %this-->scaleLimit200.position.x + %this-->scaleLimit200.extent.x / 2;
+		$end2 = %this-->scaleLimit300.position.x + %this-->scaleLimit300.extent.x / 2;
+	}
+	else if ($allWeight <= 400)
+	{
+		$begin1 = 300;
+		$end1 = 400;
+
+		$begin2 = %this-->scaleLimit300.position.x + %this-->scaleLimit300.extent.x / 2;
+		$end2 = %this-->scaleLimit400.position.x + %this-->scaleLimit400.extent.x / 2;
+	}
+	else if ($allWeight <= 500)
+	{
+		$begin1 = 400;
+		$end1 = 500;
+
+		$begin2 = %this-->scaleLimit400.position.x + %this-->scaleLimit400.extent.x / 2;
+		$end2 = %this-->scaleLimit500.position.x + %this-->scaleLimit500.extent.x / 2;
+	}
+	else if ($allWeight <= 600)
+	{
+		$begin1 = 500;
+		$end1 = 600;
+
+		$begin2 = %this-->scaleLimit500.position.x + %this-->scaleLimit500.extent.x / 2;
+		$end2 = %this-->scaleLimit600.position.x + %this-->scaleLimit600.extent.x / 2;
+	}
+	else if ($allWeight <= 750)
+	{
+		$begin1 = 600;
+		$end1 = 750;
+
+		$begin2 = %this-->scaleLimit600.position.x + %this-->scaleLimit600.extent.x / 2;
+		$end2 = %this-->scaleLimit750.position.x + %this-->scaleLimit750.extent.x / 2;
+	}
+	else if ($allWeight <= 1000)
+	{
+		$begin1 = 750;
+		$end1 = 1000;
+
+		$begin2 = %this-->scaleLimit750.position.x + %this-->scaleLimit750.extent.x / 2;
+		$end2 = %this-->scaleLimit1000.position.x + %this-->scaleLimit1000.extent.x / 2;
+	}
+	else if ($allWeight <= 2500)
+	{
+		$begin1 = 1000;
+		$end1 = 2500;
+
+		$begin2 = %this-->scaleLimit1000.position.x + %this-->scaleLimit1000.extent.x / 2;
+		$end2 = %this-->scaleLimit2500.position.x + %this-->scaleLimit2500.extent.x / 2;
+	}
+	else if ($allWeight <= 5000)
+	{
+		$begin1 = 2500;
+		$end1 = 5000;
+
+		$begin2 = %this-->scaleLimit2500.position.x + %this-->scaleLimit2500.extent.x / 2;
+		$end2 = %this-->scaleLimit5000.position.x + %this-->scaleLimit5000.extent.x / 2;
+	}
+	else if ($allWeight <= 10000)
+	{
+		$begin1 = 5000;
+		$end1 = 10000;
+
+		$begin2 = %this-->scaleLimit5000.position.x + %this-->scaleLimit5000.extent.x / 2;
+		$end2 = %this-->scaleLimit10000.position.x + %this-->scaleLimit10000.extent.x;
+	}
+	else
+	{
+		$begin1 = $allWeight;
+		$end1 = $allWeight + 1;
+
+		$begin2 = %this-->scaleLimit10000.position.x + %this-->scaleLimit10000.extent.x;
+		$end2 = %this-->scaleLimit10000.position.x + %this-->scaleLimit10000.extent.x + 1;
+	}
+
+	$centerPos = ($end2 - $begin2) * ($allWeight - $begin1) / ($end1 - $begin1) + $begin2;
+	return $centerPos;
+}
+//-----------------------------------------------------------------------------
+function ChangeStoreSizeContent::updateStoreSize(%this)
+{
+	// update store size and weight info
+
+	$pos = %this.calcWeightPos(%this.storeWeight, true);
+	%this-->storeWeightLine.extent.x = $pos - %this-->storeWeightLine.position.x;
+	%this-->storeWeightLimitCtrl.position.x = $pos - 9;
+
+	$pos = %this.calcWeightPos(%this.storeSize, false);
+	%this-->storeSizeLine.extent.x = $pos - %this-->storeSizeLine.position.x;
+	%this-->storeSizeLimitCtrl.position.x = $pos - 9;
+
+	%storePayment = getTradePostStorePayment(%this.storeSize);
+	%this-->storePaymentCoins.text = GetMessageIDText(2854) @ " " @ %storePayment.x;
+	%this-->storePaymentGodsFavor.text = GetMessageIDText(2855) @ " " @ %storePayment.y;
+}
+//-----------------------------------------------------------------------------
+function ChangeStoreSizeContent::onCancelClick(%this)
+{
+	Canvas.popDialog(ChangeStoreSizeContent);
+	ChangeStoreSizeContent.safeDeleteObject();
+}
+//-----------------------------------------------------------------------------
+function ChangeStoreSizeContent::onOkClick(%this)
+{
+	changeStoreSize(ChangeStoreSizeContent.storeSize);
+	Canvas.popDialog(ChangeStoreSizeContent);
+	ChangeStoreSizeContent.safeDeleteObject();
+}
+//-----------------------------------------------------------------------------
+function ChangeStoreSizeContent::onDecreaseStoreSizeClick(%this)
+{
+	%this.storeSize = getTradePostNextSmallerStoreSize(%this.storeSize);
+	%this.updateStoreSize();
+}
+//-----------------------------------------------------------------------------
+function ChangeStoreSizeContent::onIncreaseStoreSizeClick(%this)
+{
+	%this.storeSize = getTradePostNextBiggerStoreSize(%this.storeSize);
+	%this.updateStoreSize();
+}
+//-----------------------------------------------------------------------------

@@ -1,0 +1,265 @@
+//-----------------------------------------------------------------------------
+// Craftsman & Marksman: Life is feudal
+//----------------------------------------------------------------------------- 
+
+function createFillTypePanel(%name)
+{
+	%gui = new GuiScrollCtrl()
+	{
+		docking = Client;
+		profile = "GuiEagleScrollBarProfile";
+		horizSizing = "width";
+		vertSizing = "height";
+		position = "0 0";
+		extent = "100% 100%";// "514 542";
+		minExtent = "8 8";
+		visible = "1";
+		helpTag = "0";
+		willFirstRespond = "1";
+		hScrollBar = "alwaysOff";
+		vScrollBar = "alwaysOn";
+		lockHorizScroll = "true";
+		lockVertScroll = "false";
+		constantThumbHeight = true;
+		alwaysShowThumb = false;
+		childMargin = "0 7";
+		trackOffset = 12;
+		arrowSadowSize = -27;
+		addContentWidth = 12;
+		internalName = %name;
+
+		new GuiDynamicCtrlArrayControl()
+		{
+			position = "0 0";
+			extent = "623 627";
+			horizSizing = "width";
+			vertSizing = "height";
+			profile = "GuiBaseTextProfile";
+			dynamicSize = true;
+			internalName = "heraldryFillTypePanel";
+			autoCellSize = true;
+			rowSpacing = 40;
+			colSpacing = 40;
+			padding = "8 8 15 0";
+		};
+	};
+
+	return %gui;
+}
+
+function createHeraldrySymbolPanel(%name)
+{
+	%gui = new GuiScrollCtrl()
+	{
+		docking = Client;
+		profile = "GuiEagleScrollBarProfile";
+		horizSizing = "width";
+		vertSizing = "height";
+		position = "0 0";
+		extent = "100% 100%";// "514 542";
+		minExtent = "8 8";
+		visible = "1";
+		helpTag = "0";
+		willFirstRespond = "1";
+		hScrollBar = "alwaysOff";
+		vScrollBar = "alwaysOn";
+		lockHorizScroll = "true";
+		lockVertScroll = "false";
+		constantThumbHeight = true;
+		alwaysShowThumb = false;
+		childMargin = "0 7";
+		trackOffset = 12;
+		arrowSadowSize = -27;
+		addContentWidth = 12;
+		internalName = %name;
+
+		new GuiDynamicCtrlArrayControl()
+		{
+			position = "0 0";
+			extent = "623 627";
+			horizSizing = "width";
+			vertSizing = "height";
+			profile = "GuiBaseTextProfile";
+			dynamicSize = true;
+			internalName = "heraldrySymbolPanel";
+			autoCellSize = true;
+			rowSpacing = 35;
+			colSpacing = 40;
+			padding = "8 8 15 0";
+		};
+	};
+	return %gui;
+}
+
+
+function getHeraldryFillTypeName(%imageName)
+{
+	return "fillType" @ %imageName @ "Btn";
+}
+
+function addHeraldryFillTypeInTable(%parent, %imageIndex, %stateOn)
+{
+	%image = "art/Textures/Heraldry/Backgrounds/preview/" @ %imageIndex @ "_preview.png";
+	
+	%gui = new GuiBitmapButtonCtrl()
+	{
+		extent = "124 124";
+		position = "0 0";
+		profile = "GuiHeraldryImageProfile";
+		buttonType = "RadioButton";
+		groupNum = 1;
+		bitmapMode = "Centered";
+		command = "HeraldryWindow.chooseFillType(" @ %imageIndex @ ");";
+		internalName = getHeraldryFillTypeName(%imageIndex);
+		defaultState = %stateOn;
+		class = "HeraldryBackgroundBtn";
+		useStates = false;
+
+		// заливка
+		new GuiBitmapCtrl()
+		{
+			position = "0 0";
+			extent = "116 116";
+			canHit = "false";
+			visible = "true";
+			centered = "true";
+			profile = "GuiHeraldryImageProfile";
+			bitmap = %image;
+			horizSizing = "center";
+			vertSizing = "center";
+		};
+
+		new GuiBitmapCtrl()
+		{
+			position = "0 0";
+			extent = "116 116";
+			canHit = "false";
+			visible = "true";
+			centered = "true";
+			profile = "GuiAtlas3ImageProfile";
+			imageIndex = "ShadowBackground";
+			horizSizing = "center";
+			vertSizing = "center";
+			internalName = "shadowSymbol";
+		};
+
+		new GuiBitmapCtrl()
+		{
+			position = "0 0";
+			extent = "124 124";
+			canHit = "false";
+			visible = %stateOn;
+			centered = "true";
+			profile = "GuiAtlas3ImageProfile";
+			imageIndex = "BorderSymbolSelected";
+			horizSizing = "center";
+			vertSizing = "center";
+			internalName = "borderSelected";
+		};
+	};
+
+	%parent-->heraldryFillTypePanel.add(%gui);
+}
+
+function getHeraldrySymbolName(%imageName)
+{
+	return "Symbol" @ %imageName @ "Btn";
+}
+
+function addHeraldrySymbolInTable(%parent, %imageIndex, %nameIndex, %stateOn)
+{
+	%image = "art/Textures/Heraldry/Symbols/preview/" @ %imageIndex @ "_preview.png";
+	%name = GetMessageIDText(%nameIndex);
+	%gui = new GuiBitmapButtonCtrl()
+	{
+		extent = "124 160";
+		position = "0 0";
+		profile = "GuiHeraldryImageProfile";
+		buttonType = "RadioButton";
+		groupNum = 1;
+		bitmapMode = "Centered";
+		command = "HeraldryWindow.chooseSymbol(" @ %imageIndex @ ");";
+		internalName = getHeraldrySymbolName(%imageIndex);
+		defaultState = %stateOn;
+		class = "HeraldrySymbolBtn";
+
+		new GuiBitmapCtrl() 
+		{
+			position = "0 0";
+			extent = "124 124";
+			canHit = "false";
+			visible = "true";
+			centered = "true";
+			profile = "GuiHeraldryImageProfile";
+			bitmap = %image;
+
+			new GuiBitmapCtrl()
+			{
+				position = "0 0";
+				extent = "116 116";
+				canHit = "false";
+				visible = "true";
+				centered = "true";
+				profile = "GuiAtlas3ImageProfile";
+				imageIndex = "ShadowSymbol";
+				horizSizing = "center";
+				vertSizing = "center";
+				internalName = "shadowSymbol";
+			};
+		};
+
+		new GuiBitmapCtrl()
+		{
+			position = "0 0";
+			extent = "124 124";
+			canHit = "false";
+			visible = %stateOn;
+			centered = "true";
+			profile = "GuiAtlas3ImageProfile";
+			imageIndex = "BorderSymbolSelected";
+			horizSizing = "center";
+			internalName = "borderSelected";
+		};
+
+		new GuiMLTextCtrl() 
+		{
+			position = "0 124";
+			extent = "124 30";
+			profile = "HeraldryWindowColorTextProfile";
+			canHit = "false";
+			text = "<just:center>" @ %name;
+			rightOffset = 0;
+		};
+
+
+	};
+
+	%parent-->heraldrySymbolPanel.add(%gui);
+	return %gui;
+}
+
+function HeraldrySymbolBtn::onStateChanged(%this, %state)
+{
+	%this-->borderSelected.setVisible(%state);
+}
+
+function HeraldrySymbolBtn::onMouseOverChanged(%this, %mouse_over)
+{
+	if (%mouse_over)
+		%this-->shadowSymbol.imageIndex = "ShadowSymbolMouseOver";
+	else
+		%this-->shadowSymbol.imageIndex = "ShadowSymbol";
+}
+
+function HeraldryBackgroundBtn::onStateChanged(%this, %state)
+{
+	%this-->borderSelected.setVisible(%state);
+}
+
+function HeraldryBackgroundBtn::onMouseOverChanged(%this, %mouse_over)
+{
+	if (%mouse_over)
+		%this-->shadowSymbol.imageIndex = "ShadowBackgroundMouseOver";
+	else
+		%this-->shadowSymbol.imageIndex = "ShadowBackground";
+}

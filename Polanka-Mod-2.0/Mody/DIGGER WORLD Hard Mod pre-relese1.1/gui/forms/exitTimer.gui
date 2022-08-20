@@ -1,0 +1,271 @@
+
+singleton GuiControlProfile(ExitTimerProfile)
+{
+	fontSize = 22;
+	fontType = $GlobalTextBoldFontName;
+	textOffset = "0 0";
+	fontColor = "159 137 109";
+	justify = "center";
+	modal = 0;
+};
+//----------------------------------------------------------
+new GuiControl(exitTimerDlg)
+{
+	canSaveDynamicFields = "0";
+	profile = "GuiOverlayAutoCursorProfile";
+	horizSizing = "width";
+	vertSizing = "height";
+	position = "0 0";
+	extent = "800 600";
+	minExtent = "8 8";
+
+	new GuiWindowCtrl()
+	{
+		canSaveDynamicFields = "0";
+		position = "250 116";
+		extent = "100 262";
+		minExtent = "48 92";
+		Profile = "GuiWindowProfile";
+		HorizSizing = "center";
+		VertSizing = "center";
+		position = "250 235";
+		Extent = "550 280";
+		MinExtent = "48 220";
+		Visible = "1";
+		canMove = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canHideOnFreelook = "1";
+		canLock = "0";
+		canSetup = "0";
+		closeCommand = "onExitTimerCancelPressed();";
+		accelerator = "escape";
+		text = GetMessageIDText(1158);
+
+		new GuiContainer()
+		{
+			position = "277 0";
+			minExtent = "48 92";
+			profile = GuiAtlas3TiledImageProfile;
+			visible = "1";
+			active = "1";
+			canHit = "0";
+			BackgroundIndex = LearningWindowBackground;
+			docking = Client;
+		};
+
+
+		new GuiMLTextCtrl(exitTimerText)
+		{
+			text = "<just:center>" @ GetMessageIDText(2484); // If you close the game now,&#xA;your character will leave the world in&#xA
+			canSaveDynamicFields = "0";
+			profile = "MessageBoxTextProfile";
+			horizSizing = "center";
+			vertSizing = "bottom";
+			position = "53 61";
+			extent = "410 48";
+			minExtent = "410 48";
+			lineSpacing = "2";
+			allowColorChars = "0";
+			maxChars = "-1";
+			canHit = "0";
+		};
+
+		new GuiControl()
+		{
+			canSaveDynamicFields = "0";
+			profile = "GuiBaseTextProfile";
+			horizSizing = "center";
+			vertSizing = "bottom";
+			position = "0 100+5";
+			extent = "70 22";
+			visible = "1";
+
+			new GuiTimerCtrl(exitTimerCtrl)
+			{
+				position = "0 0";
+				extent = "25 22";
+				horizSizing = "right";
+				vertSizing = "bottom";
+				profile = "ExitTimerProfile";
+				formatString = "%.f";
+
+				new GuiTextCtrl()
+				{
+					text = "";
+					position = "0 0";
+					extent = "25 22";
+					horizSizing = "center";
+					vertSizing = "center";
+					profile = "MessageBoxTextProfile";
+					internalName = "timerValueText";
+				};
+			};
+
+			new GuiMLTextCtrl()
+			{
+				text = "<just:left>" @ GetMessageIDText(2500); // sec.
+				Profile = "MessageBoxTextProfile";
+				horizSizing = "right";
+				vertSizing = "bottom";
+				position = "25 0";
+				extent = "45 22";
+				minExtent = "45 22";
+				lineSpacing = "2";
+				allowColorChars = "0";
+				maxChars = "-1";
+				canHit = "0";
+			};
+
+		};
+
+		new guiHorzTilingButtonCtrl()
+		{
+			text = GetMessageIDText(1158);	// Exit
+			canSaveDynamicFields = "0";
+			profile = "MessageBoxButtonProfile";
+			horizSizing = "right";
+			vertSizing = "top";
+			position = "60 156";
+			extent = "199 44";
+			minExtent = "8 8";
+			groupNum = "-1";
+			buttonType = "PushButton";
+			accelerator = "return";
+			command = "onExitTimerExitPressed();";
+			imageIndex = H44Btn;
+		};
+
+		new guiHorzTilingButtonCtrl()
+		{
+			text = GetMessageIDText(1113);	// Cancel
+			canSaveDynamicFields = "0";
+			profile = "MessageBoxButtonProfile";
+			horizSizing = "right";
+			vertSizing = "top";
+			position = "291 156";
+			extent = "199 44";
+			minExtent = "8 8";
+			groupNum = "-1";
+			buttonType = "PushButton";
+			accelerator = "escape";
+			command = "onExitTimerCancelPressed();";
+			imageIndex = H44Btn;
+		};
+
+	};//window
+};// full screen GuiControl
+//----------------------------------------------------------
+function onExitTimerExitPressed()
+{
+	if (!exitTimerDlg.isAwake())
+	{
+		return;
+	}
+
+	eval(exitTimerDlg.finishCommand);
+}
+//----------------------------------------------------------
+function exitTimerCtrl::onTimerDone()
+{
+	if (!exitTimerDlg.isAwake())
+	{
+		return;
+	}
+
+	eval(exitTimerDlg.finishCommand);
+}
+//----------------------------------------------------------
+function onExitTimerCancelPressed()
+{
+	if (!exitTimerDlg.isAwake())
+	{
+		return;
+	}
+
+	closeExitTimerDlg();
+	sendExitCancelRequestToServer();
+}
+//----------------------------------------------------------
+function onExitTimerAutoclose()
+{
+	if (!exitTimerDlg.isAwake())
+	{
+		return;
+	}
+
+	closeExitTimerDlg();
+	sendExitCancelRequestToServer();
+
+	MessageBoxOK("", GetMessageIDText(2501)); // Any actions will prevent your character from leaving the world.
+}
+//----------------------------------------------------------
+function onControlObjectDead()
+{
+	if (!exitTimerDlg.isAwake())
+	{
+		return;
+	}
+
+	closeExitTimerDlg();
+	sendExitCancelRequestToServer();
+}
+//----------------------------------------------------------
+function openExitTimerDlg(%seconds, %finishCommand)
+{
+	if (!exitTimerDlg.isAwake())
+	{
+		Canvas.pushDialog(exitTimerDlg, 99);
+	}
+	exitTimerDlg.finishCommand = %finishCommand;
+	exitTimerCtrl.startTimer(%seconds);
+}
+//----------------------------------------------------------
+function closeExitTimerDlg()
+{
+	exitTimerCtrl.stopTimer();
+	if (exitTimerDlg.isAwake())
+	{
+		Canvas.popDialog(exitTimerDlg);
+	}
+}
+
+//----------------------------------------------------------
+
+function userWantsToExit(%type)
+{
+   %isInGame = isObject(ServerConnection) && isObject(ServerConnection.getControlObject());
+   %seconds = isObject(ServerConnection) ? ServerConnection.getPingTimeout()/1000 : 30;
+   %subCallback = "closeExitTimerDlg();";
+   switch$(%type)
+   {
+      case "Disconnect":
+         %addCallback = "_disconnect();";
+      case "Quit":
+         %addCallback = "_disconnectQuit();";
+      default:
+         error("Error: unrecognized %type given:", %type);
+   }
+   %callback = %subCallback SPC %addCallback;
+   hack(%type, %seconds, %callback);
+   $exitTimerChoiceQuit = (%type $= "Quit");
+   if(%isInGame)
+   {
+      openExitTimerDlg(%seconds, %callback);
+      sendExitRequestToServer();
+   }
+   else
+   {
+      if($exitTimerChoiceQuit)
+         %msgId = 689;
+      else
+         %msgId = 2137;
+      MessageBoxYesNo("", GetMessageIDText(%msgId), %callback, "");
+   }
+}
+
+//----------------------------------------------------------
+

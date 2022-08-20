@@ -1,0 +1,831 @@
+﻿singleton GuiControlProfile(BackgroundDarkProfile : GuiBaseTextProfile)
+{
+	globalImageIndex = "backgroundDark";
+	border = "only_background_tiling";
+	opaque = false;
+};
+
+singleton GuiControlProfile(CharParamHelpTextProfile: GuiBaseTextProfile)
+{
+	fontSize = 19;
+	fontColor = "102 102 102";
+	textOffset = "0 0";
+};
+
+singleton GuiControlProfile(GuiSkillStatLabelProfile: GuiBaseTextProfile)
+{
+	fontSize = 20;
+	fontColor = "124 124 124";
+	fontColorNA = "124 124 124";
+	justify = "left";
+};
+
+singleton GuiControlProfile(GuiSkillStatDoubleValProfile: GuiBaseTextProfile)
+{
+	fontSize = 20;
+	fontColor = "124 124 124";
+	fontColorNA = "124 124 124";  //Второе значение
+	fontColorSEL = "255 255 255"; //Первое значение
+	fontColorHL = "124 124 124";  //Разделитель
+	justify = "right";
+};
+
+singleton GuiControlProfile(GuiAlignmentProfile: GuiSkillStatDoubleValProfile)
+{
+	fontColorSEL = "210 90 75"; //Первое значение
+};
+
+function createCharParamStatsPnl()
+{
+	%gui = new GuiCharControl()
+	{
+		canSaveDynamicFields = "0";
+		position = "0 0";
+		extent = "100% 100%";
+		Enabled = "1";
+		Profile = "BackgroundDarkProfile";
+		Visible = "1";
+		class = "CharacterWindowStats";
+
+		//help text
+		new GuiControl()
+		{
+			position = "30 21";
+			extent = "246 40";
+			Profile = "GuiBaseTextProfile";
+
+			new GuiBitmapCtrl()
+			{
+				imageIndex = ImportantRemarkIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "38 36";
+				position = "0 0";
+				VertSizing = "center";
+			};
+
+			new GuiMLTextCtrl()
+			{
+				canSaveDynamicFields = "0";
+				Profile = "CharParamHelpTextProfile";
+				HorizSizing = "width";
+				VertSizing = "height";
+				position = "42 0";
+				Extent = "200 40";
+				Visible = "1";
+				lineSpacing = "0";
+				allowColorChars = "0";
+				maxChars = "-1";
+				text = GetMessageIDText(3135);
+			};
+		};
+
+		//health
+		new GuiControl() {
+			position = "30 77";
+			extent = "246 52";
+			Profile = "GuiBaseTextProfile";
+	
+			new GuiBitmapCtrl()
+			{
+				imageIndex = Stat2lineBarBackground;
+				profile = "GuiSkillStatImageProfile";
+				extent = "175 10";
+				position = "31 28";
+				VertSizing = "center";
+				wrap = "true";
+
+				new cmDoubleBarWidget(StatHitpointsBar)
+				{
+					position = "0 0";
+					extent = "175 10";
+					canHit = "false";
+					profile = "GuiSkillStatImageProfile";
+					VertSizing = "width";
+
+					firstBarCenterIndex = SoftHPMiniBar;
+					secondBarCenterIndex = HardHPMiniBar;
+				};
+
+			};
+
+			new GuiBitmapCtrl()
+			{
+				imageIndex = HPIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "38 36";
+				position = "0 0";
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl()
+			{
+				position = "42 0";
+				extent = "250 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1102); //Soft Hitpoints
+				active = false;
+			};
+	
+			new CmGuiDoubleValTextCtrl(SoftHitCtrl) {
+				position = "146 0";
+				extent = "60 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+			};
+	
+			new GuiTextCtrl()
+			{
+				position = "42 30";
+				extent = "250 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1101);  //Hard Hitpoints
+				active = false;
+			};
+	
+			new CmGuiDoubleValTextCtrl(HardHitCtrl) {
+				position = "146 30";
+				extent = "60 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+			};
+		};
+	
+		//stamina
+		new GuiControl() {
+			position = "30 161";
+			extent = "246 52";
+			Profile = "GuiBaseTextProfile";
+	
+			new GuiBitmapCtrl()
+			{
+				imageIndex = Stat2lineBarBackground;
+				profile = "GuiSkillStatImageProfile";
+				extent = "175 10";
+				position = "31 28";
+				VertSizing = "center";
+				wrap = "true";
+
+				new cmDoubleBarWidget(StatStaminaBar)
+				{
+					position = "0 0";
+					extent = "175 10";
+					canHit = "false";
+					profile = "GuiSkillStatImageProfile";
+					VertSizing = "width";
+
+					firstBarCenterIndex = SoftStamMiniBar;
+					secondBarCenterIndex = HardStamMiniBar;
+				};
+			};
+
+			new GuiBitmapCtrl()
+			{
+				imageIndex = StaminaIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "38 36";
+				position = "0 0";
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl()
+			{
+				position = "42 0";
+				extent = "250 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1104); //Soft Stamina
+				active = false;
+			};
+	
+			new CmGuiDoubleValTextCtrl(SoftStamCtrl) {
+				position = "146 0";
+				extent = "60 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+			};
+	
+			new GuiTextCtrl()
+			{
+				position = "42 30";
+				extent = "250 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1103); //Hard Stamina
+				active = false;
+			};
+	
+			new CmGuiDoubleValTextCtrl(HardStamCtrl) {
+				position = "146 30";
+				extent = "60 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+			};
+		};
+	
+		//Hunger
+		new GuiControl() {
+			position = "30 244";
+			extent = "246 51";
+			Profile = "GuiBaseTextProfile";
+
+			new GuiBitmapCtrl()
+			{
+				imageIndex = Stat1lineBarBackground;
+				profile = "GuiSkillStatImageProfile";
+				extent = "175 5";
+				position = "31 28";
+				VertSizing = "center";
+				wrap = "true";
+
+				new cmBarWidget(StatHungerBar)
+				{
+					position = "0 0";
+					extent = "175 5";
+					canHit = "false";
+					firstBarCenterIndex = HungerMiniBar;
+					profile = "GuiSkillStatImageProfile";
+					VertSizing = "center";
+				};
+			};
+
+			new GuiBitmapCtrl()
+			{
+				imageIndex = HungerIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "38 36";
+				position = "0 0";
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl()
+			{
+				position = "42 0";
+				extent = "250 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1098);  //Hunger
+				active = false;
+			};
+	
+			new CmGuiDoubleValTextCtrl(HungerCtrl) {
+				position = "146 0";
+				extent = "60 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+			};
+	
+			new GuiTextCtrl() {
+				position = "42 30";
+				extent = "250 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1099); //Food Quality multiplier
+				active = false;
+			};
+	
+			new GuiTextCtrl(GuiFoodQualityVal) {
+				position = "146 30";
+				extent = "60 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+				text="0.0";
+			};
+	
+		};
+	
+		//Alignment
+		new GuiControl() {
+			position = "30 330";
+			extent = "246 51";
+			Profile = "GuiBaseTextProfile";
+
+			new GuiBitmapCtrl(StatPlusAlignmentBackground)
+			{
+				imageIndex = Stat1lineBarBackground;
+				profile = "GuiSkillStatImageProfile";
+				extent = "175 5";
+				position = "31 28";
+				VertSizing = "center";
+				wrap = "true";
+				visible = false;
+			};
+
+			new GuiBitmapCtrl(StatMinusAlignmentBackground)
+			{
+				imageIndex = AlignmentBarBackground;
+				profile = "GuiSkillStatImageProfile";
+				extent = "175 9";
+				position = "31 28";
+				VertSizing = "center";
+				wrap = "true";
+
+				new cmBarWidget(StatAlignmentBar)
+				{
+					position = "0 0";
+					extent = "175 5";
+					canHit = "false";
+					firstBarCenterIndex = AlignmentMiniBar;
+					profile = "GuiSkillStatImageProfile";
+					VertSizing = "center";
+				};
+			};
+	
+			new GuiBitmapCtrl()
+			{
+				imageIndex = AlignmentIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "38 36";
+				position = "0 0";
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl()
+			{
+				position = "42 0";
+				extent = "250 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1100); //Alignment
+				active = false;
+			};
+	
+			new CmGuiDoubleValTextCtrl(AlignmentCtrl) {
+				position = "126 0";
+				extent = "80 20";
+				Profile = "GuiAlignmentProfile";
+			};
+		};
+	
+		//statcap
+		new GuiControl() {
+			position = "30 406";
+			extent = "246 51";
+			Profile = "GuiBaseTextProfile";
+
+			new GuiBitmapCtrl()
+			{
+				imageIndex = Stat1lineBarBackground;
+				profile = "GuiSkillStatImageProfile";
+				extent = "199 5";
+				position = "7 28";
+				VertSizing = "center";
+				wrap = "true";
+
+				new cmBarWidget(StatcapBar)
+				{
+					position = "0 0";
+					extent = "199 5";
+					canHit = "false";
+					firstBarCenterIndex = StatcapMiniBar;
+					profile = "GuiSkillStatImageProfile";
+					VertSizing = "center";
+				};
+			};
+
+			new GuiTextCtrl()
+			{
+				position = "7 0";
+				extent = "250 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1096); //StatCap
+				active = false;
+			};
+
+			new CmGuiDoubleValTextCtrl(CurStatcapVal) {
+				position = "146 0";
+				extent = "60 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+			};
+
+		};
+
+		//strength
+		new GuiMouseEventCtrl(GuiStrengtPnl) {
+			position = "30 446";
+			extent = "246 20";
+			Profile = "GuiBaseTextProfile";
+			class = "StatPnl";
+	
+			new GuiBitmapCtrl()
+			{
+				imageIndex = StrengthIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "14 14";
+				position = "6 0";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl() {
+				position = "26 0";
+				extent = "140 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1091); //Strength
+				internalName = "statTextCtrl";
+				canHit = false;
+				active = false;
+				VertSizing = "center";
+			};
+	
+			new CmGuiDoubleValTextCtrl(GuiStrengthVal) {
+				position = "132 0";
+				extent = "50 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+				text="";
+				skipSecondValue = true;
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiSkillLockButton(GuiStrengthLockBtn)
+			{
+				imageIndex = BtnStatState;
+				profile = "GuiSkillStatImageProfile";
+				extent = "18 14";
+				position = "188 0";
+				command = "changeStrengthLock();";
+				VertSizing = "center";
+			};
+		};
+	
+		//agility
+		new GuiMouseEventCtrl(GuiAgilityPnl) {
+			position = "30 468";
+			extent = "246 20";
+			Profile = "GuiBaseTextProfile";
+			class = "StatPnl";
+	
+			new GuiBitmapCtrl()
+			{
+				imageIndex = AgilityIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "14 14";
+				position = "6 0";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl() {
+				position = "26 0";
+				extent = "140 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1092); //Agility
+				internalName = "statTextCtrl";
+				canHit = false;
+				active = false;
+				VertSizing = "center";
+			};
+	
+			new CmGuiDoubleValTextCtrl(GuiAgilityVal) {
+				position = "132 0";
+				extent = "50 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+				text="";
+				skipSecondValue = true;
+				internalName = "statValCtrl";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiSkillLockButton(GuiAgilityLockBtn)
+			{
+				imageIndex = BtnStatState;
+				profile = "GuiSkillStatImageProfile";
+				extent = "18 14";
+				position = "188 0";
+				command = "changeAgilityLock();";
+				VertSizing = "center";
+			};
+	
+		};
+	
+		//Constitution
+		new GuiMouseEventCtrl(GuiConstitutionPnl) {
+			position = "30 490";
+			extent = "246 20";
+			Profile = "GuiBaseTextProfile";
+			class = "StatPnl";
+	
+			new GuiBitmapCtrl()
+			{
+				imageIndex = ConstitutionIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "14 14";
+				position = "6 0";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl() {
+				position = "26 0";
+				extent = "140 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1093); //Constitution
+				internalName = "statTextCtrl";
+				canHit = false;
+				active = false;
+				VertSizing = "center";
+			};
+	
+			new CmGuiDoubleValTextCtrl(GuiConstitutionVal) {
+				position = "132 0";
+				extent = "50 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+				text="";
+				skipSecondValue = true;
+				internalName = "statValCtrl";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiSkillLockButton(GuiConstitutionLockBtn)
+			{
+				imageIndex = BtnStatState;
+				profile = "GuiSkillStatImageProfile";
+				extent = "18 14";
+				position = "188 0";
+				command = "changeConstitutionLock();";
+				VertSizing = "center";
+			};
+	
+		};
+	
+		//Intelect
+		new GuiMouseEventCtrl(GuiIntelectPnl) {
+			position = "30 512";
+			extent = "246 20";
+			Profile = "GuiBaseTextProfile";
+			class = "StatPnl";
+
+			new GuiBitmapCtrl()
+			{
+				imageIndex = IntellectIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "14 14";
+				position = "6 0";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl() {
+				position = "26 0";
+				extent = "140 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1095); //Intellect
+				internalName = "statTextCtrl";
+				canHit = false;
+				active = false;
+				VertSizing = "center";
+			};
+	
+			new CmGuiDoubleValTextCtrl(GuiIntellectVal) {
+				position = "132 0";
+				extent = "50 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+				text="";
+				skipSecondValue = true;
+				internalName = "statValCtrl";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiSkillLockButton(GuiIntellectLockBtn)
+			{
+				imageIndex = BtnStatState;
+				profile = "GuiSkillStatImageProfile";
+				extent = "18 14";
+				position = "188 0";
+				command = "changeIntellectLock();";
+				VertSizing = "center";
+			};
+		};
+	
+		//Willpower
+		new GuiMouseEventCtrl(GuiWillpowerPnl) {
+			position = "30 534";
+			extent = "246 20";
+			Profile = "GuiBaseTextProfile";
+			class = "StatPnl";
+	
+			new GuiBitmapCtrl()
+			{
+				imageIndex = WillpowerIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "14 14";
+				position = "6 0";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl() {
+				position = "26 0";
+				extent = "140 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1094); //Willpower
+				internalName = "statTextCtrl";
+				canHit = false;
+				active = false;
+				VertSizing = "center";
+			};
+	
+			new CmGuiDoubleValTextCtrl(GuiWillpowerVal) {
+				position = "132 0";
+				extent = "50 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+				text="";
+				skipSecondValue = true;
+				internalName = "statValCtrl";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiSkillLockButton(GuiWillpowerLockBtn)
+			{
+				imageIndex = BtnStatState;
+				profile = "GuiSkillStatImageProfile";
+				extent = "18 14";
+				position = "188 0";
+				command = "changeWillpowerLock();";
+				VertSizing = "center";
+			};
+		};
+	
+		//Luck
+		new GuiMouseEventCtrl(GuiLuckPnl) {
+			position = "30 556";
+			extent = "246 20";
+			Profile = "GuiBaseTextProfile";
+			class = "StatPnl";
+	
+			new GuiBitmapCtrl()
+			{
+				imageIndex = LuckIcon;
+				profile = "GuiSkillStatImageProfile";
+				extent = "14 14";
+				position = "6 0";
+				canHit = false;
+				VertSizing = "center";
+			};
+	
+			new GuiTextCtrl() {
+				position = "26 0";
+				extent = "140 20";
+				Profile = "GuiSkillStatLabelProfile";
+				text = GetMessageIDText(1097); //Luck
+				internalName = "statTextCtrl";
+				canHit = false;
+				active = false;
+				VertSizing = "center";
+			};
+	
+			new CmGuiDoubleValTextCtrl(GuiLuckVal) {
+				position = "132 0";
+				extent = "50 20";
+				Profile = "GuiSkillStatDoubleValProfile";
+				text="";
+				internalName = "statValCtrl";
+				canHit = false;
+				VertSizing = "center";
+				active = false;
+				skipSecondValue = true;
+			};
+		};
+	};
+	return %gui;
+}
+
+function CharacterWindowStats::onHPChange(%this, %max_hard_val, %hard_val, %max_soft_val, %soft_val)
+{
+	HardHitCtrl.setFirstValue(%hard_val);
+	HardHitCtrl.setSecondValue(%max_hard_val);
+	SoftHitCtrl.setFirstValue(%soft_val);
+	SoftHitCtrl.setSecondValue(%max_soft_val);
+	if (isObject(StatHitpointsBar))
+	{
+		StatHitpointsBar.setMaxValue(%max_hard_val);
+		StatHitpointsBar.setFirstValue(%soft_val);
+		StatHitpointsBar.setSecondValue(%hard_val);
+	}
+}
+
+function CharacterWindowStats::onStamChange(%this, %max_hard_val, %hard_val, %max_soft_val, %soft_val)
+{
+	HardStamCtrl.setFirstValue(%hard_val);
+	HardStamCtrl.setSecondValue(%max_hard_val);
+	SoftStamCtrl.setFirstValue(%soft_val);
+	SoftStamCtrl.setSecondValue(%max_soft_val);
+
+	if (isObject(StatStaminaBar))
+	{
+		StatStaminaBar.setMaxValue(%max_hard_val);
+		StatStaminaBar.setFirstValue(%soft_val);
+		StatStaminaBar.setSecondValue(%hard_val);
+	}
+}
+
+function CharacterWindowStats::onHungerChange(%this, %hungerRate)
+{
+	HungerCtrl.setFirstValue(%hungerRate);
+	HungerCtrl.setSecondValue(100);
+
+	if (isObject(StatHungerBar))
+	{
+		StatHungerBar.setMaxValue(100);
+		StatHungerBar.setFirstValue(%hungerRate);
+	}
+}
+
+function CharacterWindowStats::onFedChange(%this, %fedRate)
+{
+	GuiFoodQualityVal.setText(%fedRate);
+}
+
+function CharacterWindowStats::onAlignmentChange(%this, %val, %is_criminal)
+{
+	StatAlignmentBar.setMaxValue(1000);
+
+	if (%val < 0)
+	{
+		StatPlusAlignmentBackground.setVisible(false);
+		StatMinusAlignmentBackground.setVisible(true);
+		StatMinusAlignmentBackground.add(StatAlignmentBar);
+		StatAlignmentBar.setFirstValue(-%val);
+		AlignmentCtrl.setSecondValue(-1000);
+		AlignmentCtrl.setProfile("GuiAlignmentProfile");
+	}
+	else
+	{
+		StatPlusAlignmentBackground.setVisible(true);
+		StatPlusAlignmentBackground.add(StatAlignmentBar);
+		StatMinusAlignmentBackground.setVisible(false);
+		StatAlignmentBar.setFirstValue(%val);
+		AlignmentCtrl.setSecondValue(1000);
+		AlignmentCtrl.setProfile("GuiSkillStatDoubleValProfile");
+	}
+	AlignmentCtrl.setFirstValue(%val);
+}
+
+function CharacterWindowStats::onStatcapChange(%this, %val, %max_val)
+{
+	if (isObject(StatcapBar))
+	{
+		StatcapBar.setMaxValue(%max_val);
+		StatcapBar.setFirstValue(%val);
+	}
+
+	if (isObject(CurStatcapVal))
+	{
+		CurStatcapVal.setFirstValue(strformat( "%.2f", %val));
+		CurStatcapVal.setSecondValue(%max_val);
+	}
+}
+
+function CharacterWindowStats::onStrengthChange(%this, %val, %nam_val)
+{
+	GuiStrengthVal.setFirstValue(%nam_val);
+	GuiStrengtPnl.createTooltipByTemplate("tooltipStrength", %val);
+}
+
+function CharacterWindowStats::onAgilityChange(%this, %val, %nam_val)
+{
+	GuiAgilityVal.setFirstValue(%nam_val);
+	GuiAgilityPnl.createTooltipByTemplate("tooltipAgility", %val);
+}
+
+function CharacterWindowStats::onWillpowerChange(%this, %val, %nam_val)
+{
+	GuiWillpowerVal.setFirstValue(%nam_val);
+	GuiWillpowerPnl.createTooltipByTemplate("tooltipWillpower", %val);
+}
+
+function CharacterWindowStats::onIntellectChange(%this, %val, %nam_val)
+{
+	GuiIntellectVal.setFirstValue(%nam_val);
+	GuiIntelectPnl.createTooltipByTemplate("tooltipIntelect", %val);
+}
+
+function CharacterWindowStats::onConstitutionChange(%this, %val, %nam_val)
+{
+	GuiConstitutionVal.setFirstValue(%nam_val);
+	GuiConstitutionPnl.createTooltipByTemplate("tooltipConstitution", %val);
+}
+
+function CharacterWindowStats::onLuckChange(%this, %val)
+{
+	GuiLuckVal.setFirstValue(%val);
+	GuiLuckPnl.createObjectTooltip(2672);
+}
+
+function CharacterWindowStats::onStrengthLockChange(%this, %val)
+{
+	GuiStrengthLockBtn.setLockStatus(%val);
+}
+
+function CharacterWindowStats::onAgilityLockChange(%this, %val)
+{
+	GuiAgilityLockBtn.setLockStatus(%val);
+}
+
+function CharacterWindowStats::onWillpowerLockChange(%this, %val)
+{
+	GuiWillpowerLockBtn.setLockStatus(%val);
+}
+
+function CharacterWindowStats::onIntellectLockChange(%this, %val)
+{
+	GuiIntellectLockBtn.setLockStatus(%val);
+}
+
+function CharacterWindowStats::onConstitutionLockChange(%this, %val)
+{
+	GuiConstitutionLockBtn.setLockStatus(%val);
+}

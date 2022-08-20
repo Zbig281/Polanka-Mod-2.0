@@ -1,0 +1,143 @@
+//-----------------------------------------------------------------------------
+// Craftsman & Marksman: Life is feudal
+//-----------------------------------------------------------------------------
+
+singleton GuiControlProfile( GuiBuildWindowButtonProfile : GuiBaseTextProfile ) {
+	globalImageIndex = "atlas2";
+	fontSize = 24;
+	fontColor = "204 204 204";
+	fontColorHL = "204 204 204";
+	fontColorNA = "204 204 204";
+	fontColorSEL = "204 204 204";
+	justify = "center";
+	textOffset = "0 -2";
+	border = "none";
+};
+
+singleton GuiControlProfile( GuiBuildWindowRecipeItemTextProfile : GuiBaseCaptionProfile ) {
+	fontSize = 27;
+	fontColor = "204 204 204";
+	justify = "center";
+};
+
+singleton GuiControlProfile(GuiBuildContainerHintTextProfile : GuiBaseTextProfile)
+{
+   fontType = $GlobalTextFontName;
+   fontSize = 18;
+   fontColor = "246 127 49";
+};
+
+function createBuildWindow()
+{
+   %wnd = new GuiBuildObjectContainer(GuiBuildWindow) {
+      text = ""; //set in GuiInventoryContainer::init
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      canHideOnFreelook = "0";
+      canCollapse = "0";
+      canLock = "0";
+      locked = "0";
+      canSetup = "0";
+      edgeSnap = "1";
+      margin = "0 0 0 0";
+      padding = "0 0 0 0";
+      anchorTop = "1";
+      anchorBottom = "0";
+      anchorLeft = "1";
+      anchorRight = "0";
+      position = "0 0";
+      extent = "884 772";
+      minExtent = "884 772";
+      maxExtent = "884 772";
+      horizSizing = "center";
+      vertSizing = "center";
+      profile = "GuiInventoryContainerProfile";
+      visible = "1";
+      active = "1";
+      isContainer = "1";
+      canSave = "0";
+      canSaveDynamicFields = "0";
+      closeCommand ="";
+      IsManager = %is_manager;
+
+      new GuiContainer() {
+         docking = Client;
+         extent = "890 690";
+         profile = "GuiAtlas3TiledImageProfile";
+         backgroundIndex = "LearningWindowBackground";
+         internalName = "contents";
+
+         new GuiMLTextCtrl()
+         {
+            text = GetMessageIDText(2193); // Drag materials into container below
+            position = "40 15";
+            extent = "294 2";
+            profile = "GuiBuildContainerHintTextProfile";
+            canHit = "false"; 
+            visible = "1";
+         };
+
+
+         new GuiBitmapCtrl() {
+            position = "40 40";
+            extent = "294 526";
+            visible = true;
+            bitmap = "gui/images/build_container.png";
+         };
+
+         new guiHorzTilingButtonCtrl() {
+            text = GetMessageIDText(1343);
+            buttonType = "PushButton";
+            useMouseEvents = false;
+            position = "40 606";
+            extent = "294 44";
+            profile = "GuiBuildWindowButtonProfile";
+            visible = true;
+            active = true;
+            command = "GuiBuildWindow.buildClick();";
+            imageIndex = "H44Btn";
+            internalName = "buildButton";
+         };
+
+         new GuiBitmapCtrl() {
+            position = "464 52";
+            extent = "295 166";
+            bitmap = "art/2D/Objects/3Floor_Big_Plaster_House.png";
+            profile = "GuiContentProfile";
+            internalName = "buildingImage";
+         };
+
+         new GuiMLTextCtrl() {
+            text = "<just:center>Some Strange Building";
+            position = "334 233";
+            extent = "556 60";
+            profile = "GuiBuildWindowRecipeItemTextProfile";
+            canHit = false;
+            rightOffset = 0;
+            internalName = "buildingName";
+         };
+      };
+   };
+
+   %components = createCraftingComponentsPanel();
+   %wnd-->contents.add(%components);
+   %components.setPosition(345, 287);
+
+   PlayGui.add(%wnd);
+
+   if(isObject(ClientMissionCleanupSet))
+      ClientMissionCleanupSet.add(%wnd);
+
+   return %wnd;
+}
+
+function GuiBuildWindow::setInfo(%this, %name, %image)
+{
+   %this-->buildingName.setText("<just:center>" @ %name);
+   %this-->buildingImage.setBitmap(%image);
+}
+

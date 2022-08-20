@@ -1,0 +1,172 @@
+//----------------------------------------------
+/*%guiContent = new GuiControl() {
+   isContainer = "1";
+   Profile = "GuiOverlayProfile";
+   HorizSizing = "center";
+   VertSizing = "center";
+   position = "0 0";
+   extent = "100% 100%";
+   MinExtent = "16 16";
+   Visible = "1";*/
+   
+   %guiContent = new CmGuiChatWindow() {
+      text = GetMessageIDText(1384);	// Chat
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      //canHideOnFreelook = "1";
+      canLock = "1";
+      canSetup = "1";
+      forGuiEdit = "1";
+      canCollapse = "0";
+      closeCommand = "Canvas.popDialog($ThisControl);";
+      edgeSnap = "0";
+      margin = "0 0 0 0";
+      padding = "0 0 0 0";
+      anchorTop = "1";
+      anchorBottom = "0";
+      anchorLeft = "1";
+      anchorRight = "0";
+      position = "300 300";
+      extent = "477 294";
+      minExtent = "300 180";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      profile = "GuiSmallWindowProfile";
+      internalName = "ChatWindow";
+      visible = "1";
+      active = "1";
+      opacity = "1";
+      isContainer = "1";
+      canSave = "1";
+      canSaveDynamicFields = "1";
+      class = "ChatDlg";
+
+      new CmGuiChatTabBook() {
+         minTabWidth = "40";
+         tabHeight = "20";
+         selectedPage = "0";
+         position = "11 58";
+         extent = "394 22";
+         profile = "GuiChatTabBookProfile";
+         internalName = "ChatTabBook";
+         horizSizing = "width";
+         vertSizing = "height";
+         tabDecor = "left_right_or_top_bottom";
+         decorationType = "1";
+      };
+
+		  new GuiBitmapCtrl(){
+			 wrap = "0";
+			 position = "0 50";
+			 extent = "100 1";
+			 minExtent = "2 2";
+			 horizSizing = "width";
+			 vertSizing = "top";
+			 profile = "GuiHLineChatProfile";
+			 visible = "0";
+			 active = "1";
+			 opacity = "1";
+			 isContainer = "1";
+			 canSave = "1";
+			 canSaveDynamicFields = "0";
+		     internalName = "ChatTabLine";
+		  };
+		
+	  new GuiTextEditCtrl() {
+         historySize = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         password = "0";
+         passwordMask = "*";
+         maxLength = "1024";
+         margin = "0 0 0 0";
+         padding = "0 0 0 0";
+         anchorTop = "1";
+         anchorBottom = "0";
+         anchorLeft = "1";
+         anchorRight = "0";
+         position = "146 52";
+         extent = "34 22";
+         minExtent = "8 2";
+         horizSizing = "width";
+         vertSizing = "top";
+         profile = "ChatTextEditProfile";
+         command = "";
+         visible = "1";
+         active = "1";
+         tabComplete = "false";
+         opacity = "1";
+         internalName = "ChatTextField";
+         isContainer = "1";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+         class = "ChatTextEditCtrl";
+         escapeCommand = "$ThisControl.setText(\"\"); $ThisControl.clearFirstResponder();";
+      };
+   new GuiBitmapButtonCtrl() {
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "1";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "160 60";
+         extent = "37 37";
+         minExtent = "8 2";
+         profile = "GuiButtonBitmapProfile";
+         visible = "1";
+         active = "1";
+         isContainer = "0";
+         canSave = "0";
+         canSaveDynamicFields = "0";
+         internalName = "ChatSendButton";
+      };//button
+   };
+
+//};//control
+   
+//return %guiContent;
+
+function ChatDlg::onWake(%this)
+{
+	%str = %this.getClientRect();
+	%pointX = getWord(%str, 0);
+	%pointY = getWord(%str, 1);
+	%extentX = getWord(%str, 2);
+	%extentY = getWord(%str, 3);
+
+	%textEditHeight = 53;
+	
+	%this-->ChatTabBook.setPosition(%pointX, %pointY);
+	%this-->ChatTabBook.setExtent(%extentX, %extentY - %textEditHeight - 1);
+	//%this-->ChatTabBook.setSizing(1, 1);
+	
+	%this-->ChatTextField.setPosition(%pointX, %pointY + %extentY - %textEditHeight);
+	%this-->ChatTextField.setExtent(%extentX, %textEditHeight);
+	//%this-->ChatTextField.setSizing(1, 2);
+	
+	%this-->ChatTabLine.setPosition(%pointX, %pointY + %extentY - %textEditHeight - 1);
+	%this-->ChatTabLine.setExtent(%extentX, 1);
+	
+	%this-->ChatSendButton.setPosition(%pointX + %extentX - 8 - %this-->ChatSendButton.getExtent().x, %pointY + %extentY - %textEditHeight + 6);
+	
+}
+
+function clearChat()
+{
+	clearChatWindows();
+    cmChatCreate();
+    cmChatLoadPropertyXml($HUDPresetPath @ "ChatWindow.obj");
+    cmJoinDefaultChats();
+}
+
+function ChatTextEditCtrl::onTabComplete(%this, %val)
+{
+   echo("ChatTextEditCtrl::onTabComplete");
+   if (%val == false)
+      %this.makeFirstResponder(%val);
+}
+

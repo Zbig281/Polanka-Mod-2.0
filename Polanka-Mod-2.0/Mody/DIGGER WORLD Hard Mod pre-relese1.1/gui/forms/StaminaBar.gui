@@ -1,0 +1,101 @@
+function createStaminaBar()
+{
+	new GuiWindowCtrl(StaminaBarWindow)
+	{
+		text = GetMessageIDText(1301);
+		position = "-0.546875% 88.75%";
+		Extent = "300 110";
+		resizeWidth = "1";
+		resizeHeight = "1";
+		canMove = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		canCollapse = "0";
+		edgeSnap = "0";
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		MaxExtent = "0 110";
+		MinExtent = "125 32";
+		HorizSizing = "right";
+		VertSizing = "top";
+		profile = "GuiSmallWindowProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		canSave = "1";
+		canSaveDynamicFields = "0";
+		canLock = "1";
+		canSetup = "1";
+		canHideOnFreelook = "1";
+		forGuiEdit = "1";
+
+		new GuiContainer()
+		{
+			docking = Client;
+			extent = "300 110";
+			Profile = "GuiBaseTextProfile";
+
+			new cmDoubleBarWidget(StaminaBar)
+			{
+				position = "60 27";
+				extent = "236 30";
+				MinExtent = "20 30";
+				profile = "GuiBarProfile";
+				HorizSizing = "width";
+				VertSizing = "center";
+				leftHiddenBar = 18;
+				rightBarOffset = 2;
+
+				backgroundCenterIndex = BackgroundBar;
+				backgroundRightIndex = BackgroundCornerRight;
+				firstBarCenterIndex = StaminaSoftBar;
+				firstBarRightIndex = StaminaSoftRightCorner;
+				secondBarCenterIndex = StaminaHardBar;
+				secondBarRightIndex = StaminaHardRightCorner;
+				firstBarRightDecorIndex = SlashLeft;
+				secondBarRightDecorIndex = SlashRight;
+			};
+
+			new GuiBitmapCtrl()
+			{
+				imageIndex = BarDoubleValuePanel;
+				profile = "GuiBarProfile";
+				extent = "76 79";
+				position = "0 0";
+				VertSizing = "center";
+
+				new GuiTextCtrl(StaminaBarFirstTextVal)
+				{
+					position = "1 19";
+					extent = "76 21";
+					Profile = "GuiBarValProfile";
+					text = "";
+				};
+
+				new GuiTextCtrl(StaminaBarSecondTextVal)
+				{
+					position = "1 36";
+					extent = "76 21";
+					Profile = "GuiBarValProfile";
+					text = "";
+				};
+			};
+		};
+	};
+
+	PlayGui.add(StaminaBarWindow);
+}
+
+function setStaminaBar(%firstVal, %secondVal, %max)
+{
+	StaminaBar.setMaxValue(%max);
+	StaminaBar.setFirstValue(%firstVal);
+	StaminaBar.setSecondValue(%secondVal);
+	StaminaBarFirstTextVal.setText(%firstVal);
+	StaminaBarSecondTextVal.setText(%secondVal);
+}

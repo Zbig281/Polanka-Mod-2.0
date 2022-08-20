@@ -1,0 +1,221 @@
+
+%guiContent = new GuiControl( HotBarSettingsDialog)
+{
+	position = "0 0";
+	extent = "1440 900";
+	minExtent = "8 8";
+	horizSizing = "width";
+	vertSizing = "height";
+	profile = "GuiOverlayProfile";
+	visible = "1";
+	active = "1";
+	opacity = "1";
+	isContainer = "1";
+	canSave = "1";
+	canSaveDynamicFields = "1";
+	helpTag = "0";
+
+		new GuiWindowCtrl() {
+		text = GetMessageIDText(1290); // Bar Settings
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		canLock = "0";
+		canSetup = "0";
+		canCollapse = "0";
+		closeCommand = "Canvas.popDialog( HotBarSettingsDialog);";
+		edgeSnap = "1";
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		position = "300 300";
+		extent = "417 347";
+		horizSizing = "center";
+		vertSizing = "center";
+		profile = "GuiWindowProfiles";
+		visible = "1";
+		active = "1";
+		opacity = "1";
+		isContainer = "1";
+		canSave = "1";
+		canSaveDynamicFields = "1";
+		accelerator = "escape";
+
+		new GuiContainer()
+		{
+			position = "0 0";
+			extent = "445 228";
+			profile = GuiAtlas3TiledImageProfile;
+			visible = "1";
+			active = "1";
+			canHit = "1";
+			BackgroundIndex = LearningWindowBackground;
+			docking = Client;
+
+			new GuiTextCtrl() {
+				text = GetMessageIDText(1291)@":"; // Opacity
+				position = "39 23";
+				extent = "200 24";
+				profile = "GuiTextSettingsProfile";
+				visible = "1";
+				active = "1";
+				opacity = "1";
+				isContainer = "1";
+				canSave = "1";
+				canSaveDynamicFields = "0";
+			};
+
+			new CmGuiArrowSliderCtrl(HotBarSettingsOpacity)
+			{
+				range = "0 100";
+				ticks = "0";
+				snap = "0";
+				value = "0";
+				position = "39 47";
+				extent = "236 36";
+				profile = "GuiHorizSliderProfile";
+				useMouseWheel = "1";
+				trackVOffset = "8";
+				thumbOffset = "0 0";
+				altCommand = "HotBarSettingsOpacity.UpdateValue();";
+			};
+
+			new GuiControl()
+			{
+				position = "282 45";
+				extent = "83 36";
+				profile = "GuiAtlas3TiledImageProfile";
+				leftIndex0 = "SmallHexagonalTextFieldLeft";
+				backgroundIndex = "SmallHexagonalTextFieldCenter";
+				rightIndex0 = "SmallHexagonalTextFieldRight";
+
+				new GuiTextEditSliderCtrl(HotBarSettingsOpacityText)
+				{
+					format = "%d";
+					range = "0 100";
+					renderArrow = "false";
+					increment = "1";
+					focusOnMouseWheel = "0";
+					historySize = "0";
+					tabComplete = "0";
+					sinkAllKeyEvents = "0";
+					text = "0";
+					maxLength = "1024";
+					position = "10 0";
+					extent = "60 35";
+					minExtent = "8 2";
+					profile = "GuiTextEditSettingsBarProfile";
+					command = "HotBarSettingsOpacityText.UpdateText();";
+				};
+			};
+
+			new GuiRadioCtrl( HotBarRadio1x10)
+			{
+				text = "10x1";
+				groupNum = "10";
+				buttonType = "RadioButton";
+				position = "38 88";
+				extent = "140 36";
+				profile = "CreateCharGenderCheckboxProfile";
+				canSaveDynamicFields = "0";
+				command = "$Window.setXCells(10);";
+				indentText = "7";
+				imageIndexStateOn = "RadioButtonActiveNormal";
+				imageIndexStateOff = "CheckBoxRadioButtonNormal";
+				imageIndexMouseOver = "RadioButtonActiveMouseOver";
+			};
+
+			new GuiRadioCtrl( HotBarRadio2x5)
+			{
+				text = "5x2";
+				groupNum = "10";
+				buttonType = "RadioButton";
+				position = "154 88";
+				extent = "140 36";
+				profile = "CreateCharGenderCheckboxProfile";
+				command = "$Window.setXCells(5);";
+				indentText = "7";
+				imageIndexStateOn = "RadioButtonActiveNormal";
+				imageIndexStateOff = "CheckBoxRadioButtonNormal";
+				imageIndexMouseOver = "RadioButtonActiveMouseOver";
+			};
+			new GuiRadioCtrl( HotBarRadio10x1)
+			{
+				text = "1x10";
+				groupNum = "10";
+				buttonType = "RadioButton";
+				position = "38 130";
+				extent = "140 36";
+				profile = "CreateCharGenderCheckboxProfile";
+				command = "$Window.setXCells(1);";
+				indentText = "7";
+				imageIndexStateOn = "RadioButtonActiveNormal";
+				imageIndexStateOff = "CheckBoxRadioButtonNormal";
+				imageIndexMouseOver = "RadioButtonActiveMouseOver";
+			};
+			new GuiRadioCtrl( HotBarRadio5x2) {
+				text = "2x5";
+				groupNum = "10";
+				buttonType = "RadioButton";
+				position = "154 130";
+				extent = "140 36";
+				profile = "CreateCharGenderCheckboxProfile";
+				command = "$Window.setXCells(2);";
+				indentText = "7";
+				imageIndexStateOn = "RadioButtonActiveNormal";
+				imageIndexStateOff = "CheckBoxRadioButtonNormal";
+				imageIndexMouseOver = "RadioButtonActiveMouseOver";
+			};
+	
+			new guiHorzTilingButtonCtrl()
+			{
+				text = GetMessageIDText(1218); // OK
+				Profile = "MessageBoxButtonProfile";
+				HorizSizing = "center";
+				VertSizing = "top";
+				position = "0 155";
+				Extent = "158 44";
+				imageIndex = H44Btn;
+				command = "Canvas.popDialog( HotBarSettingsDialog);";
+			};
+		};
+	};
+};
+//------------------------------------------------------------------------
+function CmHotBarWindow::onSettings( %obj) {
+	if( !isObject( HotBarSettingsDialog)) {
+		return;
+	}
+	HotBarSettingsDialog.updateWindowSettings( %obj);
+	Canvas.pushDialog( HotBarSettingsDialog);
+}
+//------------------------------------------------------------------------
+function HotBarSettingsDialog::updateWindowSettings( %obj, %window) {
+	$Window = %window;
+	HotBarSettingsOpacity.value = $Window.opacity * 100;
+	HotBarSettingsOpacityText.text = mFloor( HotBarSettingsOpacity.value);
+
+	$XCells =$Window.getXCells();
+	if( $XCells ==10)	  HotBarRadio1x10.setStateOn( true);
+	else if( $XCells ==5) HotBarRadio2x5.setStateOn( true);
+	else if( $XCells ==2) HotBarRadio5x2.setStateOn( true);
+	else if( $XCells ==1) HotBarRadio10x1.setStateOn( true);
+}
+//------------------------------------------------------------------------
+function HotBarSettingsOpacityText::UpdateText() {
+	HotBarSettingsOpacity.value = CmWindowCtrlSettingsOpacityText.getText();
+	HotBarSettingsOpacityText.setText( mFloor( HotBarSettingsOpacity.value));
+	$Window.opacity = HotBarSettingsOpacity.value * 0.01; 
+}
+//------------------------------------------------------------------------
+function HotBarSettingsOpacity::UpdateValue() {
+	HotBarSettingsOpacityText.setText( mFloor( HotBarSettingsOpacity.value));
+	$Window.opacity = HotBarSettingsOpacity.value * 0.01; 
+}
+//------------------------------------------------------------------------

@@ -1,0 +1,136 @@
+%guiContent = new GuiControl(SettingsDialog)
+{
+	position = "0 0";
+	extent = "100% 100%";
+	minExtent = "16 16";
+	horizSizing = "center";
+	vertSizing = "center";
+	profile = "GuiOverlayProfile";
+	visible = "1";
+	active = "1";
+	isContainer = "1";
+
+	new GuiBitmapCtrl(SettingsDialogBackground)			// full screen bg
+	{
+		position = "0 0";
+		extent = "443 707";
+		minExtent = "8 8";
+		horizSizing = "center";
+		vertSizing = "center";
+		visible = "1";
+		tile = "0";
+		isContainer = "1";
+		wrap = "1";
+		profile = "GuiDefaultProfile";
+		bitmap = "gui/images/menu_esc.png";
+
+		new GuiButtonCtrl(MainMenuGuiControlsBtn)
+		{
+			text = GetMessageIDText(1155); // Controls
+			imageIndex = getEscMenuButton(1);
+			horizSizing = "center";
+			vertSizing = "bottom";
+			position = "120 40";
+			extent = "200 56";
+			minExtent = "8 2";
+			profile = "EscMenuButtonProfile";
+			groupNum = "-1";
+			buttonType = "PushButton";
+			useMouseEvents = "0";
+			visible = "1";
+			active = "1";
+			hovertime = "1000";
+			isContainer = "0";
+			canSave = "1";
+			canSaveDynamicFields = "0";
+			command = "hideSettingsDialog(); ShowOptionsControls();";
+		};//button
+
+		new GuiButtonCtrl(MainMenuGuiVideoBtn) {
+			text = GetMessageIDText(1156); // Video
+			imageIndex = getEscMenuButton(1);
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "120 96";
+			extent = "200 56";
+			minExtent = "8 2";
+			profile = "EscMenuButtonProfile";
+			groupNum = "-1";
+			buttonType = "PushButton";
+			useMouseEvents = "0";
+			visible = "1";
+			active = "1";
+			hovertime = "1000";
+			isContainer = "0";
+			canSave = "1";
+			canSaveDynamicFields = "0";
+			command = "hideSettingsDialog(); createOptionsVideoDlg(); Canvas.pushDialog(OptionsVideoDlg);";
+		};//button
+
+		new GuiButtonCtrl(MainMenuGuiAudioBtn) {
+			text = GetMessageIDText(1157); // Audio
+			imageIndex = getEscMenuButton(1);
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "120 152";
+			extent = "200 56";
+			minExtent = "8 2";
+			profile = "EscMenuButtonProfile";
+			groupNum = "-1";
+			buttonType = "PushButton";
+			useMouseEvents = "0";
+			visible = "1";
+			active = "1";
+			hovertime = "1000";
+			isContainer = "0";
+			canSave = "1";
+			canSaveDynamicFields = "0";
+			command = "hideSettingsDialog(); createOptionsAudioDlg(); Canvas.pushDialog(OptionsAudioDlg);";
+		};//button
+
+		new GuiButtonCtrl(GameSettingsBtn) {
+			text = GetMessageIDText(2490); // Game settings
+			imageIndex = getEscMenuButton(1);
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "120 208";
+			extent = "200 56";
+			minExtent = "8 2";
+			profile = "EscMenuButtonProfile";
+			groupNum = "-1";
+			buttonType = "PushButton";
+			useMouseEvents = "0";
+			visible = "1";
+			active = "1";
+			hovertime = "1000";
+			isContainer = "0";
+			canSave = "1";
+			canSaveDynamicFields = "0";
+			command = "hideSettingsDialog(); OpenGameSettings();";
+		};//button
+
+		new GuiButtonCtrl(SettingsDialogBackBtn)
+		{
+			text = GetMessageIDText(1137); // Back
+			imageIndex = getEscMenuButton(2);
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "120 600";
+			extent = "200 56";
+			minExtent = "8 2";
+			profile = "EscMenuButtonProfile";
+			groupNum = "-1";
+			buttonType = "PushButton";
+			useMouseEvents = "0";
+			visible = "1";
+			active = "1";
+			hovertime = "1000";
+			isContainer = "0";
+			canSave = "1";
+			canSaveDynamicFields = "0";
+			accelerator = "escape";
+			command = "hideSettingsDialog(); showEscMenu();";
+		};
+	};
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,234 @@
+//-----------------------------------------------------------------------------
+
+singleton GuiControlProfile(CreditsBlackPnlProfile: GuiBaseTextProfile)
+{
+	opaque = "1";
+	fillColor = "0 0 0";
+	border = "rect1_color";
+	borderColor = "0 0 0";
+};
+
+singleton GuiControlProfile(CreditsUrlButtonProfile: GuiBaseCaptionProfile)
+{
+	globalImageIndex = "atlas1";
+	justify = "right";
+	fontSize = 28;
+	fontColor = "195 129 0";
+	fontColorHL = "210 161 0";
+};
+
+
+function createCreditsWindowD()
+{
+	new GuiControl(CreditsWindowD) 
+	{
+		position = "0 0";
+		extent = "1024 720";
+		profile = "GuiOverlayProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		canSave = "1";
+		canSaveDynamicFields = "1";
+		
+		new GuiWindowCtrl(CreditsWindowDDlg)
+		{
+			text = GetMessageIDText(5095); // Credits
+			resizeWidth = "0";
+			resizeHeight = "0";
+			canMove = "1";
+			canClose = "1";
+			canMaximize = "0";
+			canMinimize = "0";
+			canHideOnFreelook = "0";
+			canLock = "0";
+			canSetup = "0";
+			locked = "0";
+			position = "0 20";
+			extent = "1000 600";
+			profile = "GuiAutoCursorWindowProfile";
+			visible = "1";
+			active = "1";
+			isContainer = "1";
+			closeCommand ="closeCreditsWindowD();";
+			accelerator = "escape";
+			horizSizing = "center";
+			vertSizing = "height";
+
+			
+			new GuiContainer()
+			{
+				docking = Client;
+				extent = "500 500";
+				canSaveDynamicFields = "0";
+				Enabled = "1";
+				Profile = "GuiAtlas3TiledImageProfile";
+				canSave = "1";
+				Visible = "1";
+				canHit = "true";
+				BackgroundIndex = LearningWindowBackground;
+
+				new GuiControl()
+				{
+					position = "0 0";
+					extent = "500 80";
+					profile = "CreditsBlackPnlProfile";
+					horizSizing = "width";
+
+					new GuiBitmapCtrl()
+					{
+						position = "21 0";
+						extent = "204 49";
+						bitmap = "gui/images/credits/Logodw.png";
+						profile = "GuiBaseTextProfile";
+						vertSizing = "center";
+					};
+					
+					new guiHorzTilingButtonCtrl()
+						{
+							text = GetMessageIDText(6001); // Connect
+							position = "70 0";
+							extent = "198 44";
+							profile = "MessageBoxButtonProfile";
+							command = "openSteamURL(\"https://wargm.ru/server/52004/shop\");";
+							imageIndex = "H44Btn";
+							horizSizing = "left";
+							internalName = "connectBtnCtrl";
+							vertSizing = "center";
+						};
+						
+					new guiHorzTilingButtonCtrl()
+						{
+							text = GetMessageIDText(6002); // Connect
+							position = "278 0";
+							extent = "198 44";
+							profile = "MessageBoxButtonProfile";
+							command = "closeCreditsWindowD();";
+							imageIndex = "H44Btn";
+							horizSizing = "left";
+							internalName = "connectBtnCtrl";
+							vertSizing = "center";
+						};	
+
+					
+					
+					
+
+				};
+
+				new GuiControl()
+				{
+					position = "0 80";
+					extent = "500 36";
+					horizSizing = "width";
+					Profile = "GuiAtlas1TiledImageProfile";
+					visible = true;
+
+					TopIndex0 = FringeTopShadow;
+				};
+
+				new GuiScrollCtrl()
+				{
+					position = "4 80";
+					extent = "500 420";
+					hScrollBar = "alwaysOff";
+					vScrollBar = "alwaysOn";
+					profile = "GuiEagleScrollBarProfile";
+					constantThumbHeight = true;
+					childMargin = "20 0";
+					trackOffset = 12;
+					lockHorizScroll = true;
+					arrowSadowSize = -17;
+					addContentWidth = 29; 
+					isContainer = "1";
+					horizSizing = "width";
+					vertSizing = "height";
+					
+					new GuiStackControl()
+					{
+						position = "0 0";
+						extent = "450 100";
+						profile = "GuiDefaultProfile";
+						stackingType = Vertical;
+						padding = 2;
+						dynamicSize = "1";
+						dynamicNonStackExtent = "0";
+						changeChildPosition = "1";
+						changeChildSizeToFit = "1";
+						horizSizing = "width";
+						LeftIndent = 25;
+
+						new GuiMLTextCtrl(CreditsWindowDText)
+						{
+							text = "";
+							position = "0 0";
+							extent = "450 10";
+							profile = "GuiMLTextProfile";
+							canHit = "1"; 
+							visible = "1";
+							lineSpacing = "0";
+							bottomOffset = "0";
+							useURLMouseCursor = "1";
+						};
+					};
+				};
+				
+			};
+		};
+	};
+}
+
+function CreditsWindowDDlg::onWake(%this)
+{
+	%text = "<font:Open Sans:32><color:898989><br><font:Open Sans Bold:32><color:ffffff>Life is Feudal © Bitbox Ltd.\n";
+	CreditsWindowDText.setText(%text);
+	%this.loadCreditsFromFile();
+}
+
+function CreditsWindowDDlg::loadCreditsFromFile(%this)
+{
+   %creditsFile = "DONAT";
+	if(!isFile(%creditsFile))
+	   return;
+   new FileObject(creditsLoader);
+   if(!creditsLoader.openForRead(%creditsFile))
+   {
+      creditsLoader.delete();
+      return;
+	}
+	%text = "";
+	while(!creditsLoader.isEOF())
+	{
+	   %text = %text NL creditsLoader.readLine();
+	}
+	creditsLoader.delete();
+	CreditsWindowDText.setText(%text);
+}
+
+function showCreditsWindowD()
+{
+	if (!isObject(CreditsWindowD))
+	{
+		createCreditsWindowD();
+	}
+
+	if (isObject(CreditsWindowD))
+	{
+		Canvas.pushDialog(CreditsWindowD);
+	}
+}
+
+function closeCreditsWindowD()
+{
+	if (isObject(CreditsWindowD))
+	{
+		Canvas.popDialog(CreditsWindowD);
+		CreditsWindowD.safeDeleteObject();
+	}
+}
+
+function CreditsWindowDText::onURL(%this, %url) 
+{
+	openSteamURL(%url);
+}
+//------------------------------------------------------------------------------

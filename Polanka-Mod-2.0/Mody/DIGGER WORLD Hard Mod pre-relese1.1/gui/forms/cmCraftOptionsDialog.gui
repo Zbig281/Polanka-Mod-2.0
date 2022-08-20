@@ -1,0 +1,111 @@
+//-----------------------------------------------------------------------------
+// Craftsman & Marksman: Life is feudal
+//-----------------------------------------------------------------------------
+
+%guiContent = new GuiControl( CraftOptionsDlg) {
+	horizSizing = "width";
+	vertSizing = "height";
+	position = "0 0";
+	extent = "800 600";
+	minExtent = "8 8";
+	visible = "1";
+	helpTag = "0";
+	profile = "GuiBaseTextProfile";
+
+	new GuiWindowCtrl(CraftOptionsWnd) {
+		horizSizing = "center";
+		vertSizing = "center";
+		position = "170 175";
+		extent = "292 445";
+		minExtent = "50 100";
+		visible = "1";
+		helpTag = "0";
+		maxLength = "255";
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		minSize = "50 50";
+		text = GetMessageIDText(1346); // Select option
+		closeCommand = "";
+		profile = "GuiCursorEscWindowProfile";
+		closeCommand ="CraftOptionsClose();";
+		accelerator = "escape";
+
+		new GuiContainer()
+		{
+			position = "0 0";
+			extent = "292 508";
+			profile = GuiAtlas3TiledImageProfile;
+			visible = "1";
+			active = "1";
+			canHit = "1";
+			BackgroundIndex = LearningWindowBackground;
+			docking = Client;
+	
+			new guiHorzTilingButtonCtrl(CraftOptionsButton1) {
+				text = GetMessageIDText(2392); // Produce
+				position = "0 96";
+				extent = "198 56";
+				visible = "1";
+				active = "1";
+				groupNum = "-1";
+				buttonType = "PushButton";
+				useMouseEvents = "0";
+				horizSizing = "center";
+				vertSizing = "bottom";
+				profile = "BuildPositionButtonProfile";
+				command = "CraftOptionsSelect1();"; 
+				accelerator = "return";
+				imageIndex = "H56Btn";
+			};
+			new guiHorzTilingButtonCtrl(CraftOptionsButton2) {
+				text = GetMessageIDText(1352); // Auto craft
+				position = "0 159";
+				extent = "198 56";
+				visible = "1";
+				active = "1";
+				groupNum = "-1";
+				buttonType = "PushButton";
+				useMouseEvents = "0";
+				horizSizing = "center";
+				vertSizing = "bottom";
+				profile = "BuildPositionButtonProfile";
+				command = "CraftOptionsSelect2();";
+				imageIndex = "H56Btn";
+			};
+			new guiHorzTilingButtonCtrl(CraftOptionsButton3) {
+				text = GetMessageIDText(1349); // Minigame
+				position = "0 222";
+				extent = "198 56";
+				visible = "1";
+				active = "1";
+				groupNum = "-1";
+				buttonType = "PushButton";
+				useMouseEvents = "0";
+				horizSizing = "center";
+				vertSizing = "bottom";
+				profile = "BuildPositionButtonProfile";
+				command = "CraftOptionsSelect3();";
+				imageIndex = "H56Btn";
+			};
+			new guiHorzTilingButtonCtrl(CraftOptionsButton4) {
+				text = GetMessageIDText(1350); // Results pool
+				position = "0 285";
+				extent = "198 56";
+				visible = "1";
+				active = "1";
+				groupNum = "-1";
+				buttonType = "PushButton";
+				useMouseEvents = "0";
+				horizSizing = "center";
+				vertSizing = "bottom";
+				profile = "BuildPositionButtonProfile";
+				command = "CraftOptionsSelect4();";
+				imageIndex = "H56Btn";
+			};
+		};
+ 	};
+};

@@ -1,0 +1,419 @@
+// header1 text (e.g. "subscription is active")
+singleton GuiControlProfile(subscriptionInfoDialogHeader1Profile : GuiBaseTextProfile)
+{
+	fontSize = 19;
+	fontColor = "153 153 153";
+};
+
+// header2 text (e.g. "you can use:")
+singleton GuiControlProfile(subscriptionInfoDialogHeader2Profile : GuiBaseCaptionProfile)
+{
+	fontSize = 26;
+	fontColor = "255 255 255";
+};
+
+// delimiter between header and the rest of the window
+singleton GuiControlProfile(subscriptionInfoDialogHeaderDelimiterProfile : GuiAtlas3ImageProfile)
+{
+	border = "all_tiling";
+	globalImageIndex = "atlas3";
+};
+
+// delimiter between header and the rest of the window
+singleton GuiControlProfile(subscriptionInfoDialogFooterDelimiterProfile : subscriptionInfoDialogHeaderDelimiterProfile)
+{
+};
+
+// window footer
+singleton GuiControlProfile(subscriptionInfoDialogFooterBackgroundProfile : GuiBaseTextProfile)
+{
+	opaque = "1";
+	fillColor = "0 0 0";
+	border = "rect1_color";
+	borderColor = "0 0 0";
+};
+
+// button at the bottom of the window
+singleton GuiControlProfile(subscriptionInfoDialogFooterButtonProfile : GuiBaseTextProfile)
+{
+	fontSize = 27;
+	fontColor = "255 255 255";
+	fontColorHL = "255 255 255";
+	fontColorNA = "255 255 255";
+	fontColorSEL = "255 255 255";
+	justify = "center";
+	globalImageIndex = "atlas2";
+};
+
+// content block
+singleton GuiControlProfile(subscriptionInfoDialogContentProfile : GuiBaseTextProfile)
+{
+	// fillColor = "0 0 255 255";
+	// opaque = "1";
+};
+
+// bullet with subscription info text
+singleton GuiControlProfile(subscriptionInfoDialogBulletProfile : GuiBaseTextProfile)
+{
+	// fillColor = "255 255 255 255";
+	// opaque = "1";
+};
+
+// bullet text
+singleton GuiControlProfile(subscriptionInfoDialogBulletTextProfile : GuiBaseTextProfile)
+{
+	fontSize = 19;
+	fontColor = "153 153 153";
+	autoSizeHeight = true;
+
+	// fillColor = "255 0 0 255";
+	// opaque = "1";
+};
+
+// horizontal delimiter between various list components
+singleton GuiControlProfile(subscriptionInfoDialogDelimiterProfile : GuiBaseTextProfile)
+{
+	// fillColor = "255 255 255 255";
+	// opaque = "1";
+};
+
+// skin block
+singleton GuiControlProfile(subscriptionInfoDialogSkinProfile : GuiBaseTextProfile)
+{
+	// fillColor = "255 0 0 255";
+	// opaque = "1";
+};
+
+// skin header (name) text
+singleton GuiControlProfile(subscriptionInfoDialogSkinHeaderProfile : GuiBaseCaptionProfile)
+{
+	fontSize = 26;
+	fontColor = "178 128 28";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "left";
+	autoSizeHeight = true;
+
+	// fillColor = "255 255 255 255";
+	// opaque = "1";
+};
+
+// skin description text
+singleton GuiControlProfile(subscriptionInfoDialogSkinDescriptionProfile : GuiBaseTextProfile)
+{
+	fontType = $GlobalTextItalicFontName;
+	fontSize = 19;
+	fontColor = "102 102 102";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "left";
+	autoSizeHeight = true;
+
+	// fillColor = "0 255 0 255";
+	// opaque = "1";
+};
+
+// "available --:--:--:--" timer
+singleton GuiControlProfile(subscriptionInfoDialogSkinTimerProfile : subscriptionInfoDialogBulletTextProfile)
+{
+	fontColor = "204 204 204";
+	autoSizeHeight = true;
+
+	// fillColor = "0 0 255 255";
+	// opaque = "1";
+};
+
+singleton GuiControlProfile(subscriptionInfoDialogBoosterProfile : GuiBaseTextProfile)
+{
+	// fillColor = "255 255 255 255";
+	// opaque = "1";
+};
+
+singleton GuiControlProfile(subscriptionInfoDialogBoosterNameProfile : GuiBaseTextProfile)
+{
+	fontSize = 26;
+	fontColor = "178 128 28";
+	autoSizeHeight = true;
+
+	// fillColor = "255 0 0 255";
+	// opaque = "1";
+};
+
+singleton GuiControlProfile(subscriptionInfoDialogBoosterButtonProfile : GuiBaseTextProfile)
+{
+	// fillColor = "0 0 255 255";
+	// opaque = "1";
+};
+
+singleton GuiControlProfile(subscriptionInfoDialogBoosterTimerProfile : GuiText7pxProfile)
+{
+	fontColor = "204 204 204";
+	fontColorNA = "204 204 204";
+};
+
+function createSubscriptionInfoDialog()
+{
+	if (isObject(SubscriptionInfoGui))
+	{
+		return SubscriptionInfoGui;
+	}
+
+	%guiContent = new GuiControl(SubscriptionInfoGui)
+	{
+		position = "0 0";
+		extent = "610 800";
+		minExtent = "16 16";
+		profile = "GuiDefaultProfile";
+		visible = "1";
+		active = "1";
+		class = "SubscriptionInfoDialog";
+
+		// Main window
+		new GuiWindowCtrl()
+		{
+			internalName = "window";
+			position = "200 60";
+			extent = "610 800";
+			minExtent = "610 800";
+			horizSizing = "center";
+			vertSizing = "center";
+			resizeWidth = "1";
+			resizeHeight = "1";
+			canMove = "1";
+			canClose = "1";
+			canMinimize = "0";
+			canMaximize = "0";
+			canLock = "0";
+			canSetup = "0";
+			canCollapse = "0";
+			anchorTop = "1";
+			anchorBottom = "0";
+			anchorLeft = "1";
+			anchorRight = "0";
+			edgeSnap = true;
+			margin = "0 0 0 0";
+			padding = "0 0 0 0";
+			profile = "GuiAutoCursorWindowProfile";
+			visible = true;
+			active = true;
+			closeCommand = "CloseSubscriptionInfoDialog();";
+			accelerator = "escape";
+
+			// Background texture
+			new GuiContainer()
+			{
+				docking = Client;
+				position = "0 0";
+				extent = "610 800";
+				profile = "GuiAtlas3TiledImageProfile";
+				backgroundIndex = "LearningWindowBackground";
+
+				// // Ornament
+				// new GuiBitmapCtrl()
+				// {
+				// 	position = "15 15";
+				// 	extent = "241 251";
+				// 	minExtent = "8 8";
+				// 	horizSizing = "right";
+				// 	vertSizing = "bottom";
+				// 	visible = "1";
+				// 	profile = "GuiBaseTextProfile";
+				// 	bitmap = "gui/images/selectWorldOrnament.png";
+				// };
+
+				// Header
+				new GuiContainer()
+				{
+					docking = Top;
+					position = "0 42";
+					extent = "610 113";
+					profile = "GuiDefaultProfile";
+
+					new GuiStackControl()
+					{
+						position = "40 35";
+						extent = "530 1";
+						stackingType = "Vertical";
+						dynamicSize = "1";
+						horizSizing = "width";
+
+						new GuiMLTextCtrl()
+						{
+							internalName = "header1";
+							horizSizing = "width";
+							profile = "subscriptionInfoDialogHeader1Profile";
+							canHit = "0";
+							bottomOffset = 0;
+						};
+
+						new GuiMLTextCtrl()
+						{
+							internalName = "header2";
+							horizSizing = "width";
+							profile = "subscriptionInfoDialogHeader2Profile";
+							canHit = "0";
+							bottomOffset = 0;
+						};
+					};
+
+					// Horizontal delimiter
+					new GuiControl()
+					{
+						position = "16 110";
+						extent = "578 3";
+						profile = "subscriptionInfoDialogHeaderDelimiterProfile";
+						horizSizing = "width";
+						canHit = "0";
+						BottomLeftIndex = BlackSlimHLineLeft;
+						BottomIndex0 = BlackSlimHLineCenter;
+						BottomRightIndex = BlackSlimHLineRight;
+					};
+				};
+
+				// Content
+				new GuiContainer()
+				{
+					internalName = "content";
+					docking = Client;
+					profile = "GuiBaseTextProfile";
+					horizSizing = "width";
+					vertSizing = "height";
+					visible = "0";
+
+					// Scroll
+					new GuiScrollCtrl()
+					{
+						docking = Client;
+						profile = "GuiEagleScrollBarProfile";
+						trackOffset = 12;
+						arrowSadowSize = -25;
+						hScrollBar = "alwaysOff";
+						vScrollBar = "alwaysOn";
+						constantThumbHeight = "1";
+						alwaysShowThumb = "1";
+						isContainer = "1";
+
+						new GuiStackControl()
+						{
+							profile = "subscriptionInfoDialogContentProfile";
+							horizSizing = "width";
+							stackingType = "Vertical";
+							dynamicSize = "1";
+
+							// Boosters
+							new GuiStackControl()
+							{
+								internalName = "boosterStacker";
+								horizSizing = "width";
+								stackingType = "Vertical";
+								dynamicSize = "1";
+								topIndent = 5;
+								bottomIndent = 15;
+								leftIndent = 40;
+								padding = 8;
+							};
+
+							// Compensates for booster stacker when it's not visible
+							new GuiControl()
+							{
+								internalName = "boosterStackerPlaceholder";
+								extent = "1 25";
+								visible = "0";
+							};
+
+							// Etc
+							new GuiStackControl()
+							{
+								internalName = "stacker";
+								horizSizing = "width";
+								stackingType = "Vertical";
+								dynamicSize = "1";
+								bottomIndent = 25;
+								leftIndent = 40;
+								padding = 12;
+							};
+						};
+					};
+				};
+
+				// Loading
+				new GuiContainer()
+				{
+					internalName = "loading";
+					docking = Client;
+					profile = "GuiBaseTextProfile";
+					horizSizing = "width";
+					vertSizing = "height";
+					visible = "0";
+
+					new GuiRevolvingElement()
+					{
+						internalName = "loadingSpinner";
+						horizSizing = "center";
+						vertSizing = "center";
+						position = "0 0";
+						extent = "300 300";
+						minExtent = "300 300";
+						profile = "GuiDefaultProfile";
+						visible = "1";
+						active = "1";
+						background = "art/gui/loading/sign.png";
+						revolving = "art/gui/loading/sun.png";
+						revolvingSpeed = $GuiLoadingWindow::revolvingSpeed;
+					};
+				};
+
+				// Footer
+				new GuiContainer()
+				{
+					docking = Bottom;
+					extent = "610 91";
+					profile = "GuiBaseTextProfile";
+
+					// Background
+					new GuiControl()
+					{
+						position = "0 0";
+						extent = "100% 100%";
+						horizSizing = "width";
+						vertSizing = "height";
+						profile = "subscriptionInfoDialogFooterBackgroundProfile";
+					};
+
+					// Horizontal delimiter
+					new GuiControl()
+					{
+						position = "0 0";
+						extent = "100% 3";
+						profile = "subscriptionInfoDialogFooterDelimiterProfile";
+						horizSizing = "width";
+						canHit = "0";
+						BottomLeftIndex = BlackSlimHLineLeft;
+						BottomIndex0 = BlackSlimHLineCenter;
+						BottomRightIndex = BlackSlimHLineRight;
+					};
+
+					// Buy subscription
+					new guiHorzTilingButtonCtrl()
+					{
+						internalName = "buySubscription";
+						position = "22 25";
+						maxExtent = "312 44";
+						extent = "312 44";
+						minExtent = "8 2";
+						profile = "subscriptionInfoDialogFooterButtonProfile";
+						useMouseEvents = "1";
+						visible = "1";
+						active = "1";
+						command = "CloseSubscriptionInfoDialog(); openXsollaStore(0, true);";
+						imageIndex = H44Btn;
+					};
+				};
+			};
+		};
+	};
+
+	return %guiContent;
+}

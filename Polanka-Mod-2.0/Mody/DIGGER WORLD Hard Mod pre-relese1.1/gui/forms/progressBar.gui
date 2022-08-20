@@ -1,0 +1,100 @@
+function showProgressBar()
+{
+	if (isObject(cmProgressBarHud) == false)
+	{
+		new GuiControl(cmProgressBarHud)
+		{
+			position = "0 0";
+			extent = "800 600";
+			profile = "GuiModelessDialogProfile";
+			noCursor = "1";
+	
+			new cmBarWidget(ProgressBar)
+			{
+				position = "0 0";
+				extent = "469 30";
+				MinExtent = "469 30";
+				profile = "GuiBarProfile";
+				HorizSizing = "center";
+				VertSizing = "center";
+				leftHiddenBar = 0;
+				rightBarOffset = 2;
+				LeftBarOffset = 0;
+
+				backgroundLeftIndex = ProgressBarBackgroundLeft;
+				backgroundCenterIndex = ProgressBarBackgroundCenter;
+				backgroundRightIndex = ProgressBarBackgroundRight;
+				firstBarLeftIndex = ProgressBarLeft;
+				firstBarCenterIndex = ProgressBarCenter;
+				firstBarRightIndex = ProgressBarRight;
+				firstBarRightDecorIndex = ArrowRight;
+
+				new GuiBitmapCtrl()
+				{
+					position = "404 0";
+					extent = "30 30";
+					profile = "GuiAtlas1ImageProfile";
+					visible = "true";
+					canHit = "false";
+					imageIndex = "ProgressEscLbl";
+					internalName = "EscLbl";
+					VertSizing = "center";
+					centered = true;
+				};
+
+				new GuiButtonCtrl()
+				{
+					horizSizing = "left";
+					vertSizing = "bottom";
+					extent = "17 17";
+					position = "434 0";
+					profile = "GuiAtlas3ImageProfile";
+					command = "resetAbility();";
+					useManualIndex = "true";
+					imageIndex = "Cross";
+					depressedImageIndex = "Cross";
+					mouseOverImageIndex = "Cross";
+					stateOnImageIndex = "Cross";
+					internalName = "crossBtn";
+					VertSizing = "center";
+				};
+			};
+		};
+	}
+	Canvas.pushDialog(cmProgressBarHud);
+}
+
+function hideProgressBar()
+{
+	Canvas.popDialog(cmProgressBarHud);
+}
+
+function setProgressBar(%val)
+{
+	if (!isObject(ProgressBar))
+		return;
+
+	ProgressBar.setFirstValue(%val * 100);
+
+	%ext = ProgressBar.getExtent();
+	%pregressPos = %ext.x * %val;
+
+	checkProgressBarChildVisible(%pregressPos, ProgressBar-->EscLbl);
+	checkProgressBarChildVisible(%pregressPos, ProgressBar-->crossBtn);
+}
+
+function checkProgressBarChildVisible(%pregressPos, %chuld)
+{
+	if (isObject(%chuld))
+	{
+		%pos = %chuld.getPosition();
+		if (%pos.x <= %pregressPos)
+		{
+			%chuld.setVisible(false);
+		}
+		else
+		{
+			%chuld.setVisible(true);
+		}
+	}
+}

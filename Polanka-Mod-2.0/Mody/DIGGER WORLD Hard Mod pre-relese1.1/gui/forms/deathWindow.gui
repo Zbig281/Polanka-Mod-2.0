@@ -1,0 +1,393 @@
+
+singleton GuiControlProfile(DeathWindowCaptionProfile : GuiBaseCaptionProfile)
+{
+	fontSize = 36;
+	fontColor = "178 128 28";
+	justify = "center";
+};
+
+singleton GuiControlProfile(DeathWindowGrayTextProfile : GuiBaseTextProfile)
+{
+	fontSize = 20;
+	fontColor = "102 102 102";
+	justify = "center";
+};
+
+singleton GuiControlProfile(DeathWindowSkillsListProfile : GuiBaseTextProfile)
+{
+	fontSize = 20;
+	justify = "right";
+	fontColor = "203 203 203";
+};
+
+singleton GuiControlProfile(DeathWindowSkillsHintProfile : GuiBaseTextProfile)
+{
+	fontSize = 16;
+	justify = "right";
+	border = "none";
+	fontColor = "102 102 102";
+};
+
+singleton GuiControlProfile(DeathWindowSkillsListLeftProfile : DeathWindowSkillsListProfile)
+{
+	justify = "left";
+};
+
+singleton GuiControlProfile(DeathWindowSkillsHintLeftProfile : DeathWindowSkillsHintProfile)
+{
+	justify = "left";
+};
+
+function DeathWindowAddSkillLost(%skillID, %skillLostBasic, %skillLostInsurance, %skillLostFinal)
+{
+	%height = 20;
+
+	%textControl1 = new GuiTextCtrl() 
+	{
+		text = GetMessageIDText(%skillID);
+		maxLength = "255";
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		position = "0 0";
+		extent = 200 SPC %height;
+		profile = DeathWindowSkillsListProfile;
+	};
+
+	%textControl2 = new GuiTextCtrl() 
+	{
+		text = %skillLostBasic;
+		maxLength = "255";
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		position = "0 0";
+		extent = 120 SPC %height;
+		profile = DeathWindowSkillsListLeftProfile;
+	};
+
+	%textControl3 = new GuiTextCtrl()
+	{
+		text = %skillLostInsurance;
+		maxLength = "255";
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		position = "0 0";
+		extent = 120 SPC %height;
+		profile = DeathWindowSkillsListLeftProfile;
+	};
+
+//	%textControl4 = new GuiTextCtrl()
+//	{
+//		text = %skillLostFinal;
+//		maxLength = "255";
+//		margin = "0 0 0 0";
+//		padding = "0 0 0 0";
+//		anchorTop = "1";
+//		anchorBottom = "0";
+//		anchorLeft = "1";
+//		anchorRight = "0";
+//		position = "0 0";
+//		extent = 120 SPC %height;
+//		profile = DeathWindowSkillsListLeftProfile;
+//	};
+
+	DeathWindowStackControl-->Column1.Add(%textControl1);
+	DeathWindowStackControl-->Column2.Add(%textControl2);
+	DeathWindowStackControl-->Column3.Add(%textControl3);
+//	DeathWindowStackControl-->Column4.Add(%textControl4);
+
+	//move buttons lower
+	DeathWindowButtonsGroup.position.y += %height;
+}
+
+function createDeathWindow(%hasInsurance, %hasPenalty)
+{
+	if (isObject(DeathWindow))
+	{
+		DeathWindow.delete();
+	}
+
+	//random message id in 4329-4334 and 4367-4385.
+	%messageIndex = getRandom(0, 6 + 19 - 1);
+	%messageId = (%messageIndex >= 6) ? (4367 + %messageIndex - 6) : (4329 + %messageIndex);
+
+	%guiContent = new GuiControl(DeathWindow) 
+	{
+		isContainer = "1";
+		Profile = "GuiOverlayProfile";
+		position = "300 300";
+		extent = "576 660";
+		visible = "1";
+
+		//background
+		new GuiBitmapCtrl()
+		{
+			bitmap = "gui/images/death_background.png";
+			profile = "GuiAtlas3ImageProfile";
+			horizSizing = "center";
+			VertSizing = "center";
+			position = "0 0";
+			resize = "1";
+			wrap = true;
+			isContainer = "1";
+   
+			new GuiTextCtrl() 
+			{
+				text = GetMessageIDText(1);//You are dead
+				maxLength = "255";
+				margin = "0 0 0 0";
+				padding = "0 0 0 0";
+				anchorTop = "1";
+				anchorBottom = "0";
+				anchorLeft = "1";
+				anchorRight = "0";
+				position = "207 112";
+				extent = "300 35";
+				horizSizing = "center";
+				profile = DeathWindowCaptionProfile;
+			};
+
+			new GuiMLTextCtrl() 
+			{
+				text = "<just:center> " @ GetMessageIDText(%messageId);//Random death text
+				maxLength = "255";
+				margin = "0 0 0 0";
+				padding = "0 0 0 0";
+				anchorTop = "1";
+				anchorBottom = "0";
+				anchorLeft = "1";
+				anchorRight = "0";
+				position = "87 162";
+				extent = "300 65";
+				horizSizing = "center";
+				profile = DeathWindowGrayTextProfile;
+			};
+
+			//Line
+			new GuiBitmapCtrl()
+			{
+				imageIndex = BlackSlimHLineCenter;
+				profile = "GuiAtlas3ImageProfile";
+				extent = "430 3";
+				position = "70 300";
+				horizSizing = "center";
+				wrap = true;
+			};
+
+			//Skill hints
+			/*new GuiTextCtrl()
+			{
+				text = "";
+				maxLength = "255";
+				margin = "0 0 0 0";
+				padding = "0 0 0 0";
+				anchorTop = "1";
+				anchorBottom = "0";
+				anchorLeft = "1";
+				anchorRight = "0";
+				position = "110 329";
+				extent = "150 20";
+				profile = DeathWindowSkillsHintProfile;
+			};*/
+
+			new GuiTextCtrl()
+			{
+				text = GetMessageIDText(2890);//Basic
+				maxLength = "255";
+				margin = "0 0 0 0";
+				padding = "0 0 0 0";
+				anchorTop = "1";
+				anchorBottom = "0";
+				anchorLeft = "1";
+				anchorRight = "0";
+				position = "300 329";//"230 329";
+				extent = "100 20";
+				profile = DeathWindowSkillsHintLeftProfile;
+			};
+
+			new GuiMLTextCtrl()
+			{
+				text = GetMessageIDText(2891);//With your insurance
+				maxLength = "255";
+				margin = "0 0 0 0";
+				padding = "0 0 0 0";
+				anchorTop = "1";
+				anchorBottom = "0";
+				anchorLeft = "1";
+				anchorRight = "0";
+				position = "380 315";//"310 315";
+				extent = "100 20";
+				profile = DeathWindowSkillsHintLeftProfile;
+				visible = %hasInsurance;
+			};
+
+//			new GuiMLTextCtrl()
+//			{
+//				text = GetMessageIDText(4619);//With recent death Penalty
+//				maxLength = "255";
+//				margin = "0 0 0 0";
+//				padding = "0 0 0 0";
+//				anchorTop = "1";
+//				anchorBottom = "0";
+//				anchorLeft = "1";
+//				anchorRight = "0";
+//				position = "390 315";
+//				extent = "100 20";
+//				profile = DeathWindowSkillsHintLeftProfile;
+//				visible = %hasPenalty;
+//			};
+
+			//Skills list
+			new GuiControl(DeathWindowStackControl) 
+			{
+				hScrollBar = "alwaysOff";
+				position = "110 350";//"70 350";
+				extent = "336 145";//"416 145";
+				trackOffset = 0;
+				hScrollBar = "alwaysOff";
+				vScrollBar = "alwaysOn";
+				lockHorizScroll = "false";
+				lockVertScroll = "false";
+				profile = GuiPopUpScrollBarProfile;
+				isContainer = "1";
+			
+				new GuiStackControl()
+				{
+					StackingType = "Vertical";
+					Padding = "0";
+					DynamicSize = "1";
+					ChangeChildSizeToFit = "1";
+					ChangeChildPosition = "1";
+					isContainer = "1";
+					extent = "150 50";
+					position = "0 0";
+					LeftIndent = "0";
+					padding = 3;
+					internalName = "Column1";
+				};
+
+				new GuiStackControl()
+				{
+					StackingType = "Vertical";
+					Padding = "0";
+					DynamicSize = "1";
+					ChangeChildSizeToFit = "1";
+					ChangeChildPosition = "1";
+					isContainer = "1";
+					extent = "80 50";
+					position = "190 0";
+					LeftIndent = "0";
+					padding = 3;
+					internalName = "Column2";
+				};
+
+				new GuiStackControl()
+				{
+					StackingType = "Vertical";
+					Padding = "0";
+					DynamicSize = "1";
+					ChangeChildSizeToFit = "1";
+					ChangeChildPosition = "1";
+					isContainer = "1";
+					extent = "80 50";
+					position = "270 0";
+					LeftIndent = "0";
+					padding = 3;
+					internalName = "Column3";
+					visible = %hasInsurance;
+				};
+
+//				new GuiStackControl()
+//				{
+//					StackingType = "Vertical";
+//					Padding = "0";
+//					DynamicSize = "1";
+//					ChangeChildSizeToFit = "1";
+//					ChangeChildPosition = "1";
+//					isContainer = "1";
+//					extent = "80 50";
+//					position = "350 0";
+//					LeftIndent = "0";
+//					padding = 3;
+//					internalName = "Column4";
+//					visible = %hasPenalty;
+//				};
+			};
+
+			new GUIControl(DeathWindowButtonsGroup)
+			{
+				position = "0 380";
+				extent = "100% 80";
+				isContainer = "1";
+
+				//Line
+				new GuiBitmapCtrl()
+				{
+					imageIndex = BlackSlimHLineCenter;
+					profile = "GuiAtlas3ImageProfile";
+					extent = "430 3";
+					position = "79 0";
+					horizSizing = "center";
+					wrap = true;
+				};
+
+				//Buttons
+				new guiHorzTilingButtonCtrl() 
+				{
+					text = GetMessageIDText(2709);//Revive
+					groupNum = "-1";
+					buttonType = "PushButton";
+					useMouseEvents = "0";
+					position = "72 30";
+					extent = "200 44";
+					profile = BuildPositionButtonProfile;
+					visible = "1";
+					active = "1";
+					isContainer = "0";
+					canSave = "0";
+					canSaveDynamicFields = "0";
+					imageIndex = "H44Btn";
+					internalName = "ReviveButton";
+					command = "ReviveCharacter(); Canvas.popDialog(DeathWindow); DeathWindow.safeDeleteObject();";
+				};//button
+
+				new guiHorzTilingButtonCtrl() 
+				{
+					text = GetMessageIDText(3009);//Buy insurance
+					groupNum = "-1";
+					buttonType = "PushButton";
+					useMouseEvents = "0";
+					position = "302 30";
+					extent = "200 44";
+					profile = BuildPositionButtonProfile;
+					visible = !%hasInsurance;
+					active = "1";
+					isContainer = "0";
+					canSave = "0";
+					canSaveDynamicFields = "0";
+					imageIndex = "H44Btn";
+					internalName = "BuyButton";
+					command = "openXsollaStore(30201, false, 1);";
+				};//button
+			};
+		};
+	};//DeathWindow
+
+	Canvas.pushDialog(DeathWindow, 1);
+
+	if(isObject(CanvasCleanupSet))
+	{
+		CanvasCleanupSet.add(DeathWindow);
+	}
+}

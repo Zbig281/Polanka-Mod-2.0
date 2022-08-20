@@ -1,0 +1,274 @@
+//-----------------------------------------------------------------------------
+// Craftsman & Marksman: Life is feudal
+//-----------------------------------------------------------------------------
+
+%guiSlideButtonExtent = "200 79";
+%guiSlideButtonOffsetX = 36;
+%guiSlideButtonOffsetY = 82;
+%guiSlideButtonStep = 79;
+
+new GuiControl( DropPositionDlg) 
+{
+	position = "0 0";
+	extent = "282 595";
+	minExtent = "8 2";
+	horizSizing = "right";
+	vertSizing = "bottom";
+	profile = "GuiDefaultProfile";
+	visible = "1";
+	active = "1";
+	isContainer = "1";
+	canSave = "1";
+	canSaveDynamicFields = "1";
+
+	new GuiWindowCtrl( DropPositionDlgWnd) 
+	{
+		text = GetMessageIDText(1328); // Position
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		canCollapse = "0";
+		edgeSnap = "1";
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		position = "116 60";
+		extent = "282 595";
+		minExtent = "32 32";
+		horizSizing = "right";
+		vertSizing = "bottom";
+		profile = "GuiCursorEscWindowProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		canSave = "0";
+		canSaveDynamicFields = "0";
+		closeCommand ="CloseDropPosition();";
+
+		//background
+		new GuiBitmapCtrl()
+		{
+			position = "7 42";
+			extent = "268 513";
+			canHit = "false";
+			visible = "true";
+			profile = "GuiAtlas3ImageProfile";
+			centered = "true";
+			imageIndex = "LearningWindowBackground";
+			wrap = "1";
+			isContainer = "1";
+		};
+		
+		//X
+		new GuiBitmapCtrl()
+		{
+			position = %guiSlideButtonOffsetX SPC (%guiSlideButtonOffsetY + %guiSlideButtonStep * 0);
+			extent = %guiSlideButtonExtent;
+			canHit = "true";
+			visible = "true";
+			profile = "GuiAtlas3ImageProfile";
+			centered = "true";
+			imageIndex = "BuildBtnRightBackground";
+			isContainer = "1";
+
+			new GuiSlideButton( DropPositionBtnX) 
+			{
+				bitmapMode = "Centered";
+				buttonType = "PushButton";
+				useModifiers = "0";
+				useStates = "1";
+				groupNum = "-1";
+				useMouseEvents = "0";
+				position = "0 0";
+				extent = "100% 100%";
+				profile = "GuiAtlas3ImageProfile";
+				visible = "1";
+				active = "1";
+				opacity = "1";
+				isContainer = "1";
+				slideType = "X";
+			
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					resize = "1";
+					internalName = "BuildPositionBtnIcon";
+					canHit = "false";
+					visible = "true";
+					profile = "GuiAtlas3ImageProfile";
+					centered = "true";
+				};
+			};
+		};
+
+		//Y
+		new GuiBitmapCtrl()
+		{
+			position = %guiSlideButtonOffsetX SPC (%guiSlideButtonOffsetY + %guiSlideButtonStep * 1);
+			extent = %guiSlideButtonExtent;
+			canHit = "true";
+			visible = "true";
+			profile = "GuiAtlas3ImageProfile";
+			centered = "true";
+			imageIndex = "BuildBtnLeftBackground";
+			isContainer = "1";
+
+			new GuiSlideButton( DropPositionBtnY) 
+			{
+				bitmapMode = "Centered";
+				buttonType = "PushButton";
+				useModifiers = "0";
+				useStates = "1";
+				groupNum = "-1";
+				useMouseEvents = "0";
+				position = "0 0";
+				extent = "100% 100%";
+				profile = "GuiAtlas3ImageProfile";
+				visible = "1";
+				active = "1";
+				opacity = "1";
+				isContainer = "1";
+				slideType = "Y";
+			
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					resize = "1";
+					internalName = "BuildPositionBtnIcon";
+					canHit = "false";
+					visible = "true";
+					profile = "GuiAtlas3ImageProfile";
+					centered = "true";
+				};
+			};
+		};
+
+		//Z
+		new GuiBitmapCtrl()
+		{
+			position = %guiSlideButtonOffsetX SPC (%guiSlideButtonOffsetY + %guiSlideButtonStep * 2);
+			extent = %guiSlideButtonExtent;
+			canHit = "true";
+			visible = "true";
+			profile = "GuiAtlas3ImageProfile";
+			centered = "true";
+			imageIndex = "BuildBtnVertBackground";
+			isContainer = "1";
+
+			new GuiSlideButton( DropPositionBtnZ) 
+			{
+				bitmapMode = "Centered";
+				buttonType = "PushButton";
+				useModifiers = "0";
+				useStates = "1";
+				groupNum = "-1";
+				useMouseEvents = "0";
+				position = "0 0";
+				extent = "259 93";
+				profile = "GuiAtlas3ImageProfile";
+				visible = "1";
+				active = "1";
+				opacity = "1";
+				isContainer = "1";
+				slideType = "Z";
+			
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					resize = "1";
+					internalName = "BuildPositionBtnIcon";
+					canHit = "false";
+					visible = "true";
+					profile = "GuiAtlas3ImageProfile";
+					centered = "true";
+				};
+			};
+		};
+
+		//Rot
+		new GuiBitmapCtrl()
+		{
+			position = %guiSlideButtonOffsetX SPC (%guiSlideButtonOffsetY + %guiSlideButtonStep * 3);
+			extent = %guiSlideButtonExtent;
+			canHit = "true";
+			visible = "true";
+			profile = "GuiAtlas3ImageProfile";
+			centered = "true";
+			imageIndex = "BuildBtnRotationBackground";
+			isContainer = "1";
+
+			new GuiSlideButton( DropPositionBtnR) 
+			{
+				bitmapMode = "Centered";
+				buttonType = "PushButton";
+				useModifiers = "0";
+				useStates = "1";
+				groupNum = "-1";
+				useMouseEvents = "0";
+				position = "0 0";
+				extent = "259 93";
+				profile = "GuiAtlas3ImageProfile";
+				visible = "1";
+				active = "1";
+				opacity = "1";
+				isContainer = "1";
+				slideType = "R";
+			
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					resize = "1";
+					internalName = "BuildPositionBtnIcon";
+					canHit = "false";
+					visible = "true";
+					profile = "GuiAtlas3ImageProfile";
+					centered = "true";
+				};
+			};
+		};
+		
+		new guiHorzTilingButtonCtrl()
+		{
+			text = GetMessageIDText(1353); // Place
+			groupNum = "-1";
+			buttonType = "PushButton";
+			useMouseEvents = "0";
+			position = "0 416";
+			extent = "200 44";
+			minExtent = "8 2";
+			horizSizing = "center";
+			vertSizing = "bottom";
+			profile = "BuildPositionButtonProfile";
+			visible = "1";
+			active = "1";
+			command = "SendDropObject();";
+			accelerator = "return";
+			imageIndex = "H44Btn";
+		};
+
+		new guiHorzTilingButtonCtrl()
+		{
+			text = GetMessageIDText(1113); // Cancel
+			groupNum = "-1";
+			buttonType = "PushButton";
+			useMouseEvents = "0";
+			position = "0 471";
+			extent = "200 44";
+			minExtent = "8 2";
+			horizSizing = "center";
+			vertSizing = "bottom";
+			profile = "BuildPositionButtonProfile";
+			visible = "1";
+			active = "1";
+			command = "CloseDropPosition();";
+			accelerator = "escape";
+			imageIndex = "H44Btn";
+		};
+	};//wnd
+};//dlg

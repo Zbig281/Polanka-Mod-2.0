@@ -1,0 +1,564 @@
+//-----------------------------------------------------------------------------
+// Life is feudal
+//-----------------------------------------------------------------------------
+$Tutorial::config::borderIndent = "11 11";
+$Tutorial::config::contentExtent = "200 200";
+$Tutorial::config::contentIndent = "39 40";
+$Tutorial::config::bottomContentHeight = "90";
+
+function createTutorialHintWindow()
+{
+	createTutorialHintProfiles();
+
+	if (isObject(GuiTutorialHint))
+	{
+		GuiTutorialHint-->contentCtrl.clear();
+		GuiTutorialHint.isDummyControlAdded = "0";
+		return GuiTutorialHint;
+	}
+
+	%hintWnd = new GuiContainer(GuiTutorialHint)
+	{
+		position = "50 50";
+		extent = $Tutorial::config::contentExtent;
+		minExtent = $Tutorial::config::contentExtent;
+		profile = "TutorialContentProfile";
+		visible = "0";
+		active = "1";
+		isContainer = "1";
+		isDummyControlAdded = "0";
+
+		// background and outer border
+		new GuiContainer()
+		{
+			docking = Client;
+			position = "0 0";
+			extent = $Tutorial::config::contentExtent;
+			profile = "TutorialMainWindowProfile";
+			BackgroundIndex = LearningWindowBackground;
+			TopIndex0 = LearningWindowBorderTransparentTop;
+			RightIndex0 = LearningWindowBorderTransparentRight;
+			BottomIndex0 = LearningWindowBorderTransparentBottom;
+			LeftIndex0 = LearningWindowBorderTransparentLeft;
+			TopLeftIndex = LearningWindowBorderTransparentTLAngle;
+			TopRightIndex = LearningWindowBorderTransparentTRAngle;
+			BottomRightIndex = LearningWindowBorderTransparentBRAngle;
+			BottomLeftIndex = LearningWindowBorderTransparentBLAngle;
+			visible = "1";
+			internalName = "hintContentBackground";
+
+			// inner border
+			new GuiControl()
+			{
+				position = $Tutorial::config::borderIndent;
+				extent = $Tutorial::config::contentExtent.x - $Tutorial::config::borderIndent.x * 2 @ " " @ $Tutorial::config::contentExtent.y - $Tutorial::config::borderIndent.y * 2;
+				profile = "TutorialBackgroundProfile";
+				TopIndex0 = FringeTopShadow;
+				RightIndex0 = FringeRightShadow;
+				BottomIndex0 = FringeBottomShadow;
+				LeftIndex0 = FringeLeftShadow;
+				TopLeftIndex = FringeTLAngleShadow;
+				TopRightIndex = FringeTRAngleShadow;
+				BottomRightIndex = FringeBRAngleShadow;
+				BottomLeftIndex = FringeBLAngleShadow;
+				horizSizing = "width";
+				vertSizing = "height";
+				visible = "1";
+				internalName = "tutorialHintBackgroundCtrl";
+			};
+
+			// scroll area
+			new GuiScrollCtrl(GuiTutorialHintScrollContentCtrl)
+			{
+				hScrollBar = "alwaysOff";
+				position = $Tutorial::config::borderIndent.x + $Tutorial::config::contentIndent.x @ " " @ $Tutorial::config::borderIndent.y + $Tutorial::config::contentIndent.y;
+				extent = $Tutorial::config::contentExtent.x - $Tutorial::config::borderIndent.x * 2 - $Tutorial::config::contentIndent.x * 2 @ " " @ $Tutorial::config::contentExtent.y - $Tutorial::config::borderIndent.y * 2 - $Tutorial::config::contentIndent.y - $Tutorial::config::bottomContentHeight; // * 2 - $Tutorial::config::contentIndent.y * 2 
+				profile = "TutorialContentScrollProfile";
+				constantThumbHeight = true;
+				childMargin = "0 0";
+				trackOffset = 0;
+				addContentWidth = 30;
+				addContentHeight = 0;
+				horizSizing = "width";
+				vertSizing = "height";
+				internalName = "hintContentHolder";
+
+				new GuiStackControl(GuiTutorialHintContentCtrl)
+				{
+					position = "0 0";
+					extent = $Tutorial::config::contentExtent.x - $Tutorial::config::borderIndent.x * 2 - $Tutorial::config::contentIndent.x * 2 @ " 2";
+					internalName = "contentCtrl";
+					Stacking = Vertical;
+					profile = "TutorialContentProfile";
+					vertStacking = "Top to Bottom";
+					padding = 0;
+					dynamicSize = "1";
+					dynamicNonStackExtent = "0";
+					changeChildPosition = "1";
+					changeChildSizeToFit = "1";
+					horizSizing = "width";
+				};
+			};
+			
+			new GuiContainer()
+			{
+				docking = bottom;
+				position = "0 0";
+				extent = "10 " @ $Tutorial::config::bottomContentHeight + 40;
+				profile = "TutorialContentProfile";
+				visible = "0";
+				internalName = "understandButtonContainer";
+
+				new GuiContainer()
+				{
+					docking = top;
+					position = "0 0";
+					extent = "10 43";
+					profile = "TutorialContentProfile";
+					visible = "0";
+					internalName = "shadowContainer";
+
+					// затенение
+					new GuiBitmapCtrl()
+					{
+						position = "0 0";
+						extent = "272 43";
+						profile = GuiAtlas3ImageProfile;
+						visible = "1";
+						active = "1";
+						imageIndex = BottomBlackGradient2;
+						horizSizing = "width";
+						wrap = 0;
+					};
+
+					// кнопка прокрутки
+					new GuiButtonCtrl()
+					{
+						text = "";
+						groupNum = "-1";
+						buttonType = "PushButton";
+						position = "0 23";
+						extent = "32 20";
+						profile = "GuiAtlas1ImageProfile";
+						visible = "1";
+						active = "1";
+						command = "onTutorialScrollDownButtonClick();";
+						imageIndex = "MetalArrowDown";
+						horizSizing = "center";
+					};
+				};
+
+				new guiHorzTilingButtonCtrl() 
+				{
+					text = GetMessageIDText(4538);  // Got it
+					buttonType = "PushButton";
+					position = "0 53";
+					extent = "158 44";
+					profile = "MessageBoxButtonProfile";
+					visible = true;
+					active = true;
+					command = "";
+					imageIndex = "H44Btn";
+					internalName = "understandButton";
+					horizSizing = "center";
+				};
+			};
+
+			// кнопка закрытия
+			new GuiButtonCtrl()
+			{
+				text = "";
+				groupNum = "-1";
+				buttonType = "PushButton";
+				position = $Tutorial::config::contentExtent.x - $Tutorial::config::borderIndent.x - 20 - 17 @ " " @ $Tutorial::config::borderIndent.x + 20;
+				extent = "17 17";
+				minExtent = "8 2";
+				profile = "TutorialButtonProfile";
+				visible = "1";
+				active = "1";
+				command = "";
+				opacity = "1";
+				isContainer = "1";
+				horizSizing = "left";
+				internalName = "closeButton";
+				imageIndex = "Cross";
+				accelerator = "escape";
+			};
+		};
+	};
+
+	if(isObject(ClientMissionCleanupSet))
+		ClientMissionCleanupSet.add(%hintWnd);
+
+	return %hintWnd;
+}
+
+function createTutorialHintProfiles()
+{
+	if (!isObject(TutorialAtlas3Profile))
+	{
+		new GuiControlProfile(TutorialAtlas3Profile: GuiBaseTextProfile)
+		{
+			globalImageIndex = "atlas3";
+		};
+	}
+
+	if (!isObject(TutorialAtlas1Profile))
+	{
+		new GuiControlProfile(TutorialAtlas1Profile: GuiBaseTextProfile)
+		{
+			globalImageIndex = "atlas1";
+		};
+	}
+
+	if (!isObject(TutorialMainProfile))
+	{
+		new GuiControlProfile(TutorialMainProfile: TutorialAtlas3Profile)
+		{
+			border = "all_tiling";
+		};
+	}
+
+	if (!isObject(TutorialBackgroundProfile))
+	{
+		new GuiControlProfile(TutorialBackgroundProfile: TutorialAtlas1Profile)
+		{
+			border = "all_tiling";
+		};
+	}
+
+	if (!isObject(TutorialButtonProfile))
+	{
+		new GuiControlProfile(TutorialButtonProfile: GuiBaseTextProfile)
+		{
+			globalImageIndex = "atlas3";
+		};
+	}
+
+	if (!isObject(TutorialMainWindowProfile))
+	{
+		new GuiControlProfile(TutorialMainWindowProfile: TutorialAtlas3Profile)
+		{
+			border = "all_tiling";
+		};
+	}
+
+	if (!isObject(TutorialContentScrollProfile))
+	{
+		new GuiControlProfile(TutorialContentScrollProfile: GuiScrollProfile)
+		{
+			globalImageIndex = "atlas1";
+			border = "none";
+			opaque = false;
+			borderThickness = 0;
+		};
+	}
+
+	if (!isObject(TutorialContentProfile))
+	{
+		new GuiControlProfile(TutorialContentProfile: GuiBaseTextProfile)
+		{
+			fontType = $GlobalTextFontName;
+			fontSize = 20;
+			fontColor = "204 204 204";
+		};
+	}
+
+	if (!isObject(GuiTutorialInfoWindowProfile))
+	{
+		new GuiControlProfile(GuiTutorialInfoWindowProfile: GuiSmallWindowProfile)
+		{
+			autoCursorMode = true;
+			canEscCloseOnPlayGui = true;
+		};
+	}
+
+	if (!isObject(TutorialInfoContentProfile))
+	{
+		new GuiControlProfile(TutorialInfoContentProfile: TutorialContentProfile)
+		{
+			autoCursorMode = true;
+		};
+	}
+}
+
+function deleteTutorialHintProfiles()
+{
+	if (isObject(TutorialMainProfile))
+	{
+		TutorialMainProfile.safeDeleteObject();
+	}
+
+	if (isObject(TutorialButtonProfile))
+	{
+		TutorialButtonProfile.safeDeleteObject();
+	}
+
+	if (isObject(TutorialContentProfile))
+	{
+		TutorialContentProfile.safeDeleteObject();
+	}
+
+	if (isObject(TutorialContentScrollProfile))
+	{
+		TutorialContentScrollProfile.safeDeleteObject();
+	}
+
+	if (isObject(TutorialMainWindowProfile))
+	{
+		TutorialMainWindowProfile.safeDeleteObject();
+	}
+
+	if (isObject(TutorialAtlas1Profile))
+	{
+		TutorialAtlas1Profile.safeDeleteObject();
+	}
+
+	if (isObject(TutorialAtlas3Profile))
+	{
+		TutorialAtlas3Profile.safeDeleteObject();
+	}
+
+	if (isObject(TutorialBackgroundProfile))
+	{
+		TutorialBackgroundProfile.safeDeleteObject();
+	}
+
+	if (isObject(GuiTutorialInfoWindowProfile))
+	{
+		GuiTutorialInfoWindowProfile.safeDeleteObject();
+	}
+
+	if (isObject(TutorialInfoContentProfile))
+	{
+		TutorialInfoContentProfile.safeDeleteObject();
+	}
+}
+
+function createTutorialSimpleHintWindow()
+{
+	%hintWnd = createTutorialHintWindow();
+	%hintWnd-->hintContentHolder.extent = $Tutorial::config::contentExtent.x - $Tutorial::config::borderIndent.x * 2 - $Tutorial::config::contentIndent.x * 2 @ " " @ $Tutorial::config::contentExtent.y - $Tutorial::config::borderIndent.y * 2 - $Tutorial::config::contentIndent.y * 2; 
+	%hintWnd.extent.x = $Tutorial::config::borderIndent.x * 2 + 372;
+	%hintWnd-->closeButton.command = "closeTutorialSimpleHint();";
+	%hintWnd-->understandButtonContainer.visible = "0";
+	%hintWnd-->understandButton.command = "";
+	%hintWnd-->hintContentBackground.BackgroundIndex = "LearningWindowBackgroundTransparent";
+	%hintWnd.hintType = "simple";
+}
+
+function createTutorialInfoHintWindow()
+{
+	%hintWnd = createTutorialHintWindow();
+	%hintWnd.profile = TutorialInfoContentProfile;
+	%hintWnd-->hintContentHolder.extent = $Tutorial::config::contentExtent.x - $Tutorial::config::borderIndent.x * 2 - $Tutorial::config::contentIndent.x * 2 @ " " @ $Tutorial::config::contentExtent.y - $Tutorial::config::borderIndent.y * 2 - $Tutorial::config::contentIndent.y - $Tutorial::config::bottomContentHeight;
+	%hintWnd.extent.x = $Tutorial::config::borderIndent.x * 2 + 434;
+	%hintWnd-->closeButton.command = "closeTutorialInfoHint();";
+	%hintWnd-->understandButtonContainer.visible = "1";
+	%hintWnd-->understandButton.command = "closeTutorialInfoHint();";
+	%hintWnd-->hintContentBackground.BackgroundIndex = "LearningWindowBackground";
+	%hintWnd.hintType = "info";
+}
+
+function showTutorialHintWindow()
+{
+	if (!isObject(GuiTutorialHint))
+	{
+		echo("[Tutorial] hint window is not created");
+		return;
+	}
+
+	PlayGui.add(GuiTutorialHint);
+	updateTutorialHintContent();
+}
+
+function updateTutorialHintContent()
+{
+	if (!isObject(GuiTutorialHint))
+	{
+		echo("[Tutorial] hint window is not created");
+		return;
+	}
+
+	$contentSizeY = GuiTutorialHint-->contentCtrl.extent.y;
+
+	$newHeight = $contentSizeY + $Tutorial::config::borderIndent.y * 2 + $Tutorial::config::contentIndent.y * 2;
+	if (GuiTutorialHint.hintType $= "info")
+	{
+		$newHeight += $Tutorial::config::bottomContentHeight;
+	}
+
+	$maxHeight = PlayGui.extent.y - 40;
+	if ($newHeight > $maxHeight)
+	{
+		GuiTutorialHint.extent.y = $maxHeight;
+	}
+	else
+	{
+		GuiTutorialHint.extent.y = $newHeight;
+	}
+
+	if (GuiTutorialHint.hintType $= "info")
+	{
+		GuiTutorialHint.position = 20 - $Tutorial::config::borderIndent.x @ " " @ 20 - $Tutorial::config::borderIndent.y;
+	}
+	else
+	{
+		GuiTutorialHint.position = "20 " @ (PlayGui.extent.y - GuiTutorialHint.extent.y) / 2;
+	}
+
+	GuiTutorialHint-->shadowContainer.visible = (GuiTutorialHint-->hintContentHolder.extent.y < GuiTutorialHint-->contentCtrl.extent.y);
+	if (GuiTutorialHint-->shadowContainer.visible && GuiTutorialHint.isDummyControlAdded == false)
+	{
+		// если видна кнопка прокрутки, то добавляем в конце контрол-заглушку, чтобы контент проматывался полностью
+		addTutorialHintSpacing(50);
+		GuiTutorialHint.isDummyControlAdded = true;
+	}
+	GuiTutorialHint.visible = "1";
+}
+
+function getTutorialContentControl()
+{
+	if($helpWindowTutorialBuilding)
+	{
+		return $helpWindowTutorialControl-->contentCtrl;
+	}
+	else
+	{
+		if (!isObject(GuiTutorialHint))
+		{
+			echo("[Tutorial] hint window is not created");
+		}
+		return GuiTutorialHint-->contentCtrl;
+	}
+}
+
+function addTutorialHintTextContent(%textId)
+{
+	%content = getTutorialContentControl();
+
+	%ctrl = new GuiMLTextCtrl() 
+	{
+		text = GetMessageIDText(%textId);
+		lineSpacing = "2";
+		allowColorChars = "0";
+		maxChars = "-1";
+		useURLMouseCursor = "0";
+		isContainer = "0";
+		Profile = "TutorialContentProfile";
+		position = "0 0";
+		extent = "1 1";
+		MinExtent = "1 1";
+		Visible = "1";
+		canHit = "0";
+		horizSizing = "width";
+		bottomOffset = "0";
+		class = "GuiTutorialHintContentTextCtrl";
+	};
+
+	%content.add(%ctrl);
+}
+
+function addTutorialHintSpacing(%pixels)
+{
+	%content = getTutorialContentControl();
+
+	%ctrl = new GuiControl()
+	{
+		Profile = "TutorialContentProfile";
+		position = "0 0";
+		extent = "50 " @ %pixels;
+		canHit = "0";
+	};
+
+	%content.add(%ctrl);
+}
+
+function addTutorialHintImage(%picPath)
+{	
+	%content = getTutorialContentControl();
+
+	%ctrl = new GuiBitmapCtrl()
+	{
+		position = "0 0";
+		extent = "8 8";
+		minExtent = "0 0";
+		profile = "TutorialContentProfile";
+		bitmap = %picPath;
+		visible = "1";
+		active = "0";
+		resize = "1";
+		canHit = "0";
+		wrap = "0";
+		centered = "1";
+		class = "GuiTutorialHintContentBitmapCtrl";
+	};
+
+	%content.add(%ctrl);
+}
+
+function closeTutorialHintWindow()
+{
+	if (isObject(GuiTutorialHint))
+	{
+		PlayGui.remove(GuiTutorialHint);
+		GuiTutorialHint.safeDeleteObject();
+	}
+	deleteTutorialHintProfiles();
+}
+
+function closeTutorialSimpleHint()
+{
+	closeTutorialHintWindow();
+	onCloseTutorialSimpleHint();
+}
+
+function closeTutorialInfoHint()
+{
+	closeTutorialHintWindow();
+	onCloseTutorialInfoHint();
+}
+
+function onTutorialScrollDownButtonClick()
+{
+	if (!isObject(GuiTutorialHint))
+	{
+		echo("[Tutorial] hint window is not created");
+		return;
+	}
+	GuiTutorialHint-->hintContentHolder.setScrollPosition(0, GuiTutorialHint-->hintContentHolder.getScrollPositionY() + 20);
+}
+
+function GuiTutorialHintContentBitmapCtrl::onThisControlResized(%this)
+{
+	updateTutorialHintContent();
+}
+
+function GuiTutorialHintContentTextCtrl::onThisControlResized(%this)
+{
+	updateTutorialHintContent();
+}
+
+function GuiTutorialHint::clickClose()
+{
+	if (GuiTutorialHint.hintType $= "info")
+	{
+		closeTutorialInfoHint();
+	}
+	else
+	{
+		closeTutorialSimpleHint();
+	}
+}
+
+function applyGameSettingsShowTutorialChanged()
+{
+	$pref::GameSetting::showTutorial = $Tutorial::Setting::currentShowValue;
+	
+	if (!isObject(GuiTutorialHint) || $pref::GameSetting::showTutorial)
+	{
+		return;
+	}
+
+	GuiTutorialHint.clickClose();
+}

@@ -1,0 +1,576 @@
+//-----------------------------------------------------------------------------
+// Craftsman & Marksman: Life is feudal
+//-----------------------------------------------------------------------------
+
+singleton GuiControlProfile(SlaveNameProfile : GuiBaseCaptionProfile)
+{
+	fontSize = 23;
+	fontColor = "204 204 204";
+	justify = "left";
+};
+
+singleton GuiControlProfile(OutpostNumTextProfile : GuiBaseTextProfile)
+{
+	fontSize = 19;
+	fontColor = "204 204 204";
+	justify = "left";
+};
+
+singleton GuiControlProfile(OutpostItalicTextProfile : GuiBaseTextProfile)
+{
+	fontType = $GlobalTextItalicFontName;
+	fontSize = 19;
+	fontColor = "204 204 204";
+	justify = "left";
+};
+
+singleton GuiControlProfile(OutpostResourceProfile : GuiBaseTextProfile)
+{
+	fontSize = 24;
+	fontColor = "187 123 8";
+	fontColorNA = "187 123 8";
+	fontColorSEL = "205 205 205";
+	fontColorHL = "187 123 8";
+};
+
+singleton GuiControlProfile(OutpostProductionRateTextProfile : GuiBaseTextProfile)
+{
+	fontSize = 21;
+	fontColor = "153 153 153";
+	autoSizeWidth = "1";
+};
+
+singleton GuiControlProfile(OutpostProductionRateValProfile : GuiBaseCaptionProfile)
+{
+	fontSize = 23;
+	fontColor = "204 204 204";
+	autoSizeWidth = "1";
+};
+
+singleton GuiControlProfile(OutpostSecondLineProfile : GuiBaseTextProfile)
+{
+	fontSize = 20;
+	fontColor = "102 102 102";
+};
+
+
+function CreateOutpostDialog()
+{
+	%gui = new GuiOutpost(OutpostDlgWnd)
+	{
+		text = "";
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "1";
+		canMaximize = "0";
+		canMinimize = "0";
+		canHideOnFreelook = "0";
+		canLock = "0";
+		canSetup = "0";
+		locked = "0";
+		position = "0 0";
+		extent = "885 770";
+		minExtent = "885 770";
+		maxExtent = "885 770";
+		profile = "GuiInventoryContainerProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		canSave = "0";
+		canSaveDynamicFields = "0";
+		closeCommand ="CloseOutpostDialog();";
+		horizSizing = "center";
+		vertSizing = "center";
+
+		new GuiContainer()
+		{
+			docking = Client;
+			extent = "885 770";
+			canSaveDynamicFields = "0";
+			Enabled = "1";
+			Profile = "GuiAtlas3TiledImageProfile";
+			canSave = "1";
+			Visible = "1";
+			BackgroundIndex = "LearningWindowBackground";
+
+			// background ornament image
+			new GuiBitmapCtrl()
+			{
+				position = "0 12";
+				extent = "305 653";
+				bitmap = "gui/images/outposts/outpost_left_ornament.png";
+				profile = "GuiBaseTextProfile";
+			};
+
+			// line
+			new GuiControl()
+			{
+				position = "410 9";
+				extent = "3 751";
+				minExtent = "3 2";
+				profile = "GuiAtlas3TiledImageProfile";
+				canHit = "1";
+				vertSizing = "height";
+				TopIndex0 = BlackSlimVLineTop;
+				BackgroundIndex = BlackSlimVLineCenter;
+				BottomIndex0 = BlackSlimVLineBottom;
+			};
+
+
+			// Current production rate
+			// icon
+			new GuiBitmapCtrl()
+			{
+				tooltip = GetMessageIDText(4852); //Outpost production rate depends on base item type production rate, quality of outpost, quality and amount of dead and alive slaves
+				position = "446 25";
+				extent = "29 29";
+				profile = "GuiAtlas3ImageProfile";
+				visible = "1";
+				active = "1";
+				centered = "1";
+				canHit = "1";
+				imageIndex = ExclamationPointIconNormal;
+			};
+			
+			new GuiStackControl()
+			{
+				position = "480 21";
+				extent = "196 36";
+				canHit = "false";
+				profile = "GuiBaseTextProfile";
+				stackingType = "Horizontal";
+				padding = 3;
+				dynamicSize = "1";
+				dynamicNonStackExtent = "0";
+				changeChildSizeToFit = "0";
+				changeChildPosition = "0";
+				visible = "1";
+
+				// label
+				new GuiTextCtrl()
+				{
+					text = GetMessageIDText(4765); // Current production rate
+					position = "480 1";
+					extent = "196 36";
+					profile = "OutpostProductionRateTextProfile";
+					canHit = "false"; 
+					visible = "1";
+				};
+					
+				// amount
+				new GuiTextCtrl()
+				{
+					text = "0";
+					position = "727 0";
+					extent = "43 36";
+					profile = "OutpostProductionRateValProfile";
+					canHit = "false"; 
+					visible = "1";
+					internalName = "productionRateValue";
+				};
+			};
+
+			// second line
+			new GuiTextCtrl()
+			{
+				text = GetMessageIDText(4766); // To add slave just drop it in inventory container
+				position = "453 57";
+				extent = "350 36";
+				profile = "OutpostSecondLineProfile";
+				canHit = "false"; 
+				visible = "1";
+			};
+
+			// container
+			new GuiBitmapCtrl()
+			{
+				position = "453 90";
+				extent = "379 337";
+				minExtent = "379 337";
+				visible = "1";
+				active = "1";
+				canHit = "0";
+				bitmap = "gui/images/outposts/outpost_container.png";
+				profile = "GuiBaseTextProfile";
+				internalName = "productContainerCtrl";
+			};
+
+			//Resource
+			new GuiTextCtrl()
+			{
+				text = GetMessageIDText(4768); // Resource
+				position = "468 433";
+				extent = "236 22";
+				profile = "OutpostResourceProfile";
+				canHit = false;
+				internalName = "resourceLable";
+			};
+
+			//drop down list
+			new GuiPopUpMenuCtrlEx()
+			{
+				position = "442 460";
+				extent = "415 52";
+				profile = "CreateCharWindowPopUpProfile";
+				backPnlProfile = "GuiPopUpBorder";
+				buttonOffset = 5;
+				cellHeight = 46;
+				maxPopupHeight = 235;
+				leftIndentMenu = 24;
+				rightIndentMenu = 24;
+				addScrollSize = "-3 0";
+				horizSizing = "width";
+				menuOffset = 0;
+				createScrollCommand = "createPopUpScroll();";
+				command = "";
+				internalName = "popup";
+			};
+
+			// button
+			new guiHorzTilingButtonCtrl()
+			{
+				text = GetMessageIDText(4767); // Change
+				position = "453 538";
+				extent = "158 44";
+				profile = "MessageBoxButtonProfile";
+				command = "OutpostDlgWnd.onChangeButtonClick();";
+				imageIndex = "H44Btn";
+				internalName = "changeButton";
+			};
+		};
+	};
+
+	%gui.add(createSlaveSlots());
+	PlayGui.add(%gui);
+	return %gui;
+}
+
+function createSlaveSlot(%name, %pos)
+{
+	%slot = new GuiControl()
+	{
+		extent = "367 118";
+		position = %pos;
+		internalName = %name;
+		
+		// background slot image
+		new GuiBitmapCtrl()
+		{
+			position = "6 0";
+			extent = "118 118";
+			canHit = false;
+			profile = "GuiAtlas1ImageProfile";
+			imageIndex = "LargeSlot";
+			internalName = "slotPanel";
+		};
+
+		// item scroll image
+		new GuiBitmapCtrl()
+		{
+			position = "0 0";
+			extent = "130 130";
+			canHit = true;
+			centered = true;
+			internalName = "image";
+			bitmap = "art/2D/Items/slave.png";
+		};
+		
+		// name text
+		new GuiTextCtrl()
+		{
+			text = "";
+			position = "141 22";
+			extent = "236 22";
+			profile = "SlaveNameProfile";
+			canHit = false;
+			internalName = "slaveName";
+		};
+
+		// quality
+		new GuiStackControl()
+		{
+			position = "141 51";
+			extent = "300 50";
+			canHit = "false";
+			profile = "GuiBaseTextProfile";
+			stackingType = "Horizontal";
+			padding = 3;
+			dynamicSize = "1";
+			dynamicNonStackExtent = "1";
+			changeChildSizeToFit = "0";
+			changeChildPosition = "0";
+			visible = "1";
+			internalName = "quality";
+
+			new GuiBitmapCtrl()
+			{
+				position = "0 1";
+				extent = "14 16";
+				canHit = "false";
+				visible = "true";
+				resize = "true";
+				profile = "GuiAtlas3ImageProfile";
+				imageIndex = QualityIcon;
+			};
+
+			new GuiTextCtrl() 
+			{
+				text = "";
+				position = "0 0";
+				extent = "190 16";
+				profile = "OutpostNumTextProfile";
+				canHit = "false";
+				horizSizing = "width";
+				internalName = "qualityText";
+			};
+		};
+
+		// time
+		new GuiStackControl()
+		{
+			position = "190 51";
+			extent = "300 50";
+			canHit = "false";
+			profile = "GuiBaseTextProfile";
+			stackingType = "Horizontal";
+			padding = 3;
+			dynamicSize = "1";
+			dynamicNonStackExtent = "1";
+			changeChildSizeToFit = "0";
+			changeChildPosition = "0";
+			visible = "1";
+			internalName = "time";
+
+			new GuiBitmapCtrl()
+			{
+				position = "0 1";
+				extent = "14 16";
+				canHit = "false";
+				visible = "true";
+				resize = "true";
+				profile = "GuiAtlas3ImageProfile";
+				imageIndex = TimeIcon;
+			};
+
+			new GuiTextCtrl() 
+			{
+				text = "3 days";
+				position = "0 0";
+				extent = "190 16";
+				profile = "OutpostNumTextProfile";
+				canHit = "false";
+				horizSizing = "width";
+				internalName = "timeText";
+			};
+		};
+
+		// alive
+		new GuiStackControl()
+		{
+			position = "141 72";
+			extent = "300 50";
+			canHit = "false";
+			profile = "GuiBaseTextProfile";
+			stackingType = "Horizontal";
+			padding = 3;
+			dynamicSize = "1";
+			dynamicNonStackExtent = "1";
+			changeChildSizeToFit = "0";
+			changeChildPosition = "0";
+			visible = "1";
+			internalName = "alive";
+
+			new GuiTextCtrl() 
+			{
+				text = GetMessageIDText(4770); // Still alive / 4771 Dead
+				position = "0 2";
+				extent = "190 16";
+				profile = "OutpostItalicTextProfile";
+				canHit = "false";
+				internalName = "aliveText";
+			};
+		};
+	};
+
+	return %slot;
+}
+
+function createSlaveSlots()
+{
+	%panel = new GuiControl()
+	{
+		position = "29 63";
+		extent = "378 700";
+		internalName = "slaves";
+	};
+
+	%itemPosition[0] = "0 0";
+	%itemPosition[1] = "0 121";
+	%itemPosition[2] = "0 252";
+	%itemPosition[3] = "0 383";
+	%itemPosition[4] = "0 514";
+
+	// base slave image
+	%baseSlave = new GuiControl()
+	{
+		extent = "367 118";
+		position = %itemPosition[0];
+		internalName = "baseSlaveSlot";
+
+		new GuiBitmapCtrl()
+		{
+			position = "12 0";
+			extent = "108 108";
+			bitmap = "gui/images/outposts/slave_icon.png";
+			profile = "GuiBaseTextProfile";
+			horizSizing = "left";
+			vertSizing = "top";
+			internalName = "slotPanel";
+		};
+
+		// fake invisible item scroll image
+		new GuiBitmapCtrl()
+		{
+			position = "21 0";
+			extent = "130 130";
+			canHit = true;
+			centered = true;
+			internalName = "image";
+			visible = false;
+			bitmap = "art/2D/Items/slave.png";
+		};
+		
+		// name text
+		new GuiTextCtrl()
+		{
+			text = GetMessageIDText(4769); // Overseer
+			position = "141 29";
+			extent = "236 22";
+			profile = "SlaveNameProfile";
+			canHit = false;
+			internalName = "slaveName";
+		};
+
+		// quality
+		new GuiStackControl()
+		{
+			position = "141 58";
+			extent = "300 50";
+			canHit = "false";
+			profile = "GuiBaseTextProfile";
+			stackingType = "Horizontal";
+			padding = 3;
+			dynamicSize = "1";
+			dynamicNonStackExtent = "1";
+			changeChildSizeToFit = "0";
+			changeChildPosition = "0";
+			visible = "1";
+			internalName = "quality";
+
+			new GuiBitmapCtrl()
+			{
+				position = "0 1";
+				extent = "14 16";
+				canHit = "false";
+				visible = "true";
+				resize = "true";
+				profile = "GuiAtlas3ImageProfile";
+				imageIndex = QualityIcon;
+			};
+
+			new GuiTextCtrl() 
+			{
+				text = "60";
+				position = "0 0";
+				extent = "190 16";
+				profile = "OutpostNumTextProfile";
+				canHit = "false";
+				internalName = "qualityText";
+			};
+		};
+
+		// time - fake invisible for base npc
+		new GuiStackControl()
+		{
+			position = "190 64";
+			extent = "300 50";
+			canHit = "false";
+			profile = "GuiBaseTextProfile";
+			stackingType = "Horizontal";
+			padding = 3;
+			dynamicSize = "1";
+			dynamicNonStackExtent = "1";
+			changeChildSizeToFit = "0";
+			changeChildPosition = "0";
+			visible = "0";
+			internalName = "time";
+
+			new GuiBitmapCtrl()
+			{
+				position = "0 1";
+				extent = "14 16";
+				canHit = "false";
+				visible = "true";
+				resize = "true";
+				profile = "GuiAtlas3ImageProfile";
+				imageIndex = TimeIcon;
+			};
+
+			new GuiTextCtrl() 
+			{
+				text = "3 days";
+				position = "0 0";
+				extent = "190 16";
+				profile = "OutpostNumTextProfile";
+				canHit = "false";
+				horizSizing = "width";
+				internalName = "timeText";
+			};
+		};
+
+		// alive
+		new GuiStackControl()
+		{
+			position = "180 56";
+			extent = "300 50";
+			canHit = "false";
+			profile = "GuiBaseTextProfile";
+			stackingType = "Horizontal";
+			padding = 3;
+			dynamicSize = "1";
+			dynamicNonStackExtent = "1";
+			changeChildSizeToFit = "0";
+			changeChildPosition = "0";
+			visible = "1";
+			internalName = "alive";
+
+			new GuiTextCtrl() 
+			{
+				text = GetMessageIDText(4770); // Still alive / 4771 Dead
+				position = "0 2";
+				extent = "190 16";
+				profile = "OutpostItalicTextProfile";
+				canHit = "false";
+				internalName = "aliveText";
+			};
+		};
+	};
+	%panel.add(%baseSlave);
+
+	for (%i = 1; %i <= 4; %i++)
+	{
+		%slave = createSlaveSlot("slaveSlot" @ %i, %itemPosition[%i]);
+		%panel.add(%slave);
+	}
+
+	return %panel;
+}
+
+
+function GuiOutpost::onWake(%this)
+{
+	%this.updateWorkingBounds(462, 145, 369, 327);
+}
+
+

@@ -1,0 +1,264 @@
+
+if(!isObject(selectWorldGui))
+new GuiControl(selectWorldGui)
+{
+	position = "0 0";
+	extent = "100% 100%";
+	minExtent = "16 16";
+	horizSizing = "center";
+	vertSizing = "center";
+	profile = "GuiOverlayProfile";
+	visible = "1";
+	active = "1";
+	isContainer = "1";
+
+   new GuiControl()
+   {
+      position = "0 0";
+      extent = "860 707";
+      minExtent = "8 8";
+      horizSizing = "center";
+      vertSizing = "center";
+      visible = "1";
+      tile = "0";
+      isContainer = "1";
+      wrap = "1";
+      profile = "GuiDefaultProfile";
+
+      new GuiBitmapCtrl()
+      {
+         position = "0 0";
+         extent = "443 707";
+         minExtent = "8 8";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         visible = "1";
+         tile = "0";
+         isContainer = "1";
+         wrap = "1";
+         profile = "GuiDefaultProfile";
+         bitmap = "gui/images/menu_esc.png";
+
+         new GuiMLTextCtrl()
+         {
+            position = "65 65";
+            extent = "310 40";
+            horizSizing = "center";
+            profile = "SelectWorldWindowCaptionTextProfile";
+            canHit = "false";
+            rightOffset = 0;
+            text = GetMessageIDText(2520);
+         };
+
+         new GuiScrollCtrl()
+         {
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "50 150";
+            extent = "365 440";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            lockHorizScroll = "0";
+            lockVertScroll = "0";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+            mouseWheelScrollSpeed = "-1";
+            margin = "0 0 0 0";
+            padding = "0 0 0 0";
+            anchorTop = "1";
+            anchorBottom = "0";
+            anchorLeft = "1";
+            anchorRight = "0";
+            profile = "CharSelectScrollProfile";
+            visible = "1";
+            active = "1";
+            isContainer = "1";
+            canSave = "1";
+            canSaveDynamicFields = "0";
+            constantThumbHeight = true;
+            childMargin = "0 0";
+            trackOffset = 8;
+            lockHorizScroll = true;
+            arrowSadowSize = 7;
+            addContentWidth = 0;
+
+            new GuiStackControl()
+            {
+               internalName = "stacker";
+               StackingType = "Vertical";
+               Padding = "0";
+               DynamicSize = "1";
+               ChangeChildSizeToFit = "1";
+               ChangeChildPosition = "1";
+               isContainer = "1";
+               profile = "GuiBaseTextProfile";
+               extent = "390 450";
+               HorizSizing = "width";
+               VertSizing = "height";
+               position = "0 0";
+               MinExtent = "16 16";
+               LeftIndent = "0";
+               padding = 2;
+            };
+
+         };//scroll
+
+         new GuiButtonCtrl()
+         {
+            text = GetMessageIDText(2495); // Menu
+            imageIndex = getEscMenuButton(1);
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "120 600";
+            extent = "200 56";
+            minExtent = "8 2";
+            profile = "EscMenuButtonProfile";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+            visible = "1";
+            active = "1";
+            isContainer = "0";
+            canSave = "1";
+            canSaveDynamicFields = "0";
+            accelerator = "escape";
+            command = "showEscMenu();";
+         };
+      };
+   };
+};
+
+function selectWorldGui::onWake(%this)
+{
+   %this.schRefresh = %this.schedule(60000, refresh);
+}
+
+function selectWorldGui::onSleep(%this)
+{
+   cancel(%this.schRefresh);
+}
+
+function selectWorldGui::refresh(%this)
+{
+   if(!%this.isAwake())
+      return;
+   if(isObject(DispatcherConnection))
+   {
+      DispatcherConnection.sendCommand('WS', 1, $tmp::worldJumpLastAction);
+      %this-->stacker.clear();
+   }
+   %this.schRefresh = %this.schedule(60000, refresh);
+}
+
+function selectWorldGui::reset(%this)
+{
+   %this-->stacker.clear();
+}
+
+function selectWorldGui::show(%this)
+{
+   if ($cm_config::autoconnect::autoConnect)
+   {
+      for($i=0; $i < %this-->stacker.getCount(); $i++)
+      {
+         %worldBtn = %this-->stacker.getObject($i);
+         echo("world id = " @ %worldBtn.worldId);
+         if (%worldBtn.worldId $= $cm_config::autoconnect::worldId)
+         {
+            $ThisControl = %worldBtn;
+            eval(%worldBtn.command);
+            return;
+         }
+      }
+   }
+
+   Canvas.pushDialog(%this);
+}
+
+function selectWorldGui::close(%this)
+{
+	Canvas.popDialog(%this);
+}
+
+function selectWorldGui::addWorld(%this, %worldId, %worldDescription, %isOpen, %worldIsUp, %address, %charCount, %additionalInfo)
+{
+   if(!%charCount)
+      %mChar = "No characters";
+   else
+   {
+      %mChar = %charCount SPC "character";
+      if(%charCount != 1)
+         %mChar = %mChar @ "s";
+   }
+   if(%isOpen && %worldIsUp)
+   {
+      %accessLevel = "<color:00FF00>" @ GetMessageIDText(2518);
+   }
+   else
+   {
+      %accessLevel = "<color:FF0000>" @ GetMessageIDText(2519);
+      if(!%worldIsUp)
+         %accessLevel = %accessLevel SPC "(<spush><color:999900>Offline<spop>)";
+   }
+   if(%additionalInfo !$= "")
+      %worldDescription = %worldDescription SPC "<spush><just:right><font:"@$GlobalTextFontName@":18><color:666600>"@%additionalInfo@"<spop>";
+   %text = %worldDescription NL
+      "<just:left>"@ %mChar @" <spush><just:right>"@%accessLevel@"<spop>";
+   //warn(%this, %worldId, %worldDescription, %isOpen, %worldIsUp, %address, %charCount, %additionalInfo);
+	%btn = new guiHorzTilingButtonCtrl()
+	{
+		text = "";
+		position = "0 0";
+		extent = "300 56";
+		minExtent = "8 2";
+		profile = "CharSelectButton5Profile";
+		groupNum = "-1";
+		buttonType = "RadioButton";
+		useMouseEvents = "0";
+		visible = "1";
+		active = "1";
+		isContainer = "0";
+		canSave = "1";
+		canSaveDynamicFields = "0";
+		command = "selectWorldGui.selectWorld(\"" @ %worldId @ "\");";
+		worldId = %worldId;
+      worldDescription = %worldDescription;
+      isOpen = %isOpen;
+      worldIsUp = %worldIsUp;
+      address = %address;
+      charCount = %charCount;
+		useManualIndex = 1;
+		imageIndex = CharSelect_Button5Normal;
+		depressedImageIndex = CharSelect_Button5MouseOver;
+		mouseOverImageIndex = CharSelect_Button5Active;
+
+		new GuiMLTextCtrl()
+		{
+			position = "10 8";
+			horizSizing = "width";
+			vertSizing = "height";
+			extent = "280 40";
+			profile = "SelectWorldNameTextProfile";
+			canHit = "false";
+			rightOffset = 0;
+			text = %text;
+		};
+	};
+   %this-->stacker.add(%btn);
+   return %btn;
+}
+
+function selectWorldGui::selectWorld(%this, %worldId)
+{
+   loadLoadingGui(GetMessageIDText(2517), true); // Waiting for reply from dispatcher
+   Canvas.popDialog(%this);
+   echo(%this, %worldId, $ThisControl, $ThisControl.worldId);
+
+   if(%worldId !$= $ThisControl.worldId)
+   {
+      error("Something is wrong! WorldId mismatch!");
+      return;
+   }
+   DispatcherConnection.sendCommand('WS', 2, $ThisControl.worldId);
+}

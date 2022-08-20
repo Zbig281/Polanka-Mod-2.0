@@ -1,0 +1,244 @@
+//-----------------------------------------------------------------------------
+// Craftsman & Marksman: Life is feudal
+//-----------------------------------------------------------------------------
+$GuiBarterWindow::playerWorkBounds = "13 103 363 338";
+$GuiBarterWindow::ghostWorkBounds = "386 103 363 338";
+//-----------------------------------------------------------------------------
+function createBarterWindow()
+{
+	%barter_window = new GuiBarterWindow(BarterWindow)
+	{
+		text = GetMessageIDText(939);
+		position = "10 5";
+		extent = "762 570";
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "1";
+		canMaximize = "0";
+		canMinimize = "0";
+		canHideOnFreelook = "1";
+		canLock = "1";
+		canSetup = "1";
+		locked = "0";
+		profile = "GuiCursorEscWindowProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		closeCommand ="BarterWindow.onCloseButtonClick();";
+
+		// background
+		new GuiContainer()
+		{
+			position = "0 0";
+			minExtent = "48 92";
+			profile = GuiAtlas3TiledImageProfile;
+			visible = "1";
+			active = "1";
+			canHit = "0";
+			BackgroundIndex = LearningWindowBackground;
+			docking = Client;
+		};
+
+		// player offer
+		new GuiTextCtrl()
+		{
+			text = GetMessageIDText(940);
+			position = "15 52";
+			extent = "293 15";
+			profile = "GuiBarterLabelTextProfile";
+			canHit = "false"; 
+			visible = "1";
+		};
+		
+		// player name
+		new GuiTextCtrl()
+		{
+			text = "";
+			position = "15 70";
+			extent = "299 20";
+			profile = "GuiBarterPlayerNameTextProfile";
+			canHit = "false"; 
+			visible = "1";
+			internalName = "playerNameTextCtrl";
+		};
+		
+		// item count and weight for player
+		new CmGuiDoubleValTextCtrl()
+		{
+			position = "307 57";
+			extent = "70 49";
+			profile = "GuiBarterDoubleValueTextProfile";
+			canHit = "false"; 
+			visible = "1";
+			internalName = "playerWeightCtrl";
+		};
+		
+		// ghost offer
+		new GuiTextCtrl()
+		{
+			text = GetMessageIDText(941);
+			position = "394 52";
+			extent = "293 15";
+			profile = "GuiBarterLabelTextProfile";
+			canHit = "false"; 
+			visible = "1";
+		};
+		
+		// ghost name
+		new GuiTextCtrl()
+		{
+			text = "";
+			position = "394 70";
+			extent = "299 20";
+			profile = "GuiBarterPlayerNameTextProfile";
+			canHit = "false"; 
+			visible = "1";
+			internalName = "ghostNameTextCtrl";
+		};
+		
+		// item count and weight for ghost
+		new CmGuiDoubleValTextCtrl()
+		{
+			position = "680 57";
+			extent = "70 49";
+			profile = "GuiBarterDoubleValueTextProfile";
+			canHit = "false"; 
+			visible = "1";
+			internalName = "ghostWeightCtrl";
+		};
+		
+		// area for dropped items
+		new GuiBorderContainerCtrl()
+		{
+			position = "9 78";
+			extent = "750 340";
+			minExtent = "8 2";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			//profile = "BarterWindowWorkAreaProfile";
+			visible = "1";
+			active = "1";
+			internalName = "itemDropArea";
+			canHit = "0";			
+		};
+		
+		// background for item drop area when player accepted items
+		new GuiBitmapCtrl()
+		{
+			position = "7 97";
+			extent = "375 350";
+			minExtent = "8 2";			
+			visible = "1";
+			active = "1";
+			canHit = "0";
+			internalName = "playerAcceptedArea";			
+			bitmap = "art/images/barter_bg.png";
+			profile = "GuiBaseTextProfile";
+		};
+
+		// background for item drop area when ghost accepted items
+		new GuiBitmapCtrl()
+		{
+			position = "380 97";
+			extent = "375 350";
+			minExtent = "8 2";
+			horizSizing = "right";
+			vertSizing = "bottom";			
+			visible = "1";
+			active = "1";
+			canHit = "0";
+			internalName = "ghostAcceptedArea";
+			bitmap = "art/images/barter_bg.png";
+			profile = "GuiBaseTextProfile";
+		};
+
+		// splitter between names - now splitter from atlas
+		new GuiBitmapCtrl()
+		{
+			position = "381 44";
+			extent = "2 52";
+			profile = "GuiAtlas3ImageProfile";
+			visible = "1";
+			active = "1";
+			canHit = "false"; 
+			imageIndex = "BlackSlimVLineCenter";
+			wrap = "1";
+		};
+		
+		// button Accept
+		new guiHorzTilingButtonCtrl()
+		{
+			text = GetMessageIDText(1342); // Accept
+			groupNum = "-1";
+			buttonType = "PushButton";
+			useMouseEvents = "0";
+			position = "156 466";//"92 432";
+			extent = "210 44";
+			minExtent = "8 2";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			profile = "MessageBoxButtonProfile";
+			visible = "1";
+			active = "1";
+			command = "BarterWindow.onAcceptButtonClick();";
+			internalName = "acceptButton";
+			imageIndex = H44Btn;
+		};
+		
+		// button Cancel
+		new guiHorzTilingButtonCtrl()
+		{
+			text = GetMessageIDText(1113); // Cancel
+			groupNum = "-1";
+			buttonType = "PushButton";
+			useMouseEvents = "0";
+			position = "398 466";//"467 432";
+			extent = "210 44";
+			minExtent = "8 2";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			profile = "MessageBoxButtonProfile";
+			visible = "1";
+			active = "1";
+			command = "BarterWindow.onCancelButtonClick();";
+			internalName = "cancelButton";
+			imageIndex = H44Btn;
+		};
+		
+	};
+	
+	PlayGui.add(BarterWindow);
+}
+
+function BarterWindow::onBarterAccepted(%this, %isGhost, %bAccept)
+{
+	if (!isObject(BarterWindow))
+		return;
+		
+	if (%isGhost)
+	{
+		if (%bAccept)
+		{
+			BarterWindow-->ghostAcceptedArea.opacity = 0.6;
+		}
+		else
+		{
+			BarterWindow-->ghostAcceptedArea.opacity = 1;
+		}
+	}
+	else
+	{
+		BarterWindow-->acceptButton.setActive(!%bAccept);
+
+		if (%bAccept)
+		{
+			BarterWindow-->playerAcceptedArea.opacity = 0.6;
+		}
+		else
+		{
+			BarterWindow-->playerAcceptedArea.opacity = 1;
+		}
+	}
+}
+//-----------------------------------------------------------------------------

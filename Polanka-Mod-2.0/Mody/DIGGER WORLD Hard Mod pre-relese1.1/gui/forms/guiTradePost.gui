@@ -1,0 +1,1324 @@
+//-----------------------------------------------------------------------------
+// ◦ Craftsman & Marksman: Life is feudal ◦ 
+//-----------------------------------------------------------------------------
+$GuiTradePostWindow::privateStoreWorkBounds = "7 42 450 690";
+$GuiTradePostWindow::marketStoreWorkBounds = "456 28 555 397";
+$GuiTradePostWindow::storeCapacityExtent = "555 397";
+$GuiTradePostWindow::storeInfoExtent = "555 286";
+//-----------------------------------------------------------------------------
+function createTradePostWindow()
+{
+	createTradePostProfiles();
+	
+	%trade_post_window = new GuiTradePostWindow(TradePostWindow)
+	{
+		text = GetMessageIDText(2691);   // Trading Post
+		position = "10 5";
+		extent = "1040 772";
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "1";
+		canMaximize = "0";
+		canMinimize = "0";
+		canHideOnFreelook = "0";
+		canLock = "1";
+		canSetup = "1";
+		locked = "0";
+		profile = "GuiCursorEscWindowProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		autoClose = "1";
+
+		// client area
+		new GuiContainer(TradePostWindowClientArea)
+		{
+			docking = Client;
+			position = "0 0"; //"8 43";
+			extent = "1 1";
+			canSaveDynamicFields = "0";
+			enabled = "1";
+			profile = "GuiBaseTextProfile";
+			canSave = "1";
+			visible = "1";
+			canHit = "true";
+
+			// background
+			new GuiBitmapCtrl()
+			{
+				position = "0 0";
+				extent = "100% 100%";
+				profile = "GuiAtlas3ImageProfile";
+				visible = "1";
+				canHit = "false"; 
+				imageIndex = "LearningWindowBackground";
+			};
+
+			// area for dropped items
+			new GuiBitmapCtrl(TradePostWindowItemDropArea)
+			{
+				position = "0 0";
+				extent = $GuiTradePostWindow::privateStoreWorkBounds.z @ " " @ $GuiTradePostWindow::privateStoreWorkBounds.w;
+				minExtent = "8 8";
+				visible = "1";
+				tile = "0";
+				isContainer = "1";
+				wrap = "1";
+				centered = "1";
+				profile = "GuiBaseTextProfile";
+				bitmap = "gui/images/trade_post_container.png";
+			};
+
+			// info area
+			new GuiContainer()
+			{
+				position = "450 0";
+				extent = "576 690";
+				minExtent = "8 2";
+				profile = "TradePostWindowInfoAreaProfile";
+				visible = "1";
+				active = "1";
+				canHit = "1";
+				LeftIndex0 = "LeftWndBorder";
+
+				// area for store capacity
+				new GuiContainer()
+				{
+					docking = "Top";
+					position = "0 0";
+					extent = "1 384";
+					minExtent = "8 2";
+					profile = "TradePostWindowStoreCapacityInfoAreaProfile";
+					visible = "1";
+					active = "1";
+					canHit = "1";
+
+					// button for change store size
+					new GuiButtonCtrl()
+					{
+						text = "";
+						groupNum = "-1";
+						buttonType = "PushButton";
+						useMouseEvents = "0";
+						position = "38 57";
+						extent = "36 36";
+						minExtent = "8 2";
+						imageIndex = "BtnShowSkinsNormal";
+						profile = "GuiAtlas2ImageProfile";
+						visible = "1";
+						active = "1";
+						command = "TradePostWindow.onChangeStoreSizeClick();";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "93 49";
+						extent = "160 20";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile2";
+						visible = "1";
+						active = "1";
+						canHit = "false"; 
+						text = GetMessageIDText(2692);   // Capacity
+					};
+
+					new CmGuiDoubleValTextCtrl()
+					{
+						position = "92 72";
+						extent = "200 24";
+						profile = "TradePostDoubleValueTextProfile";
+						canHit = "false"; 
+						visible = "1";
+						internalName = "storeWeightCtrl";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "310 45";
+						extent = "240 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile9";
+						visible = "1";
+						active = "1";
+						canHit = "false"; 
+						text = GetMessageIDText(2693);   //  "Prepaid days: ";
+						internalName = "daysPayment";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "310 65";
+						extent = "240 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile9";
+						visible = "1";
+						active = "1";
+						canHit = "false"; 
+						text = GetMessageIDText(2856); // Coins in store:
+						internalName = "storeCoinsCount";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "310 85";
+						extent = "240 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile9";
+						visible = "1";
+						active = "1";
+						canHit = "false"; 
+						text = GetMessageIDText(2857); // Gods Favor in store:
+						internalName = "storeGodsFavorCount";
+					};
+
+					// контрол размера хранилища
+					new GuiControl()
+					{
+						position = "33 111";
+						extent = "510 100";
+						minExtent = "8 2";
+						visible = "1";
+						active = "1";
+						canHit = "0";
+						profile = "GuiDefaultProfile";
+
+						// бордер
+						new GuiControl()
+						{
+							position = "4 31";
+							extent = "506 22";
+							minExtent = "8 2";
+							visible = "1";
+							active = "1";
+							canHit = "0";
+							profile = "TradePostWindowWorkAreaProfile";
+							LeftIndex0 = "TradePostStoreBackgroundLineLeft";
+							BackgroundIndex = "TradePostStoreBackgroundLineBackground";
+							RightIndex0 = "TradePostStoreBackgroundLineRight";
+							internalName = "storeBackgroundLine";
+						};
+
+						// полоска размера хранилища
+						new GuiControl()
+						{
+							position = "4 31";
+							extent = "304 22";
+							minExtent = "8 2";
+							visible = "1";
+							active = "1";
+							canHit = "0";
+							profile = "TradePostWindowWorkAreaProfile";
+							LeftIndex0 = "TradePostStoreSizeLineLeft";
+							BackgroundIndex = "TradePostStoreSizeLineBackground";
+							RightIndex0 = "TradePostStoreSizeLineRight";
+							internalName = "storeSizeLine";
+						};
+
+						// полоска занимаемого места
+						new GuiControl()
+						{
+							position = "4 31";
+							extent = "200 22";
+							minExtent = "8 2";
+							visible = "1";
+							active = "1";
+							canHit = "0";
+							profile = "TradePostWindowWorkAreaProfile";
+							LeftIndex0 = "TradePostStoreWeightLineLeft";
+							BackgroundIndex = "TradePostStoreWeightLineBackground";
+							RightIndex0 = "TradePostStoreWeightLineRight";
+							internalName = "storeWeightLine";
+						};
+
+						// ограничитель размера хранилища
+						new GuiControl()
+						{
+							position = "301 22";
+							extent = "19 40";
+							minExtent = "8 2";
+							visible = "1";
+							active = "1";
+							canHit = "0";
+							profile = "TradePostWindowWorkAreaProfile";
+							BackgroundIndex = "TradePostStoreSizeLimit";
+							internalName = "storeSizeLimitCtrl";
+						};
+
+						// полоска неуменьшаемого объема
+						new GuiControl()
+						{
+							position = "-7 21";
+							extent = "75 43";
+							minExtent = "8 2";
+							visible = "1";
+							active = "1";
+							canHit = "0";
+							profile = "TradePostWindowWorkAreaProfile";
+							BackgroundIndex = "TradePostStoreMinCapacity";
+						};
+
+						// ограничитель объема занимаемого места
+						new GuiControl()
+						{
+							position = "197 10";
+							extent = "19 51";
+							minExtent = "8 2";
+							visible = "1";
+							active = "1";
+							canHit = "0";
+							profile = "TradePostWindowWorkAreaProfile";
+							BackgroundIndex = "TradePostStoreWeightLimit";
+							internalName = "storeWeightLimitCtrl";
+						};
+
+						// текущий вес предметов (надпись над шкалой)
+						new GuiTextCtrl()
+						{
+							position = "0 0";
+							extent = "100 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile6";
+							visible = "1";
+							active = "1";
+							text = "0";
+							internalName = "scaleCurrentWeight";
+						};
+
+						// надписи на шкале
+						new GuiTextCtrl()
+						{
+							position = "-19 58";
+							extent = "50 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile1";
+							visible = "1";
+							active = "1";
+							text = "0";
+							internalName = "scaleLimit0";
+						};
+							
+						new GuiTextCtrl()
+						{
+							position = "38 58";
+							extent = "50 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile1";
+							visible = "1";
+							active = "1";
+							text = "100";
+							internalName = "scaleLimit100";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "90 58";
+							extent = "30 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile2";
+							visible = "1";
+							active = "1";
+							text = "200";
+							internalName = "scaleLimit200";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "132 58";
+							extent = "30 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile2";
+							visible = "1";
+							active = "1";
+							text = "300";
+							internalName = "scaleLimit300";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "174 58";
+							extent = "30 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile2";
+							visible = "1";
+							active = "1";
+							text = "400";
+							internalName = "scaleLimit400";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "216 58";
+							extent = "30 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile2";
+							visible = "1";
+							active = "1";
+							text = "500";
+							internalName = "scaleLimit500";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "258 58";
+							extent = "30 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile5";
+							visible = "1";
+							active = "1";
+							text = "600";
+							internalName = "scaleLimit600";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "300 58";
+							extent = "30 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile3";
+							visible = "1";
+							active = "1";
+							text = "750";
+							internalName = "scaleLimit750";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "342 58";
+							extent = "30 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile3";
+							visible = "1";
+							active = "1";
+							text = "1000";
+							internalName = "scaleLimit1000";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "384 58";
+							extent = "30 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile3";
+							visible = "1";
+							active = "1";
+							text = "2500";
+							internalName = "scaleLimit2500";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "426 58";
+							extent = "30 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile3";
+							visible = "1";
+							active = "1";
+							text = "5000";
+							internalName = "scaleLimit5000";
+						};
+
+						new GuiTextCtrl()
+						{
+							position = "461 58";
+							extent = "50 12";
+							minExtent = "8 2";
+							profile = "TradePostScaleTextProfile4";
+							visible = "1";
+							active = "1";
+							text = "10000";
+							internalName = "scaleLimit10000";
+						};
+					};
+
+					new GuiMLTextCtrl() 
+					{
+						text = GetMessageIDText(2694);   //  ATTENTION: Your items will be permanently deleted if you do not pay for your storage
+						lineSpacing = "0";
+						allowColorChars = "0";
+						maxChars = "-1";
+						useURLMouseCursor = "0";
+						isContainer = "0";
+						Profile = "TradePostTextProfile8";
+						position = "31 215";
+						extent = "510 0";
+						MinExtent = "8 8";
+						canSave = "1";
+						Visible = "1";
+						canSaveDynamicFields = "0";
+					};
+
+					new guiHorzTilingButtonCtrl()
+					{
+						text = GetMessageIDText(2695);   // Pay with coins
+						groupNum = "-1";
+						buttonType = "PushButton";
+						useMouseEvents = "0";
+						position = "31 280";
+						extent = "287 56";
+						minExtent = "8 2";
+						profile = "CreateCharButtonProfile";
+						visible = "1";
+						active = "1";
+						command = "TradePostWindow.onPayCoinsForStoreClick();"; 
+						imageIndex = "H56Btn";
+					};
+				};
+
+				new GuiContainer()
+				{
+					docking = "Client";
+					position = "0 0";
+					extent = "1 1";
+					minExtent = "8 2";
+					profile = "TradePostWindowInfoAreaProfile";
+					visible = "1";
+					active = "1";
+					canHit = "1";
+					TopIndex0 = "FringeTopShadow";
+
+					// left part
+					new GuiTextCtrl()
+					{
+						position = "34 51";
+						extent = "160 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile1";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2697);   //  Storage
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "31 73";
+						extent = "160 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile2";
+						visible = "1";
+						active = "1";
+						text = "";
+						internalName = "privateStoreWeight";
+					};
+
+					// captions
+					new GuiTextCtrl()
+					{
+						position = "32 116";
+						extent = "160 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile3";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2698);   //  Service
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "32 141";
+						extent = "160 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile4";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2699);   //  Base cost
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "32 164";
+						extent = "160 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile4";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2700);   //  Landlord's Tax
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "32 187";
+						extent = "160 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile4";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2701);   //  Overweight
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "32 210";
+						extent = "160 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile2";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2702);   //  Summary:
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "32 233";
+						extent = "160 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile2";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2703);   //  Payment:
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "198 116";
+						extent = "45 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile6";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2704);   //  Coins
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "232 116";
+						extent = "90 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile6";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2530);   //  God's Favor
+					};
+
+					// values
+					new GuiTextCtrl()
+					{
+						position = "198 141";
+						extent = "45 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile5";
+						visible = "1";
+						active = "1";
+						text = "0";
+						internalName = "baseCoinsPayment";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "232 141";
+						extent = "90 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile5";
+						visible = "1";
+						active = "1";
+						text = "0";
+						internalName = "baseGodsFavorsPayment";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "198 164";
+						extent = "45 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile5";
+						visible = "1";
+						active = "1";
+						text = "0";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "232 164";
+						extent = "90 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile5";
+						visible = "1";
+						active = "1";
+						text = "0";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "198 187";
+						extent = "45 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile5";
+						visible = "1";
+						active = "1";
+						text = "0";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "232 187";
+						extent = "90 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile5";
+						visible = "1";
+						active = "1";
+						text = "0";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "198 210";
+						extent = "45 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile7";
+						visible = "1";
+						active = "1";
+						text = "0";
+						internalName = "summaryCoinsPayment";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "232 210";
+						extent = "90 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile7";
+						visible = "1";
+						active = "1";
+						text = "0";
+						internalName = "summaryGodsFavorsPayment";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "198 233";
+						extent = "45 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile7";
+						visible = "1";
+						active = "1";
+						text = "0";
+					};
+					
+					new GuiTextCtrl()
+					{
+						position = "232 233";
+						extent = "90 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile7";
+						visible = "1";
+						active = "1";
+						text = "0";
+					};
+
+					// right part
+					new GuiTextCtrl()
+					{
+						position = "341 51";
+						extent = "200 24";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile1";
+						visible = "1";
+						active = "1";
+						text = GetMessageIDText(2705);   //  Stall
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "341 77";
+						extent = "200 16";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile2";
+						visible = "1";
+						active = "1";
+						text = "";
+						internalName = "marketStoreWeight";
+					};
+
+					new GuiTextCtrl()
+					{
+						position = "341 105";
+						extent = "200 16";
+						minExtent = "8 2";
+						profile = "TradePostTextProfile2";
+						visible = "1";
+						active = "1";
+						text = "";
+						internalName = "marketStoreItemsCount";
+					};
+
+					new guiHorzTilingButtonCtrl()
+					{
+						text = GetMessageIDText(2706);   // Market
+						groupNum = "-1";
+						buttonType = "PushButton";
+						useMouseEvents = "0";
+						position = "340 157";
+						extent = "198 56";
+						minExtent = "8 2";
+						profile = "CreateCharButtonProfile";
+						visible = "1";
+						active = "1";
+						command = "TradePostWindow.onGotoMarketClick();"; 
+						imageIndex = "H56Btn";
+					};
+				};
+			};
+		};
+	};
+
+	PlayGui.add(TradePostWindow);
+	TradePostWindow.initStore();
+}
+//-----------------------------------------------------------------------------
+function createTradePostProfiles()
+{
+	if (!isObject(TradePostWindowInfoAreaProfile))
+	{
+		new GuiControlProfile(TradePostWindowInfoAreaProfile: GuiAtlas1ImageProfile)
+		{
+			border = "all_tiling";
+		};
+	}
+
+	if (!isObject(TradePostWindowStoreCapacityInfoAreaProfile))
+	{
+		new GuiControlProfile(TradePostWindowStoreCapacityInfoAreaProfile: GuiAtlas1ImageProfile)
+		{
+			opaque = "1";
+			fillColor = "0 0 0";
+		};
+	}
+
+
+	if (!isObject(TradePostWindowWorkAreaProfile))
+	{
+		new GuiControlProfile(TradePostWindowWorkAreaProfile: GuiAtlas3ImageProfile)
+		{
+			border = "all_tiling";
+		};
+	}
+
+	if (!isObject(TradePostWindowCommonProfile))
+	{
+		new GuiControlProfile(TradePostWindowCommonProfile: GuiBaseTextProfile)
+		{
+			globalImageIndex = "trade_post";
+		};
+	}
+	
+	if (!isObject(TradePostBackgroundProfile))
+	{
+		new GuiControlProfile(TradePostBackgroundProfile: GuiDefaultProfile)
+		{
+			globalImageIndex = "trade_post";
+		};
+	}
+
+
+	if (!isObject(TradePostTextProfile1))
+	{
+		new GuiControlProfile(TradePostTextProfile1: GuiBaseTextProfile)
+		{
+			fontType = $GlobalCaptionFontName;
+			fontSize = "22";
+			fontColor = "205 205 205";
+		};
+	}
+
+	if (!isObject(TradePostTextProfile2))
+	{
+		new GuiControlProfile(TradePostTextProfile2: GuiBaseTextProfile)
+		{
+			fontSize = "20";
+			fontColor = "187 123 8";
+		};
+	}
+
+	if (!isObject(TradePostTextProfile3))
+	{
+		new GuiControlProfile(TradePostTextProfile3: GuiBaseTextProfile)
+		{
+			fontSize = "16";
+			fontColor = "137 137 137";
+		};
+	}
+
+	if (!isObject(TradePostTextProfile4))
+	{
+		new GuiControlProfile(TradePostTextProfile4: GuiBaseTextProfile)
+		{
+			fontSize = "20";
+			fontColor = "204 204 204";
+		};
+	}
+
+	if (!isObject(TradePostTextProfile5))
+	{
+		new GuiControlProfile(TradePostTextProfile5: TradePostTextProfile4)
+		{
+			justify = "center";
+		};
+	}
+
+	if (!isObject(TradePostTextProfile6))
+	{
+		new GuiControlProfile(TradePostTextProfile6: TradePostTextProfile3)
+		{
+			justify = "center";
+		};
+	}
+
+	if (!isObject(TradePostTextProfile7))
+	{
+		new GuiControlProfile(TradePostTextProfile7: TradePostTextProfile2)
+		{
+			justify = "center";
+		};
+	}
+
+	if (!isObject(TradePostTextProfile8))
+	{
+		new GuiControlProfile(TradePostTextProfile8: GuiBaseTextProfile)
+		{
+			fontSize = "21";
+			fontColor = "241 86 72";
+		};
+	}
+
+	if (!isObject(TradePostTextProfile9))
+	{
+		new GuiControlProfile(TradePostTextProfile9: GuiBaseTextProfile)
+		{
+			fontSize = "20";
+			fontColor = "255 255 255";
+			justify = "right";
+		};
+	}
+
+	if (!isObject(TradePostButtonProfile))
+	{
+		new GuiControlProfile(TradePostButtonProfile: GuiBaseTextProfile)
+		{
+			globalImageIndex = "trade_post";
+			border = "all_tiling";
+			fontSize = "22";
+			fontColor = "159 137 109";
+			justify = "center";
+		};
+	}
+
+	if (!isObject(TradePostDoubleValueTextProfile))
+	{
+		new GuiControlProfile(TradePostDoubleValueTextProfile: GuiBaseTextProfile)
+		{
+			fontSize = "32";
+			// fontColorHL = "159 137 109";
+			justify = "left";
+		};
+	}
+
+	if (!isObject(TradePostBaseScaleTextProfile))
+	{
+		new GuiControlProfile(TradePostBaseScaleTextProfile: GuiBaseTextProfile)
+		{
+			fontSize = "16";
+			justify = "center";
+		};
+	}
+
+	if (!isObject(TradePostScaleTextProfile1))
+	{
+		new GuiControlProfile(TradePostScaleTextProfile1: TradePostBaseScaleTextProfile)
+		{
+			fontColor = "102 102 102";
+		};
+	}
+
+	if (!isObject(TradePostScaleTextProfile2))
+	{
+		new GuiControlProfile(TradePostScaleTextProfile2: TradePostBaseScaleTextProfile)
+		{
+			fontColor = "107 72 13";
+		};
+	}
+
+	if (!isObject(TradePostScaleTextProfile3))
+	{
+		new GuiControlProfile(TradePostScaleTextProfile3: TradePostBaseScaleTextProfile)
+		{
+			fontColor = "6 52 79";
+		};
+	}
+
+	if (!isObject(TradePostScaleTextProfile4))
+	{
+		new GuiControlProfile(TradePostScaleTextProfile4: TradePostBaseScaleTextProfile)
+		{
+			justify = "right";
+			fontColor = "6 52 79";
+		};
+	}
+
+	if (!isObject(TradePostScaleTextProfile5))
+	{
+		new GuiControlProfile(TradePostScaleTextProfile5: TradePostBaseScaleTextProfile)
+		{
+			fontColor = "0 102 156";
+		};
+	}
+
+	if (!isObject(TradePostScaleTextProfile6))
+	{
+		new GuiControlProfile(TradePostScaleTextProfile6: GuiBaseTextProfile)
+		{
+			fontSize = "20";
+			justify = "center";
+			autoSizeWidth = "1";
+		};
+	}
+
+}
+//-----------------------------------------------------------------------------
+function deleteTradePostProfiles()
+{
+	if (isObject(TradePostWindowWorkAreaProfile))
+	{
+		TradePostWindowWorkAreaProfile.safeDeleteObject();
+	}
+
+	if (isObject(TradePostWindowCommonProfile))
+	{
+		TradePostWindowCommonProfile.safeDeleteObject();
+	}
+
+	if (isObject(TradePostTextProfile1))
+	{
+		TradePostTextProfile1.safeDeleteObject();
+	}
+
+	if (isObject(TradePostTextProfile2))
+	{
+		TradePostTextProfile2.safeDeleteObject();
+	}
+
+	if (isObject(TradePostTextProfile3))
+	{
+		TradePostTextProfile3.safeDeleteObject();
+	}
+
+	if (isObject(TradePostTextProfile4))
+	{
+		TradePostTextProfile4.safeDeleteObject();
+	}
+
+	if (isObject(TradePostTextProfile5))
+	{
+		TradePostTextProfile5.safeDeleteObject();
+	}
+
+	if (isObject(TradePostTextProfile6))
+	{
+		TradePostTextProfile6.safeDeleteObject();
+	}
+
+	if (isObject(TradePostTextProfile7))
+	{
+		TradePostTextProfile7.safeDeleteObject();
+	}
+
+	if (isObject(TradePostTextProfile8))
+	{
+		TradePostTextProfile8.safeDeleteObject();
+	}
+
+	if (isObject(TradePostTextProfile9))
+	{
+		TradePostTextProfile9.safeDeleteObject();
+	}
+
+	if (isObject(TradePostBackgroundProfile))
+	{
+		TradePostBackgroundProfile.safeDeleteObject();
+	}
+
+	if (isObject(TradePostButtonProfile))
+	{
+		TradePostButtonProfile.safeDeleteObject();
+	}
+
+	if (isObject(TradePostDoubleValueTextProfile))
+	{
+		TradePostDoubleValueTextProfile.safeDeleteObject();
+	}
+
+	if (isObject(TradePostBaseScaleTextProfile))
+	{
+		TradePostBaseScaleTextProfile.safeDeleteObject();
+	}
+
+	if (isObject(TradePostScaleTextProfile1))
+	{
+		TradePostScaleTextProfile1.safeDeleteObject();
+	}
+
+	if (isObject(TradePostScaleTextProfile2))
+	{
+		TradePostScaleTextProfile2.safeDeleteObject();
+	}
+
+	if (isObject(TradePostScaleTextProfile3))
+	{
+		TradePostScaleTextProfile3.safeDeleteObject();
+	}
+
+	if (isObject(TradePostScaleTextProfile4))
+	{
+		TradePostScaleTextProfile4.safeDeleteObject();
+	}
+
+	if (isObject(TradePostScaleTextProfile6))
+	{
+		TradePostScaleTextProfile6.safeDeleteObject();
+	}
+
+}
+//-----------------------------------------------------------------------------
+function GuiTradePostWindow::addScaleSplitter(%this, %txtCtrl)
+{
+	%splitter = new GuiBitmapCtrl()
+	{
+		position = %txtCtrl.position.x - %this-->storeBackgroundLine.position.x + %txtCtrl.extent.x / 2 @ " 5";
+		extent = "1 12";
+		minExtent = "1 1";
+		profile = "GuiAtlas3ImageProfile";
+		visible = "1";
+		canHit = "false";
+		wrap = "0";
+		imageIndex = "TradePosteScaleSplitter";
+	};
+
+	%this-->storeBackgroundLine.add(%splitter);
+}
+//-----------------------------------------------------------------------------
+function GuiTradePostWindow::initStore(%this)
+{
+	%this-->storeWeightCtrl.setFormatValue("%.2f");
+	%this.addScaleSplitter(%this-->scaleLimit100);
+	%this.addScaleSplitter(%this-->scaleLimit200);
+	%this.addScaleSplitter(%this-->scaleLimit300);
+	%this.addScaleSplitter(%this-->scaleLimit400);
+	%this.addScaleSplitter(%this-->scaleLimit500);
+	%this.addScaleSplitter(%this-->scaleLimit600);
+	%this.addScaleSplitter(%this-->scaleLimit750);
+	%this.addScaleSplitter(%this-->scaleLimit1000);
+	%this.addScaleSplitter(%this-->scaleLimit2500);
+	%this.addScaleSplitter(%this-->scaleLimit5000);
+}
+//-----------------------------------------------------------------------------
+function GuiTradePostWindow::calcWeightPos(%this, $allWeight, $calcMinimum)
+{
+	$begin1 = 0;
+	$begin2 = 0;
+	$end1 = 0;
+	$end2 = 0;
+
+	if ($allWeight <= 100)
+	{
+		if ($calcMinimum)
+		{
+			$begin1 = 0;
+			$begin2 = %this-->scaleLimit0.position.x + %this-->scaleLimit0.extent.x / 2;
+		}
+		else
+		{
+			$begin1 = $allWeight - 1;
+			$begin2 = %this-->scaleLimit100.position.x + %this-->scaleLimit100.extent.x / 2 - 1;
+		}
+
+		$end1 = 100;
+		$end2 = %this-->scaleLimit100.position.x + %this-->scaleLimit100.extent.x / 2;
+	}
+	else if ($allWeight <= 200)
+	{
+		$begin1 = 100;
+		$end1 = 200;
+
+		$begin2 = %this-->scaleLimit100.position.x + %this-->scaleLimit100.extent.x / 2;
+		$end2 = %this-->scaleLimit200.position.x + %this-->scaleLimit200.extent.x / 2;
+	}
+	else if ($allWeight <= 300)
+	{
+		$begin1 = 200;
+		$end1 = 300;
+
+		$begin2 = %this-->scaleLimit200.position.x + %this-->scaleLimit200.extent.x / 2;
+		$end2 = %this-->scaleLimit300.position.x + %this-->scaleLimit300.extent.x / 2;
+	}
+	else if ($allWeight <= 400)
+	{
+		$begin1 = 300;
+		$end1 = 400;
+
+		$begin2 = %this-->scaleLimit300.position.x + %this-->scaleLimit300.extent.x / 2;
+		$end2 = %this-->scaleLimit400.position.x + %this-->scaleLimit400.extent.x / 2;
+	}
+	else if ($allWeight <= 500)
+	{
+		$begin1 = 400;
+		$end1 = 500;
+
+		$begin2 = %this-->scaleLimit400.position.x + %this-->scaleLimit400.extent.x / 2;
+		$end2 = %this-->scaleLimit500.position.x + %this-->scaleLimit500.extent.x / 2;
+	}
+	else if ($allWeight <= 600)
+	{
+		$begin1 = 500;
+		$end1 = 600;
+
+		$begin2 = %this-->scaleLimit500.position.x + %this-->scaleLimit500.extent.x / 2;
+		$end2 = %this-->scaleLimit600.position.x + %this-->scaleLimit600.extent.x / 2;
+	}
+	else if ($allWeight <= 750)
+	{
+		$begin1 = 600;
+		$end1 = 750;
+
+		$begin2 = %this-->scaleLimit600.position.x + %this-->scaleLimit600.extent.x / 2;
+		$end2 = %this-->scaleLimit750.position.x + %this-->scaleLimit750.extent.x / 2;
+	}
+	else if ($allWeight <= 1000)
+	{
+		$begin1 = 750;
+		$end1 = 1000;
+
+		$begin2 = %this-->scaleLimit750.position.x + %this-->scaleLimit750.extent.x / 2;
+		$end2 = %this-->scaleLimit1000.position.x + %this-->scaleLimit1000.extent.x / 2;
+	}
+	else if ($allWeight <= 2500)
+	{
+		$begin1 = 1000;
+		$end1 = 2500;
+
+		$begin2 = %this-->scaleLimit1000.position.x + %this-->scaleLimit1000.extent.x / 2;
+		$end2 = %this-->scaleLimit2500.position.x + %this-->scaleLimit2500.extent.x / 2;
+	}
+	else if ($allWeight <= 5000)
+	{
+		$begin1 = 2500;
+		$end1 = 5000;
+
+		$begin2 = %this-->scaleLimit2500.position.x + %this-->scaleLimit2500.extent.x / 2;
+		$end2 = %this-->scaleLimit5000.position.x + %this-->scaleLimit5000.extent.x / 2;
+	}
+	else if ($allWeight <= 10000)
+	{
+		$begin1 = 5000;
+		$end1 = 10000;
+
+		$begin2 = %this-->scaleLimit5000.position.x + %this-->scaleLimit5000.extent.x / 2;
+		$end2 = %this-->scaleLimit10000.position.x + %this-->scaleLimit10000.extent.x;
+	}
+	else
+	{
+		$begin1 = $allWeight;
+		$end1 = $allWeight + 1;
+
+		$begin2 = %this-->scaleLimit10000.position.x + %this-->scaleLimit10000.extent.x;
+		$end2 = %this-->scaleLimit10000.position.x + %this-->scaleLimit10000.extent.x + 1;
+	}
+
+	$centerPos = ($end2 - $begin2) * ($allWeight - $begin1) / ($end1 - $begin1) + $begin2;
+	return $centerPos;
+}
+//-----------------------------------------------------------------------------
+function GuiTradePostWindow::updateStoreInfo(%this, %privateStoreWeight, %privateItemsCount, %marketStoreWeight, %marketItemsCount, %storeSize, %coinsCount, %godsFavorsCount, %coinsPayment, %godsFavorsPayment)
+{
+	// update store size and weight info
+	$allWeight = %privateStoreWeight + %marketStoreWeight;
+	%this-->storeWeightCtrl.setFirstFloatValue($allWeight);
+	%this-->storeWeightCtrl.setSecondFloatValue(%storeSize);
+
+	if ($allWeight > %storeSize)
+	{
+		%this-->storeWeightCtrl.setFirstColor("242 86 72");
+		TradePostScaleTextProfile6.fontColor = "242 86 72";
+	}
+	else
+	{
+		%this-->storeWeightCtrl.setFirstColor("255 255 255");
+		TradePostScaleTextProfile6.fontColor = "255 255 255";
+	}
+
+	$pos = %this.calcWeightPos($allWeight, true);
+	%this-->storeWeightLine.extent.x = $pos - %this-->storeWeightLine.position.x;
+	%this-->storeWeightLimitCtrl.position.x = $pos - 9;
+	%this-->scaleCurrentWeight.setText(strformat("%.2f", $allWeight));
+	%this-->scaleCurrentWeight.position.x = %this-->storeWeightLimitCtrl.position.x + %this-->storeWeightLimitCtrl.extent.x / 2 - %this-->scaleCurrentWeight.extent.x / 2;
+
+	$pos = %this.calcWeightPos(%storeSize, false);
+
+	%this-->storeSizeLine.extent.x = $pos - %this-->storeSizeLine.position.x;
+	%this-->storeSizeLimitCtrl.position.x = $pos - 9;
+
+	%this-->privateStoreWeight.text = GetMessageIDText(2707) @ strformat(" %.2f", %privateStoreWeight);
+	%this-->marketStoreWeight.text = GetMessageIDText(2707) @ strformat(" %.2f", %marketStoreWeight);
+	%this-->marketStoreItemsCount.text = GetMessageIDText(2708) @ strformat(" %d", %marketItemsCount);
+
+	%this-->baseCoinsPayment.text = %coinsPayment;
+	%this-->baseGodsFavorsPayment.text = %godsFavorsPayment;
+
+	$summaryCoinsPayment = %coinsPayment;
+	$summaryGodsFavorsPayment = %godsFavorsPayment;
+
+	$paymentDays = "0";
+
+	if (%coinsPayment > 0)
+	{
+		$paymentDays = strformat("%d", %coinsCount / $summaryCoinsPayment);
+	}
+	else if (%godsFavorsPayment > 0)
+	{
+		$paymentDays = strformat("%d", %godsFavorsCount / $summaryGodsFavorsPayment);
+	}
+	else
+	{
+		$paymentDays = "∞";
+	}
+
+	%this-->summaryCoinsPayment.text = %coinsPayment;
+	%this-->summaryGodsFavorsPayment.text = %godsFavorsPayment;
+	%this-->daysPayment.text = GetMessageIDText(2693) @ " " @$paymentDays;
+	%this-->storeCoinsCount.text = GetMessageIDText(2856) @ " " @ %coinsCount;
+	%this-->storeGodsFavorCount.text = GetMessageIDText(2857) @ " " @ %godsFavorsCount;
+}
+//-----------------------------------------------------------------------------
+function createSplitSupportCoinsDialog()
+{
+	closePayForStoreDialog();
+	createPayForStoreDialog();
+}
+//-----------------------------------------------------------------------------
+function closeChangeStoreSizeDialog()
+{
+	if (isObject(ChangeStoreSizeContent))
+	{
+		Canvas.popDialog(ChangeStoreSizeContent);
+		ChangeStoreSizeContent.safeDeleteObject();
+	}
+}
+//-----------------------------------------------------------------------------
+function closePayForStoreDialog()
+{
+	if (isObject(PayForStoreContent))
+	{
+		Canvas.popDialog(PayForStoreContent);
+		PayForStoreContent.safeDeleteObject();
+	}
+}
+//-----------------------------------------------------------------------------
+function showChangeStoreSizeDialog(%storeWeight, %storeSize)
+{
+	closeChangeStoreSizeDialog();
+	createChangeStoreSizeDialog(%storeWeight, %storeSize);
+}
+//-----------------------------------------------------------------------------
+function GuiTradePostWindow::closeChildWindows(%this)
+{
+	closeChangeStoreSizeDialog();
+	closePayForStoreDialog();
+}

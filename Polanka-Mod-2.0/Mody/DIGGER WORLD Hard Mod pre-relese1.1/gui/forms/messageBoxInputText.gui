@@ -1,0 +1,338 @@
+//----------------------------------------------------------------
+// LiF - Life Is Feudal
+//----------------------------------------------------------------
+
+function createMessageBoxInputText(%command_name, %cancelCommandName, %caption, %label)
+{
+	%gui = new GuiControl()
+	{
+		position = "0 0";
+		extent = "100% 100%";
+		minExtent = "8 8";
+		horizSizing = "width";
+		vertSizing = "height";
+		profile = "GuiOverlayProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		canSave = "1";
+		canSaveDynamicFields = "1";
+		class = "MessageBoxInputTextBackground";
+	
+		new GuiMessageBoxInputText()
+		{
+			text = %caption;
+			resizeWidth = "1";
+			resizeHeight = "1";
+			canMove = "1";
+			canClose = "1";
+			canMinimize = "0";
+			canMaximize = "0";
+			canCollapse = "0";
+			edgeSnap = "1";
+			margin = "0 0 0 0";
+			padding = "0 0 0 0";
+			anchorTop = "1";
+			anchorBottom = "0";
+			anchorLeft = "1";
+			anchorRight = "0";
+			position = "362 259";
+			extent = "600 300";
+			minExtent = "48 92";
+			horizSizing = "center";
+			vertSizing = "center";
+			profile = "GuiAutoCursorWindowProfile";
+			visible = "1";
+			active = "1";
+			isContainer = "1";
+			canSave = "1";
+			canSaveDynamicFields = "1";
+			closeCommand = "$ThisControl.InputCancel();";
+			cancelCommandName = %cancelCommandName;
+			okCommandName = %command_name;
+			internalName = "messageBoxDialog";
+
+			new GuiContainer()
+			{
+				position = "277 0";
+				minExtent = "48 92";
+				profile = "GuiAtlas3TiledImageProfile";
+				visible = "1";
+				active = "1";
+				canHit = "0";
+				BackgroundIndex = LearningWindowBackground;
+				docking = Client;
+			};
+
+			// background
+			new GuiControl()
+			{
+				position = "25 104";
+				extent = "551 52";
+				Visible = "1";
+				profile = "GuiAtlas3TiledImageProfile";
+				leftIndex0 = "BigHexagonalTextFieldLeft";
+				backgroundIndex = "BigHexagonalTextFieldCenter";
+				rightIndex0 = "BigHexagonalTextFieldRight";
+				vertSizing = "top";
+			};
+			
+			// tooltip icon
+			new GuiBitmapCtrl() 
+			{
+				position = "49 72";
+				extent = "29 29";
+				minExtent = "8 2";
+				profile = "GuiAtlas3ImageProfile";
+				visible = "0";
+				active = "1";
+				imageIndex = "InfoBtnNormal";
+				tooltip = "";
+				internalName = "inputConfirmIcon";
+			};
+
+			// caption text
+			new GuiMLTextCtrl()
+			{
+				lineSpacing = "2";
+				allowColorChars = "0";
+				maxChars = "-1";
+				text = %label;
+				useURLMouseCursor = "0";
+				position = "57 72";
+				extent = "470 58";
+				minExtent = "8 2";
+				horizSizing = "left";
+				vertSizing = "bottom";
+				profile = "MessageBoxInputLabelProfile"; 
+				visible = "1";
+				active = "1";
+				isContainer = "0";
+				canSave = "1";
+				canSaveDynamicFields = "0";
+				class = "MBInputLabelText";
+				internalName = "inputConfirmText";
+			};
+			
+			// text edit for input
+			new GuiTextEditCtrl()
+			{
+				historySize = "1";
+				tabComplete = "0";
+				position = "43 100";
+				extent = "506 55";
+				minExtent = "8 2";
+				profile = "MessageBoxInputTextProfile";
+				visible = "1";
+				active = "1";
+				password = "0";
+				VertSizing = "top";
+				internalName = "inputTextCtrl";
+				class = "MessageBoxInputTextEditCtrl";
+			};
+			
+			new guiHorzTilingButtonCtrl()
+			{
+				text = GetMessageIDText(1218);	// OK
+				groupNum = "-1";
+				buttonType = "PushButton";
+				useMouseEvents = "0";
+				position = "143 184";
+				extent = "158 44";
+				minExtent = "8 8";
+				horizSizing = "right";
+				vertSizing = "top";
+				visible = "1";
+				active = "1";
+				command = "$ThisControl.onOkButtonClick();";
+				accelerator = "return";
+				isContainer = "0";
+				canSave = "1";
+				canSaveDynamicFields = "0";
+				imageIndex = getMessageBoxPasswordDlgButtonIndex();
+				profile = "MessageBoxButtonProfile";
+				imageIndex = H44Btn;
+				class = "MessageBoxInputTextButton";
+			};
+			
+			new guiHorzTilingButtonCtrl()
+			{
+				text = GetMessageIDText(1113);	// Cancel
+				groupNum = "-1";
+				buttonType = "PushButton";
+				useMouseEvents = "0";
+				position = "314 184";
+				extent = "158 44";
+				minExtent = "8 8";
+				horizSizing = "right";
+				vertSizing = "top";
+				visible = "1";
+				active = "1";
+				command = "$ThisControl.onCancelButtonClick();";
+				accelerator = "escape";
+				isContainer = "0";
+				canSave = "1";
+				canSaveDynamicFields = "0";
+				imageIndex = getMessageBoxPasswordDlgButtonIndex();
+				profile = "MessageBoxButtonProfile";
+				imageIndex = H44Btn;
+				class = "MessageBoxInputTextButton";
+			};
+		};
+	};
+
+	%gui-->inputConfirmText.Dialog = %gui-->messageBoxDialog;
+
+	Canvas.pushDialog(%gui);
+	%gui-->messageBoxDialog.setFirstResponder();
+
+	return %gui;
+}
+//---------------------------------------------------------------------------------------------
+// member functions
+
+function MessageBoxInputTextButton::onOkButtonClick(%this)
+{
+	%this.getParent().InputOK();
+}
+
+function MessageBoxInputTextButton::onCancelButtonClick(%this)
+{
+	%this.getParent().InputCancel();
+}
+
+function MessageBoxInputTextBackground::closeDialog(%this)
+{
+	Canvas.popDialog(%this);
+	%this.safeDeleteObject();
+}
+
+function MessageBoxInputTextBackground::SetConfirmIconText(%this, %tooltipMsgId)
+{
+	%this-->inputConfirmText.position.x = 87;
+	%this-->inputConfirmIcon.visible = true;
+	%this-->inputConfirmIcon.createObjectTooltip(%tooltipMsgId);
+}
+
+function MessageBoxInputTextBackground::SetValidateCallback(%this, %validateCallback, %validateFailedMessageID)
+{
+	%this-->messageBoxDialog.validateCallback = %validateCallback;
+	%this-->messageBoxDialog.validateFailedMessageID = %validateFailedMessageID;
+}
+
+function MessageBoxInputTextBackground::SetInputText(%this, %txt)
+{
+	%this-->inputTextCtrl.setText(%txt);
+}
+
+function GuiMessageBoxInputText::InputOK(%this)
+{
+	if (%this.validateCallback $= "" || %this.validateFailedMessageID == 0 || GetMessageIDText(%this.validateFailedMessageID) $= "")
+	{
+		%this.InputValidateOk();
+	}
+	else
+	{
+		if (call(%this.validateCallback, %this-->inputTextCtrl.getText()))
+		{
+			%this.InputValidateOk();
+		}
+		else
+		{
+			MessageBoxOK("", GetMessageIDText(%this.validateFailedMessageID));
+		}
+	}
+}
+
+function GuiMessageBoxInputText::InputValidateOk(%this)
+{
+	call(%this.okCommandName, %this, %this-->inputTextCtrl.getText());
+	%this.getParent().closeDialog();
+}
+
+function GuiMessageBoxInputText::InputCancel(%this)
+{
+	if (%this.cancelCommandName !$= "")
+	{
+		call(%this.cancelCommandName);
+	}
+
+	%this.getParent().closeDialog();
+}
+
+function MBInputLabelText::onResize(%this, %width, %maxY)
+{
+	%x = %this.Dialog.getExtent();
+
+	if (%maxY <= 32)
+	{
+		%x.y = 304;
+	}
+	else
+	{
+		%d = %maxY - 32;
+		%x.y = 304 + %d;
+	}
+	
+	%this.Dialog.setExtent(%x.x, %x.y);
+}
+
+function MessageBoxInputTextEditCtrl::onReturn(%this)
+{
+	%this.getParent().InputOK();
+}
+
+// common global functions
+
+function ShowNameBoxInput(%command_name)
+{
+	createMessageBoxInputText(%command_name, "", GetMessageIDText(1048), GetMessageIDText(813));
+}
+
+function CharSelectionDelcharDoubleCheck(%dialog, %givenText)
+{
+	MessageBoxYesNo("", GetMessageIDText(4398), "CharSelectionDelcharSlot(\"" @ %dialog.getParent().charSlotId @ "\",\"" @ %givenText @ "\");", "");
+}
+
+function CharSelectionDelcharOK(%dialog, %givenText)
+{
+	CharSelectionDelcharSlot(%dialog.getParent().charSlotId, %givenText);
+}
+
+function CharSelectionDelcharSlot(%charSlotId, %givenText)
+{
+	if (CharSelectionDelcharSure(%charSlotId, %givenText))
+	{
+		closeCharacterSelectionDialog();
+	}
+}
+
+function MessageBoxDelchar(%slot)
+{
+	$gui = "";
+	if($IsNewbieWorld || $IsYO)
+	{
+		%gui = createMessageBoxInputText("CharSelectionDelcharOK", "", GetMessageIDText(1267), GetMessageIDText(1009));
+	}
+	else
+	{
+		%gui = createMessageBoxInputText("CharSelectionDelcharDoubleCheck", "", GetMessageIDText(1267), GetMessageIDText(4397));
+	}
+
+	%gui.charSlotId = %slot;
+}
+
+function MessageBoxRenameContainer()
+{
+	%gui = createMessageBoxInputText("RenameYesCallback", "RenameNoCallback", GetMessageIDText(2320), GetMessageIDText(813));
+}
+
+function createRenameComplexObjectDialog(%objectTypeName, %currentObjectName)
+{
+	%gui = createMessageBoxInputText("renameComplexObjectDone", "", GetMessageIDText(2320), GetMessageIDText(2984, %objectTypeName));
+	%gui.SetValidateCallback("isNewComplexObjectNameValid", 2985);
+	%gui.SetConfirmIconText(2985);
+	%gui.SetInputText(%currentObjectName);
+
+	return %gui;
+}

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<body_parts>
+
+<!-- головы -->
+
+		<part type="ears" id="0" female="no" vik="no" mon="no">
+			<mesh>Male_Head_Eur_v1_Ear</mesh>
+		</part>
+		<part type="head" id="0" female="no" vik="no" mon="no">
+			<mesh>Male_Head_Eur_v1_Eye</mesh>
+			<mesh>Male_Head_Eur_v1_Face</mesh>
+		</part>
+
+		<part type="ears" id="0" female="no" eur="no" mon="no">
+			<mesh>Male_Head_Vik_v1_Ear</mesh>
+		</part>
+		<part type="head" id="0" female="no" eur="no" mon="no">
+			<mesh>Male_Head_Vik_v1_Eye</mesh>
+			<mesh>Male_Head_Vik_v1_Face</mesh>
+		</part>
+
+		<part type="ears" id="0" female="no" eur="no" vik="no">
+			<mesh>Male_Head_Mon_v1_Ear</mesh>
+		</part>
+		<part type="head" id="0" female="no" eur="no" vik="no">
+			<mesh>Male_Head_Mon_v1_Eye</mesh>
+			<mesh>Male_Head_Mon_v1_Face</mesh>
+		</part>
+
+<!-- головы2 -->
+
+		<part type="ears" id="1" female="no" vik="no" mon="no">
+			<mesh>Male_Head_Eur_v2_Ear</mesh>
+		</part>
+		<part type="head" id="1" female="no" vik="no" mon="no">
+			<mesh>Male_Head_Eur_v2_Eye</mesh>
+			<mesh>Male_Head_Eur_v2_Face</mesh>
+		</part>
+
+		<part type="ears" id="1" female="no" eur="no" mon="no">
+			<mesh>Male_Head_Vik_v2_Ear</mesh>
+		</part>
+		<part type="head" id="1" female="no" eur="no" mon="no">
+			<mesh>Male_Head_Vik_v2_Eye</mesh>
+			<mesh>Male_Head_Vik_v2_Face</mesh>
+		</part>
+
+		<part type="ears" id="1" female="no" eur="no" vik="no">
+			<mesh>Male_Head_Mon_v2_Ear</mesh>
+		</part>
+		<part type="head" id="1" female="no" eur="no" vik="no">
+			<mesh>Male_Head_Mon_v2_Eye</mesh>
+			<mesh>Male_Head_Mon_v2_Face</mesh>
+		</part>
+
+<!-- головы3 -->
+
+		<part type="ears" id="2" female="no" vik="no" mon="no">
+			<mesh>Male_Head_Eur_v3_Ear</mesh>
+		</part>
+		<part type="head" id="2" female="no" vik="no" mon="no">
+			<mesh>Male_Head_Eur_v3_Eye</mesh>
+			<mesh>Male_Head_Eur_v3_Face</mesh>
+		</part>
+
+		<part type="ears" id="2" female="no" eur="no" mon="no">
+			<mesh>Male_Head_Vik_v3_Ear</mesh>
+		</part>
+		<part type="head" id="2" female="no" eur="no" mon="no">
+			<mesh>Male_Head_Vik_v3_Eye</mesh>
+			<mesh>Male_Head_Vik_v3_Face</mesh>
+		</part>
+	
+		<part type="ears" id="2" female="no" eur="no" vik="no">
+			<mesh>Male_Head_Mon_v3_Ear</mesh>
+		</part>
+		<part type="head" id="2" female="no" eur="no" vik="no">
+			<mesh>Male_Head_Mon_v3_Eye</mesh>
+			<mesh>Male_Head_Mon_v3_Face</mesh>
+		</part>
+
+<!-- сенсемилья -->
+
+		<part type="ears" id="0" male="no" vik="no" mon="no">
+			<mesh>Female_Head_Eur_v1_Ear</mesh>
+		</part>
+		<part type="head" id="0" male="no" vik="no" mon="no">
+			<mesh>Female_Head_Eur_v1_Eye</mesh>
+			<mesh>Female_Head_Eur_v1_Face</mesh>
+		</part>
+
+		<part type="ears" id="0" male="no" eur="no" mon="no">
+			<mesh>Female_Head_Vik_v1_Ear</mesh>
+		</part>
+		<part type="head" id="0" male="no" eur="no" mon="no">
+			<mesh>Female_Head_Vik_v1_Eye</mesh>
+			<mesh>Female_Head_Vik_v1_Face</mesh>
+		</part>
+
+		<part type="ears" id="0" male="no" eur="no" vik="no">
+			<mesh>Female_Head_Mon_v1_Ear</mesh>
+		</part>
+		<part type="head" id="0" male="no" eur="no" vik="no">
+			<mesh>Female_Head_Mon_v1_Eye</mesh>
+			<mesh>Female_Head_Mon_v1_Face</mesh>
+		</part>
+
+<!-- сенсемилья2 -->
+
+		<part type="ears" id="1" male="no" vik="no" mon="no">
+			<mesh>Female_Head_Eur_v2_Ear</mesh>
+		</part>
+		<part type="head" id="1" male="no" vik="no" mon="no">
+			<mesh>Female_Head_Eur_v2_Eye</mesh>
+			<mesh>Female_Head_Eur_v2_Face</mesh>
+		</part>
+
+		<part type="ears" id="1" male="no" eur="no" mon="no">
+			<mesh>Female_Head_Vik_v2_Ear</mesh>
+		</part>
+		<part type="head" id="1" male="no" eur="no" mon="no">
+			<mesh>Female_Head_Vik_v2_Eye</mesh>
+			<mesh>Female_Head_Vik_v2_Face</mesh>
+		</part>
+
+		<part type="ears" id="1" male="no" eur="no" vik="no">
+			<mesh>Female_Head_Mon_v2_Ear</mesh>
+		</part>
+		<part type="head" id="1" male="no" eur="no" vik="no">
+			<mesh>Female_Head_Mon_v2_Eye</mesh>
+			<mesh>Female_Head_Mon_v2_Face</mesh>
+		</part>
+
+<!-- сенсемилья3 -->
+
+		<part type="ears" id="2" male="no" vik="no" mon="no">
+			<mesh>Female_Head_Eur_v3_Ear</mesh>
+		</part>
+		<part type="head" id="2" male="no" vik="no" mon="no">
+			<mesh>Female_Head_Eur_v3_Eye</mesh>
+			<mesh>Female_Head_Eur_v3_Face</mesh>
+		</part>
+		<part type="ears" id="2" male="no" eur="no" mon="no">
+			<mesh>Female_Head_Vik_v3_Ear</mesh>
+		</part>
+		<part type="head" id="2" male="no" eur="no" mon="no">
+			<mesh>Female_Head_Vik_v3_Eye</mesh>
+			<mesh>Female_Head_Vik_v3_Face</mesh>
+		</part>
+
+		<part type="ears" id="2" male="no" eur="no" vik="no">
+			<mesh>Female_Head_Mon_v3_Ear</mesh>
+		</part>
+		<part type="head" id="2" male="no" eur="no" vik="no">
+			<mesh>Female_Head_Mon_v3_Eye</mesh>
+			<mesh>Female_Head_Mon_v3_Face</mesh>
+		</part>
+	
+<!-- волосы-ж -->
+	
+		<part type="hair" id="0" male="no">
+			<mesh>Female_Hair_All_v1_up</mesh> 
+			<helmet_mesh>Female_Hair_All_v1_cut</helmet_mesh>
+		</part>	
+		<part type="hair" id="1" male="no">
+			<mesh>Female_Hair_All_v3_up</mesh>
+		</part>
+
+		<part type="hair" id="2" male="no" >
+			<mesh>Female_Hair_Eur_v2_up</mesh>
+			<helmet_mesh>Female_Hair_Eur_v2_cut</helmet_mesh>
+		</part>
+		<part type="hair" id="3" male="no" >
+			<mesh>Female_Hair_Vik_v1_up</mesh>
+			<helmet_mesh>Female_Hair_Eur_v2_cut</helmet_mesh>
+		</part>
+		<part type="hair" id="4" male="no" >
+			<mesh>Female_Hair_Mon_v1_up</mesh>
+			<helmet_mesh>Female_Hair_Mon_v1_cut</helmet_mesh>
+		</part>
+
+		<part type="hair" id="5" male="no" >
+			<mesh>Female_Hair_Vik_v3_up</mesh>
+			<helmet_mesh>Female_Hair_Vik_v3_cut</helmet_mesh>
+		</part>
+		<part type="hair" id="6" male="no" >
+			<mesh>Female_Hair_Mon_v3_up</mesh>
+			<helmet_mesh>Female_Hair_Mon_v3_cut</helmet_mesh>
+		</part>
+		<part type="hair" id="7" male="no" >
+			<mesh>Female_Hair_Eur_v3_up</mesh>
+		</part>
+
+		<part type="hair" id="8" male="no" >
+			<mesh>Female_Hair_Vik_v2_up</mesh>
+		</part>
+		<part type="hair" id="9" male="no" >
+			<mesh>Female_Hair_Mon_v2_up</mesh>
+			<helmet_mesh>Female_Hair_Mon_v2_cut</helmet_mesh>
+		</part>
+		<part type="hair" id="10" male="no" >
+			<mesh>Female_Hair_Eur_v1_up</mesh>
+			<helmet_mesh>Female_Hair_Eur_v1_cut</helmet_mesh>
+		</part>
+
+		<part type="hair" id="11" male="no">
+			<mesh>Female_Hair_All_v2_up</mesh>
+		</part>
+
+<!-- волосы-м -->
+
+		<part type="hair" id="0" female="no">
+		</part>
+
+		<part type="hair" id="1" female="no">
+			<mesh>Male_Hair_All_v1_up</mesh>
+			<helmet_mesh>Male_Hair_All_v1_cut</helmet_mesh>
+		</part>
+
+		<part type="hair" id="2" female="no">
+			<mesh>Male_Hair_All_v2_up</mesh>
+			<helmet_mesh>Male_Hair_All_v2_cut</helmet_mesh>
+		</part>
+		<part type="hair" id="3" female="no">
+			<mesh>Male_Hair_All_v4_up</mesh>
+			<helmet_mesh>Male_Hair_All_v4_cut</helmet_mesh>
+		</part>
+
+		<part type="hair" id="4" female="no" >
+			<mesh>Male_Hair_Vik_v2_up</mesh>
+		</part>
+		<part type="hair" id="5" female="no" >
+			<mesh>Male_Hair_Mon_v2_up</mesh>
+		</part>
+		<part type="hair" id="6" female="no" >
+			<mesh>Male_Hair_Eur_v1_up</mesh>
+			<helmet_mesh></helmet_mesh>
+		</part>
+
+		<part type="hair" id="7" female="no" >
+			<mesh>Male_Hair_Eur_v2_up</mesh>
+			<helmet_mesh>Male_Hair_Eur_v2_cut</helmet_mesh>
+		</part>
+		<part type="hair" id="8" female="no" >
+			<mesh>Male_Hair_Vik_v1_up</mesh>
+			<helmet_mesh></helmet_mesh>
+		</part>
+		<part type="hair" id="9" female="no" >
+			<mesh>Male_Hair_Mon_v4_up</mesh>
+		</part>
+
+		<part type="hair" id="10" female="no" >
+			<mesh>Male_Hair_Eur_v4_up</mesh>
+			<helmet_mesh></helmet_mesh>
+		</part>
+		<part type="hair" id="11" female="no" >
+			<mesh>Male_Hair_Vik_v3_up</mesh>
+		</part>
+		<part type="hair" id="12" female="no" >
+			<mesh>Male_Hair_Mon_v3_up</mesh>
+		</part>
+
+		<part type="hair" id="13" female="no" >
+			<mesh>Male_Hair_Eur_v3_up</mesh>
+			<helmet_mesh></helmet_mesh>
+		</part>
+		<part type="hair" id="14" female="no" >
+			<mesh>Male_Hair_Vik_v4_up</mesh>
+			<helmet_mesh></helmet_mesh>
+		</part>
+		<part type="hair" id="15" female="no" >
+			<mesh>Male_Hair_Mon_v1_up</mesh>
+		</part>
+
+		<part type="hair" id="16" female="no">
+			<mesh>Male_Hair_All_v3_up</mesh>
+		</part>
+
+<!-- бороды -->
+
+		<part type="beard" id="0" female="no">
+		</part>
+
+		<part type="beard" id="1" female="no">
+			<mesh>Male_Beard_All_v3_up</mesh>
+			<helmet_mesh>Male_Beard_All_v3_cut</helmet_mesh>
+		</part>
+
+		<part type="beard" id="2" female="no">
+			<mesh>Male_Beard_All_v4_up</mesh>
+			<helmet_mesh>Male_Beard_All_v4_cut</helmet_mesh>
+		</part>
+	
+		<part type="beard" id="3" female="no" >
+			<mesh>Male_Beard_Vik_v1_up</mesh>
+			<helmet_mesh>Male_Beard_Vik_v1_cut</helmet_mesh>
+		</part>
+		<part type="beard" id="4" female="no" >
+			<mesh>Male_Beard_Mon_v3_up</mesh>
+			<helmet_mesh>Male_Beard_Mon_v3_cut</helmet_mesh>
+		</part>	
+		<part type="beard" id="5" female="no" >
+		<mesh>Male_Beard_Eur_v1_up</mesh>
+			<helmet_mesh>Male_Beard_Eur_v1_cut</helmet_mesh>
+		</part>
+
+		<part type="beard" id="6" female="no" >
+			<mesh>Male_Beard_Mon_v4_up</mesh>
+			<helmet_mesh>Male_Beard_Mon_v4_cut</helmet_mesh>
+		</part>
+		<part type="beard" id="7" female="no" >
+			<mesh>Male_Beard_Vik_v4_up</mesh>
+			<helmet_mesh>Male_Beard_Vik_v4_cut</helmet_mesh>
+		</part>
+		<part type="beard" id="8" female="no" >
+			<mesh>Male_Beard_Eur_v2_up</mesh>
+			<helmet_mesh>Male_Beard_Eur_v2_cut</helmet_mesh>
+		</part>
+
+		<part type="beard" id="9" female="no" >
+			<mesh>Male_Beard_Mon_v1_up</mesh>
+			<helmet_mesh>Male_Beard_Mon_v1_cut</helmet_mesh>
+		</part>
+		<part type="beard" id="10" female="no" >
+			<mesh>Male_Beard_Vik_v2_up</mesh>
+			<helmet_mesh>Male_Beard_Vik_v2_cut</helmet_mesh>
+		</part>
+		<part type="beard" id="11" female="no" >
+			<mesh>Male_Beard_Eur_v3_up</mesh>
+			<helmet_mesh>Male_Beard_Eur_v3_cut</helmet_mesh>
+		</part>
+
+		<part type="beard" id="12" female="no" >
+			<mesh>Male_Beard_Mon_v2_up</mesh>
+			<helmet_mesh>Male_Beard_Mon_v2_cut</helmet_mesh>
+		</part>
+		<part type="beard" id="13" female="no" >
+			<mesh>Male_Beard_Vik_v3_up</mesh>
+			<helmet_mesh>Male_Beard_Vik_v3_cut</helmet_mesh>
+		</part>
+		<part type="beard" id="14" female="no" >
+			<mesh>Male_Beard_Eur_v4_up</mesh>
+			<helmet_mesh>Male_Beard_Eur_v4_cut</helmet_mesh>
+		</part>
+
+		<part type="beard" id="15" female="no">
+			<mesh>Male_Beard_All_v1_up</mesh>
+			<helmet_mesh>Male_Beard_All_v1_cut</helmet_mesh>
+		</part>
+
+		<part type="beard" id="16" female="no">
+			<mesh>Male_Beard_All_v3_up</mesh>
+			<helmet_mesh>Male_Beard_All_v3_cut</helmet_mesh>
+		</part>
+
+<!-- прочие конечности-->
+
+		<part type="shoulders" id="0" female="no">
+			<mesh>Male_Body_v1_shoulders</mesh>
+		</part>
+		<part type="forearms" id="0" female="no">
+			<mesh>Male_Body_v1_forearms</mesh>
+		</part>
+		<part type="arms" id="0" female="no" vik="no">
+			<mesh>Male_Body_v1_arm</mesh>
+			<helmet_mesh>Male_Body_v1_arm</helmet_mesh>
+		</part>
+		<part type="arms" id="0" female="no" eur="no" mon="no">
+			<mesh>Male_Body_v1_arm</mesh>
+			<helmet_mesh>Male_Body_v1_arm</helmet_mesh>
+		</part>
+
+		<part type="torso" id="0" male="no" vik="no" mon="no">
+			<mesh>Female_Body_v1_torso</mesh>
+			<mesh>Female_Underwear_Eur_Body</mesh>
+			<helmet_mesh>Female_Body_v1_torso_B</helmet_mesh>
+			<helmet_mesh>Female_Antiseam</helmet_mesh>
+		</part>
+		<part type="torso" id="0" male="no" eur="no" mon="no">
+			<mesh>Female_Body_v1_torso</mesh>
+			<mesh>Female_Underwear_Vik_Body</mesh>
+			<helmet_mesh>Female_Body_v1_torso_B</helmet_mesh>
+			<helmet_mesh>Female_Antiseam</helmet_mesh>
+		</part>
+		<part type="torso" id="0" male="no" vik="no" eur="no">
+			<mesh>Female_Body_v1_torso</mesh>
+			<mesh>Female_Underwear_Mon_Body</mesh>
+			<helmet_mesh>Female_Body_v1_torso_B</helmet_mesh>
+			<helmet_mesh>Female_Antiseam</helmet_mesh>
+		</part>
+
+		<part type="shoulders" id="0" male="no" vik="no">
+			<mesh>Female_Body_v1_shoulders</mesh>
+		</part>
+		<part type="shoulders" id="0" male="no" eur="no" mon="no">
+			<mesh>Female_Body_v1_shoulders</mesh>
+			<mesh>Female_Underwear_Vik_Hands</mesh>
+		</part>
+		<part type="forearms" id="0" male="no">
+			<mesh>Female_Body_v1_forearms</mesh>
+		</part>
+		<part type="arms" id="0" male="no">
+			<mesh>Female_Body_v1_arm</mesh>
+			<helmet_mesh>Female_Body_v1_arm</helmet_mesh>
+		</part>
+
+<!--труселя -->
+
+		<part type="hips" id="0" female="no" vik="no" mon="no">
+			<mesh>Male_Underwear_Eur_Hips</mesh>
+			<helmet_mesh>Male_Underwear_Eur_Hips_B</helmet_mesh>
+		</part>
+		<part type="torso" id="0" female="no" vik="no" mon="no">
+			<mesh>Male_Body_v1_torso</mesh>
+			<helmet_mesh>Male_Body_v1_torso_B</helmet_mesh>
+			<helmet_mesh>Male_Antiseam</helmet_mesh>
+		</part>
+
+		<part type="hips" id="0" female="no" eur="no" mon="no">
+			<mesh>Male_Underwear_Vik_Hips</mesh>
+			<helmet_mesh>Male_Underwear_Vik_Hips_B</helmet_mesh>
+		</part>
+		<part type="torso" id="0" female="no" eur="no" mon="no">
+			<mesh>Male_Underwear_Vik_Body</mesh>
+			<mesh>Male_Body_v1_torso</mesh>
+			<helmet_mesh>Male_Body_v1_torso_B</helmet_mesh>
+			<helmet_mesh>Male_Antiseam</helmet_mesh>
+		</part>
+
+		<part type="hips" id="0" female="no" eur="no" vik="no">
+			<mesh>Male_Underwear_Mon_Hips</mesh>
+			<helmet_mesh>Male_Underwear_Mon_Hips_B</helmet_mesh>
+		</part>
+		<part type="torso" id="0" female="no" eur="no" vik="no">
+			<mesh>Male_Underwear_Mon_Body</mesh>
+			<mesh>Male_Body_v1_torso</mesh>
+			<helmet_mesh>Male_Body_v1_torso_B</helmet_mesh>
+			<helmet_mesh>Male_Antiseam</helmet_mesh>
+		</part>
+
+		<part type="hips" id="0" male="no" vik="no" mon="no">
+			<mesh>Female_Body_v1_hips</mesh>
+			<helmet_mesh>Female_Underwear_Eur_Body_Cut</helmet_mesh>
+			<helmet_mesh>Female_Body_v1_hips_B</helmet_mesh>
+		</part>
+		<part type="hips" id="0" male="no" eur="no" mon="no">
+			<mesh>Female_Body_v1_hips</mesh>
+			<helmet_mesh>Female_Underwear_Vik_Body_Cut</helmet_mesh>
+			<helmet_mesh>Female_Body_v1_hips_B</helmet_mesh>
+		</part>
+		<part type="hips" id="0" male="no" vik="no" eur="no">
+			<mesh>Female_Body_v1_hips</mesh>
+			<helmet_mesh>Female_Underwear_Mon_Body_Cut</helmet_mesh>
+			<helmet_mesh>Female_Body_v1_hips_B</helmet_mesh>
+		</part>
+
+		<part type="shin" id="0" female="no">
+			<mesh>Male_Body_v1_shin</mesh>
+		</part>
+
+		<part type="feet" id="0" female="no" vik="no" mon="no">
+			<mesh>Male_Body_v1_feet</mesh>
+			<helmet_mesh>Male_Body_v1_feet</helmet_mesh>
+		</part>
+		<part type="feet" id="0" female="no" eur="no" mon="no">
+			<mesh>Male_Body_v1_feet</mesh>
+			<helmet_mesh>Male_Body_v1_feet</helmet_mesh>
+		</part>
+		<part type="feet" id="0" female="no" vik="no" eur="no">
+			<mesh>Male_Body_v1_feet</mesh>
+			<helmet_mesh>Male_Body_v1_feet</helmet_mesh>
+		</part>
+
+		<part type="shin" id="0" male="no">
+			<mesh>Female_Body_v1_shin</mesh>
+		</part>
+		<part type="feet" id="0" male="no" vik="no">
+			<mesh>Female_Body_v1_feet</mesh>
+		</part>
+		<part type="feet" id="0" male="no" eur="no" mon="no">
+			<mesh>Female_Body_v1_feet</mesh>
+			<mesh>Female_Underwear_Vik_Legs</mesh>
+		</part>
+
+		<part type="tabard" id="0">
+			<mesh></mesh>
+			<helmet_mesh></helmet_mesh>
+		</part>
+
+	</body_parts>
+
+	<colors>
+		<color hairid="0"> 255	255	255 255</color>
+		<color hairid="1"> 253	226	184 255</color>
+		<color hairid="2"> 224	149	118 255</color>		
+		<color hairid="3"> 156	98	65 255</color>	
+
+		<color hairid="4"> 194	194	194 255</color>		
+		<color hairid="5"> 120	110	97 255</color>		
+		<color hairid="6"> 92	86	82 255</color>
+		<color hairid="7"> 158	108	79 255</color>
+
+		<color hairid="8"> 89	85	82 255</color>
+		<color hairid="9"> 84	69	59 255</color>
+		<color hairid="10"> 60	60	60 255</color>
+		<color hairid="11"> 65	51	51 255</color>
+
+
+		<color skinid="0" >246 231 227 255</color>
+		<color skinid="1" >236 210 196 255</color>
+		<color skinid="2" >214 177 163 255</color>
+		
+		<color skinid="3" >255 255 255 255</color>
+		<color skinid="4" >232 227 222 255</color>
+		<color skinid="5" >215 208 203 255</color>
+		
+		<color skinid="6" >176 156 133 255</color>
+		<color skinid="7" >188 170 138 255</color>
+		<color skinid="8" >158 135 119 255</color>		
+	</colors>
+
+	<features>
+		<!--
+		<feature faceid="0">Tatu_Number_01_mat</feature>
+		<feature faceid="1">Tatu_Number_02_mat</feature>
+
+		<feature bodyid="0">Tatu_Number_03_mat</feature>
+		<feature bodyid="1">Scar_Number_01_mat</feature>
+		-->
+	</features>
+
+
+</xml>

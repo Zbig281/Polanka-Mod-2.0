@@ -1,0 +1,733 @@
+function createOptionsControlsDlg()
+{
+	%lineExtent = "590 30";
+	%lineOffset = "10 20";
+
+	%guiContent = new GuiControl( OptionsControlsDlg)
+	{
+		isContainer = "1";
+		Profile = "GuiOverlayProfile";
+		horizSizing = "width";
+		vertSizing = "height";
+		position = "0 0";
+		extent = "1024 720";
+		MinExtent = "16 16";
+		Visible = "1";
+
+		new GuiWindowCtrl()
+		{
+			text = GetMessageIDText(1155); // Controls
+			resizeWidth = "0";
+			resizeHeight = "0";
+			canMove = "1";
+			canClose = "1";
+			canMinimize = "0";
+			canMaximize = "0";
+			canCollapse = "0";
+			canHideOnFreelook = "0";
+			canLock = "0";
+			canSetup = "0";
+			edgeSnap = "1";
+			margin = "0 0 0 0";
+			padding = "0 0 0 0";
+			anchorTop = "1";
+			anchorBottom = "0";
+			anchorLeft = "1";
+			anchorRight = "0";
+			position = "0 0";
+			extent = "733 681";
+			horizSizing = "center";
+			vertSizing = "height";
+			profile = "GuiAutoCursorWindowProfile";
+			closeCommand ="CancelOptionsControlsDlg();";
+			accelerator = "escape";
+
+			new GuiContainer()
+			{
+				docking = Client;
+				extent = "715 580";
+				canSaveDynamicFields = "0";
+				Enabled = "1";
+				profile = "GuiBaseTextProfile";
+
+				//background
+				new GuiControl()
+				{
+					profile = GuildBlackVertLineProfile;
+					extent = "100% 53";
+					position = "0 0";
+					//vertSizing = "top";
+				};
+
+				new GuiTextCtrl()
+				{
+					text = GetMessageIDText(1161); // Command
+					horizSizing = "right";
+					vertSizing = "bottom";
+					position = "38 12";
+					extent = "150 32";
+					profile = "OptionsHeaderTextProfile";
+				};
+				new GuiTextCtrl()
+				{
+					text = GetMessageIDText(1162); // Key 1
+					horizSizing = "left";
+					vertSizing = "bottom";
+					position = "329 12";
+					extent = "150 32";
+					profile = "OptionsHeaderKeyProfile";
+				};
+				new GuiTextCtrl() 
+				{
+					text = GetMessageIDText(1163); // Key 2
+					horizSizing = "left";
+					vertSizing = "bottom";
+					position = "497 12";
+					extent = "150 32";
+					profile = "OptionsHeaderKeyProfile";
+				};
+
+				new GuiBitmapCtrl()
+				{
+					imageIndex = getOptionsTopBorder();
+					profile = "CmComboStackButtonDef";
+					extent = "100% 11";
+					position = "0 59";
+					vertSizing = "bottom";
+					wrap = true;
+				};
+
+				//background
+				new GuiControl()
+				{
+					position = "0 53";
+					extent = "100% 100%";
+					profile = GuiAtlas3TiledImageProfile;
+					visible = "1";
+					active = "1";
+					canHit = "0";
+					BackgroundIndex = LearningWindowBackground;
+				};
+
+				//background border
+				new GuiControl()
+				{
+					position = "0 53";
+					extent = "100% 100%";
+					profile = "GuiAtlas1TiledImageProfile";
+					visible = "1";
+					active = "1";
+					canHit = "0";
+					TopIndex0 = FringeTopShadow;
+				};
+
+				new GuiScrollCtrl()
+				{
+					hScrollBar = "alwaysOff";
+					position = "0 63";
+					extent = "100% 429";
+					horizSizing = "width";
+					vertSizing = "height";
+					profile = "GuiEagleScrollBarProfile";
+					constantThumbHeight = true;
+					childMargin = "0 5";
+					trackOffset = 8;
+					addContentWidth = 0;
+
+					new GuiStackControl()
+					{
+						StackingType = "Vertical";
+						Padding = "0";
+						DynamicSize = "1";
+						ChangeChildSizeToFit = "1";
+						ChangeChildPosition = "1";
+						isContainer = "1";
+						profile = "GuiBaseTextProfile";
+						extent = "772 100";
+						HorizSizing = "width";
+						VertSizing = "height";
+						position = "0 0";
+						MinExtent = "16 16";
+						LeftIndent = "23";
+						TopIndent = "12";
+						padding = 12;
+
+						new GuiStackControl(OptionsControlsMovementPanel)
+						{
+							position = "0 0";
+							extent = "739 145";
+							minExtent = "16 16";
+							profile = "GuiBaseTextProfile";
+							visible = "1";
+							active = "1";
+							padding = 5;
+
+							new GuiTextCtrl() 
+							{
+								text = GetMessageIDText(1167); // Movement
+								horizSizing = "left";
+								vertSizing = "bottom";
+								position = "26 37";
+								extent = "108 32";
+								profile = "ControlsSubMenuTextProfile";
+							};
+						};
+
+						new GuiStackControl(OptionsControlsInteractionPanel) 
+						{
+							position = "0 0";
+							extent = "739 145";
+							minExtent = "16 16";
+							profile = "GuiBaseTextProfile";
+							visible = "1";
+							active = "1";
+							padding = 5;
+
+							//Line
+							new GuiControl()
+							{
+								position = "0 0";
+								extent = %lineExtent;
+								isContainer = "1";
+
+								new GuiBitmapCtrl()
+								{
+									imageIndex = HLine1;
+									profile = "GuiAtlas3ImageProfile";
+									position = %lineOffset;
+									extent = "100% 1";
+									wrap = true;
+									VertSizing = "center";
+								};
+							};
+
+							new GuiTextCtrl() 
+							{
+								text = GetMessageIDText(1168); // Interaction
+								horizSizing = "left";
+								vertSizing = "bottom";
+								position = "26 75";
+								extent = "108 32";
+								profile = "ControlsSubMenuTextProfile";
+							};
+						};
+
+						new GuiStackControl(OptionsControlsInterfacePanel) 
+						{
+							position = "0 0";
+							extent = "739 145";
+							minExtent = "16 16";
+							profile = "GuiBaseTextProfile";
+							visible = "1";
+							active = "1";
+							padding = 5;
+
+							//Line
+							new GuiControl()
+							{
+								position = "0 0";
+								extent = %lineExtent;
+								isContainer = "1";
+
+								new GuiBitmapCtrl()
+								{
+									imageIndex = HLine1;
+									profile = "GuiAtlas3ImageProfile";
+									position = %lineOffset;
+									extent = "100% 1";
+									wrap = true;
+									VertSizing = "center";
+								};
+							};
+
+							new GuiTextCtrl() 
+							{
+								text = GetMessageIDText(1169); // Interface
+								horizSizing = "left";
+								vertSizing = "bottom";
+								position = "26 37";
+								extent = "108 32";
+								profile = "ControlsSubMenuTextProfile";
+							};
+						};
+
+						new GuiStackControl(OptionsControlsViewPanel) 
+						{
+							position = "0 0";
+							extent = "739 145";
+							profile = "GuiBaseTextProfile";
+							visible = "1";
+							active = "1";
+							padding = 5;
+
+							//Line
+							new GuiControl()
+							{
+								position = "0 0";
+								extent = %lineExtent;
+								isContainer = "1";
+
+								new GuiBitmapCtrl()
+								{
+									imageIndex = HLine1;
+									profile = "GuiAtlas3ImageProfile";
+									position = %lineOffset;
+									extent = "100% 1";
+									wrap = true;
+									VertSizing = "center";
+								};
+							};
+
+							new GuiTextCtrl() 
+							{
+								text = GetMessageIDText(1170); // View
+								horizSizing = "left";
+								vertSizing = "bottom";
+								position = "26 37";
+								extent = "108 32";
+								profile = "ControlsSubMenuTextProfile";
+							};
+						};
+
+						new GuiStackControl(OptionsControlsVehiclePanel) 
+						{
+							position = "0 0";
+							extent = "739 145";
+							profile = "GuiBaseTextProfile";
+							visible = "1";
+							active = "1";
+							padding = 5;
+
+							//Line
+							new GuiControl()
+							{
+								position = "0 0";
+								extent = %lineExtent;
+								isContainer = "1";
+
+								new GuiBitmapCtrl()
+								{
+									imageIndex = HLine1;
+									profile = "GuiAtlas3ImageProfile";
+									position = %lineOffset;
+									extent = "100% 1";
+									wrap = true;
+									VertSizing = "center";
+								};
+							};
+
+							new GuiTextCtrl() 
+							{
+								text = GetMessageIDText(2135); // Vehicle
+								horizSizing = "left";
+								vertSizing = "bottom";
+								position = "26 37";
+								extent = "108 32";
+								profile = "ControlsSubMenuTextProfile";
+							};
+						};
+
+						new GuiStackControl(OptionsControlsHotbarPanel) 
+						{
+							position = "0 0";
+							extent = "739 145";
+							minExtent = "16 16";
+							profile = "GuiBaseTextProfile";
+							visible = "1";
+							active = "1";
+							padding = 5;
+
+							//Line
+							new GuiControl()
+							{
+								position = "0 0";
+								extent = %lineExtent;
+								isContainer = "1";
+
+								new GuiBitmapCtrl()
+								{
+									imageIndex = HLine1;
+									profile = "GuiAtlas3ImageProfile";
+									position = %lineOffset;
+									extent = "100% 1";
+									wrap = true;
+									VertSizing = "center";
+								};
+							};
+
+							new GuiTextCtrl() 
+							{
+								text = GetMessageIDText(1171); // Hotbar
+								horizSizing = "left";
+								vertSizing = "bottom";
+								position = "26 37";
+								extent = "108 32";
+								profile = "ControlsSubMenuTextProfile";
+							};
+						};
+
+						new GuiStackControl() 
+						{
+							position = "0 0";
+							extent = "739 145";
+							minExtent = "16 16";
+							profile = "GuiBaseTextProfile";
+							visible = "1";
+							active = "1";
+							padding = 5;
+
+							//Line
+							new GuiControl()
+							{
+								position = "0 0";
+								extent = %lineExtent;
+								isContainer = "1";
+
+								new GuiBitmapCtrl()
+								{
+									imageIndex = HLine1;
+									profile = "GuiAtlas3ImageProfile";
+									position = %lineOffset;
+									extent = "100% 1";
+									wrap = true;
+									VertSizing = "center";
+								};
+							};
+
+							new GuiTextCtrl() 
+							{
+								text = GetMessageIDText(1044);//HUD Presets
+								horizSizing = "left";
+								vertSizing = "bottom";
+								position = "26 37";
+								extent = "108 32";
+								profile = "ControlsSubMenuTextProfile";
+							};
+
+							new GuiStackControl(OptionsControlsHUDPresetsPanel) 
+							{
+								position = "0 0";
+								extent = "739 145";
+								minExtent = "16 16";
+								profile = "GuiBaseTextProfile";
+								visible = "1";
+								active = "1";
+								padding = 5;
+							};
+						};
+
+						new GuiStackControl() 
+						{
+							position = "0 0";
+							extent = "739 145";
+							minExtent = "16 16";
+							profile = "GuiBaseTextProfile";
+							visible = "1";
+							active = "1";
+							padding = 5;
+
+							//Line
+							new GuiControl()
+							{
+								position = "0 0";
+								extent = %lineExtent;
+								isContainer = "1";
+
+								new GuiBitmapCtrl()
+								{
+									imageIndex = HLine1;
+									profile = "GuiAtlas3ImageProfile";
+									position = %lineOffset;
+									extent = "100% 1";
+									wrap = true;
+									VertSizing = "center";
+								};
+							};
+
+							new GuiTextCtrl() 
+							{
+								text = GetMessageIDText(1045);//Hotbar presets
+								horizSizing = "left";
+								vertSizing = "bottom";
+								position = "26 37";
+								extent = "108 32";
+								profile = "ControlsSubMenuTextProfile";
+							};
+
+							new GuiStackControl(OptionsControlsHotBarPresetsPanel) 
+							{
+								position = "0 0";
+								extent = "739 8";
+								minExtent = "16 16";
+								profile = "GuiBaseTextProfile";
+								visible = "1";
+								active = "1";
+								padding = 5;
+							};
+						};
+					};//stack
+				};//scroll
+
+				//Line
+				new GuiBitmapCtrl()
+				{
+					imageIndex = BlackSlimHLineCenter;
+					profile = "GuiAtlas3ImageProfile";
+					extent = "100% 3";
+					position = "0 495";
+					vertSizing = "top";
+					wrap = true;
+				};
+
+				//Buttons background
+				new GuiControl()
+				{
+					profile = GuildBlackVertLineProfile;
+					extent = "100% 84";
+					position = "0 498";
+					vertSizing = "top";
+					isContainer = "true";
+
+					new guiHorzTilingButtonCtrl()
+					{
+						text = GetMessageIDText(1113); // Cancel
+						groupNum = "-1";
+						buttonType = "PushButton";
+						useMouseEvents = "0";
+						horizSizing = "left";
+						vertSizing = "center";
+						position = "204 516";
+						extent = "158 44";
+						profile = BuildPositionButtonProfile;
+						command ="CancelOptionsControlsDlg();";
+						imageIndex = H44Btn;
+					};//button
+
+					new guiHorzTilingButtonCtrl()
+					{
+						text = GetMessageIDText(1164); // Apply
+						groupNum = "-1";
+						buttonType = "PushButton";
+						useMouseEvents = "0";
+						horizSizing = "left";
+						vertSizing = "center";
+						position = "20 516";
+						extent = "158 44";
+						profile = BuildPositionButtonProfile;
+						command ="applyPresetActions(); ApplyBindQueue(); Canvas.popDialog(OptionsControlsDlg); OptionsControlsDlg.safeDeleteObject();";
+						imageIndex = H44Btn;
+					};//button
+
+					new guiHorzTilingButtonCtrl()
+					{
+						text = GetMessageIDText(5089); // Reset Defaults
+						groupNum = "-1";
+						buttonType = "PushButton";
+						useMouseEvents = "0";
+						horizSizing = "left";
+						vertSizing = "center";
+						position = "388 516";
+						extent = "158 44";
+						profile = BuildPositionButtonProfile;
+						command ="openResetConfirmationDialog();";
+						imageIndex = H44Btn;
+					};//button
+				};
+			};
+		};
+	};//control
+	Canvas.pushDialog(OptionsControlsDlg);
+}
+
+//-----------------------------------------------
+%guiContent = new GuiControl( optionsBindDlg)
+{
+	position = "0 0";
+	extent = "100% 100%";
+	minExtent = "8 8";
+	horizSizing = "right";
+	vertSizing = "bottom";
+	profile = "GuiDefaultProfile";
+	visible = "1";
+	active = "1";
+	isContainer = "1";
+	canSave = "1";
+	canSaveDynamicFields = "1";
+	helpTag = "0";
+	accelerator = "escape";
+	command = "BtnUnlock(); Canvas.popDialog( optionsBindDlg);";
+
+	new GuiInputCtrl( optionsBindInputCtrl)
+	{
+		lockMouse = "0";
+		position = "0 0";
+		extent = "100% 100%";
+		minExtent = "8 8";
+		horizSizing = "center";
+		vertSizing = "bottom";
+		profile = "GuiInputCtrlProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "0";
+		canSave = "1";
+		canSaveDynamicFields = "0";
+	};
+};
+
+//----------------------------------------------
+function ShowOptionsControls()
+{
+	if(getCurrentActionMap().getName() !$= "moveMap")
+	{
+		moveMap.push();
+		%moveMapPushed = true;
+	}
+
+	$oldMouseSensitivity      = $pref::Input::MouseSensitivity;
+	$oldInvertMouseY          = $pref::Input::invertMouseY;
+	$oldRevertAttackDirection = $pref::Controls::revertAttackDirection;
+	$oldPathDefault           = $pref::HotBar::pathDefault;
+	$oldHotBarPathPresets     = $pref::HotBar::pathPresets;
+	$oldHotBarPreset          = $pref::HotBar::preset;
+	$oldHUDPathPresets        = $pref::HUD::pathPresets;
+	$oldHUDPreset             = $pref::HUD::preset;
+	$winHotBarPreset          = $pref::HotBar::preset;
+	$winHUDPreset             = $pref::HUD::preset;
+	$oldHoldkeyForCursorMode  = $pref::Input::holdkeyForCursorMode;
+
+	OpenOptionsControls();
+
+	if(%moveMapPushed)
+		moveMap.pop();
+}
+//----------------------------------------------
+
+function CancelOptionsControlsDlg()
+{
+	%load_prop = ($pref::HUD::preset != $oldHUDPreset);
+	%load_hot_bar = ($pref::HotBar::preset != $oldHotBarPreset);
+
+	$pref::Input::MouseSensitivity         = $oldMouseSensitivity;
+	$pref::Input::invertMouseY             = $oldInvertMouseY;
+	$pref::Controls::revertAttackDirection = $oldRevertAttackDirection;
+	$pref::HotBar::pathDefault             = $oldPathDefault;
+	$pref::HotBar::pathPresets             = $oldHotBarPathPresets;
+	$pref::HotBar::preset                  = $oldHotBarPreset;
+	$pref::HUD::pathPresets                = $oldHUDPathPresets;
+	$pref::HUD::preset                     = $oldHUDPreset;
+	$pref::Input::holdkeyForCursorMode     = $oldHoldkeyForCursorMode;
+
+	checkDefHotBarPresetPath();
+	$HUDPresetPath = $pref::HUD::pathPresets @ $pref::HUD::preset @ "/";
+
+	if (%load_prop)
+	{
+		echo("load_prop");
+		loadAllGuiProperty();
+	}
+	else if (%load_hot_bar)
+	{
+		echo("load_hot_bar");
+		loadHotBarData();
+	}
+
+	Canvas.popDialog(OptionsControlsDlg);
+	OptionsControlsDlg.safeDeleteObject();
+}
+//----------------------------------------------
+
+function optionsBindInputCtrl::onInputEvent( %this, %device, %action)
+{
+	if(getCurrentActionMap().getName() !$= "moveMap")
+	{
+		moveMap.push();
+		%moveMapPushed = true;
+	}
+
+	Canvas.popDialog(optionsBindDlg);
+	BtnUnlock();
+	DoneBind(%device, %action);
+
+	if(%moveMapPushed)
+		moveMap.pop();
+}
+//----------------------------------------------
+
+function ApplyBindQueue()
+{
+	if(getCurrentActionMap().getName() !$= "moveMap")
+	{
+		moveMap.push();
+		%moveMapPushed = true;
+	}
+
+	//save moveMap
+	ProcessBindQueue();
+
+	//save mouse sensitivity
+	exportPrefs();
+
+	if(%moveMapPushed)
+		moveMap.pop();
+}
+
+function OptionsControlsDlg::onSleep( %this)
+{
+	CloseOptionsControlsDlg();
+}
+
+//----------------------------------------------
+
+function OptionsControlsHUDTextCtrl::onDoubleClick(%this)
+{
+	renamePreset("HUD", %this.text);
+}
+//----------------------------------------------
+
+function OptionsControlsHotBarTextCtrl::onDoubleClick(%this)
+{
+	renamePreset("HotBar", %this.text);
+}
+//----------------------------------------------
+
+function renamePreset(%menu_name, %preset_name)
+{
+	$curRenameMenu = %menu_name;
+	$curRenamePreset = %preset_name;
+	ShowNameBoxInput("setNewPresetName");
+}
+//----------------------------------------------
+function resetSettingsToDefault()
+{
+	if(getCurrentActionMap().getName() $= "moveMap")
+	{
+		moveMap.pop();
+		%moveMapPresented = true;
+	}
+
+	moveMap.delete();
+	new ActionMap(moveMap);
+
+	moveMap.push();
+
+	exec("scripts/client/default.bind.cs");
+	exec("scripts/client/default.bind.update.cs");
+	moveMap.save($bindingsConfig);
+
+	// reset checkboxes and sliders
+	exec("core/scripts/client/defaultControls.cs");
+
+	if(!%moveMapPresented)
+		moveMap.pop();
+
+	// reopen window to reload the content
+	Canvas.popDialog(OptionsControlsDlg);
+	OptionsControlsDlg.delete();
+	ShowOptionsControls();
+}
+
+function openResetConfirmationDialog()
+{
+	MessageBoxYesNo(GetMessageIDText(5089), GetMessageIDText(5090), "resetSettingsToDefault();", "");
+}
+//----------------------------------------------

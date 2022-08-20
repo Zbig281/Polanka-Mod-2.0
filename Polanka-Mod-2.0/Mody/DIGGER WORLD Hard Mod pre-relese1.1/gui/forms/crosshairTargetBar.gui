@@ -1,0 +1,379 @@
+//-----------------------------------------------------------------------------
+$TargetBar::mainTextColor = "255 255 255";
+$TargetBar::secondTextColor = "180 180 180";
+//-----------------------------------------------------------------------------
+
+singleton GuiControlProfile(TargetBarTitleProfile : TargetBarObjectTypeProfile)
+{
+	fontColor = "204 204 204";
+};
+
+singleton GuiControlProfile(TargetBarGrandmasterTitleProfile : TargetBarObjectTypeProfile)
+{
+	fontColor = "195 129 0";
+};
+
+function reexec()
+{
+	TargetBar.delete();
+	exec("gui/forms/crosshairTargetBar.gui");
+	createTargetBar();
+}
+//-----------------------------------------------------------------------------
+function createTargetBar()
+{
+	new GuiCrosshairTargetBar(TargetBar)
+	{
+		text = GetMessageIDText(1302); // Target
+		position = "32.5521% 51.0841%";
+		MaxExtent = "720 120";
+		MinExtent = "300 120";
+		Extent = "420 120";
+		HorizSizing = "right";	
+		VertSizing = "top";
+		canSave = "1";
+		Visible = "1";
+		canSaveDynamicFields = "1";
+		forGuiEdit = "1";
+		profile = "GuiSmallWindowProfile";
+		canMove = "1";
+		canLock = "1";
+		canSetup = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		canHideOnFreelook = "1";
+		canCollapse = "0";
+		closeCommand = "closeTargetBar();";
+		edgeSnap = "0";
+		locked = "1";
+		
+		// main object info
+		new GuiShapeMainInfoCtrl()
+		{
+			position = "9 21";
+			extent = "400 60";
+			minExtent = "8 2";
+			profile = "TargetBarBorderProfile";
+			visible = "1";
+			active = "1";
+			isContainer = "1";
+			internalName = "shapeMainInfoCtrl";
+			HorizSizing = "width";
+			canHit = "false";
+
+			// criminal background
+			new GuiBitmapCtrl()
+			{
+				position = "0 0";
+				extent = "232 60";
+				profile = "TargetBarImageProfile";
+				visible = "true";
+				centered = "false";
+				canHit = "false";
+				internalName = "criminalBackground";
+				imageIndex = "ShapeMainInfoCriminalBackground";
+				useParentOpacity = "true";
+			};
+
+			// object icon
+			new GuiBitmapCtrl()
+			{
+				position = "54 6";
+				extent = "38 38";
+				profile = "TargetBarImageProfile";
+				visible = "true";
+				centered = "true";
+				canHit = "false";
+				internalName = "objectIcon";
+				useParentOpacity = "false";
+			};
+			
+			// object name
+			new GuiTextCtrl()
+			{
+				text = "";
+				position = "54 7";
+				extent = "310 24";
+				profile = "TargetBarObjectNameProfile";
+				canHit = "false";
+				visible = "1";
+				internalName = "objectName";
+				useParentOpacity = "0";
+			};
+
+			// waiting client object data
+			new GuiRevolvingElement()
+			{
+				position = "330 0";
+				extent = "64 64";
+				minExtent = "64 64";
+				profile = "GuiDefaultProfile";
+				visible = "0";
+				active = "1";
+				background = "art/gui/loading/sign.png";
+				revolving = "art/gui/loading/sun.png";
+				revolvingSpeed = $GuiLoadingWindow::revolvingSpeed;
+				internalName = "waitingClientData";
+			};
+			
+			// object type / criminal text
+			new GuiTextCtrl()
+			{
+				text = "";
+				position = "370 11";
+				extent = "100 19";
+				profile = "TargetBarObjectTypeProfile";
+				canHit = "false";
+				visible = "1";
+				internalName = "objectType";
+				useParentOpacity = "0";
+			};
+
+			// unit icon
+			new GuiBitmapCtrl()
+			{
+				position = "370 1";
+				extent = "38 39";
+				profile = "TargetBarImageProfile";
+				visible = "true";
+				centered = "true";
+				canHit = "false";
+				internalName = "unitIcon";
+				useParentOpacity = "false";
+			};
+			
+			// extra info top line
+			new GuiTextCtrl()
+			{
+				text = "";
+				position = "60 11";
+				extent = "310 19";
+				profile = "TargetBarExtraInfoProfile";
+				canHit = "false";
+				visible = "1";
+				internalName = "extraInfo1";
+				useParentOpacity = "0";
+			};
+
+			// left button icon
+			new GuiBitmapCtrl()
+			{
+				position = "54 35";
+				extent = "9 14";
+				profile = "TargetBarImageProfile";
+				visible = "1";
+				active = "1";
+				centered = "1";
+				canHit = "false";
+				internalName = "leftButtonIcon";
+				imageIndex = "MouseLeftBtnIcon";
+				wrap = "0";
+				useParentOpacity = "0";
+			};
+
+			// left button action
+			new GuiTextCtrl()
+			{
+				text = "";
+				position = "67 31";
+				extent = "270 19";
+				profile = "TargetBarMouseActionProfile";
+				canHit = "false";
+				visible = "1";
+				internalName = "leftButtonAction";
+				useParentOpacity = "0";
+			};
+			
+			// extra info line 2 icon
+			new GuiBitmapCtrl()
+			{
+				position = "44 33";
+				extent = "15 16";
+				profile = "TargetBarImageProfile";
+				visible = "true";
+				centered = "true";
+				canHit = "false";
+				internalName = "extraInfo2Icon";
+				useParentOpacity = "false";
+			};
+			
+			// extra info bottom line
+			new GuiTextCtrl()
+			{
+				text = "";
+				position = "60 31";
+				extent = "310 19";
+				profile = "TargetBarExtraInfoProfile";
+				canHit = "false";
+				visible = "1";
+				internalName = "extraInfo2";
+				useParentOpacity = "0";
+			};
+		};
+
+		// distance
+		new GuiShapeInfoBottomCtrl()
+		{
+			position = "35 80";
+			extent = "370 33";
+			minExtent = "8 2";
+			profile = "TargetBarBorderProfile";
+			visible = "1";
+			active = "1";
+			isContainer = "1";
+			internalName = "shapeInfoBottomCtrl";
+			HorizSizing = "width";
+			canHit = "false";
+
+			// title background
+			new GuiBitmapCtrl()
+			{
+				position = "0 1";
+				extent = "235 31";
+				profile = "TargetBarImageProfile";
+				visible = "true";
+				centered = "false";
+				canHit = "false";
+				internalName = "titlebackground";
+				useParentOpacity = "true";
+			};
+
+			// title
+			new GuiTextCtrl()
+			{
+				text = "";
+				position = "26 6";
+				extent = "10 19";
+				profile = "TargetBarObjectDistanceProfile";
+				canHit = "false";
+				visible = "1";
+				internalName = "objectTitle";
+				useParentOpacity = "0";
+				class = "ShapeInfoTitleText";
+			};
+
+			// distance
+			new GuiTextCtrl()
+			{
+				text = "";
+				position = "200 6";
+				extent = "10 19";
+				profile = "TargetBarObjectDistanceProfile";
+				canHit = "false";
+				visible = "1";
+				internalName = "objectDistance";
+				useParentOpacity = "0";
+				HorizSizing = "left";
+			};
+		};
+	};
+
+	PlayGui.add(TargetBar);
+}
+
+function closeTargetBar()
+{
+	if (isObject(TargetBar))
+	{
+		TargetBar.visible = "0";
+	}
+}
+
+function GuiCrosshairTargetBar::updateControls(%this)
+{
+	if (!isObject(TargetBar)) return;
+
+	%mainInfo = TargetBar-->shapeMainInfoCtrl;
+
+	%objectIcon = %mainInfo-->objectIcon;
+	%objectName = %mainInfo-->objectName;
+	%leftButtonIcon = %mainInfo-->leftButtonIcon;
+
+	%objectName.position.x = %objectIcon.visible ? (%objectIcon.position.x + %objectIcon.extent.x + 4) : 54;
+	%leftButtonIcon.position.x = %objectName.position.x;
+}
+
+function GuiCrosshairTargetBar::updateDynamicControls(%this)
+{
+	if (!isObject(TargetBar)) return;
+
+	%titleBackWidth = 255;
+	%addExtentIfNotDistance = 68;
+
+	%mainInfo = TargetBar-->shapeMainInfoCtrl;
+
+	%objectName = %mainInfo-->objectName;
+	%objectType = %mainInfo-->objectType;
+	%unitIcon = %mainInfo-->unitIcon;
+	%extraInfo1 = %mainInfo-->extraInfo1;
+	%leftButtonIcon = %mainInfo-->leftButtonIcon;
+	%leftButtonAction = %mainInfo-->leftButtonAction;
+	%extraInfo2Icon = %mainInfo-->extraInfo2Icon;
+	%extraInfo2 = %mainInfo-->extraInfo2;
+
+	%bottomInfo = TargetBar-->shapeInfoBottomCtrl;
+
+	%objectTitle = %bottomInfo-->objectTitle;
+	%objectDistance = %bottomInfo-->objectDistance;
+
+	%objectType.position.x = %objectName.position.x + %objectName.extent.x;
+	%unitIcon.position.x = %objectType.position.x + %objectType.extent.x + 1;
+	%leftButtonAction.position.x = %leftButtonIcon.position.x + (%leftButtonIcon.visible ? %leftButtonIcon.extent.x + 4 : 0);
+
+	%firstLineWidth = %objectType.position.x + %objectType.extent.x + 
+							(%unitIcon.visible ? (%unitIcon.extent.x + 1) : 0) +
+							10 + %extraInfo1.extent.x;
+
+	%secondLineWidth =
+		%leftButtonAction.position.x + %leftButtonAction.extent.x + 10 +
+		(%extraInfo2Icon.visible ? (%extraInfo2Icon.extent.x + 4) : 0) +
+		%extraInfo2.extent.x;
+
+	%bottomLineWidth = %objectTitle.position.x + %objectTitle.extent.x + (%objectDistance.Visible ? (40 + %objectDistance.extent.x + 32) : %addExtentIfNotDistance);
+	%bottomLineWidth = getMax(%titleBackWidth, %bottomLineWidth);
+
+	%contentWidth = getMax(%firstLineWidth, %secondLineWidth);
+	%contentWidth = getMax(%contentWidth, %bottomLineWidth);
+	%contentWidth += 40;
+
+	%mainInfo.extent.x = getMax(%contentWidth, TargetBar.extent.x - %mainInfo.position.x);
+
+	%extraInfo1.position.x = %mainInfo.extent.x - %extraInfo1.extent.x - 40;
+	%extraInfo2.position.x = %mainInfo.extent.x - %extraInfo2.extent.x - 40;
+
+	if (%extraInfo2Icon.visible)
+	{
+		%extraInfo2Icon.position.x = %extraInfo2.position.x - %extraInfo2Icon.extent.x - 4;
+	}
+
+	if (%objectTitle.visible && %objectDistance.visible)
+	{
+		%bottomInfo.position.x = 35;
+		%bottomInfo.extent.x = %mainInfo.extent.x - 40;
+		%objectDistance.position.x = %bottomInfo.extent.x - %objectDistance.extent.x - 32;
+	}
+	else if (%objectTitle.visible == false && %objectDistance.visible == true)
+	{
+		%bottomInfo.extent.x = 25 + %objectDistance.extent.x + 25;
+		%bottomInfo.position.x = %mainInfo.extent.x - %bottomInfo.extent.x - 6;
+		%objectDistance.position.x = 25;
+	}
+	else if (%objectTitle.visible == true && %objectDistance.visible == false)
+	{
+		%bottomInfo.position.x = 35;
+		%bottomInfo.extent.x = getMax(%objectTitle.position.x + %objectTitle.extent.x + %addExtentIfNotDistance, %titleBackWidth);
+	}
+}
+
+function ShapeInfoTitleText::setGrandmaster(%this, %val)
+{
+	if (%val)
+	{
+		%this.setProfile("TargetBarGrandmasterTitleProfile");
+	}
+	else
+	{
+		%this.setProfile("TargetBarTitleProfile");
+	}
+}

@@ -1,0 +1,165 @@
+function createGameSettingsDlg()
+{
+	%guiContent = new GuiControl(GameSettingsDlg)
+	{
+		isContainer = "1";
+		Profile = "GuiOverlayProfile";
+		horizSizing = "width";
+		vertSizing = "height";
+		position = "0 0";
+		extent = "1024 703";
+		MinExtent = "16 16";
+		Visible = "1";
+	
+		new GuiWindowCtrl(GameSettingsDlgWindow)
+		{
+			text = GetMessageIDText(2490);
+			resizeWidth = "0";
+			resizeHeight = "0";
+			canMove = "1";
+			canClose = "1";
+			canMinimize = "0";
+			canMaximize = "0";
+			canCollapse = "0";
+			canHideOnFreelook = "0";
+			canLock = "0";
+			canSetup = "0";
+			edgeSnap = "1";
+			margin = "0 0 0 0";
+			padding = "0 0 0 0";
+			anchorTop = "1";
+			anchorBottom = "0";
+			anchorLeft = "1";
+			anchorRight = "0";
+			position = "0 0";
+			extent = "740 567";
+			horizSizing = "center";
+			vertSizing = "center";
+			profile = "GuiAutoCursorWindowProfile";
+			closeCommand ="GameSettingsDlg.cancelAndClose();";
+			accelerator = "escape";
+
+			new GuiContainer()
+			{
+				docking = Client;
+				extent = "723 400";
+				canSaveDynamicFields = "0";
+				Enabled = "1";
+				Profile = "GuiBaseTextProfile";
+				canSave = "1";
+				Visible = "1";
+
+				//background
+				new GuiBitmapCtrl()
+				{
+					imageIndex = LearningWindowBackground;
+					profile = "GuiAtlas3ImageProfile";
+					position = "0 0";
+					extent = "100% 100%";
+					wrap = true;
+				};
+
+				new GuiScrollCtrl()
+				{
+					vScrollBar = "dynamic";
+					hScrollBar = "alwaysOff";
+					position = "0 0";
+					extent = "822 502";
+					horizSizing = "width";
+					vertSizing = "height";
+					profile = "GuiScrollSkillInfoProfile";
+					constantThumbHeight = true;
+					childMargin = "0 7";
+					trackOffset = 8;
+					addContentWidth = 8;
+
+					new GuiStackControl()
+					{
+						StackingType = "Vertical";
+						Padding = "0";
+						DynamicSize = "1";
+						ChangeChildSizeToFit = "1";
+						ChangeChildPosition = "1";
+						isContainer = "1";
+						profile = "GuiBaseTextProfile";
+						extent = "792 100";
+						HorizSizing = "width";
+						VertSizing = "height";
+						position = "0 0";
+						MinExtent = "16 16";
+						LeftIndent = "23";
+						TopIndent = "12";
+						padding = 12;
+
+						new GuiStackControl(GameOptions)
+						{
+							position = "0 0";
+							extent = "739 145";
+							minExtent = "16 16";
+							profile = "GuiBaseTextProfile";
+							visible = "1";
+							active = "1";
+							padding = 5;
+						};
+					};
+				};
+
+				//Line
+				new GuiBitmapCtrl()
+				{
+					imageIndex = BlackSlimHLineCenter;
+					profile = "GuiAtlas3ImageProfile";
+					extent = "100% 3";
+					position = "0 280";
+					vertSizing = "top";
+					wrap = true;
+				};
+
+				//Buttons background
+				new GuiControl()
+				{
+					profile = GuildBlackVertLineProfile;
+					extent = "100% 115";
+					position = "0 283";
+					vertSizing = "top";
+					isContainer = "true";
+
+					//Buttons
+					new guiHorzTilingButtonCtrl() 
+					{
+						text = GetMessageIDText(1113); // Cancel
+						groupNum = "-1";
+						buttonType = "PushButton";
+						useMouseEvents = "0";
+						horizSizing = "left";
+						vertSizing = "center";
+						position = "224 315";
+						extent = "158 44";
+						profile = "BuildPositionButtonProfile";
+						command ="GameSettingsDlg.cancelAndClose();";
+						imageIndex = "H44Btn";
+					};//button
+
+					new guiHorzTilingButtonCtrl() 
+					{
+						text = GetMessageIDText(1218); // Ok
+						groupNum = "-1";
+						buttonType = "PushButton";
+						useMouseEvents = "0";
+						horizSizing = "left";
+						vertSizing = "center";
+						position = "40 315";
+						extent = "158 44";
+						profile = "BuildPositionButtonProfile";
+						command ="applyNewGameSettings();";
+						imageIndex = "H44Btn";
+					};//button
+				};
+
+				
+			}; //GuiContainer
+		}; //GuiWindowCtrl
+	};
+
+	Canvas.pushDialog(%guiContent);
+}

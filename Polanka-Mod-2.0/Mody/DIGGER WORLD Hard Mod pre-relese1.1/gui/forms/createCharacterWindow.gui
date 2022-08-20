@@ -1,0 +1,1072 @@
+singleton GuiControlProfile( CreateCharBtnIconProfile: GuiBaseCaptionProfile ) {
+   globalImageIndex = "atlas2";
+   fontSize = 30;
+   fontColor = "178 128 28";
+   fontColorHL = "178 128 28";
+   fontColorSEL = "178 128 28";
+   justify = "center";
+   textOffset = "0 0";
+};
+
+singleton GuiControlProfile( CreateCharButtonProfile : GuiAtlas2ImageProfile ) {
+   fontSize = 24;
+   fontColor = "204 204 204";
+   fontColorHL = "204 204 204";
+   fontColorNA = "204 204 204";
+   fontColorSEL = "204 204 204";
+   justify = "center";
+   textOffset = "0 -2";
+   border = "none";
+};
+
+singleton GuiControlProfile( CreateCharComboStackButtonProfile : CreateCharButtonProfile ) {
+   fontSize = 26;
+   justify = "left";
+   textOffset = "53 -2";
+};
+
+singleton GuiControlProfile( CreateCharOptionCaptionProfile : GuiBaseTextProfile ) {
+   fontSize = 24;
+   fontColor = "178 128 28";
+   fontColorHL = "178 128 28";
+   fontColorSEL = "178 128 28";
+   fontColorNA = "120 85 20";
+};
+
+singleton GuiControlProfile( CreateCharSmallOptionCaptionProfile : CreateCharOptionCaptionProfile ) {
+   fontSize = 19;
+   fontColor = "120 85 20";
+};
+
+singleton GuiControlProfile( CreateCharNameOptionCaptionProfile : CreateCharSmallOptionCaptionProfile ) {
+   fontColor = "102 102 102";
+};
+
+singleton GuiControlProfile( CreateCharTextEditProfile : GuiBaseTextProfile ) {
+   fontSize = 24;
+   fontColor = "255 255 255";
+   textOffset = "15 0";
+   cursorColor = "255 255 255";
+   opaque = false;
+   border = "none";
+   tab = "1";
+   canKeyFocus = true;
+};
+
+singleton GuiControlProfile( CreateCharTextEditPlaceholderProfile : CreateCharTextEditProfile ) {
+   fontSize = 19;
+   fontColor = "154 154 154";
+};
+
+singleton GuiControlProfile( CreateCharGenderCheckboxProfile : CreateCharOptionCaptionProfile ) {
+   globalImageIndex = "atlas1";
+   fontColor = "120 85 20";
+};
+
+singleton GuiControlProfile( CreateCharLabelRaceProfile: GuiBaseTextProfile ) {
+	fontSize = 32;
+	fontColor = "118 109 83";
+};
+
+singleton GuiControlProfile( CreateCharPanelProfile: GuiBaseTextProfile ) {
+	profileForChildren = CmComboStackButtonDef;
+};
+
+function createWindowCreateCharacter()
+{
+   if (isObject(createCharacterWindow))
+      return;
+
+   new GuiControl(createCharacterWindow)
+   {
+      position = "0 0";
+      extent = "1024 720";
+      minExtent = "8 8";
+      horizSizing = "width";
+      vertSizing = "height";
+      profile = "GuiBaseTextProfile";
+      visible = "1";
+      active = "1";
+      //isDecoy = "0";
+
+      new GuiControl( CC_ModelPanel) {
+         position = "510 0";
+         extent = "514 720";
+         minExtent = "16 16";
+         horizSizing = "width";
+         vertSizing = "height";
+         profile = "CreateCharPanelProfile";
+
+         new GuiCharacterView( createCharacterModel) {
+            shapeFile = "art/models/3d/mobiles/characters/male.dts";
+            animSequence = "idle_ch_select_screen";
+            mountedNode = "mount0";
+            mountObjectMountNode = "mount0";
+            mountedMesh = "NordicSword_Base";
+            mountedShapeFile = "art/models/3d-2d/weapons/1hswords/nordic_sword_export_01.dts";//
+
+            lightType[0] = "vector";
+            lightColor[0] = "1 1 1 1";
+            lightAmbient[0] = "0.5 0.5 0.5 1";
+            lightDirection[0] = "0 0.707 -0.707";
+
+            orbitDiststance = "7";
+            minOrbitDiststance = "1";
+            maxOrbitDiststance = "12";
+            cameraSpeed = "0.01";
+            cameraZRot = "0";
+            modelRotation = "0 0 180";
+            forceFOV = "25";
+            reflectPriority = "0";
+            margin = "0 0 0 0";
+            padding = "0 0 0 0";
+            anchorTop = "1";
+            anchorBottom = "0";
+            anchorLeft = "1";
+            anchorRight = "0";
+            position = "0 0";
+            extent = "514 720";
+            minExtent = "8 2";
+            horizSizing = "width";
+            vertSizing = "height";
+         };
+
+         new GuiCreateWorldCaption()
+         {
+            position = "0 7";
+            extent = "176 62";
+            minExtent = "8 2";
+            profile = "CreateWorldWindowCaptionProfile";
+            visible = "0";
+            active = "1";
+            isContainer = "1";
+            horizSizing = "center";
+
+            new GuiTextCtrl()
+            {
+               position = "71 0";
+               extent = "176 62";
+               minExtent = "8 2";
+               profile = "CreateWorldWindowCaptionTextProfile";
+               visible = "1";
+               active = "1";
+               text = GetMessageIDText(1231);//Create New Character;
+               internalName = "captionTextCtrl";
+            };
+         };
+
+         new GuiControl( CC_PlusMinus) {
+            position = "0 0";
+            extent = "93 71";
+            minExtent = "16 16";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            profile = "CreateCharPanelProfile";
+            visible = "1";
+            active = "1";
+
+            new GuiBitmapButtonCtrl(createCharacterPlusBut)
+            {
+               imageIndex = "PlusBtn";
+               extent = "43 43";
+               position = "0 0";
+               horizSizing = "right";
+               vertSizing = "center";
+               command = "createCharacterWindow::OnPlusBtn();";
+               profile = "GuiAtlas2ImageProfile";
+               canHideOnFreelook = "1";
+            };
+            new GuiBitmapButtonCtrl(createCharacterMinusBut)
+            {
+               imageIndex = "MinusBtn";
+               extent = "43 43";
+               position = "50 0";
+               horizSizing = "right";
+               vertSizing = "center";
+               command = "createCharacterWindow::OnMinusBtn();";
+               profile = "GuiAtlas2ImageProfile";
+               canHideOnFreelook = "1";
+            };
+         };
+
+      };//CC_ModelPanel
+
+      new GuiControl() {
+         position = "0 0";
+         extent = "510 720";
+         minExtent = "16 16";
+         horizSizing = "right";
+         vertSizing = "height";
+
+         new GuiBitmapCtrl() {
+            position = "-896 -360";
+            extent = "1920 1080";
+            bitmap = "gui/images/Main_back_ornament.png";
+            profile = "GuiContentProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+         };
+
+         new GuiScrollCtrl() {
+            profile = "GuiEagleScrollBarProfile";
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "0 0";
+            extent = "514 542";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            lockHorizScroll = "true";
+            lockVertScroll = "false";
+            constantThumbHeight = true;
+            alwaysShowThumb = true;
+            childMargin = "0 0";
+            trackOffset = 12;
+            arrowSadowSize = -27;
+            addContentWidth = 59;
+            internalName = "scrollCtrl";
+
+            new GuiStackControl(ParamComboStackCtrl) {
+               StackingType = "Vertical";
+               HorizStacking = "Left to Right";
+               VertStacking = "Top to Bottom";
+               Padding = "0";
+               DynamicSize = "1";
+               ChangeChildSizeToFit = "1";
+               ChangeChildPosition = "1";
+               isContainer = "1";
+               HorizSizing = "width";
+               VertSizing = "bottom";
+               position = "0 0";
+               Extent = "0 0";
+               MinExtent = "16 16";
+               topIndent = "23";
+               padding = -10;
+            }; // GuiComboStackControl
+         }; //GuiScrollCtrl
+
+         new GuiBitmapCtrl() { // bottom panel
+             vertSizing = "top";
+             position = "0 543";
+             extent = "510 177";
+             visible = "1";
+             profile = "GuiAtlas3ImageProfile";
+             wrap = true;
+
+             imageIndex = "LearningWindowBackgroundTransparent";
+         };
+
+         new GuiControl() { // 3px line between
+             vertSizing = "top";
+             position = "0 542";
+             extent = "510 3";
+             visible = "1";
+             profile = "GuiAtlas3TiledImageProfile";
+
+             leftIndex0 = "BlackSlimHLineLeft";
+             backgroundIndex = "BlackSlimHLineCenter";
+             rightIndex0 = "BlackSlimHLineRight";
+         };
+
+         new GuiButtonCtrl() {
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+            position = "121 559";
+            extent = "102 104";
+            minExtent = "8 2";
+            horizSizing = "right";
+            vertSizing = "top";
+            profile = "CreateCharBtnIconProfile";
+            visible = "1";
+            active = "1";
+            command = "createCharacterWindow::OnCancelBtn();";
+            imageIndex = "CreateCharCancel";
+         };
+
+         new GuiTextCtrl()
+         {
+            position = "94 658";
+            extent = "155 30";
+            horizSizing = "right";
+            vertSizing = "top";
+            minExtent = "8 2";
+            profile = "CreateCharBtnIconProfile";
+            visible = "1";
+            active = "1";
+            text = GetMessageIDText(1113);//Cancel
+         };
+
+         new GuiButtonCtrl() {
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+            position = "287 559";
+            extent = "102 104";
+            minExtent = "8 2";
+            horizSizing = "right";
+            vertSizing = "top";
+            profile = "CreateCharBtnIconProfile";
+            visible = "1";
+            active = "1";
+            command = "createCharacterWindow::OnNextBtn();";
+            imageIndex = "CreateCharCreate";
+         };
+
+         new GuiTextCtrl()
+         {
+            position = "260 658";
+            extent = "155 30";
+            horizSizing = "right";
+            vertSizing = "top";
+            minExtent = "8 2";
+            profile = "CreateCharBtnIconProfile";
+            visible = "1";
+            active = "1";
+            text = GetMessageIDText(1160);//Done;
+         };
+      };
+
+      new GuiBitmapCtrl(createCharacterDescriptionFrame)
+      {
+         position = "632 360";
+         extent = "362 330";
+         profile = "CmComboStackButtonDef";
+         horizSizing = "left";
+         vertSizing = "top";
+         imageIndex = getCreateCharRaceDescriptionBackground();
+         visible = "0";
+
+         new GuiBitmapCtrl(createCharacterRaceIcon)
+         {
+            imageIndex = "CharSelectRace1";
+            profile = "GuiAtlas3ImageProfile";
+            extent = "40 44";
+            position = "26 15";
+            resize = false;
+         };
+
+         new GuiTextCtrl(createCharacterRaceName)
+         {
+            position = "74 6";
+            extent = "288 66";
+            Profile = "CreateCharLabelRaceProfile";
+            text = GetMessageIDText(1257);
+            canHit = false;
+         };
+
+         new GuiBitmapCtrl()
+         {
+            imageIndex = getCreateCharRaceDescriptionDecorLine();
+            profile = "CmComboStackButtonDef";
+            position = "18 72";
+            resize =true;
+         };
+
+         new GuiScrollCtrl() {
+            profile = "GuiEagleScrollBarProfile";
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "26 73";
+            extent = "328 246";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            lockHorizScroll = "true";
+            lockVertScroll = "false";
+            constantThumbHeight = true;
+            childMargin = "0 7";
+            trackOffset = 12;
+            arrowSadowSize = 2;
+            addContentWidth = 10;
+
+            new GuiMLTextCtrl( createCharacterDescriptionText) {
+               lineSpacing = "2";
+               allowColorChars = "0";
+               maxChars = "-1";
+               text = "";
+               useURLMouseCursor = "0";
+               position = "0 0";
+               extent = "0 0";
+               minExtent = "8 2";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               profile = "GuiCharDescProfile";
+            };
+         };
+
+         new GuiBitmapCtrl()
+         {
+            imageIndex = getCreateCharRaceDescriptionDecorLine();
+            profile = "CmComboStackButtonDef";
+            position = "18 306";
+            resize =true;
+         };
+
+      };
+   };
+
+   createComboStackName(ParamComboStackCtrl, 2);
+   createComboStackSex(ParamComboStackCtrl, 2);
+   createComboStackRace(ParamComboStackCtrl, 2);
+   createComboStackSettingAppearance(ParamComboStackCtrl, 2);
+   createComboStackAttributes(ParamComboStackCtrl, 2);
+   createComboStackCraftingSkills(ParamComboStackCtrl, 2);
+   createComboStackCombatSkills(ParamComboStackCtrl, 2);
+
+   %decorLine = new GuiControl() { // 3px line between
+      extent = "100% 30";
+
+      new GuiControl() {
+         position = "71 7";
+         extent = "368 3";
+         profile = "GuiAtlas3TiledImageProfile";
+
+         leftIndex0 = "BlackSlimHLineLeft";
+         backgroundIndex = "BlackSlimHLineCenter";
+         rightIndex0 = "BlackSlimHLineRight";
+      };
+   };
+   ParamComboStackCtrl.add(%decorLine);
+}
+//-----------------------------------------------------------------------------
+
+function createComboStackItem(%combo_stack_ctrl, %name, %pnl_height, %group_num, %image, %is_race)
+{
+   //echo(">>>> !!!! createComboStackItem = " @ %name @ " is_race = " @ is_race);
+   %ctrl = new GuiComboPanel() {
+      position = "0 0";
+      extent = "470 105";
+      minExtent = "16 16";
+      profile = "GuiBaseTextProfile";
+   };
+
+   %pnl = new GuiAnimatePanel() {
+      position = "0 87";
+      minExtent = "0 0";
+      visible = "0";
+      AnimateDirection = "Top";
+      AnimateSpeed = 1500;
+      class = "ComboAnimatePnl";
+   };
+   %pnl.setExtent(470, %pnl_height);
+   %ctrl.add(%pnl);
+
+   %btn = new GuiComboStackButton()
+   {
+      text = %name;
+      extent = "379 74";
+      position = "60 7";
+      profile = "CreateCharComboStackButtonProfile";
+      groupNum = %group_num;
+      buttonType = "ToggleButton";
+      defaultState = false;
+      animPnl = %pnl;
+      class = "ComboStackAnimButton";
+      is_race = %is_race;
+
+      useManualIndex = true;
+      imageIndex = "CreateCharBtnItemMinimize";
+      depressedImageIndex = "CreateCharBtnItemMaximize";
+      mouseOverImageIndex = "CreateCharBtnItemMinimizeMouseOver";
+      stateOnImageIndex = "CreateCharBtnItemMaximize";
+   };
+   %ctrl.add(%btn);
+
+   %bmp = new GuiBitmapCtrl()
+   {
+      imageIndex = %image;
+      profile = "GuiAtlas2ImageProfile";
+      extent = "88 88";
+      position = "17 0";
+   };
+   %ctrl.add(%bmp);
+
+   %combo_stack_ctrl.add(%ctrl);
+   return %pnl;
+}
+//-----------------------------------------------------------------------------
+
+function createComboStackName(%combo_stack_ctrl, %group_num)
+{
+   %pnl = createComboStackItem(%combo_stack_ctrl, GetMessageIDText(1146), 181, %group_num, "CreateCharNameIcon", false);
+
+   %stack = new GuiStackControl() {
+      position = "0 8";
+      extent = "100% 50";
+      isContainer = "1";
+      stacking = Vertical;
+      dynamicSize = "1";
+      dynamicNonStackExtent = "1";
+      changeChildPosition = false;
+      changeChildSizeToFit = false;
+      padding = "11";
+   };
+   %pnl.add(%stack);
+
+   %name = createEditBox(createCharacterEnteredName, GetMessageIDText(1146), 9); // Name
+   %name-->caption.profile = CreateCharNameOptionCaptionProfile;
+   %name-->caption.extent.y = 19;
+
+   %familyName = createEditBox(createCharacterEnteredFamily, GetMessageIDText(1254), 15); // Family name
+   %familyName-->caption.profile = CreateCharNameOptionCaptionProfile;
+   %familyName-->caption.extent.y = 19;
+
+   %stack.add(%name);
+   %stack.add(%familyName);
+}
+//-----------------------------------------------------------------------------
+
+function createComboStackSex(%combo_stack_ctrl, %group_num)
+{
+   %pnl = createComboStackItem(%combo_stack_ctrl, GetMessageIDText(1245), 174, %group_num, "CreateCharGenderIcon", false); // Gender
+
+   %stack = new GuiStackControl() {
+      position = "0 10";
+      extent = "100% 50";
+      isContainer = "1";
+      stacking = Vertical;
+      dynamicSize = "1";
+      dynamicNonStackExtent = "1";
+      changeChildPosition = false;
+      changeChildSizeToFit = false;
+      padding = "6";
+   };
+   %pnl.add(%stack);
+
+   %genders = new GuiControl() {
+      extent = "439 44";
+
+      new GuiCheckBoxCtrl(createCharacterMaleBut) {
+         position = "60 5";
+         extent = "148 34";
+         text = GetMessageIDText(2155); // Male
+         groupNum = "1";
+         buttonType = "RadioButton";
+         useMouseEvents = "0";
+         profile = "CreateCharGenderCheckboxProfile";
+         defaultState = true;
+         indentText = "7";
+
+         imageIndexStateOn = "CheckBoxActiveNormal";
+         imageIndexStateOff = "CheckBoxRadioButtonNormal";
+         imageIndexMouseOver = "CheckBoxActiveMouseOver";
+      };
+
+      new GuiCheckBoxCtrl(createCharacterFemaleBut) {
+         position = "259 5";
+         extent = "148 34";
+         text = GetMessageIDText(2156); // Female
+         groupNum = "1";
+         buttonType = "RadioButton";
+         useMouseEvents = "0";
+         profile = "CreateCharGenderCheckboxProfile";
+         defaultState = false;
+         indentText = "7";
+
+         imageIndexStateOn = "CheckBoxActiveNormal";
+         imageIndexStateOff = "CheckBoxRadioButtonNormal";
+         imageIndexMouseOver = "CheckBoxActiveMouseOver";
+      };
+   };
+   %stack.add(%genders);
+
+   %stack.add(createDropBox(createCharacterVoicePopUpMenu, GetMessageIDText(1063))); // Voice
+}
+//-----------------------------------------------------------------------------
+
+function createCharRaceButton(%name, %text, %defaultState)
+{
+   %btn = new guiHorzTilingButtonCtrl(%name) {
+      text = %text;
+      groupNum = "2";
+      buttonType = "RadioButton";
+      useMouseEvents = "0";
+      position = "60 0";
+      extent = "379 44";
+      profile = "CreateCharButtonProfile";
+      defaultState = %defaultState;
+
+      useManualIndex = true;
+      imageIndex = "H44Btn";
+      depressedImageIndex = "H44BtnStateOn";
+      mouseOverImageIndex = "H44BtnMouseOver";
+   };
+   return %btn;
+}
+
+function createComboStackRace(%combo_stack_ctrl, %group_num)
+{
+   %pnl = createComboStackItem(%combo_stack_ctrl, GetMessageIDText(1246), 186, %group_num, "CreateCharRaceIcon", true); // Race
+
+   %stack = new GuiStackControl() {
+      position = "0 8";
+      extent = "100% 50";
+      isContainer = "1";
+      stacking = Vertical;
+      dynamicSize = "1";
+      dynamicNonStackExtent = "1";
+      changeChildPosition = false;
+      changeChildSizeToFit = false;
+      padding = "11";
+   };
+   %pnl.add(%stack);
+
+   %stack.add(createCharRaceButton(createCharacterEurBut, GetMessageIDText(1257), true)); // Gottlung
+   %stack.add(createCharRaceButton(createCharacterVikBut, GetMessageIDText(1258), false)); // Slavard
+   %stack.add(createCharRaceButton(createCharacterMonBut, GetMessageIDText(1259), false)); // Khoor
+}
+//-----------------------------------------------------------------------------
+
+function createComboStackSettingAppearance(%combo_stack_ctrl, %group_num)
+{
+   %pnl = createComboStackItem(%combo_stack_ctrl, GetMessageIDText(1247), 595, %group_num, "CreateCharApperanceIcon", false); // Setting appearance
+
+   %stack = new GuiStackControl()
+   {
+      position = "0 20";
+      extent = "100% 50";
+      isContainer = "1";
+      stacking = Vertical;
+      dynamicSize = "1";
+      dynamicNonStackExtent = "1";
+      changeChildPosition = false;
+      changeChildSizeToFit = false;
+      padding = "6";
+   };
+   %pnl.add(%stack);
+
+   %stack.add(createSimpleSlider(createCharacterHeadSlider, GetMessageIDText(1248), "0 2")); // Head
+   %stack.add(createSimpleSlider(FacialFeaturesSliderCtrl, GetMessageIDText(1261), "0 15")); // Facial features
+   %stack.add(createDropBox(createCharacterHaircutPopUpMenu, GetMessageIDText(1262))); // Haircut
+   %stack.add(createDropBox(createCharacterFacialHairPopUpMenu, GetMessageIDText(1263))); // Facial hair
+   %stack.add(createColorSlider(HairColorSliderCtrl, HairToneColorViewControl, GetMessageIDText(1264))); // Hair color
+   %stack.add(createSimpleSlider(BodyFeaturesSliderCtrl, GetMessageIDText(1062), "0 15")); // Body features
+   %stack.add(createColorSlider(SkinToneGuiSliderCtrl, SkinToneColorViewControl, GetMessageIDText(1250))); // Skin tone
+   %stack.add(createRandomizeButton("createCharacterWindow::OnRandomAppearance();"));
+}
+
+function createComboStackAttributes(%combo_stack_ctrl, %group_num)
+{
+   %pnl = createComboStackItem(%combo_stack_ctrl, GetMessageIDText(1251), 435, %group_num, "CreateCharAttributesIcon", false); // Attributes
+
+   %stack = new GuiStackControl()
+   {
+      position = "0 0";
+      extent = "100% 50";
+      isContainer = "1";
+      stacking = Vertical;
+      dynamicSize = "1";
+      dynamicNonStackExtent = "1";
+      changeChildPosition = false;
+      changeChildSizeToFit = false;
+      padding = "6";
+   };
+   %pnl.add(%stack);
+
+   %caption = new GuiControl() {
+      position = "0 0";
+      extent = "400 19";
+
+      new GuiTextCtrl() {
+         text = GetMessageIDText(3138, CreateCharacterGetMaxStatPoints());
+         position = "60 0";
+         extent = "400 19";
+         profile = CreateCharSmallOptionCaptionProfile;
+      };
+   };
+
+   %strength_gui = createTextEditSlider(GetMessageIDText(1091), StrenghtGuiSliderCtrl, StrenghtValTextCtrl); // Strength
+   %agility_gui = createTextEditSlider(GetMessageIDText(1092), AgilityGuiSliderCtrl, AgilityValTextCtrl); // Agility
+   %constitution_gui = createTextEditSlider(GetMessageIDText(1093), ConstitutionGuiSliderCtrl, ConstitutionValTextCtrl); // Constitution
+   %willpower_gui = createTextEditSlider(GetMessageIDText(1094), WillpowerGuiSliderCtrl, WillpowerValTextCtrl); // Willpower
+   %intellect_gui = createTextEditSlider(GetMessageIDText(1095), IntelligenceGuiSliderCtrl, IntelligenceValTextCtrl); // Intellect
+
+   %stack.add(%caption);
+   %stack.add(%strength_gui);
+   %stack.add(%agility_gui);
+   %stack.add(%constitution_gui);
+   %stack.add(%willpower_gui);
+   %stack.add(%intellect_gui);
+
+   %stack.add(createRandomizeButton("randomizeStatSliders();"));
+}
+
+
+function createComboStackCraftingSkills(%combo_stack_ctrl, %group_num)
+{
+   %pnl = createComboStackItem(%combo_stack_ctrl, GetMessageIDText(1252), 369, %group_num, "CreateCharCraftingSkillIcon", false); // Crafting skills
+
+   %stack = new GuiStackControl()
+   {
+      position = "0 0";
+      extent = "100% 50";
+      isContainer = "1";
+      stacking = Vertical;
+      dynamicSize = "1";
+      dynamicNonStackExtent = "1";
+      changeChildPosition = false;
+      changeChildSizeToFit = false;
+      padding = "6";
+   };
+   %pnl.add(%stack);
+
+   %caption = new GuiControl() {
+      position = "0 0";
+      extent = "400 19";
+
+      new GuiTextCtrl() {
+         text = GetMessageIDText(3138, CreateCharacterGetMaxCraftingSkillPoints());
+         position = "60 0";
+         extent = "400 19";
+         profile = CreateCharSmallOptionCaptionProfile;
+      };
+   };
+
+   %artisan_gui = createTextEditSlider(getSkillName(1), ArtisanSlider, ArtisanValTextCtrl); // Artisan
+   %construct_gui = createTextEditSlider(getSkillName(18), ConstructSlider, ConstructValTextCtrl); // Construct
+   %naturelore_gui = createTextEditSlider(getSkillName(11), NatureloreSlider, NatureloreValTextCtrl); // Nature's lore
+   %hunting_gui = createTextEditSlider(getSkillName(51), HuntingSlider, HuntingValTextCtrl); // Hunting
+
+   %stack.add(%caption);
+   %stack.add(%artisan_gui);
+   %stack.add(%construct_gui);
+   %stack.add(%naturelore_gui);
+   %stack.add(%hunting_gui);
+
+   %stack.add(createRandomizeButton("randomizeCraftingSkillSliders();"));
+}
+
+
+function createComboStackCombatSkills(%combo_stack_ctrl, %group_num)
+{
+   %pnl = createComboStackItem(%combo_stack_ctrl, GetMessageIDText(1253), 435, %group_num, "CreateCharCombatSkillIcon", false); // Combat skills
+
+   %stack = new GuiStackControl()
+   {
+      position = "0 0";
+      extent = "100% 50";
+      isContainer = "1";
+      stacking = Vertical;
+      dynamicSize = "1";
+      dynamicNonStackExtent = "1";
+      changeChildPosition = false;
+      changeChildSizeToFit = false;
+      padding = "6";
+   };
+   %pnl.add(%stack);
+
+   %caption = new GuiControl() {
+      position = "0 0";
+      extent = "400 19";
+
+      new GuiTextCtrl() {
+         text = GetMessageIDText(3138, CreateCharacterGetMaxFightingSkillPoints());
+         position = "60 0";
+         extent = "400 19";
+         profile = CreateCharSmallOptionCaptionProfile;
+      };
+   };
+
+   %cavalryman_gui = createTextEditSlider(getSkillName(28), CavalrymanSlider, CavalrymanValTextCtrl); // Cavalryman
+   %militia_gui = createTextEditSlider(getSkillName(33), MilitiaSlider, MilitiaValTextCtrl); // Militia
+   %footman_gui = createTextEditSlider(getSkillName(36), FootmanSlider, FootmanValTextCtrl); // Footman
+   %slinger_gui = createTextEditSlider(getSkillName(47), SlingerSlider, SlingerValTextCtrl); // Slinger
+   %assaulter_gui = createTextEditSlider(getSkillName(43), AssaulterSlider, AssaulterValTextCtrl); // Assaulter
+
+   %stack.add(%caption);
+   %stack.add(%cavalryman_gui);
+   %stack.add(%militia_gui);
+   %stack.add(%footman_gui);
+   %stack.add(%slinger_gui);
+   %stack.add(%assaulter_gui);
+
+   %stack.add(createRandomizeButton("randomizeFightingSkillSliders();"));
+}
+
+function ComboAnimatePnl::onAnimateResize(%this, %delta_width, %delta_height)
+{
+   //echo("onAnimateResize this = " @ %this @ " delta_height = " @ %delta_height);
+   %this_size = %this.getExtent();
+   %this_pos = %this.getPosition();
+   %parent = %this.getParent();
+   %size = %parent.getExtent();
+   %h = %this_size.y + %this_pos.y + 4;
+   if (%h > 100)
+      %parent.setExtent(%size.x, %h);
+   else
+      %parent.setExtent(%size.x, 100);
+
+   //%size = %parent.getExtent();
+   //echo("onAnimateResize this = " @ %this @ " size = " @ %size);
+}
+
+function ComboStackAnimButton::onStateChanged(%this, %state_on)
+{
+   %this.animPnl.startAction(%state_on);
+
+   //if (%this.is_race && %state_on)
+   //{
+   //   createCharacterDescriptionFrame.setVisible(true);
+   //}
+   //else
+   //{
+   //   createCharacterDescriptionFrame.setVisible(false);
+   //}
+}
+
+function createPopUpScroll()
+{
+   %gui = new GuiScrollCtrl()
+   {
+      hScrollBar = "alwaysOff";
+      vScrollBar = "dynamic";
+      horizSizing = "width";
+      vertSizing = "height";
+      profile = "GuiPopUpScrollBarProfile";
+      constantThumbHeight = false;
+      childMargin = "10 0";
+      trackOffset = 11;
+      lockHorizScroll = true;
+      arrowSadowSize = 2;
+      addContentWidth = -60;
+   };
+   return %gui;
+}
+
+function createNamedStackControl(%caption)
+{
+   %stack = new GuiStackControl() {
+      position = "0 0";
+      extent = "100% 50";
+      isContainer = "1";
+      stacking = Vertical;
+      dynamicSize = true;
+      dynamicNonStackExtent = true;
+      changeChildPosition = false;
+      changeChildSizeToFit = false;
+      padding = 0;
+
+      new GuiTextCtrl() {
+         text = %caption;
+         position = "60 0";
+         extent = "258 24";
+         profile = "CreateCharOptionCaptionProfile";
+         internalName = "caption";
+      };
+   };
+   return %stack;
+}
+
+function createEditBox(%editBoxName, %caption, %maxLength)
+{
+   %stack = createNamedStackControl(%caption);
+   %stack.padding = 4;
+
+   %ctrl = new GuiControl() {
+      position = "60 0";
+      extent = "379 44";
+      profile = "GuiAtlas2TiledImageProfile";
+
+      leftIndex0 = "EditTextLeft";
+      backgroundIndex = "EditTextCenter";
+      rightIndex0 = "EditTextRight";
+
+      new GuiTextCtrl() {
+         text = GetMessageIDText(3137, %maxLength);
+         position = "0 0";
+         extent = "379 44";
+         profile = "CreateCharTextEditPlaceholderProfile";
+         internalName = "placeholder";
+      };
+
+      new GuiTextEditCtrl ( %editBoxName ) {
+         position = "0 0";
+         extent = "379 44";
+         historySize = "0";
+         tabComplete = "1";
+         sinkAllKeyEvents = "0";
+         password = "0";
+         passwordMask = "*";
+         maxLength = %maxLength;
+         profile = "CreateCharTextEditProfile";
+         class = CreateCharTextEditCtrl;
+         internalName = "editBox";
+      };
+   };
+   %stack.add(%ctrl);
+
+   return %stack;
+}
+
+function createSimpleSlider(%sliderName, %caption, %range)
+{
+   %stack = createNamedStackControl(%caption);
+
+   %slider = new CmGuiArrowSliderCtrl( %sliderName ) {
+      range = %range;
+      ticks = "0";
+      snap = "0";
+      value = "0";
+      position = "60 0";
+      extent = "379 36";
+      profile = "GuiHorizSliderProfile";
+      useMouseWheel = "0";
+      trackVOffset = "8";
+      thumbOffset = "0 0";
+   };
+   %stack.add(%slider);
+
+   return %stack;
+}
+
+function createTextEditSlider(%caption, %slider_name, %text_value_name)
+{
+   %stack = createNamedStackControl(%caption);
+
+   %ctrl = new GuiControl() {
+      position = "60 0";
+      extent = "379 36";
+
+      new CmGuiArrowSliderCtrl(%slider_name)
+      {
+         step = "1";
+         ticks = "0";
+         snap = "0";
+         value = "0";
+         position = "0 2";
+         extent = "289 32";
+         profile = "GuiHorizSliderProfile";
+         useMouseWheel = "0";
+         trackVOffset = "8";
+         thumbOffset = "0 0";
+      };
+
+      new GuiControl()
+      {
+         position = "296 0";
+         extent = "83 36";
+         profile = "GuiAtlas3TiledImageProfile";
+
+         leftIndex0 = "SmallHexagonalTextFieldLeft";
+         backgroundIndex = "SmallHexagonalTextFieldCenter";
+         rightIndex0 = "SmallHexagonalTextFieldRight";
+
+         new GuiTextEditSliderCtrl(%text_value_name)
+         {
+            format = "%d";
+            renderArrow = "false";
+            increment = "1";
+            focusOnMouseWheel = "0";
+            historySize = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+            text = "0";
+            maxLength = "1024";
+            position = "10 0";
+            extent = "60 35";
+            minExtent = "8 2";
+            profile = "CreateCharButtonProfile";
+         };
+      };
+   };
+   %stack.add(%ctrl);
+
+   return %stack;
+}
+
+function createColorSlider(%sliderName, %colorName, %caption)
+{
+   %stack = createNamedStackControl(%caption);
+
+   %ctrl = new GuiControl() {
+      position = "60 0";
+      extent = "379 34";
+
+      new CmGuiArrowSliderCtrl( %sliderName ) {
+         step = "1";
+         ticks = "0";
+         snap = "0";
+         value = "0";
+         position = "0 1";
+         extent = "337 32";
+         profile = "GuiHorizSliderProfile";
+         useMouseWheel = "0";
+         trackVOffset = "8";
+         thumbOffset = "0 0";
+      };
+
+      new GuiColorViewControl( %colorName ) {
+         position = "345 0";
+         extent = "34 34";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         profile = "CharPanelColorProfile";
+         color = "155 155 155";
+         imageIndex = "CreateCharColorBorder";
+      };
+   };
+   %stack.add(%ctrl);
+
+   return %stack;
+}
+
+function createDropBox(%popUpMenuName, %caption)
+{
+   %stack = createNamedStackControl(%caption);
+
+   %ctrl = new GuiPopUpMenuCtrlEx( %popUpMenuName ) {
+      position = "35 0";
+      extent = "429 52";
+      Profile = "CreateCharWindowPopUpProfile";
+      backPnlProfile = "GuiPopUpBorder";
+      buttonOffset = 5;
+      cellHeight = 46;
+      createScrollCommand = "createPopUpScroll();";
+      maxPopupHeight = 235;
+      leftIndentMenu = 24;
+      rightIndentMenu = 24;
+      addScrollSize = "-3 0";
+      menuOffset = 0;
+   };
+   %stack.add(%ctrl);
+
+   return %stack;
+}
+
+function createRandomizeButton(%command)
+{
+   %btn = new GuiControl() {
+      extent = "439 61";
+
+      new guiHorzTilingButtonCtrl() {
+         position = "60 17";
+         extent = "379 44";
+         text = GetMessageIDText(1265); // Random
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = false;
+         profile = "CreateCharButtonProfile";
+         imageIndex = "H44Btn";
+
+         command = %command;
+      };
+   };
+   return %btn;
+}
+
+function CreateCharTextEditCtrl::onGainFirstResponder(%this)
+{
+   %this.getParent()-->placeholder.setVisible(false);
+}
+
+function CreateCharTextEditCtrl::onLoseFirstResponder(%this)
+{
+   %this.getParent()-->placeholder.setVisible(%this.getText() $= "");
+}

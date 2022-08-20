@@ -1,0 +1,66 @@
+function createIntroWindow(%videoFile, %command)
+{
+	if (isObject(IntroDialog) == true)
+	{
+		IntroDialog-->IntroVideoCtrl.safeDeleteObject();
+	}
+	else
+	{
+		%guiContent = new GuiControl(IntroDialog)
+		{
+			position = "0 0";
+			extent = "1024 780";
+			minExtent = "8 2";
+			horizSizing = "width";
+			vertSizing = "height";
+			profile = "GuiDefaultProfile";
+			visible = "1";
+			active = "1";
+			accelerator = "escape";
+		};
+
+		Canvas.pushDialog(%guiContent);
+	}
+
+	%introCtrl = createSubtitlesTheoraCtrl(%videoFile, %command, "IntroVideoCtrl");
+	IntroDialog.add(%introCtrl);
+	%introCtrl.setExtent(IntroDialog.getExtent());
+	IntroDialog.command = %command;
+}
+
+function showBitboxIntro()
+{
+   if ($cm_config::intro::skip)
+   {
+      endIntro();
+   }
+   else
+   {
+      %nextAction = $cmYO ? "endIntro();" : "showXsollaIntro();";
+      createIntroWindow("art/intro/Bitbox_Intro.ogv", %nextAction);
+   }
+}
+
+function showXsollaIntro()
+{
+	createIntroWindow("art/intro/Xsolla_Intro.ogv", "showLifeIsFeudalIntro();");
+}
+
+function showLifeIsFeudalIntro()
+{
+	createIntroWindow($MainMenuMultiplayerWindow::startupVideo, "endIntro();");
+}
+
+function endIntro()
+{
+	// Schedule removal on next tick!
+	if (isObject(IntroDialog))
+	{
+		Canvas.schedule(0, popDialog, IntroDialog);
+		IntroDialog.safeDeleteObject();
+	}
+   if(!$cmYO)
+	   initConnection(); // Initiate connection with Dispatcher
+   else
+      cmShowMainMenuMultiplayerWindow(); // Will trigger LifeIsFeudal intro video to be shows before main menu appears
+}

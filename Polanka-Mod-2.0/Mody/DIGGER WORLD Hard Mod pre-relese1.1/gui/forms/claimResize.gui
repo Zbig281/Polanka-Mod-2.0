@@ -1,0 +1,278 @@
+//-----------------------------------------------------------------------------
+// Craftsman & Marksman: Life is feudal
+//-----------------------------------------------------------------------------
+
+singleton GuiControlProfile(claimResizeText1Profile: GuiBaseCaptionProfile)
+{
+	fontSize = 18;
+	fontColor = "153 153 153";
+};
+
+singleton GuiControlProfile(claimResizeRightText1Profile: claimResizeText1Profile)
+{
+	justify = "right";
+};
+
+singleton GuiControlProfile(claimResizeText2Profile: GuiBaseCaptionProfile)
+{
+	fontSize = 18;
+	fontColor = "178 128 28";
+};
+
+singleton GuiControlProfile(claimResizeRightText2Profile: GuiBaseCaptionProfile)
+{
+	fontSize = 18;
+	fontColor = "178 128 28";
+	fontColorNA = "153 153 153";  //Второе значение
+	fontColorSEL = "178 128 28"; //Первое значение
+	fontColorHL = "153 153 153";  //Разделитель
+	justify = "right";
+};
+
+singleton GuiControlProfile(claimResizeText3Profile: GuiBaseTextProfile)
+{
+	fontSize = 16;
+	fontColor = "103 103 103";
+};
+
+new GuiControl(claimResizeDialogPnl) 
+{
+	position = "0 0";
+	extent = "800 700";
+	minExtent = "8 2";
+	horizSizing = "width";
+	vertSizing = "height";
+	profile = "GuiCursorModelessDialogProfile";
+	visible = "1";
+	active = "1";
+	noCursor = "1";
+
+	new GuiResizeClaim(claimResizeWindow) 
+	{
+		text = GetMessageIDText(2674); // Resize Claim
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		canCollapse = "0";
+		position = "116 60";
+		extent = "284 664";
+		horizSizing = "right";
+		vertSizing = "bottom";
+		profile = "GuiWindowProfile";
+		visible = "1";
+		active = "1";
+		isContainer = "1";
+		closeCommand ="CloseResizeClaim();";
+		accelerator = "escape";
+		
+		new GuiContainer(ClaimResizeMainContainer)
+		{
+			docking = Client;
+			extent = "384 580";
+			Enabled = "1";
+			Profile = GuiAtlas3TiledImageProfile;
+			BackgroundIndex = LearningWindowBackground;
+			canSave = "1";
+			Visible = "1";
+
+			new GuiTextCtrl()
+			{
+				position = "37 32";
+				extent = "235 22";
+				Profile = claimResizeText1Profile;
+				text = GetMessageIDText(2586);//Current claim size
+			};
+
+			new GuiTextCtrl(GuiClaimResizeCur)
+			{
+				position = "180 32";
+				extent = "60 22";
+				Profile = claimResizeRightText1Profile;
+				text = "";
+			};
+
+			new GuiTextCtrl()
+			{
+				position = "37 54";
+				extent = "235 22";
+				Profile = "claimResizeText2Profile";
+				text = GetMessageIDText(2587);//New claim size
+			};
+
+			new CmGuiDoubleValTextCtrl(GuiClaimResizeSelTil)
+			{
+				position = "180 54";
+				extent = "60 22";
+				Profile = "claimResizeRightText2Profile";
+			};
+
+			new GuiTextCtrl()
+			{
+				position = "40 93";
+				extent = "235 22";
+				Profile = "claimResizeText3Profile";
+				text = GetMessageIDText(2570);//Drag sign to change size of claim
+			};
+
+			// container for legend items
+			new GuiStackControl()
+			{
+				position = "40 122";
+				extent = "370 1";
+				minExtent = "10 1";
+				profile = "GuiBaseTextProfile";
+				stackingType = "Vertical";
+				padding = 7;
+				dynamicSize = "1";
+				dynamicNonStackExtent = "0";
+				changeChildPosition = "1";
+				changeChildSizeToFit = "1";
+				isContainer = "1";
+				internalName = "tilesLegendStackCtrl";
+			};
+
+			//X
+			new GuiBitmapCtrl()
+			{
+				position = "37 246";
+				extent = "200 79";
+				canHit = "true";
+				visible = "true";
+				profile = "GuiAtlas3ImageProfile";
+				//centered = "true";
+				imageIndex = "BuildBtnRightBackground";
+				isContainer = "1";
+
+				new GuiSlideButton(PositionBtnX) 
+				{
+					bitmapMode = "Centered";
+					buttonType = "PushButton";
+					useModifiers = "0";
+					useStates = "1";
+					groupNum = "-1";
+					useMouseEvents = "0";
+					position = "0 0";
+					extent = "100% 100%";
+					profile = "GuiAtlas3ImageProfile";
+					visible = "1";
+					active = "1";
+					opacity = "1";
+					isContainer = "1";
+					slideType = "X";
+			
+					new GuiBitmapCtrl()
+					{
+						position = "0 0";
+						resize = "1";
+						internalName = "BuildPositionBtnIcon";
+						canHit = "false";
+						visible = "true";
+						profile = "GuiAtlas3ImageProfile";
+						centered = "true";
+					};
+				};
+			};
+
+			//Y
+			new GuiBitmapCtrl()
+			{
+				position = "37 325";
+				extent = "200 79";
+				canHit = "true";
+				visible = "true";
+				profile = "GuiAtlas3ImageProfile";
+				//centered = "true";
+				imageIndex = "BuildBtnLeftBackground";
+				isContainer = "1";
+
+				new GuiSlideButton(PositionBtnY) 
+				{
+					bitmapMode = "Centered";
+					buttonType = "PushButton";
+					useModifiers = "0";
+					useStates = "1";
+					groupNum = "-1";
+					useMouseEvents = "0";
+					position = "0 0";
+					extent = "100% 100%";
+					profile = "GuiAtlas3ImageProfile";
+					visible = "1";
+					active = "1";
+					opacity = "1";
+					isContainer = "1";
+					slideType = "Y";
+			
+					new GuiBitmapCtrl()
+					{
+						position = "0 0";
+						resize = "1";
+						internalName = "BuildPositionBtnIcon";
+						canHit = "false";
+						visible = "true";
+						profile = "GuiAtlas3ImageProfile";
+						centered = "true";
+					};
+				};
+			};
+
+			new guiHorzTilingButtonCtrl()
+			{
+				text = GetMessageIDText(2860); // Claim
+				groupNum = "-1";
+				buttonType = "PushButton";
+				useMouseEvents = "0";
+				position = "36 444";
+				extent = "194 44";
+				profile = BuildPositionButtonProfile;
+				imageIndex = H44Btn;
+				visible = "1";
+				active = "1";
+				opacity = "1";
+				command = "ApplyResizeClaim();";
+			};
+
+			new guiHorzTilingButtonCtrl()
+			{
+				text = GetMessageIDText(1113); // Cancel
+				groupNum = "-1";
+				buttonType = "PushButton";
+				useMouseEvents = "0";
+				position = "36 498";
+				extent = "194 44";
+				profile = BuildPositionButtonProfile;
+				imageIndex = H44Btn;
+				visible = "1";
+				active = "1";
+				opacity = "1";
+				command = "CloseResizeClaim();";
+			};
+		};
+	};//wnd
+};//dlg
+
+createClaimTileLegendItems(claimResizeDialogPnl-->tilesLegendStackCtrl);
+
+function claimResizeWindow::onUpdateCurSize(%this, %val)
+{
+	GuiClaimResizeCur.setTExt(%val);
+}
+
+function claimResizeWindow::onUpdateTiles(%this, %cur, %max)
+{
+	GuiClaimResizeSelTil.setFirstValue(%cur);
+	GuiClaimResizeSelTil.setSecondValue(%max);
+}
+
+function showResizeClaimWindow()
+{
+	Canvas.pushDialog(claimResizeDialogPnl);
+}
+
+function closeResizeClaimWindow()
+{
+	Canvas.popDialog(claimResizeDialogPnl);
+}
+

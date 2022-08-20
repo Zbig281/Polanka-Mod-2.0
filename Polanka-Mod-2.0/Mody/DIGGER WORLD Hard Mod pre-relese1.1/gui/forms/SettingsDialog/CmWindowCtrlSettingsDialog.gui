@@ -1,0 +1,132 @@
+//--- OBJECT WRITE BEGIN ---
+%guiContent = new GuiControl(CmWindowCtrlSettingsDialog) {
+	position = "0 0";
+	extent = "1440 900";
+	minExtent = "8 8";
+	horizSizing = "width";
+	vertSizing = "height";
+	profile = "GuiOverlayProfile";
+	visible = "1";
+	active = "1";
+	opacity = "1";
+	isContainer = "1";
+	canSave = "1";
+	canSaveDynamicFields = "1";
+	helpTag = "0";
+
+		new GuiWindowCtrl() {
+		text = GetMessageIDText(2895); //Settings
+		resizeWidth = "0";
+		resizeHeight = "0";
+		canMove = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		canLock = "0";
+		canSetup = "0";
+		canCollapse = "0";
+		closeCommand = "Canvas.popDialog(CmWindowCtrlSettingsDialog);";
+		edgeSnap = "1";
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		position = "300 300";
+		extent = "417 263";
+		minExtent = "8 2";
+		horizSizing = "center";
+		vertSizing = "center";
+		profile = "GuiWindowProfile";
+		visible = "1";
+		active = "1";
+		opacity = "1";
+		isContainer = "1";
+		canSave = "1";
+		canSaveDynamicFields = "1";
+		accelerator = "escape";
+
+		new GuiContainer()
+		{
+			position = "0 0";
+			extent = "445 228";
+			profile = GuiAtlas3TiledImageProfile;
+			visible = "1";
+			active = "1";
+			canHit = "1";
+			BackgroundIndex = LearningWindowBackground;
+			docking = Client;
+
+			new GuiTextCtrl() {
+				text = GetMessageIDText(1291)@":"; // Opacity
+				position = "39 23";
+				extent = "200 24";
+				profile = "GuiTextSettingsProfile";
+				visible = "1";
+				active = "1";
+				opacity = "1";
+				isContainer = "1";
+				canSave = "1";
+				canSaveDynamicFields = "0";
+			};
+
+			new CmGuiArrowSliderCtrl(CmWindowCtrlSettingsOpacity)
+			{
+				range = "0 100";
+				ticks = "0";
+				snap = "0";
+				value = "0";
+				position = "39 47";
+				extent = "236 36";
+				profile = "GuiHorizSliderProfile";
+				useMouseWheel = "1";
+				trackVOffset = "8";
+				thumbOffset = "0 0";
+				altCommand = "CmWindowCtrlSettingsOpacity.UpdateValue();";
+			};
+
+			new GuiControl()
+			{
+				position = "282 45";
+				extent = "83 36";
+				profile = "GuiAtlas3TiledImageProfile";
+				leftIndex0 = "SmallHexagonalTextFieldLeft";
+				backgroundIndex = "SmallHexagonalTextFieldCenter";
+				rightIndex0 = "SmallHexagonalTextFieldRight";
+
+				new GuiTextEditSliderCtrl(CmWindowCtrlSettingsOpacityText)
+				{
+					format = "%d";
+					range = "0 100";
+					renderArrow = "false";
+					increment = "1";
+					focusOnMouseWheel = "0";
+					historySize = "0";
+					tabComplete = "0";
+					sinkAllKeyEvents = "0";
+					text = "0";
+					maxLength = "1024";
+					position = "10 0";
+					extent = "60 35";
+					minExtent = "8 2";
+					profile = "GuiTextEditSettingsBarProfile";
+					command = "CmWindowCtrlSettingsOpacityText.UpdateText();";
+				};
+			};
+
+			new guiHorzTilingButtonCtrl()
+			{
+				text = GetMessageIDText(1218); // OK
+				Profile = "MessageBoxButtonProfile";
+				HorizSizing = "center";
+				VertSizing = "top";
+				position = "0 155";
+				Extent = "158 44";
+				imageIndex = H44Btn;
+				command = "CmWindowCtrlSettingsDialog.SaveXml(); Canvas.popDialog(CmWindowCtrlSettingsDialog);";
+			};
+		};
+	};
+};
+//--- OBJECT WRITE END ---

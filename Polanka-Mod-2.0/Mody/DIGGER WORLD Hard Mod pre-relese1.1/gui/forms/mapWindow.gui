@@ -1,0 +1,154 @@
+//----------------------------------------------------------
+function createGuiMapWindow()
+{
+	%gui = new GuiWindowCtrl( GuiMapWindow ) {
+		text = GetMessageIDText(1193); // Map
+		resizeWidth = "1";
+		resizeHeight = "1";
+		canMove = "1";
+		canClose = "1";
+		canMinimize = "0";
+		canMaximize = "0";
+		canCollapse = "0";
+		canHideOnFreelook = "1";
+		canLock = "1";
+		canSetup = "1";
+		edgeSnap = "1";
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		position = "200 200";
+		extent = "646 396";
+		minExtent = "306 260";
+		horizSizing = "center";
+		vertSizing = "center";
+		profile = "GuiWindowProfile";
+		visible = "0";
+		active = "1";
+		isContainer = "1";
+		canSave = "0";
+		canSaveDynamicFields = "0";
+		closeCommand ="toggleMap(1);";
+		renderCaptionShadow = false;
+
+
+		new GuiContainer()
+		{
+			docking = Client;
+			extent = "627 349";
+			canSaveDynamicFields = "0";
+			Enabled = "1";
+			Profile = "GuiBaseTextProfile";
+			canSave = "1";
+			Visible = "1";
+			canHit = "true";
+
+			new GuiMapCtrl()
+			{
+				waterColor = "0.0 0.152941 0.301961 1";
+				position = "0 0";
+				extent = "627 349";
+				horizSizing = "width";
+				vertSizing = "height";
+				internalName = "mapCtrl";
+				profile = "GuiMapCtrlProfile";
+				playerIcon = "gui/images/map/player.png";
+				playerIconSize = "43 43";
+				gradientTexPath = "gui/images/map/heightmap.png";
+			};
+	
+			new GuiButtonCtrl()
+			{
+				imageIndex = BtnCenterToPlayer;
+				extent = "47 46";
+				position = "3 301";
+				vertSizing = "top";
+				command = "GuiMapWindow-->mapCtrl.centerToPlayer();";
+				profile = "GuiAtlas2ImageProfile";
+				canHideOnFreelook = "1";
+			};
+
+			new GuiButtonCtrl()
+			{
+				imageIndex = PlusBtn;
+				extent = "45 45";
+				position = "528 300";
+				horizSizing = "left";
+				vertSizing = "top";
+				command = "GuiMapWindow-->mapCtrl.zoomIn();";
+				profile = "GuiAtlas2ImageProfile";
+				canHideOnFreelook = "1";
+			};
+			new GuiButtonCtrl()
+			{
+				imageIndex = MinusBtn;
+				extent = "45 45";
+				position = "578 300";
+				horizSizing = "left";
+				vertSizing = "top";
+				command = "GuiMapWindow-->mapCtrl.zoomOut();";
+				profile = "GuiAtlas2ImageProfile";
+				canHideOnFreelook = "1";
+			};
+
+			new GuiBitmapCtrl()
+			{
+				bitmap = "gui/images/map/compass.png";
+				profile = "GuiBaseTextProfile";
+				extent = "108 118";
+				position = "0 0";
+				canHit = "false";
+				visible = "true";
+				canHideOnFreelook = "1";
+			};
+		};
+	};//wnd
+
+	return %gui;
+}
+//-----------------------------------------------------------------------------
+//TODO Zigger: move this function to default.bindCommands.cs
+function toggleMap(%val)
+{
+	if(!%val)
+		return;
+	if (!$cmYO) // temporary fix for yo
+	{
+		toggleMinimap();
+		return;
+	}
+
+	if (!isObject(GuiMapWindow))
+	{
+		createGuiMapWindow();
+
+		if(isObject(ClientMissionCleanupSet))
+			ClientMissionCleanupSet.add(%wnd);
+	}
+
+	if (GuiMapWindow.isVisible())
+	{
+		GuiMapWindow.setVisible(false);
+		PlayGui.remove(GuiMapWindow);
+	}
+	else
+	{
+		GuiMapWindow.setVisible(true);
+		PlayGui.add(GuiMapWindow);
+	}
+}
+//-----------------------------------------------------------------------------
+function GuiMapWindow::onWake( %this) 
+{
+	loadObjectPropertyXml(%this, "MapWindow");
+}
+//-----------------------------------------------------------------------------
+function GuiMapWindow::onSleep( %this) 
+{
+	saveObjectPropertyXml(%this, "MapWindow");
+}
+//-----------------------------------------------------------------------------
+

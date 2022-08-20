@@ -1,0 +1,159 @@
+﻿$Quests::hideAlertQuestWindowTimeout = 10000;
+//-----------------------------------------------------------------------------
+function showAlertQuestWindow(%questNameId, %isNewQuest)
+{
+	createAlertQuestWindowProfiles();
+
+	if (!isObject(GuiAlertQuestWnd))
+	{
+		new GuiWindowCtrl(GuiAlertQuestWnd)
+		{
+			text = "";
+			forGuiEdit = "1";
+			resizeWidth = "1";
+			resizeHeight = "1";
+			canMove = "1";
+			canClose = "0";
+			canMinimize = "0";
+			canMaximize = "0";
+			canCollapse = "0";
+			canHideOnFreelook = "1";
+			canLock = "0";
+			canSetup = "0";
+			edgeSnap = "1";
+			margin = "0 0 0 0";
+			padding = "0 0 0 0";
+			anchorTop = "1";
+			anchorBottom = "0";
+			anchorLeft = "1";
+			anchorRight = "0";
+			position = "0 0";
+			extent = "544 309";
+			minExtent = "200 200";
+			profile = "GuiSmallWindowProfile";
+			visible = "1";
+			active = "1";
+			isContainer = "1";
+			closeCommand ="closeAlertQuestWindow();";
+			locked = "1";
+
+			// client area
+			new GuiContainer()
+			{
+				docking = Client;
+				position = "0 0";
+				extent = "100 0";
+				canSaveDynamicFields = "0";
+				enabled = "1";
+				profile = "GuiBaseTextProfile";
+				canSave = "1";
+				visible = "1";
+				canHit = "true";
+
+				// background
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					extent = "100% 100%";
+					profile = "GuiBaseTextProfile";
+					visible = "1";
+					canHit = "false"; 
+					bitmap = "gui/images/quest/new_quest.png";
+				};
+
+				new GuiTextCtrl()
+				{
+					position = "5 101";
+					extent = "65 20";
+					minExtent = "8 2";
+					profile = "AlertQuestWindowCaptionProfile";
+					visible = "1";
+					active = "1";
+					canHit = "false"; 
+					text = GetMessageIDText(4490);   // New task
+					horizSizing = "width";
+					internalName = "alertCaption";
+				};
+
+				// quest name
+				new GuiTextCtrl()
+				{
+					position = "5 125";
+					extent = "65 33";
+					minExtent = "8 2";
+					profile = "AlertQuestWindowNameProfile";
+					visible = "1";
+					active = "1";
+					canHit = "false"; 
+					text = GetMessageIDText(%questNameId);
+					horizSizing = "width";
+				};
+			};
+		};
+	}
+
+	GuiAlertQuestWnd.position.x = PlayGui.extent.x - GuiAlertQuestWnd.extent.x - 10;
+	GuiAlertQuestWnd.position.y = (PlayGui.extent.y - GuiAlertQuestWnd.extent.y) / 2;
+	
+	if (%isNewQuest)
+	{
+		GuiAlertQuestWnd-->alertCaption.text = GetMessageIDText(4490);   // New task
+	}
+	else
+	{
+		GuiAlertQuestWnd-->alertCaption.text = GetMessageIDText(4539);   // Task completed
+	}
+
+	PlayGui.add(GuiAlertQuestWnd);
+	schedule($Quests::hideAlertQuestWindowTimeout, 0, "closeAlertQuestWindow");
+
+	return GuiAlertQuestWnd;
+}
+//-----------------------------------------------------------------------------
+function closeAlertQuestWindow()
+{
+	if (isObject(GuiAlertQuestWnd))
+	{
+		PlayGui.remove(GuiAlertQuestWnd);
+		GuiAlertQuestWnd.safeDeleteObject();
+	}
+}
+//-----------------------------------------------------------------------------
+function createAlertQuestWindowProfiles()
+{
+	if (!isObject(AlertQuestWindowCaptionProfile))
+	{
+		new GuiControlProfile(AlertQuestWindowCaptionProfile: GuiBaseTextProfile)
+		{
+			fontType = $GlobalTextFontName;
+			fontSize = 24;
+			fontColor = "119 119 119";
+			justify = "Right";
+		};
+	}
+
+	if (!isObject(AlertQuestWindowNameProfile))
+	{
+		new GuiControlProfile(AlertQuestWindowNameProfile: GuiBaseTextProfile)
+		{
+			fontType = $GlobalCaptionFontName;
+			fontSize = 36;
+			fontColor = "195 129 0";
+			justify = "Right";
+		};
+	}
+}
+//-----------------------------------------------------------------------------
+function deleteAlertQuestWindowProfiles()
+{
+	if (isObject(AlertQuestWindowCaptionProfile))
+	{
+		AlertQuestWindowCaptionProfile.safeDeleteObject();
+	}
+
+	if (isObject(AlertQuestWindowNameProfile))
+	{
+		AlertQuestWindowNameProfile.safeDeleteObject();
+	}
+}
+//-----------------------------------------------------------------------------

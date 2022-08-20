@@ -1,0 +1,1155 @@
+singleton GameTSCtrl(SelectSkinPlayGui) 
+{
+		canSaveDynamicFields = true;
+		isContainer = true;
+		profile = "GuiContentProfile";
+		HorizSizing = "right";
+		VertSizing = "bottom";
+		position = "0 0";
+		extent = "100% 100%";
+		minExtent = "8 8";
+		canSave = true;
+		visible = true;
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		anchorTop = "1";
+		anchorBottom = "0";
+		anchorLeft = "1";
+		anchorRight = "0";
+		cameraZRot = "0";
+		forceFov = "0";
+		enabled = true;
+		helpTag = "0";
+		noCursor = "1";
+		canHit = false;
+};
+
+singleton GuiControlProfile(SkinWindowClothedText : Atlas1BitmapProfile)
+{
+	fontType = $GlobalTextItalicFontName;
+	fontSize = 19;
+	fontColor = "178 128 28";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "left";
+	autoSizeWidth = true;
+	autoSizeHeight = true;
+};
+
+singleton GuiControlProfile(SkinWindowNotificationText : Atlas1BitmapProfile)
+{
+	fontType = $GlobalTextItalicFontName;
+	fontSize = 19;
+	fontColor = "102 102 102";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "left";
+	autoSizeWidth = false;
+};
+
+singleton GuiControlProfile(SkinWindowCaptionText : Atlas1BitmapProfile)
+{
+	fontType = $GlobalCaptionFontName;
+	fontSize = 27;
+	fontColor = "178 128 28";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "left";
+	autoSizeWidth = true;
+};
+
+singleton GuiControlProfile(SkinWindowSubcaptionText : Atlas1BitmapProfile)
+{
+	fontType = $GlobalTextFontName;
+	fontSize = 19;
+	fontColor = "255 255 255";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "left";
+	autoSizeWidth = true;
+};
+
+singleton GuiControlProfile(SkinWindowFreelokHintLine1Text : Atlas1BitmapProfile)
+{
+	fontType = $GlobalTextBoldFontName;
+	fontSize = 19;
+	fontColor = "255 153 0";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "right";
+};
+
+singleton GuiControlProfile(SkinWindowFreelokHintLine2Text : Atlas1BitmapProfile)
+{
+	fontType = $GlobalTextFontName;
+	fontSize = 19;
+	fontColor = "102 102 102";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "right";
+};
+
+singleton GuiControlProfile(SkinWindowGoldText : GuiBaseTextProfile)
+{
+	fontType = $GlobalTextFontName;
+	fontSize = 25;
+	fontColor = "178 128 28";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "left";
+	autoSizeWidth = true;
+	autoSizeHeight = true;
+};
+
+singleton GuiControlProfile(SkinWindowNormalCaptionText : SkinWindowCaptionText)
+{
+	fontSize = 26;
+	autoSizeWidth = false;
+};
+
+singleton GuiControlProfile(SkinWindowNormalText : Atlas1BitmapProfile)
+{
+	fontType = $GlobalTextFontName;
+	fontSize = 19;
+	fontColor = "153 153 153";
+	fontColorHL = "255 255 255";
+	fontColorNA = "102 102 102";
+	fontColorSEL = "255 255 255";
+	justify = "left";
+	autoSizeWidth = true;
+};
+
+singleton GuiContentProfile(SkinWindowTimerText : SkinWindowNormalText)
+{
+	fontColor = "204 204 204";
+	justify = "right";
+};
+
+singleton GuiControlProfile(SkinWindowNormalDescriptionText : SkinWindowNormalText)
+{
+	autoSizeWidth = false;
+};
+
+singleton GuiControlProfile(SkinsWindowHeaderBackground : GuiBaseTextProfile)
+{
+	opaque = "1";
+	fillColor = "0 0 0";
+	border = "rect1_color";
+	borderColor = "0 0 0";
+};
+
+singleton GuiControlProfile(SkinsWindowButton : GuiBaseTextProfile)
+{
+	fontSize = 27;
+	fontColor = "255 255 255";
+	fontColorHL = "255 255 255";
+	fontColorNA = "255 255 255";
+	fontColorSEL = "255 255 255";
+	justify = "center";
+	globalImageIndex = "atlas2";
+};
+
+singleton GuiControlProfile(SkinsWindowDivider : GuiAtlas3ImageProfile)
+{
+	border = "all_tiling";
+	globalImageIndex = "atlas3";
+};
+
+singleton GuiControlProfile(SkinsWindowFlex : GuiDefaultProfile)
+{
+	modal = false;
+};
+
+singleton GuiControlProfile(SkinsListCombineText : SkinWindowClothedText)
+{
+	justify = center;
+	fontSize = 17;
+	autoSizeWidth = true;
+	autoSizeHeight = true;
+	fontColor = "120 85 20";
+};
+
+singleton GuiControlProfile(SkinsListCombineTypeText : SkinWindowNormalDescriptionText)
+{
+	justify = center;
+	fontSize = 20;
+	autoSizeWidth = false;
+	fontColor = "178 128 28";
+};
+
+// Skin Select
+
+function createSkinsSelectElement(%icon, %header, %desc, %status)
+{	
+	%canBuy = getWord(%status, 0);
+	%price = getWord(%status, 1);
+	%equipStatus = getWord(%status, 2);
+	
+	%onlyWin = (%canBuy == false) && (%equipStatus < 2);
+	%canBuy = (%canBuy == true) && (%equipStatus < 2);
+	%isPriceVisible = (%price > 0);
+	
+	%guiContent = new GuiFlexCtrl()
+	{
+		position = "0 0";
+		extent = "585 10";
+		horizSizing = "width";
+		align = "top";
+		justify = "stretch";
+		dynamicHeight = true;
+		
+		new GuiAbsoluteFlexCtrl()
+		{
+			// Clothed background
+			new GuiBitmapCtrl()
+			{
+				internalName = "clothedBackground";
+				extent = "100% 100%";
+				horizSizing = "width";
+				vertSizing = "height";
+				profile = "GuiAtlas3ImageProfile";
+				imageIndex = LearningWindowBackgroundTransparent;
+				canHit = false; 
+				resize = false;
+				wrap = true;
+			};
+			
+			// Mouse events
+			new GuiMouseEventCtrl()
+			{
+				internalName = "mouseControl";
+				extent = "100% 100%";
+				horizSizing = "width";
+				vertSizing = "height";
+				class = "SelectSkinsMouseControl";
+			};
+		};
+		
+		// Skin Icon
+		new GuiFlexCtrl()
+		{
+			position = "0 0";
+			extent = "130 220";
+			direction = "column";
+			dynamicHeight = true;
+			canHit = false; 
+			align = "center";
+			marginTop = 32;
+			
+			new GuiBitmapCtrl()
+			{
+				profile = "GuiDefaultProfile";
+				bitmap = %icon;
+				centered = false;
+				canHit = false; 
+				wrap = false;
+				resize = true;
+			};
+			
+			new GuiTextCtrl()
+			{
+				internalName = "clothedText";
+				profile = "SkinWindowClothedText";
+				text = GetMessageIDText(4111); // Clothed
+				visible = false;
+			};
+		};
+		
+		// Skin content
+		new GuiFlexCtrl()
+		{
+			profile = "SkinsWindowFlex";
+			position = "0 0";
+			extent = "445 100";
+			horizSizing = "relative";
+			direction = "column";
+			dynamicHeight = true;
+			
+			// Skin header
+			new GuiFlexCtrl()
+			{
+				position = "0 0";
+				extent = "445 60";
+				justify = "stretch";
+				align = "start";
+				canHit = false; 
+				dynamicHeight = true;
+				marginTop = 23;
+				
+				new GuiMLTextCtrl()
+				{
+					horizSizing = "relative";
+					profile = "SkinWindowNormalCaptionText";
+					text = %header;
+				};
+				
+				new GuiBitmapCtrl()
+				{
+					extent = "15 16";
+					profile = "GuiAtlas3ImageProfile";
+					imageIndex = LightTimeIcon;
+					centered = false;
+					canHit = false; 
+					wrap = false;
+					resize = false;
+					visible = (%equipStatus == 1);
+				};
+				
+				new GuiMLTextCtrl()
+				{
+					internalName = "premiumTimer";
+					profile = "SkinWindowTimerText";
+					text = "available\n15:05:23";
+					visible = (%equipStatus == 1);
+				};
+			};
+			
+			// Skin description
+			new GuiMLTextCtrl()
+			{
+				position = "0 0";
+				canHit = false; 
+				extent = "445 10";
+				profile = "SkinWindowNormalDescriptionText";
+				text = %desc;
+			};
+			
+			new GuiMLTextCtrl()
+			{
+				visible = (%equipStatus == 1);
+				canHit = false; 
+				internalName = "subscriptionText";
+				profile = "SkinWindowNotificationText";
+				text = GetMessageIDText(4112); // Gift notification
+			};
+			
+			new GuiMLTextCtrl()
+			{
+				visible = %onlyWin;
+				canHit = false; 
+				internalName = "lootboxText";
+				profile = "SkinWindowNotificationText";
+				text = GetMessageIDText(4113); // Can't buy notication
+			};
+			
+			// Skin footer
+			new GuiFlexCtrl()
+			{
+				profile = "SkinsWindowFlex";
+				position = "0 0";
+				extent = "445 74";
+				justify = "stretch";
+				align = "center";
+				marginBottom = 30;
+				padding = "3 0";
+				
+				// Buttons
+				new GuiFlexCtrl()
+				{
+					profile = "SkinsWindowFlex";
+					position = "0 6";
+					extent = "100 44";
+					padding = "10 0";
+					horizSizing = "relative";
+					justify = "stretch";
+					
+					new guiHorzTilingButtonCtrl()
+					{
+						text = GetMessageIDText(4114); // Equip now
+						internalName = "equipButton";
+						horizSizing = "relative";
+						position = "0 0";
+						maxExtent = "158 44";
+						extent = "158 44";
+						minExtent = "8 2";
+						profile = "SkinsWindowButton";
+						useMouseEvents = "1";
+						visible = (%equipStatus > 0);
+						active = (%equipStatus > 0);
+						command = "";
+						imageIndex = H44Btn;
+					};
+					
+					new guiHorzTilingButtonCtrl()
+					{
+						text = GetMessageIDText(4115); // Go to shop
+						internalName = "buyButton";
+						horizSizing = "relative";
+						position = "0 0";
+						maxExtent = "158 44";
+						extent = "158 44";
+						minExtent = "8 2";
+						profile = "SkinsWindowButton";
+						useMouseEvents = "1";
+						visible = %canBuy;
+						active = %canBuy;
+						command = "";
+						imageIndex = GoldBtn;
+					};
+				};
+				
+				// Price
+				new GuiTextCtrl()
+				{
+					profile = "SkinWindowGoldText";
+					canHit = false; 
+					text = %price;
+					visible = %canBuy && %isPriceVisible;
+				};
+				
+				// Coin icon
+				new GuiBitmapCtrl()
+				{
+					extent = "20 20";
+					profile = "GuiAtlas3ImageProfile";
+					imageIndex = GoldIcon;
+					centered = false;
+					canHit = false; 
+					wrap = false;
+					resize = false;
+					visible = %canBuy && %isPriceVisible;
+				};
+			};
+		};
+	};
+	
+	return %guiContent;
+}
+
+function createSkinsSelectDivider()
+{
+	return new GuiControl()
+	{
+		position = "0 0";
+		extent = "100 3";
+		profile = "SkinsWindowDivider";
+		BottomLeftIndex = BlackSlimHLineLeft;
+		BottomIndex0 = BlackSlimHLineCenter;
+		BottomRightIndex = BlackSlimHLineRight;
+		canHit = false;
+	};
+}
+
+new GuiControl(SkinsSelectWindow)
+{
+	position = "0 0";
+	extent = "1920 1080";
+	minExtent = "16 16";
+	horizSizing = "width";
+	vertSizing = "width";
+	profile = "GuiDefaultProfile";
+	visible = "1";
+	active = "1";
+	isContainer = "1";
+	class = "SelectSkinsWindow";
+
+	// Main window
+	new GuiWindowCtrl(SelectSkinDialogWnd)
+	{
+		position = "200 60";
+		extent = "657 766";
+		minExtent = "550 8";
+		maxExtent = "1920 1080";
+		horizSizing = "right";
+		vertSizing = "relative";
+		canMove = true;
+		canClose = true;
+		canMinimize = false;
+		canMaximize = false;
+		canCollapse = false;
+		canHideOnFreelook = false;
+		canLock = false;
+		canSetup = false;
+		edgeSnap = true;
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		profile = "GuiWindowProfile";
+		visible = true;
+		active = true;
+		isContainer = true;
+		text = GetMessageIDText(4116); // Your skins
+		closeCommand = "SelectSkinPlayGui.close();";
+		command = "SelectSkinPlayGui.close();";
+		accelerator = "escape";
+
+		// Header
+		new GuiContainer()
+		{
+			docking = Top;
+			extent = "644 70";
+			profile = "GuiBaseTextProfile";
+
+			new GuiControl()
+			{
+				position = "0 0";
+				extent = "100% 100%";
+				horizSizing = "width";
+				vertSizing = "height";
+				profile = "SkinsWindowHeaderBackground";
+			};
+
+			// item caption
+			new GuiTextCtrl(SelectSkinDialogWndTxt1)
+			{
+				position = "25 -8";
+				extent = "500 70";
+				profile = "SkinWindowCaptionText";
+				text = "Breastplate";
+				internalName = "skinsCaption";
+			};
+
+			new GuiTextCtrl(SelectSkinDialogWndTxt2)
+			{
+				position = "25 15";
+				extent = "500 70";
+				profile = "SkinWindowSubcaptionText";
+				text = GetMessageIDText(4117); // Double click for fitting
+			};
+
+			new GuiTextCtrl(SelectSkinDialogWndTxt3)
+			{
+				horizSizing = "left";
+				position = "130 -5";
+				extent = "500 70";
+				profile = "SkinWindowFreelokHintLine1Text";
+				text = GetMessageIDText(4913); // Press Tab
+			};
+
+			new GuiTextCtrl(SelectSkinDialogWndTxt4)
+			{
+				horizSizing = "left";
+				position = "130 15";
+				extent = "500 70";
+				profile = "SkinWindowFreelokHintLine2Text";
+				text = GetMessageIDText(4914); // to toggle freelook mode
+			};
+		};
+
+		// Content
+		new GuiContainer()
+		{
+			docking = Client;
+			profile = "GuiBaseTextProfile";
+
+			// Background
+			new GuiContainer()
+				{
+				position = "0 0";
+				extent = "100% 100%";
+				anchorLeft = true;
+				anchorTop = true;
+				anchorBottom = true;
+				anchorRight = true;
+				profile = "GuiBaseTextProfile";
+
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					extent = "100% 100%";
+					imageIndex = LearningWindowBackground;
+					profile = "GuiAtlas3ImageProfile";
+					horizSizing = "width";
+					vertSizing = "height";
+					resize = false;
+					wrap = true;
+				};
+
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					extent = "100% 36";
+					imageIndex = FringeTopShadow;
+					profile = "GuiAtlas1ImageProfile";
+					horizSizing = "width";
+					vertSizing = "bottom";
+					resize = false;
+					wrap = true;
+				};
+			};
+
+			// Loading
+			new GuiRevolvingElement()
+			{
+				internalName = "loadingSpinner";
+				horizSizing = "center";
+				vertSizing = "center";
+				position = "0 0";
+				extent = "300 300";
+				minExtent = "300 300";
+				profile = "GuiDefaultProfile";
+				visible = true;
+				active = "1";
+				background = "art/gui/loading/sign.png";
+				revolving = "art/gui/loading/sun.png";
+				revolvingSpeed = $GuiLoadingWindow::revolvingSpeed;
+			};
+
+			// Scroll
+			new GuiScrollCtrl()
+			{
+				internalName = "skinsContent";
+				docking = Client;
+				profile = "GuiEagleScrollBarProfile";
+				trackOffset = 12;
+				arrowSadowSize = -25;
+				hScrollBar = "alwaysOff";
+				vScrollBar = "dynamic";
+				constantThumbHeight = true;
+				isContainer = true;
+				visible = false;
+
+				new GuiFlexCtrl()
+				{
+					extent = "100% 10";
+					horizSizing = "width";
+					internalName = "skinsList";
+					direction = "column";
+					dynamicHeight = true;
+					align = "stretch";
+					marginLeft = 10;
+					marginRight = 65;
+				};
+			};
+		};
+	};
+};
+
+
+// Skins List
+
+function createSkinsListElement(%icon, %equipType, %combine)
+{
+	%guiContent = new GuiFlexCtrl()
+	{
+		extent = "170 40";
+		direction = "column";
+		justify = "center";
+		align = "stretch";
+		dynamicHeight = true;
+		marginLeft = 10;
+		marginRight = 10;
+		marginTop = 20;
+		marginBottom = 10;
+		
+		new GuiAbsoluteFlexCtrl()
+		{
+			new GuiBitmapCtrl()
+			{
+				visible = (%equipType == 1);
+				position = "137 10";
+				profile = "GuiAtlas3ImageProfile";
+				extent = "15 17";
+				imageIndex = LightTimeIcon;
+				centered = false;
+				canHit = false; 
+				wrap = false;
+				resize = false;
+			};
+		};
+		
+		new GuiBitmapCtrl()
+		{
+			horizSizing = "center";
+			profile = "GuiDefaultProfile";
+			bitmap = %icon;
+			centered = false;
+			canHit = false; 
+			wrap = false;
+			resize = true;
+		};
+		
+		new GuiTextCtrl()
+		{
+			profile = "SkinsListCombineText";
+			text = GetMessageIDText(4118); // combined with
+		};
+		
+		new GuiMLTextCtrl()
+		{
+			profile = "SkinsListCombineTypeText";
+			text = "<just:center>" @ %combine;
+		};
+	};
+	return %guiContent;
+}
+
+function createSkinsListVerticalDivider()
+{
+	%guiContent = new GuiControl()
+	{
+		extent = "1 150";
+		vertSizing = center;
+		profile = "SkinsWindowDivider";
+		leftIndex0 = "VLine1";
+		leftIndexN = "VLine4";
+		canHit = false;
+	};
+	return %guiContent;
+}
+
+function createSkinsListWindow()
+{
+	if (isObject(SkinsListWindow))
+	{
+		return SkinsListWindow;
+	}
+	
+	%guiContent = new GuiWindowCtrl(SkinsListWindow)
+	{
+		position = "100 100";
+		extent = "584 585";
+		minExtent = "584 585";
+		maxExtent = "584 585";
+		canMove = true;
+		canClose = true;
+		canMinimize = false;
+		canMaximize = false;
+		canCollapse = false;
+		canHideOnFreelook = false;
+		canLock = true;
+		canSetup = false;
+		edgeSnap = true;
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		profile = "GuiWindowProfile";
+		visible = true;
+		active = true;
+		isContainer = true;
+		text = GetMessageIDText(4119); // Skins
+		closeCommand = "SkinsListWindow.safeDeleteObject();";
+		
+		// Content
+		new GuiContainer()
+		{
+			docking = Client;
+			profile = "GuiBaseTextProfile";
+			
+			// Background
+			new GuiContainer()
+			{
+				position = "0 0";
+				extent = "100% 100%";
+				anchorLeft = true;
+				anchorTop = true;
+				anchorBottom = true;
+				anchorRight = true;
+				profile = "GuiBaseTextProfile";
+				
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					extent = "100% 100%";
+					imageIndex = LearningWindowBackground;
+					profile = "GuiAtlas3ImageProfile";
+					horizSizing = "width";
+					vertSizing = "height";
+					resize = false;
+					wrap = true;
+				};
+			};
+			
+			// Loading
+			new GuiRevolvingElement()
+			{
+				internalName = "loadingSpinner";
+				horizSizing = "center";
+				vertSizing = "center";
+				position = "0 0";
+				extent = "300 300";
+				minExtent = "300 300";
+				profile = "GuiDefaultProfile";
+				visible = true;
+				active = "1";
+				background = "art/gui/loading/sign.png";
+				revolving = "art/gui/loading/sun.png";
+				revolvingSpeed = $GuiLoadingWindow::revolvingSpeed;
+			};
+
+			// Buttons
+			new GuiContainer()
+			{
+				extent = "100 115";
+				minExtent = "0 115";
+				maxExtent = "0 115";
+				docking = Bottom;
+				profile = "GuiBaseTextProfile";
+				
+				new GuiFlexCtrl()
+				{
+					extent = "100% 100%";
+					vertSizing = "width";
+					horizSizing = "height";
+					
+					justify = center;
+					align = end;
+					marginLeft = 35;
+					marginBottom = 40;
+					padding = "10 0";
+					
+					new guiHorzTilingButtonCtrl()
+					{
+						text = GetMessageIDText(4120); // Shop button
+						position = "0 0";
+						maxExtent = "158 44";
+						extent = "158 44";
+						minExtent = "8 2";
+						profile = "SkinsWindowButton";
+						useMouseEvents = "1";
+						visible = true;
+						active = true;
+						command = "SkinsListWindow.openStore();";
+						imageIndex = H44Btn;
+					};
+					
+					new guiHorzTilingButtonCtrl()
+					{
+						text = GetMessageIDText(1113); // Cancel
+						position = "0 0";
+						maxExtent = "158 44";
+						extent = "158 44";
+						minExtent = "8 2";
+						profile = "SkinsWindowButton";
+						useMouseEvents = "1";
+						visible = true;
+						active = true;
+						command = "SkinsListWindow.safeDeleteObject();";
+						imageIndex = H44Btn;
+					};
+				};
+			};
+			
+			// Scroll
+			new GuiScrollCtrl()
+			{
+				internalName = "skinsContent";
+				docking = Client;
+				profile = "GuiEagleScrollBarProfile";
+				trackOffset = 12;
+				arrowSadowSize = -25;
+				hScrollBar = "alwaysOff";
+				vScrollBar = "dynamic";
+				constantThumbHeight = true;
+				isContainer = true;
+				visible = false;
+				
+				new GuiFlexCtrl()
+				{
+					extent = "100% 10";
+					horizSizing = "width";
+					internalName = "skinsList";
+					direction = "column";
+					dynamicHeight = true;
+					align = "stretch";
+					marginLeft = 10;
+					marginRight = 65;
+				};
+			};
+		};
+	};
+	return %guiContent;
+}
+
+// Skin Apply
+
+function createSkinsApplyElement(%id, %icon, %header, %desc, %canBuy)
+{	
+	%guiContent = new GuiFlexCtrl()
+	{
+		internalName = "skinControl" @ %id;
+		position = "0 0";
+		extent = "585 10";
+		horizSizing = "width";
+		align = "top";
+		justify = "stretch";
+		dynamicHeight = true;
+		
+		// Skin Icon
+		new GuiFlexCtrl()
+		{
+			position = "0 0";
+			extent = "130 220";
+			direction = "column";
+			dynamicHeight = true;
+			canHit = false; 
+			align = "center";
+			marginTop = 32;
+			
+			new GuiBitmapCtrl()
+			{
+				profile = "GuiDefaultProfile";
+				bitmap = %icon;
+				centered = false;
+				canHit = false; 
+				wrap = false;
+				resize = true;
+			};
+		};
+		
+		// Skin content
+		new GuiFlexCtrl()
+		{
+			profile = "SkinsWindowFlex";
+			position = "0 0";
+			extent = "445 100";
+			horizSizing = "relative";
+			direction = "column";
+			dynamicHeight = true;
+			
+			// Skin header
+			new GuiFlexCtrl()
+			{
+				position = "0 0";
+				extent = "445 60";
+				justify = "stretch";
+				align = "start";
+				canHit = false; 
+				dynamicHeight = true;
+				marginTop = 23;
+				
+				new GuiMLTextCtrl()
+				{
+					horizSizing = "relative";
+					profile = "SkinWindowNormalCaptionText";
+					text = %header;
+				};
+			};
+			
+			// Skin description
+			new GuiMLTextCtrl()
+			{
+				position = "0 0";
+				canHit = false; 
+				extent = "445 10";
+				profile = "SkinWindowNotificationText";
+				text = %desc;
+			};
+			
+			new GuiMLTextCtrl()
+			{
+				visible = !%canBuy;
+				canHit = false; 
+				profile = "SkinWindowNormalDescriptionText";
+				text = GetMessageIDText(4113); // Lootbox notification
+			};
+			
+			// Skin footer
+			new GuiFlexCtrl()
+			{
+				profile = "SkinsWindowFlex";
+				position = "0 0";
+				extent = "445 74";
+				justify = "stretch";
+				align = "center";
+				visible = %canBuy;
+				marginBottom = 30;
+				
+				new guiHorzTilingButtonCtrl()
+				{
+					text = GetMessageIDText(4115); // Go to shop
+					internalName = "buyButton";
+					horizSizing = "relative";
+					position = "0 0";
+					maxExtent = "158 44";
+					extent = "158 44";
+					minExtent = "8 2";
+					profile = "SkinsWindowButton";
+					useMouseEvents = "1";
+					visible = %canBuy;
+					active = %canBuy;
+					command = "";
+					imageIndex = GoldBtn;
+				};
+			};
+		};
+	};
+	
+	return %guiContent;
+}
+
+function createSkinsApplyWindow()
+{
+	if (isObject(SkinsApplyWindow))
+	{
+		return SkinsApplyWindow.getId();
+	}
+	
+	// Main window
+	%guiControl = new GuiWindowCtrl(SkinsApplyWindow)
+	{
+		position = "200 60";
+		extent = "516 600";
+		minExtent = "400 400";
+		maxExtent = "1920 1080";
+		canMove = true;
+		canClose = true;
+		canMinimize = false;
+		canMaximize = false;
+		canCollapse = false;
+		canHideOnFreelook = false;
+		canLock = true;
+		canSetup = false;
+		edgeSnap = true;
+		margin = "0 0 0 0";
+		padding = "0 0 0 0";
+		profile = "GuiWindowProfile";
+		visible = true;
+		active = true;
+		isContainer = true;
+		text = GetMessageIDText(4121); // Premium Skins
+		closeCommand = "SkinsApplyWindow.resetSkins();";
+		
+		// Header
+		new GuiContainer()
+		{
+			docking = Top;
+			extent = "644 70";			
+			profile = "GuiBaseTextProfile";
+			
+			new GuiControl()
+			{
+				position = "0 0";
+				extent = "100% 100%";
+				horizSizing = "width";
+				vertSizing = "height";
+				profile = "SkinsWindowHeaderBackground";
+			};
+			
+			new GuiFlexCtrl()
+			{
+				extent = "644 70";
+				vertSizing = height;
+				horizSizing = width;
+				
+				justify = stretch;
+				align = center;
+				
+				marginLeft = 30;
+				marginRight = 30;
+				
+				new GuiMLTextCtrl()
+				{
+					horizSizing = relative;
+					profile = "SkinWindowNormalDescriptionText";
+					text = GetMessageIDText(4122); // Warning text
+				};
+			};
+		};
+		
+		// Content
+		new GuiContainer()
+		{
+			docking = Client;
+			profile = "GuiBaseTextProfile";
+			
+			// Background
+			new GuiContainer()
+			{
+				position = "0 0";
+				extent = "100% 100%";
+				anchorLeft = true;
+				anchorTop = true;
+				anchorBottom = true;
+				anchorRight = true;
+				profile = "GuiBaseTextProfile";
+				
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					extent = "100% 100%";
+					imageIndex = LearningWindowBackground;
+					profile = "GuiAtlas3ImageProfile";
+					horizSizing = "width";
+					vertSizing = "height";
+					resize = false;
+					wrap = true;
+				};
+				
+				new GuiBitmapCtrl()
+				{
+					position = "0 0";
+					extent = "100% 36";
+					imageIndex = FringeTopShadow;
+					profile = "GuiAtlas1ImageProfile";
+					horizSizing = "width";
+					vertSizing = "bottom";
+					resize = false;
+					wrap = true;
+				};
+			};
+			
+			new GuiContainer()
+			{
+				profile = "SkinsWindowHeaderBackground";
+				extent = "300 112";
+				minExtent = "0 112";
+				maxExtent = "0 112";
+				docking = Bottom;
+				
+				new GuiControl()
+				{
+					position = "1 0";
+					extent = "298 3";
+					horizSizing = width;
+					
+					profile = "SkinsWindowDivider";
+
+					BottomLeftIndex = BlackSlimHLineLeft;
+					BottomIndex0 = BlackSlimHLineCenter;
+					BottomRightIndex = BlackSlimHLineRight;
+					canHit = false;
+				};
+				
+				new guiHorzTilingButtonCtrl()
+				{
+					text = GetMessageIDText(4123); // Remove skins
+					position = "26 28";
+					maxExtent = "198 44";
+					extent = "198 44";
+					minExtent = "8 2";
+					profile = "SkinsWindowButton";
+					useMouseEvents = "1";
+					visible = true;
+					active = true;
+					command = "SkinsApplyWindow.resetSkins();";
+					imageIndex = H44Btn;
+				};
+			};
+			
+			// Scroll
+			new GuiScrollCtrl()
+			{
+				internalName = "skinsContent";
+				docking = Client;
+				profile = "GuiEagleScrollBarProfile";
+				trackOffset = 12;
+				arrowSadowSize = -25;
+				hScrollBar = "alwaysOff";
+				vScrollBar = "dynamic";
+				constantThumbHeight = true;
+				isContainer = true;
+				visible = true;
+				
+				new GuiFlexCtrl()
+				{
+					extent = "100% 10";
+					horizSizing = "width";
+					internalName = "skinsList";
+					direction = "column";
+					dynamicHeight = true;
+					align = "stretch";
+					marginLeft = 10;
+					marginRight = 65;
+				};
+			};
+		};
+	};
+	
+	return %guiControl;
+}
