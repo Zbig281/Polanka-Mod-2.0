@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xml>
-	<items>
-		<item id="316" amount="1" vik="no" mon="no"/>
-		<item id="1063" amount="1" eur="no" mon="no"/>
-		<item id="951" amount="1" vik="no" eur="no"/>
-		<item id="297" amount="1" vik="no" mon="no"/>
-		<item id="1137" amount="1" eur="no" mon="no"/>
-		<item id="1138" amount="1" vik="no" eur="no"/>
-	</items>
+    <items>
+        <item id="316" amount="1" vik="no" mon="no"/>
+        <item id="1063" amount="1" eur="no" mon="no"/>
+        <item id="951" amount="1" vik="no" eur="no"/>
+        <item id="297" amount="1" vik="no" mon="no"/>
+        <item id="1137" amount="1" eur="no" mon="no"/>
+        <item id="1138" amount="1" vik="no" eur="no"/>
+        <item id="1376" amount="1"/>
+        <item id="1463" amount="1"/> 
+        <item id="1464" amount="1"/> 
+        <item id="1465" amount="1"/> 
+        <item id="1466" amount="1"/> 
+        <item id="1467" amount="1"/> 
+        <item id="1468" amount="1"/> 
+        <item id="1469" amount="1"/> 
+        <item id="1011" amount="5"/> 
+    </items>
 </xml>
