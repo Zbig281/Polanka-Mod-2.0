@@ -18871,7 +18871,7 @@
 	<row>
 		<ID>1072</ID>
 		<ParentID>130</ParentID>
-		<Name>Palisade Wall (diagonal)</Name>
+		<Name>0de Wall (diagonal)</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>1</IsUnmovableobject>
@@ -36176,11 +36176,125 @@
 		<BackgndImage></BackgndImage>
 		<FaceImage>art\2D\Items\gold_and_silver_amulet.png</FaceImage>
 		<Description>Elder's gift for helping the villagers.</Description>
-	</row>	
+	</row>
 	<row>
-		<ID>3000</ID>
-		<ParentID>751</ParentID>
-		<Name>Tribe Bear</Name>
+		<ID>2400</ID>
+		<ParentID>1722</ParentID>
+		<Name>Wooden Cross</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>0</Length>
+		<MaxStackSize>0</MaxStackSize>
+		<UnitWeight>1000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>\mods\JorvikMod\art\2D\objects\wooden_cross.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
+	</row>
+	<row>
+		<ID>2401</ID>
+		<ParentID>61</ParentID>
+		<Name>Wooden Bridge</Name> 
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>3</Length>
+		<MaxStackSize>0</MaxStackSize>
+		<UnitWeight>5000</UnitWeight>
+		<BackgndImage> </BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\wooden_bridge.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
+	</row>
+	<row>
+		<ID>2402</ID>
+		<ParentID>61</ParentID>
+		<Name>Stone Bridge</Name> 
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>3</Length>
+		<MaxStackSize>0</MaxStackSize>
+		<UnitWeight>10000</UnitWeight>
+		<BackgndImage> </BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\stone_bridge.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
+	</row>
+	<row>
+		<ID>2403</ID>
+		<ParentID>69</ParentID>
+		<Name>Small Wooden Shed</Name>
+		<IsContainer>1</IsContainer>
+		<IsMovableObject>1</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>5000000</MaxContSize>
+		<Length>8</Length>
+		<MaxStackSize>0</MaxStackSize>
+		<UnitWeight>10000</UnitWeight>
+		<BackgndImage>art\\images\\warehouse</BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\small_wooden_shed.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
+	</row>
+	<row>
+		<ID>2404</ID>
+		<ParentID>72</ParentID>
+		<Name>Metal Cage</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>1</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>0</Length>
+		<MaxStackSize>3</MaxStackSize>
+		<UnitWeight>10000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\metal_cage.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
+	</row>
+	<row>
+		<ID>2405</ID>
+		<ParentID>61</ParentID>
+		<Name>Wooden Pier</Name> 
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>3</Length>
+		<MaxStackSize>0</MaxStackSize>
+		<UnitWeight>5000</UnitWeight>
+		<BackgndImage> </BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\wooden_pier.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
+	</row>
+	<row>
+		<ID>2406</ID>
+		<ParentID>130</ParentID>
+		<Name>Wooden Barricade</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>1</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -36189,182 +36303,125 @@
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>0</MaxContSize>
-		<Length>0</Length>
+		<Length>4</Length>
 		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
+		<UnitWeight>2000</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
+		<FaceImage>mods\JorvikMod\art\2D\objects\wooden_barricade.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
 	</row>
 	<row>
-		<ID>3001</ID>
-		<ParentID>59</ParentID>
-		<Name>Tribe Bear Carcass</Name>
-		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
-		<IsTool>0</IsTool>
-		<IsDevice>0</IsDevice>
-		<IsDoor>0</IsDoor>
-		<IsPremium>0</IsPremium>
-		<MaxContSize>100000</MaxContSize>
-		<Length>5</Length>
-		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
-		<BackgndImage>art\images\universal</BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
-	</row>
-	<row>
-		<ID>3002</ID>
-		<ParentID>751</ParentID>
-		<Name>Tribe Chieftain</Name>
+		<ID>2408</ID>
+		<ParentID>61</ParentID>
+		<Name>Stone Altar</Name> 
 		<IsContainer>0</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>0</MaxContSize>
-		<Length>0</Length>
+		<Length>3</Length>
 		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
-		<BackgndImage></BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
+		<UnitWeight>5000</UnitWeight>
+		<BackgndImage> </BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\stone_altar.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
 	</row>
 	<row>
-		<ID>3003</ID>
-		<ParentID>59</ParentID>
-		<Name>Tribe Chieftain Carcass</Name>
-		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
+		<ID>2409</ID>
+		<ParentID>72</ParentID>
+		<Name>Wooden House with Tower</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
-		<IsDoor>0</IsDoor>
+		<IsDoor>1</IsDoor>
 		<IsPremium>0</IsPremium>
-		<MaxContSize>100000</MaxContSize>
-		<Length>5</Length>
-		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
-		<BackgndImage>art\images\universal</BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
+		<MaxContSize>0</MaxContSize>
+		<Length>4</Length>
+		<MaxStackSize>6</MaxStackSize>
+		<UnitWeight>10000000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\wooden_house_with_tower.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
 	</row>
 	<row>
-		<ID>3004</ID>
-		<ParentID>751</ParentID>
-		<Name>Tribe Hunter</Name>
+		<ID>2410</ID>
+		<ParentID>72</ParentID>
+		<Name>Wooden Church</Name>
 		<IsContainer>0</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>1</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>4</Length>
+		<MaxStackSize>0</MaxStackSize>
+		<UnitWeight>20000000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\wooden_church.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
+	</row>
+	<row>
+		<ID>2411</ID>
+		<ParentID>61</ParentID>
+		<Name>Wooden Pier T</Name> 
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>0</MaxContSize>
-		<Length>0</Length>
+		<Length>3</Length>
 		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
-		<BackgndImage></BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
+		<UnitWeight>5000</UnitWeight>
+		<BackgndImage> </BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\pier_T.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
 	</row>
 	<row>
-		<ID>3005</ID>
-		<ParentID>59</ParentID>
-		<Name>Tribe Hunter Carcass</Name>
-		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
-		<IsTool>0</IsTool>
-		<IsDevice>0</IsDevice>
-		<IsDoor>0</IsDoor>
-		<IsPremium>0</IsPremium>
-		<MaxContSize>100000</MaxContSize>
-		<Length>5</Length>
-		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
-		<BackgndImage>art\images\universal</BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
-	</row>
-	<row>
-		<ID>3006</ID>
-		<ParentID>751</ParentID>
-		<Name>Tribe Mole</Name>
+		<ID>2412</ID>
+		<ParentID>61</ParentID>
+		<Name>Wooden Pier L</Name> 
 		<IsContainer>0</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>0</MaxContSize>
-		<Length>0</Length>
+		<Length>3</Length>
 		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
-		<BackgndImage></BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
+		<UnitWeight>5000</UnitWeight>
+		<BackgndImage> </BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\pier_L.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
 	</row>
 	<row>
-		<ID>3007</ID>
-		<ParentID>59</ParentID>
-		<Name>Tribe Mole Carcass</Name>
-		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
-		<IsTool>0</IsTool>
-		<IsDevice>0</IsDevice>
-		<IsDoor>0</IsDoor>
-		<IsPremium>0</IsPremium>
-		<MaxContSize>100000</MaxContSize>
-		<Length>5</Length>
-		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
-		<BackgndImage>art\images\universal</BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
-	</row>
-	<row>
-		<ID>3008</ID>
-		<ParentID>751</ParentID>
-		<Name>Tribe Witch</Name>
+		<ID>2413</ID>
+		<ParentID>61</ParentID>
+		<Name>Stone tomb with cross</Name> 
 		<IsContainer>0</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>1</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>0</MaxContSize>
-		<Length>0</Length>
+		<Length>3</Length>
 		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
-		<BackgndImage></BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
-	</row>
-	<row>
-		<ID>3009</ID>
-		<ParentID>59</ParentID>
-		<Name>Tribe Witch Carcass</Name>
-		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
-		<IsTool>0</IsTool>
-		<IsDevice>0</IsDevice>
-		<IsDoor>0</IsDoor>
-		<IsPremium>0</IsPremium>
-		<MaxContSize>100000</MaxContSize>
-		<Length>5</Length>
-		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>1</UnitWeight>
-		<BackgndImage>art\images\universal</BackgndImage>
-		<FaceImage></FaceImage>
-		<Description></Description>
+		<UnitWeight>3000</UnitWeight>
+		<BackgndImage> </BackgndImage>
+		<FaceImage>mods\JorvikMod\art\2D\objects\stone_tomb_with_cross.png</FaceImage>
+		<Description>Object from Jorvik MOD pack</Description>
 	</row>
 </table>

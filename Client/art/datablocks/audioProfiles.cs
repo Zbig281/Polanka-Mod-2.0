@@ -172,45 +172,7 @@ datablock SFXProfile(HareDeathSound)
    filename = "art/sound/animals/hare_death.ogg";
    description = AudioDefault3D;
 };
-
-//Knool Death sound by Zbig Brodaty
-datablock SFXProfile(TribeB_DeathSound)
-{
-   local = 1;
-   filename = "art/sound/Tribe/TribeB_Death.ogg";
-   description = AudioDefault3D;
-};
-
-datablock SFXProfile(TribeC_DeathSound)
-{
-   local = 1;
-   filename = "art/sound/Tribe/TribeC_Death.ogg";
-   description = AudioDefault3D;
-};
-
-datablock SFXProfile(TribeH_DeathSound)
-{
-   local = 1;
-   filename = "art/sound/Tribe/TribeH_Death.ogg";
-   description = AudioDefault3D;
-};
-
-datablock SFXProfile(TribeM_DeathSound)
-{
-   local = 1;
-   filename = "art/sound/Tribe/TribeM_Death.ogg";
-   description = AudioDefault3D;
-};
-
-datablock SFXProfile(TribeW_DeathSound)
-{
-   local = 1;
-   filename = "art/sound/Tribe/TribeW_Death.ogg";
-   description = AudioDefault3D;
-};
-//Knool Sound
 //} Animal death sounds profiles
-
 
 //Ambient sounds
 datablock SFXProfile(EnvFireSmallSound)
@@ -852,6 +814,12 @@ datablock SFXProfile( horse_jump) {
    id = 1017;
    filename = "art/sound/horse/horse_jump_01";
    description = AudioClosest3D;
+};
+datablock SFXProfile(env_bell)
+{
+   local = 1;
+   filename = "art/sound/SFX/env_bell.ogg";
+   description = AudioObjectsCloseLoop3D;
 };
 //-----------------------------------------------------------------------------
 datablock SFXProfile(npc_blacksmith)

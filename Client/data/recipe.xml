@@ -13790,75 +13790,187 @@
 		<Autorepeat>0</Autorepeat>
 		<IsBlueprint>0</IsBlueprint>
 		<ImagePath>art\2D\Items\flag_game_12.png</ImagePath>
-	</row>	
-	<row>
-		<ID>3001</ID>
-		<Name>Tribe Bear Sack</Name>
-		<Description></Description>
-		<StartingToolsID>36</StartingToolsID>
-		<SkillTypeID>8</SkillTypeID>
-		<SkillLvl>500</SkillLvl>
-		<ResultObjectTypeID>3001</ResultObjectTypeID>
-		<SkillDepends>0</SkillDepends>
-		<Quantity>1</Quantity>
-		<Autorepeat>0</Autorepeat>
-		<IsBlueprint>0</IsBlueprint>
-		<ImagePath></ImagePath>
 	</row>
 	<row>
-		<ID>3003</ID>
-		<Name>Tribe Chieftain Sack</Name>
-		<Description></Description>
-		<StartingToolsID>36</StartingToolsID>
-		<SkillTypeID>8</SkillTypeID>
-		<SkillLvl>500</SkillLvl>
-		<ResultObjectTypeID>3003</ResultObjectTypeID>
-		<SkillDepends>0</SkillDepends>
+		<ID>1087</ID>
+		<Name>Wooden Cross</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>34</StartingToolsID>
+		<SkillTypeID>54</SkillTypeID>
+		<SkillLvl>0</SkillLvl>
+		<ResultObjectTypeID>2400</ResultObjectTypeID>
+		<SkillDepends>25</SkillDepends>
 		<Quantity>1</Quantity>
 		<Autorepeat>0</Autorepeat>
 		<IsBlueprint>0</IsBlueprint>
-		<ImagePath></ImagePath>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\wooden_cross.png</ImagePath>
 	</row>
 	<row>
-		<ID>3005</ID>
-		<Name>Tribe Hunter Sack</Name>
-		<Description></Description>
-		<StartingToolsID>36</StartingToolsID>
-		<SkillTypeID>8</SkillTypeID>
-		<SkillLvl>500</SkillLvl>
-		<ResultObjectTypeID>3005</ResultObjectTypeID>
-		<SkillDepends>0</SkillDepends>
+		<ID>1088</ID>
+		<Name>Wooden Bridge</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>18</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2401</ResultObjectTypeID>
+		<SkillDepends>10</SkillDepends>
 		<Quantity>1</Quantity>
 		<Autorepeat>0</Autorepeat>
 		<IsBlueprint>0</IsBlueprint>
-		<ImagePath></ImagePath>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\wooden_bridge.png</ImagePath>
 	</row>
 	<row>
-		<ID>3007</ID>
-		<Name>Tribe Mole Sack</Name>
-		<Description></Description>
-		<StartingToolsID>36</StartingToolsID>
-		<SkillTypeID>8</SkillTypeID>
-		<SkillLvl>500</SkillLvl>
-		<ResultObjectTypeID>3007</ResultObjectTypeID>
-		<SkillDepends>0</SkillDepends>
+		<ID>1089</ID>
+		<Name>Stone Bridge</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>19</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2402</ResultObjectTypeID>
+		<SkillDepends>10</SkillDepends>
 		<Quantity>1</Quantity>
 		<Autorepeat>0</Autorepeat>
 		<IsBlueprint>0</IsBlueprint>
-		<ImagePath></ImagePath>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\stone_bridge.png</ImagePath>
 	</row>
 	<row>
-		<ID>3009</ID>
-		<Name>Tribe Witch Sack</Name>
-		<Description></Description>
-		<StartingToolsID>36</StartingToolsID>
-		<SkillTypeID>8</SkillTypeID>
-		<SkillLvl>500</SkillLvl>
-		<ResultObjectTypeID>3009</ResultObjectTypeID>
-		<SkillDepends>0</SkillDepends>
+		<ID>1090</ID>
+		<Name>Small Wooden Shed</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>18</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2403</ResultObjectTypeID>
+		<SkillDepends>25</SkillDepends>
 		<Quantity>1</Quantity>
 		<Autorepeat>0</Autorepeat>
 		<IsBlueprint>0</IsBlueprint>
-		<ImagePath></ImagePath>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\small_wooden_shed.png</ImagePath>
+	</row>
+	<row>
+		<ID>1091</ID>
+		<Name>Metal Cage</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>19</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2404</ResultObjectTypeID>
+		<SkillDepends>35</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\metal_cage.png</ImagePath>
+	</row>
+	<row>
+		<ID>1092</ID>
+		<Name>Wooden Pier</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>18</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2405</ResultObjectTypeID>
+		<SkillDepends>10</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\wooden_pier.png</ImagePath>
+	</row>
+	<row>
+		<ID>1093</ID>
+		<Name>Wooden Barricade</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>36</StartingToolsID>
+		<SkillTypeID>18</SkillTypeID>
+		<SkillLvl>0</SkillLvl>
+		<ResultObjectTypeID>2406</ResultObjectTypeID>
+		<SkillDepends>40</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\wooden_barricade.png</ImagePath>
+	</row>
+	<row>
+		<ID>1094</ID>
+		<Name>Stone Altar</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>19</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2408</ResultObjectTypeID>
+		<SkillDepends>10</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\stone_altar.png</ImagePath>
+	</row>
+	<row>
+		<ID>1095</ID>
+		<Name>Wooden House with Tower</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>36</StartingToolsID>
+		<SkillTypeID>18</SkillTypeID>
+		<SkillLvl>0</SkillLvl>
+		<ResultObjectTypeID>2409</ResultObjectTypeID>
+		<SkillDepends>40</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\wooden_house_with_tower.png</ImagePath>
+	</row>
+	<row>
+		<ID>1096</ID>
+		<Name>Wooden Church</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>19</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2410</ResultObjectTypeID>
+		<SkillDepends>35</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\wooden_church.png</ImagePath>
+	</row>
+	<row>
+		<ID>1097</ID>
+		<Name>Wooden Pier T</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>18</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2411</ResultObjectTypeID>
+		<SkillDepends>10</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\pier_T.png</ImagePath>
+	</row>
+	<row>
+		<ID>1098</ID>
+		<Name>Wooden Pier L</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>18</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2412</ResultObjectTypeID>
+		<SkillDepends>10</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\pier_L.png</ImagePath>
+	</row>
+	<row>
+		<ID>1099</ID>
+		<Name>Stone tomb with cross</Name>
+		<Description>Object from Jorvik MOD pack</Description>
+		<StartingToolsID>32</StartingToolsID>
+		<SkillTypeID>19</SkillTypeID>
+		<SkillLvl>60</SkillLvl>
+		<ResultObjectTypeID>2413</ResultObjectTypeID>
+		<SkillDepends>10</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath>mods\JorvikMod\art\2D\recipes\stone_tomb_with_cross.png</ImagePath>
 	</row>
 </table>

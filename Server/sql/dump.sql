@@ -10,7 +10,7 @@ DELETE FROM `skill_type`;
 -- 
 -- MySQL dump 10.13  Distrib 5.7.8-rc, for Win32 (AMD64)
 --
--- Host: 127.0.0.1    Database: lif_1
+-- Host: 195.9.172.106    Database: cm
 -- ------------------------------------------------------
 -- Server version	5.5.45-MariaDB
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -1928,16 +1928,20 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (2004,1491,'Banner',0,0,0,0,0,0,0,0,4,1,200,'',0,0,0,0,0,0,'art\\2D\\Items\\flag_game_12.png','Wearable flag with heraldry',50000,NULL,0,0),
 (2005,1457,'Starting Island Idols',0,0,0,0,0,0,0,0,0,0,0,'',0,0,0,0,0,0,'','',NULL,NULL,0,0),
 (2006,478,'Amulet from Illa-Newydd',0,0,0,0,0,0,0,0,2,1,100,'',0,0,0,0,0,0,'art\\2D\\Items\\gold_and_silver_amulet.png','Elder\'s gift for helping the villagers.',6000,NULL,0,0),
-(3000,751,'Tribe Bear',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
-(3001,59,'Tribe Bear Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
-(3002,751,'Tribe Chieftain',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
-(3003,59,'Tribe Chieftain Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
-(3004,751,'Tribe Hunter',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
-(3005,59,'Tribe Hunter Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
-(3006,751,'Tribe Mole',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
-(3007,59,'Tribe Mole Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
-(3008,751,'Tribe Witch',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
-(3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0);
+(2400,1722,'Wooden Cross',0,0,1,0,0,0,0,0,0,0,1000,'',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\wooden_cross.png','Object from Jorvik MOD pack',1,NULL,0,0),
+(2401,61,'Wooden Bridge',0,0,1,0,0,0,0,0,3,0,5000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\wooden_bridge.png','Object from Jorvik MOD pack',5200,NULL,0,0),
+(2402,61,'Stone Bridge',0,0,1,0,0,0,0,0,3,0,10000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\stone_bridge.png','Object from Jorvik MOD pack',5200,NULL,0,0),
+(2403,69,'Small Wooden Shed',1,1,0,0,0,0,0,5000000,8,0,10000,'art\\images\\warehouse',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\small_wooden_shed.png','Object from Jorvik MOD pack',194200,86400,0,0),
+(2404,72,'Metal Cage',0,0,1,0,0,1,0,0,0,3,10000,'',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\metal_cage.png','Object from Jorvik MOD pack',396000,86400,0,0),
+(2405,61,'Wooden Pier',0,0,1,0,0,0,0,0,3,0,5000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\wooden_pier.png','Object from Jorvik MOD pack',5200,NULL,0,0),
+(2406,130,'Wooden Barricade',0,1,0,0,0,0,0,0,4,0,1000,'',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\wooden_barricade.png','Object from Jorvik MOD pack',2400,120,0,0),
+(2407,1902,'Wooden Barricade',0,0,0,0,0,0,0,0,4,1,2000,'',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\wooden_barricade.png','Object from Jorvik MOD pack',NULL,NULL,0,0),
+(2408,61,'Stone Altar',0,0,1,0,0,0,0,0,3,0,5000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\stone_altar.png','Object from Jorvik MOD pack',5200,NULL,0,0),
+(2409,72,'Wooden House with Tower',0,0,1,0,0,1,0,0,4,6,10000000,'',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\wooden_house_with_tower.png','Object from Jorvik MOD pack',2400,120,0,0),
+(2410,72,'Wooden Church',0,0,1,0,0,1,0,0,4,0,20000000,'',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\wooden_church.png','Object from Jorvik MOD pack',2400,120,0,0),
+(2411,61,'Wooden Pier T',0,0,1,0,0,0,0,0,3,0,5000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\pier_T.png','Object from Jorvik MOD pack',5200,NULL,0,0),
+(2412,61,'Wooden Pier L',0,0,1,0,0,0,0,0,3,0,5000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\pier_L.png','Object from Jorvik MOD pack',5200,NULL,0,0),
+(2413,61,'Stone tomb with cross',0,0,1,0,0,0,0,0,3,0,3000,' ',0,0,0,0,0,0,'mods\JorvikMod\\art\\2D\\objects\\stone_tomb_with_cross.png','Object from Jorvik MOD pack',5200,NULL,0,0);
 --
 -- Dumping data for table `objects_conversions`
 --
@@ -2037,8 +2041,8 @@ INSERT INTO `objects_conversions` (`ID`, `ObjectTypeID1`, `ObjectTypeID2`) VALUE
 (91,1732,1993),
 (93,167,2000),
 (94,168,2001),
-(95,169,2002);
-
+(95,169,2002),
+(96,2406,2407);
 --
 -- Dumping data for table `recipe`
 --
@@ -3030,11 +3034,19 @@ INSERT INTO `recipe` (`ID`, `Name`, `Description`, `StartingToolsID`, `SkillType
 (1084,'Altar Kallente (colored)','',NULL,62,0,1897,10,1,0,0,'art\\2D\\Recipes\\BAltarKallente.png'),
 (1085,'Altar Velent (colored)','',NULL,62,0,1898,10,1,0,0,'art\\2D\\Recipes\\BAltarVelent.png'),
 (1086,'Banner','Wearable flag with heraldry',295,25,0,2004,50,1,0,0,'art\\2D\\Items\\flag_game_12.png'),
-(3001,'Tribe Bear Sack','',36,8,500,3001,0,1,0,0,''),
-(3003,'Tribe Chieftain Sack','',36,8,500,3003,0,1,0,0,''),
-(3005,'Tribe Hunter Sack','',36,8,500,3005,0,1,0,0,''),
-(3007,'Tribe Mole Sack','',36,8,500,3007,0,1,0,0,''),
-(3009,'Tribe Witch Sack','',36,8,500,3009,0,1,0,0,'');
+(1087,'Wooden Cross','Object from Jorvik MOD pack',34,54,0,2400,25,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\wooden_cross.png'),
+(1088,'Wooden Bridge','Object from Jorvik MOD pack',32,18,60,2401,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\wooden_bridge.png'),
+(1089,'Stone Bridge','Object from Jorvik MOD pack',32,19,60,2402,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_bridge.png'),
+(1090,'Small Wooden Shed','Object from Jorvik MOD pack',32,18,60,2403,25,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\small_wooden_shed.png'),
+(1091,'Metal Cage','Object from Jorvik MOD pack',32,19,60,2404,35,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\metal_cage.png'),
+(1092,'Wooden Pier','Object from Jorvik MOD pack',32,18,60,2405,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\wooden_pier.png'),
+(1093,'Wooden Barricade','Object from Jorvik MOD pack',36,18,0,2406,40,1,0,0,'art\\2D\\Recipes\\mods\JorvikMod\\art\\2D\\recipes\\wooden_barricade.png'),
+(1094,'Stone Altar','Object from Jorvik MOD pack',32,19,60,2408,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_altar.png'),
+(1095,'Wooden House with Tower','Object from Jorvik MOD pack',36,18,0,2409,40,1,0,0,'art\\2D\\Recipes\\mods\JorvikMod\\art\\2D\\recipes\\wooden_house_with_tower.png'),
+(1096,'Wooden Church','Object from Jorvik MOD pack',32,19,60,2410,35,1,0,0,'art\\2D\\Recipes\\mods\JorvikMod\\art\\2D\\recipes\\wooden_church.png'),
+(1097,'Wooden Pier T','Object from Jorvik MOD pack',32,18,60,2411,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_T.png'),
+(1098,'Wooden Pier L','Object from Jorvik MOD pack',32,18,60,2412,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_L.png'),
+(1099,'Stone tomb with cross','Object from Jorvik MOD pack',32,19,60,2413,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_tomb_with_cross.png');
 
 --
 -- Dumping data for table `recipe_requirement`
@@ -6413,11 +6425,53 @@ INSERT INTO `recipe_requirement` (`ID`, `RecipeID`, `MaterialObjectTypeID`, `Qua
 (4258,1086,295,0,10,40,0),
 (4259,1086,261,0,30,1,0),
 (4260,1086,237,0,10,2,0),
-(4261,3001,237,0,0,1,0),
-(4262,3003,237,0,0,1,0),
-(4263,3005,237,0,0,1,0),
-(4264,3007,237,0,0,1,0),
-(4265,3009,237,0,0,1,0);
+(4261,1087,233,0,65,2,0),
+(4262,1087,234,0,10,40,0),
+(4263,1087,247,0,0,1,0),
+(4264,1088,326,0,30,18,0),
+(4265,1088,233,0,20,4,0),
+(4266,1088,32,0,10,15,0),
+(4267,1088,262,0,20,8,0),
+(4268,1088,281,0,20,40,0),
+(4269,1089,269,0,30,100,0),
+(4270,1089,233,0,20,8,0),
+(4271,1089,32,0,10,15,0),
+(4272,1089,528,0,20,40,0),
+(4273,1090,233,0,20,4,0),
+(4274,1090,326,0,20,40,0),
+(4275,1090,281,0,20,40,0),
+(4276,1090,1356,0,20,10,0),
+(4277,1091,282,0,20,4,0),
+(4278,1091,283,0,20,2,0),
+(4279,1092,326,0,30,18,0),
+(4280,1092,233,0,20,8,0),
+(4281,1092,32,0,10,25,0),
+(4282,1092,281,0,10,40,0),
+(4283,1093,233,0,20,3,0),
+(4284,1093,1356,0,20,4,0),
+(4285,1094,269,0,30,80,0),
+(4286,1094,32,0,10,10,0),
+(4287,1094,528,0,20,30,0),
+(4288,1094,270,0,20,4,0),
+(4289,1095,233,0,30,200,0),
+(4290,1095,281,0,10,400,0),
+(4291,1095,286,0,10,1,0),
+(4292,1095,326,0,5,230,0),
+(4293,1096,233,0,30,250,0),
+(4294,1096,281,0,10,400,0),
+(4295,1096,286,0,10,2,0),
+(4296,1096,288,0,5,6,0),
+(4297,1096,326,0,5,280,0),
+(4298,1097,326,0,30,36,0),
+(4299,1097,233,0,20,16,0),
+(4300,1097,32,0,10,50,0),
+(4301,1097,281,0,10,80,0),
+(4302,1098,326,0,30,36,0),
+(4303,1098,233,0,20,16,0),
+(4304,1098,32,0,10,50,0),
+(4305,1098,281,0,10,80,0),
+(4306,1099,269,0,30,50,0),
+(4307,1099,528,0,20,20,0);
 
 --
 -- Dumping data for table `effects`
@@ -6754,4 +6808,5 @@ INSERT INTO `skill_type` (`ID`, `Name`, `Description`, `Parent`, `Group`, `Prima
 -- Dump completed on 2018-09-10 14:36:41
 ALTER TABLE `objects_types` ALTER `ID` DROP DEFAULT;
 ALTER TABLE `objects_types`	CHANGE COLUMN `ID` `ID` INT(10) UNSIGNED NOT NULL FIRST;
-ALTER TABLE `recipe` AUTO_INCREMENT=1087;
+
+INSERT INTO `objects_types` VALUES (2420,61,'Bazaar',0,0,1,0,0,0,0,0,0,0,5000,'',0,0,0,0,0,0,'mods\\ExampleMod\\buildings\\construction\\misc\\BazaarHall\\BazaarHall.png','Bazaar tent',0,0,0,0);

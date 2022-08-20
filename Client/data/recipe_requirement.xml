@@ -30339,50 +30339,443 @@
 		<Influence>10</Influence>
 		<Quantity>2</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
-	</row>	
+	</row>
+	<!------------------ Wooden Cross -------------------->
 	<row>
 		<ID>4261</ID>
-		<RecipeID>3001</RecipeID>
-		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<RecipeID>1087</RecipeID>
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
 		<Quality>0</Quality>
-		<Influence>0</Influence>
-		<Quantity>1</Quantity>
+		<Influence>65</Influence>
+		<Quantity>2</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
 	<row>
 		<ID>4262</ID>
-		<RecipeID>3003</RecipeID>
-		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<RecipeID>1087</RecipeID>
+		<MaterialObjectTypeID>34</MaterialObjectTypeID>
 		<Quality>0</Quality>
-		<Influence>0</Influence>
-		<Quantity>1</Quantity>
+		<Influence>10</Influence>
+		<Quantity>40</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
 	<row>
-		<ID>4623</ID>
-		<RecipeID>3005</RecipeID>
-		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<ID>4263</ID>
+		<RecipeID>1087</RecipeID>
+		<MaterialObjectTypeID>247</MaterialObjectTypeID>
 		<Quality>0</Quality>
 		<Influence>0</Influence>
 		<Quantity>1</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
+	<!------------ Wooden Bridge ---------------->
 	<row>
 		<ID>4264</ID>
-		<RecipeID>3007</RecipeID>
-		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<RecipeID>1088</RecipeID>
+		<MaterialObjectTypeID>326</MaterialObjectTypeID> 
 		<Quality>0</Quality>
-		<Influence>0</Influence>
+		<Influence>30</Influence>
+		<Quantity>18</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4265</ID>
+		<RecipeID>1088</RecipeID> 
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>4</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4266</ID>
+		<RecipeID>1088</RecipeID>
+		<MaterialObjectTypeID>32</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>15</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4267</ID>
+		<RecipeID>1088</RecipeID>
+		<MaterialObjectTypeID>262</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>8</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4268</ID>
+		<RecipeID>1088</RecipeID>
+		<MaterialObjectTypeID>281</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>40</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!------------------- Stone Bridge----------------->
+	<row>
+		<ID>4269</ID>
+		<RecipeID>1089</RecipeID> 
+		<MaterialObjectTypeID>269</MaterialObjectTypeID> 
+		<Quality>0</Quality>
+		<Influence>30</Influence>
+		<Quantity>100</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4270</ID>
+		<RecipeID>1089</RecipeID>
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>8</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4271</ID>
+		<RecipeID>1089</RecipeID>
+		<MaterialObjectTypeID>32</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>15</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4272</ID>
+		<RecipeID>1089</RecipeID>
+		<MaterialObjectTypeID>528</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>40</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!----------- small_wooden_shed ----------->
+	<row>
+		<ID>4273</ID>
+		<RecipeID>1090</RecipeID>
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>4</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4274</ID>
+		<RecipeID>1090</RecipeID>
+		<MaterialObjectTypeID>326</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>40</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4275</ID>
+		<RecipeID>1090</RecipeID>
+		<MaterialObjectTypeID>281</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>40</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4276</ID>
+		<RecipeID>1090</RecipeID>
+		<MaterialObjectTypeID>1356</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>10</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	
+	<!--------- Metal Cage --------------->
+	
+	<row>
+		<ID>4277</ID>
+		<RecipeID>1091</RecipeID>
+		<MaterialObjectTypeID>282</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>4</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4278</ID>
+		<RecipeID>1091</RecipeID>
+		<MaterialObjectTypeID>283</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>2</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!------------ Wooden Pier ---------------->
+	<row>
+		<ID>4279</ID>
+		<RecipeID>1092</RecipeID>
+		<MaterialObjectTypeID>326</MaterialObjectTypeID> 
+		<Quality>0</Quality>
+		<Influence>30</Influence>
+		<Quantity>18</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4280</ID>
+		<RecipeID>1092</RecipeID> 
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>8</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4281</ID>
+		<RecipeID>1092</RecipeID>
+		<MaterialObjectTypeID>32</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>25</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4282</ID>
+		<RecipeID>1092</RecipeID>
+		<MaterialObjectTypeID>281</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>40</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!------------ Wooden Barricade ---------------->
+	<row>
+		<ID>4283</ID>
+		<RecipeID>1093</RecipeID> 
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>3</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4284</ID>
+		<RecipeID>1093</RecipeID>
+		<MaterialObjectTypeID>1356</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>4</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!------------------- Stone Altar----------------->
+	<row>
+		<ID>4285</ID>
+		<RecipeID>1094</RecipeID> 
+		<MaterialObjectTypeID>269</MaterialObjectTypeID> 
+		<Quality>0</Quality>
+		<Influence>30</Influence>
+		<Quantity>80</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4286</ID>
+		<RecipeID>1094</RecipeID>
+		<MaterialObjectTypeID>32</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>10</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4287</ID>
+		<RecipeID>1094</RecipeID>
+		<MaterialObjectTypeID>528</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>30</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4288</ID>
+		<RecipeID>1094</RecipeID>
+		<MaterialObjectTypeID>270</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>4</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!------------ Wooden house with tower ---------------->
+	<row>
+		<ID>4289</ID>
+		<RecipeID>1095</RecipeID>
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>30</Influence>
+		<Quantity>200</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4290</ID>
+		<RecipeID>1095</RecipeID>
+		<MaterialObjectTypeID>281</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>400</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4291</ID>
+		<RecipeID>1095</RecipeID>
+		<MaterialObjectTypeID>286</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
 		<Quantity>1</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
 	<row>
-		<ID>4625</ID>
-		<RecipeID>3009</RecipeID>
-		<MaterialObjectTypeID>237</MaterialObjectTypeID>
+		<ID>4292</ID>
+		<RecipeID>1095</RecipeID>
+		<MaterialObjectTypeID>326</MaterialObjectTypeID>
 		<Quality>0</Quality>
-		<Influence>0</Influence>
-		<Quantity>1</Quantity>
+		<Influence>5</Influence>
+		<Quantity>230</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!------------ Wooden Church ---------------->
+	<row>
+		<ID>4293</ID>2
+		<RecipeID>1096</RecipeID>
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>30</Influence>
+		<Quantity>250</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4294</ID>
+		<RecipeID>1096</RecipeID>
+		<MaterialObjectTypeID>281</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>400</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4295</ID>
+		<RecipeID>1096</RecipeID>
+		<MaterialObjectTypeID>286</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>2</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4296</ID>
+		<RecipeID>1096</RecipeID>
+		<MaterialObjectTypeID>288</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>5</Influence>
+		<Quantity>6</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4297</ID>
+		<RecipeID>1096</RecipeID>
+		<MaterialObjectTypeID>326</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>5</Influence>
+		<Quantity>280</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!------------ Wooden Pier T ---------------->
+	<row>
+		<ID>4298</ID>
+		<RecipeID>1097</RecipeID>
+		<MaterialObjectTypeID>326</MaterialObjectTypeID> 
+		<Quality>0</Quality>
+		<Influence>30</Influence>
+		<Quantity>36</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4299</ID>
+		<RecipeID>1097</RecipeID> 
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>16</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4300</ID>
+		<RecipeID>1097</RecipeID>
+		<MaterialObjectTypeID>32</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>50</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4301</ID>
+		<RecipeID>1097</RecipeID>
+		<MaterialObjectTypeID>281</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>80</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!------------ Wooden Pier L ---------------->
+	<row>
+		<ID>4302</ID>
+		<RecipeID>1098</RecipeID>
+		<MaterialObjectTypeID>326</MaterialObjectTypeID> 
+		<Quality>0</Quality>
+		<Influence>30</Influence>
+		<Quantity>36</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4303</ID>
+		<RecipeID>1098</RecipeID> 
+		<MaterialObjectTypeID>233</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>16</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4304</ID>
+		<RecipeID>1098</RecipeID>
+		<MaterialObjectTypeID>32</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>50</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4305</ID>
+		<RecipeID>1098</RecipeID>
+		<MaterialObjectTypeID>281</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>10</Influence>
+		<Quantity>80</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<!------------------- Stone tomb with cross ----------------->
+	<row>
+		<ID>4306</ID>
+		<RecipeID>1099</RecipeID> 
+		<MaterialObjectTypeID>269</MaterialObjectTypeID> 
+		<Quality>0</Quality>
+		<Influence>30</Influence>
+		<Quantity>50</Quantity>
+		<IsRegionItemRequired>0</IsRegionItemRequired>
+	</row>
+	<row>
+		<ID>4307</ID>
+		<RecipeID>1099</RecipeID>
+		<MaterialObjectTypeID>528</MaterialObjectTypeID>
+		<Quality>0</Quality>
+		<Influence>20</Influence>
+		<Quantity>20</Quantity>
 		<IsRegionItemRequired>0</IsRegionItemRequired>
 	</row>
 </table>
