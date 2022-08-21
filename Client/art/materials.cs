@@ -659,9 +659,9 @@ singleton Material(Longbow_DIFFUSE_mat)
 singleton Material(Tribe_Weapon_DIFFUSE_ns_mat)
 {
    mapTo = "Tribe_Weapon_DIFFUSE_ns";
-   diffuseMap[0] = "art/Textures/Weapons/Zweihander_DIFFUSE.dds";
-   diffuseMap[1] = "art/Textures/Weapons/Zweihander_NORMALMAP.dds";
-   diffuseMap[2] = "art/Textures/Weapons/Zweihander_SPECULAR.dds";
+   diffuseMap[0] = "art/Textures/Tribe/Tribe_Weapon_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Tribe/Tribe_Weapon_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Tribe/Tribe_Weapon_SPECULAR.dds";
    materialTag0 = "LiF";
    behaveAsParticle = true;
 };
