@@ -36668,7 +36668,26 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>2000</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage>art\2D\Items\composite_bow.png</FaceImage>
+		<FaceImage></FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3013</ID>
+		<ParentID>1031</ParentID>48
+		<Name>Witch Sickle</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>2</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>/FaceImage>
 		<Description></Description>
 	</row>
 </table>
