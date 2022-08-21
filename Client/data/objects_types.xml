@@ -36687,7 +36687,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>1000</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage>/FaceImage>
+		<FaceImage></FaceImage>
 		<Description></Description>
 	</row>
 </table>
