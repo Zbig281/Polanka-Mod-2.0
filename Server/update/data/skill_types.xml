@@ -1263,7 +1263,7 @@
 					</entity>
 				</entities>
 				<requirements>
-					<req type="tool_id" parent="1">35</req>
+					<req type="tool_id" parent="1">35 3014</req>
 				</requirements>
 				<results>
 					<animation>mining</animation>
@@ -1290,7 +1290,7 @@
 					</entity>
 				</entities>
 				<requirements>
-					<req type="tool_id" parent="1">35</req>
+					<req type="tool_id" parent="1">35 3014</req>
 				</requirements>
 				<results>
 					<animation>mining</animation>
@@ -1317,7 +1317,7 @@
 					</entity>
 				</entities>
 				<requirements>
-					<req type="tool_id" parent="1">35</req>
+					<req type="tool_id" parent="1">35 3014</req>
 				</requirements>
 				<results>
 					<animation>mining</animation>
@@ -1402,7 +1402,7 @@
 					</entity>
 				</entities>
 				<requirements>
-					<req type="tool_id" parent="1">35</req>
+					<req type="tool_id" parent="1">35 3014</req>
 				</requirements>
 				<results>
 					<animation>mining</animation>
@@ -1429,7 +1429,7 @@
 					</entity>
 				</entities>
 				<requirements>
-					<req type="tool_id" parent="1">35</req>
+					<req type="tool_id" parent="1">35 3014</req>
 				</requirements>
 				<results>
 					<animation>mining</animation>
@@ -1483,7 +1483,7 @@
 					</entity>
 				</entities>
 				<requirements>
-					<req type="tool_id" parent="1">35</req>
+					<req type="tool_id" parent="1">35 3014</req>
 				</requirements>
 				<results>
 					<animation>mining</animation>
@@ -1509,7 +1509,7 @@
 					</entity>
 				</entities>
 				<requirements>
-					<req type="tool_id" parent="1">35</req>
+					<req type="tool_id" parent="1">35 3014</req>
 				</requirements>
 				<results>
 					<animation>mining</animation>
