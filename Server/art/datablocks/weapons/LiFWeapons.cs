@@ -3744,7 +3744,7 @@ datablock WeaponData(Chieftainsword : BaseMeleeWeapon)
 //witchsickle
 datablock WeaponData(witchsickle : BaseMeleeWeapon)
 {
-   Object_typeID = 3012;
+   Object_typeID = 3013;
    
    shapefile = "art/models/3d-2d/weapons/Tribe/witchsickle.dts";
    
@@ -3763,10 +3763,13 @@ datablock WeaponData(witchsickle : BaseMeleeWeapon)
    hitDirection[1] = "0"; // Overhead
    hitDirection[2] = "0"; // RightToLeftHit
    hitDirection[3] = "0"; // LeftToRightHit
-   WoundMultiplier = 0;
-   FractureMultiplier = 0;
+   WoundMultiplier = 1.5;
+   FractureMultiplier = 0.7;
    StunMultiplier = 0;
    correctMuzzleVector = false;
    className = "WeaponImage";
    item = SickleItem;
+   BasePrefireAnimTime = 1.2;
+   BaseFireAnimTime = 1.1;
+   BaseRecoilAnimTime = 1.15;
 };
