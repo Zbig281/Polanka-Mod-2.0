@@ -42,7 +42,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="to Lower Ground Level" id="7" type="Use Shovel" priority="10.1">
-				<duration const="6 50"/>
+				<duration const="4"/>
 				<ability_skill_mult>100</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -90,7 +90,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="30" name="to Flat Ground" id="9" type="Use Shovel" priority="11.3">
-				<duration const="6 25"/>
+				<duration const="4"/>
 				<ability_skill_mult>200</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -116,7 +116,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="30" name="to Flat Upward Slope" type="Use Shovel" id="10" priority="11.2">
-				<duration const="6 50"/>
+				<duration const="4"/>
 				<ability_skill_mult>300</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -142,7 +142,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="30" name="to Flat Downward Slope" type="Use Shovel" id="11" priority="11.1">
-				<duration const="6 50"/>
+				<duration const="4"/>
 				<ability_skill_mult>300</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -168,7 +168,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="a Bark" id="33" type="Gather" priority="9.2">
-				<duration const="">5</duration>
+				<duration const="">2</duration>
 				<chance>0.01</chance>
 				<ability_skill_mult>100</ability_skill_mult>
 				<entities>
@@ -192,7 +192,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Cut Down" id="34" type="Special" priority="9.1">
-				<duration const="10 20"/>
+				<duration const="4"/>
 				<chance>0.04</chance>
 				<ability_skill_mult>600</ability_skill_mult>
 				<entities>
@@ -218,7 +218,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="30" name="Uproot" type="Special" id="35">
-				<duration const="20 10"/>
+				<duration const="1"/>
 				<chance>0.06</chance>
 				<ability_skill_mult>960</ability_skill_mult>
 				<entities>
@@ -243,7 +243,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Cut Down" id="36" type="Special" priority="9.1">
-				<duration const="15 20"/>
+				<duration const="40"/>
 				<chance>0.04</chance>
 				<ability_skill_mult>880</ability_skill_mult>
 				<entities>
@@ -288,7 +288,7 @@
 				<results/>
 			</ability>
 			<ability lvl="0" name="a Camp" type="Create" id="23">
-				<duration const="10 20"/>
+				<duration const="3"/>
 				<ability_skill_mult>600</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -421,7 +421,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="a Branch" type="Gather" id="21">
-				<duration const="">5</duration>
+				<duration const="">3</duration>
 				<ability_skill_mult>100</ability_skill_mult>
 				<entities>
 					<entity type="tree">
@@ -453,7 +453,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Plant Fiber" type="Gather" id="45">
-				<duration const="">2</duration>
+				<duration const="">3</duration>
 				<chance>0.7</chance>
 				<ability_skill_mult>200</ability_skill_mult>
 				<entities>
@@ -476,7 +476,7 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="Herbs" type="Look for" id="46">
-				<duration const="20 10"/>
+				<duration const="7"/>
 				<chance>0.3</chance>
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
@@ -498,7 +498,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Materials" type="Look for" id="325">
-				<duration const="20 10"/>
+				<duration const="7"/>
 				<chance>0.3</chance>
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
@@ -520,7 +520,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Edibles" type="Look for" id="326">
-				<duration const="20 10"/>
+				<duration const="7"/>
 				<chance>0.3</chance>
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
@@ -543,7 +543,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Prepare Food" type="Special" id="114">
-				<duration const="15 10"/>
+				<duration const="2"/>
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -566,7 +566,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Gather Edibles" id="50">
-				<duration const="">2</duration>
+				<duration const="">3</duration>
 				<chance>0.2</chance>
 				<ability_skill_mult>420</ability_skill_mult>
 				<entities>
@@ -589,7 +589,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Berries" type="Gather" id="51">
-				<duration const="">2</duration>
+				<duration const="">3</duration>
 				<chance>0.1</chance>
 				<ability_skill_mult>300</ability_skill_mult>
 				<entities>
@@ -613,7 +613,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="30" name="Gather Herbs" type="Special" id="52">
-				<duration const="">5</duration>
+				<duration const="">4</duration>
 				<chance>0.3</chance>
 				<ability_skill_mult>500</ability_skill_mult>
 				<entities>
@@ -638,7 +638,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Apples" type="Gather" id="98">
-				<duration const="">5</duration>
+				<duration const="">4</duration>
 				<ability_skill_mult>100</ability_skill_mult>
 				<entities>
 					<entity type="tree">
@@ -661,7 +661,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Nuts" type="Gather" id="280">
-				<duration const="">5</duration>
+				<duration const="">4</duration>
 				<ability_skill_mult>100</ability_skill_mult>
 				<entities>
 					<entity type="tree">
@@ -723,7 +723,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Fish" type="Special" id="89">
-				<duration const="15 10"/>
+				<duration const="5"/>
 				<chance>0.15</chance>
 				<ability_skill_mult>500</ability_skill_mult>
 				<entities>
@@ -742,7 +742,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Skin" type="Special" id="90">
-				<duration const="">10</duration>
+				<duration const="">5</duration>
 				<chance>0.05</chance>
 				<regional type="resource" probability="0.05">383 384 385 386 390 426 427 428 429 430 431</regional>
 				<ability_skill_mult>600</ability_skill_mult>
@@ -797,7 +797,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Craft Hunting Gear" id="169">
-				<duration const="10 20"/>
+				<duration const="4"/>
 				<ability_skill_mult>480</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -858,7 +858,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Pick up a Snare" type="Special" id="172">
-				<duration const="">1</duration>
+				<duration const="">2</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -881,7 +881,7 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="a Trap" type="Create" id="173">
-				<duration const="">1</duration>
+				<duration const="">2</duration>
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -902,7 +902,7 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="Pick up Trap" type="Special" id="175">
-				<duration const="">1</duration>
+				<duration const="">2</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -925,9 +925,9 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Slaughter!" id="176">
-				<duration const="">1</duration>
+				<duration const="">3</duration>
 				<chance>0.2</chance>
-				<regional type="resource" probability="0.05">390 430</regional>
+				<regional type="resource" probability="0.1">390 430</regional>
 				<ability_skill_mult>500</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -965,7 +965,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Simple Construction" type="Build" id="18">
-				<duration const="15 10"/>
+				<duration const="3"/>
 				<ability_skill_mult>320</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -992,7 +992,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Stone Road" type="Build" id="65">
-				<duration const="15 20"/>
+				<duration const="3"/>
 				<ability_skill_mult>200</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -1016,7 +1016,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Slate Road" type="Build" id="310">
-				<duration const="15 20"/>
+				<duration const="3"/>
 				<ability_skill_mult>200</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -1040,7 +1040,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Marble Road" type="Build" id="311">
-				<duration const="15 20"/>
+				<duration const="3"/>
 				<ability_skill_mult>200</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -1085,7 +1085,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Construction" type="Build" id="19">
-				<duration const="15 10"/>
+				<duration const="2"/>
 				<ability_skill_mult>300</ability_skill_mult>
 				<entities>
 					<entity type="cell">
@@ -1181,7 +1181,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Repair" type="Special" id="210">
-				<duration const="10 50"/>
+				<duration const="2"/>
 				<ability_skill_mult>150</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -1205,7 +1205,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Make Repair Kit" id="209">
-				<duration const="10 20"/>
+				<duration const="2"/>
 				<ability_skill_mult>200</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -1245,7 +1245,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Forward" type="Dig a Tunnel" id="12" priority="12.2">
-				<duration const="5 50"/>
+				<duration const="4"/>
 				<regional type="resource" probability="0.01">243</regional>
 				<ability_skill_mult>280</ability_skill_mult>
 				<entities>
@@ -1272,7 +1272,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Downward" type="Dig a Tunnel" id="14" priority="12.1">
-				<duration const="5 50"/>
+				<duration const="4"/>
 				<regional type="resource" probability="0.01">243</regional>
 				<ability_skill_mult>280</ability_skill_mult>
 				<entities>
@@ -1299,7 +1299,7 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="Upward" type="Dig a Tunnel" id="13" priority="12.2">
-				<duration const="5 50"/>
+				<duration const="4"/>
 				<regional type="resource" probability="0.01">243</regional>
 				<ability_skill_mult>300</ability_skill_mult>
 				<entities>
@@ -1385,10 +1385,10 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Copper Ore" type="Mine" id="148">
-				<duration const="10 20"/>
+				<duration const="3"/>
 				<chance>0.005</chance>
 				<ability_skill_mult>300</ability_skill_mult>
-				<regional type="resource" probability="0.05">329</regional>
+				<regional type="resource" probability="0.03">329</regional>
 				<entities>
 					<entity type="tun_side">
 						<ent_reqs>
@@ -1412,10 +1412,10 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Iron Ore" type="Mine" id="149">
-				<duration const="10 20"/>
+				<duration const="3"/>
 				<chance>0.005</chance>
 				<ability_skill_mult>200</ability_skill_mult>
-				<regional type="resource" probability="0.05">328</regional>
+				<regional type="resource" probability="0.03">328</regional>
 				<entities>
 					<entity type="tun_side">
 						<ent_reqs>
@@ -1439,7 +1439,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Copper Deposits" type="Look for" id="1">
-				<duration const="8 25"/>
+				<duration const="3"/>
 				<ability_skill_mult>60</ability_skill_mult>
 				<entities>
 					<entity type="cell"/>
@@ -1453,7 +1453,7 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="Iron Deposits" type="Look for" id="3">
-				<duration const="8 25"/>
+				<duration const="3"/>
 				<ability_skill_mult>60</ability_skill_mult>
 				<entities>
 					<entity type="cell"/>
@@ -1467,7 +1467,7 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="Silver Ore" type="Mine" id="150">
-				<duration const="10 20"/>
+				<duration const="6"/>
 				<chance>0.005</chance>
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
@@ -1493,7 +1493,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="30" name="Gold" type="Mine" id="151">
-				<duration const="10 20"/>
+				<duration const="6"/>
 				<chance>0.005</chance>
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
@@ -1540,7 +1540,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Silver Deposits" type="Look for" id="4">
-				<duration const="8 25"/>
+				<duration const="7"/>
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="cell"/>
@@ -1554,7 +1554,7 @@
 				</results>
 			</ability>
 			<ability lvl="60" name="Gold Deposits" type="Look for" id="5">
-				<duration const="8 25"/>
+				<duration const="7"/>
 				<ability_skill_mult>600</ability_skill_mult>
 				<entities>
 					<entity type="cell"/>
@@ -1589,8 +1589,8 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Craft" id="17">
-				<duration const="15 20"/>
-				<regional type="blueprint" probability="0.15"/>
+				<duration const="2"/>
+				<regional type="blueprint" probability="0.17"/>
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -1609,7 +1609,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="a Billet" type="Saw out" id="37">
-				<duration const="12 10"/>
+				<duration const="2"/>
 				<ability_skill_mult>150</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -1634,7 +1634,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="a Board" type="Saw out" id="38">
-				<duration const="15 20"/>
+				<duration const="5"/>
 				<ability_skill_mult>250</ability_skill_mult>
 				<regional type="resource" probability="0.05">326 327</regional>
 				<entities>
@@ -1660,7 +1660,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="a Building Log" type="Saw out" id="39">
-				<duration const="15 20"/>
+				<duration const="7 12"/>
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -1757,7 +1757,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Craft Archer's Gear" id="42">
-				<duration const="15 20"/>
+				<duration const="10 15"/>
 				<chance>0.001</chance>
 				<ability_skill_mult>350</ability_skill_mult>
 				<entities>
@@ -1799,7 +1799,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Make Naphtha Ammo" id="218">
-				<duration const="10 20"/>
+				<duration const="3"/>
 				<ability_skill_mult>320</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -3436,7 +3436,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Patient" type="Treat" id="54">
-				<duration const="">5</duration>
+				<duration const="">2</duration>
 				<ability_skill_mult>300</ability_skill_mult>
 				<entities>
 					<entity type="player">
@@ -3451,7 +3451,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="to Revive" type="Treat" id="55">
-				<duration const="">5</duration>
+				<duration const="">4</duration>
 				<ability_skill_mult>150</ability_skill_mult>
 				<entities>
 					<entity type="player">
@@ -3465,7 +3465,7 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="Wounds" type="Treat" id="56">
-				<duration const="">5</duration>
+				<duration const="">4</duration>
 				<ability_skill_mult>300</ability_skill_mult>
 				<entities>
 					<entity type="player">
