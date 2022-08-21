@@ -3,7 +3,7 @@ DELIMITER //
 CREATE TRIGGER `tribeloot` BEFORE INSERT ON `movable_objects` FOR EACH ROW BEGIN
 DECLARE _rnd int DEFAULT 0;
 
-IF new.ObjectTypeID = (3001,3003,3005,3007,3009) AND new.IsComplete = 0 THEN   
+IF new.ObjectTypeID = (3001,3003,3005,3007,3009) THEN
    
    Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
 		VALUES (new.RootContainerID, 1060, 10, 100, 0, 0);
