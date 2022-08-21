@@ -36633,4 +36633,23 @@
 		<FaceImage>art\2D\Items\bearaxe.png</FaceImage>
 		<Description></Description>
 	</row>
+	<row>
+		<ID>3011</ID>
+		<ParentID>57</ParentID>
+		<Name>Chieftain Sword</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>4</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>4500</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\Items\chieftainsword.png</FaceImage>
+		<Description></Description>
+	</row>
 </table>
