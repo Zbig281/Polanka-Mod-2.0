@@ -36652,4 +36652,23 @@
 		<FaceImage>art\2D\Items\chieftainsword.png</FaceImage>
 		<Description></Description>
 	</row>
+	<row>
+		<ID>567</ID>
+		<ParentID>190</ParentID>
+		<Name>Hunter Axe</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>3</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1300</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\Items\hunteraxe.png</FaceImage>
+		<Description></Description>
+	</row>
 </table>

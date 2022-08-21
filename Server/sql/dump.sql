@@ -1953,7 +1953,8 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3008,751,'Tribe Witch',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
 (3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
 (3010,191,'Bear Axe',0,0,0,0,0,0,0,0,4,1,3200,'',0,0,0,0,0,0,'art\\2D\\Items\\bearaxe.png','',0,NULL,1,1),
-(3011,57,'Chieftain Sword',0,0,0,0,0,0,0,0,4,1,4500,'',0,0,0,0,0,0,'art\\2D\\Items\\chieftainsword.png','',3000,NULL,1,1);
+(3011,57,'Chieftain Sword',0,0,0,0,0,0,0,0,4,1,4500,'',0,0,0,0,0,0,'art\\2D\\Items\\chieftainsword.png','',3000,NULL,1,1),
+(3012,190,'Hunter Axe',0,0,0,0,0,0,0,0,3,1,1300,'',0,0,0,0,0,0,'art\\2D\\Items\\hunteraxe.png','',3000,NULL,1,1);
 --
 -- Dumping data for table `objects_conversions`
 --
