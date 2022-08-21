@@ -1951,7 +1951,8 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3006,751,'Tribe Mole',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
 (3007,59,'Tribe Mole Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
 (3008,751,'Tribe Witch',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
-(3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0);
+(3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
+(3010,191,'Bear Axe',0,0,0,0,0,0,0,0,4,1,3200,'',0,0,0,0,0,0,'art\2D\equipIcons\Tribe\bearaxe.png','',7900,NULL,1,1);
 --
 -- Dumping data for table `objects_conversions`
 --
@@ -3056,7 +3057,7 @@ INSERT INTO `recipe` (`ID`, `Name`, `Description`, `StartingToolsID`, `SkillType
 (1096,'Wooden Church','Object from Jorvik MOD pack',32,19,60,2410,35,1,0,0,'art\\2D\\Recipes\\mods\JorvikMod\\art\\2D\\recipes\\wooden_church.png'),
 (1097,'Wooden Pier T','Object from Jorvik MOD pack',32,18,60,2411,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_T.png'),
 (1098,'Wooden Pier L','Object from Jorvik MOD pack',32,18,60,2412,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_L.png'),
-(1099,'Stone tomb with cross','Object from Jorvik MOD pack',32,19,60,2413,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_tomb_with_cross.png');
+(1099,'Stone tomb with cross','Object from Jorvik MOD pack',32,19,60,2413,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_tomb_with_cross.png'),
 --
 -- Dumping data for table `recipe_requirement`
 --

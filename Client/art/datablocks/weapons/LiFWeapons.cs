@@ -3673,3 +3673,37 @@ datablock WeaponData(BalancedStaff : BaseMeleeWeapon)
    BaseFireAnimTime = 1.05;
    BaseRecoilAnimTime = 1.0;
 };
+
+datablock WeaponData(bearaxe : BaseMeleeWeapon)
+{
+   Object_typeID = 3010;
+   
+   shapefile = "art/models/3d-2d/weapons/Tribe/bearaxe.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack2HWeapon;
+   WeaponType = Weapon2HAxe;
+   weaponMaterial = Wooden;
+   hitGroupType[0] =  Slashing;
+   hitGroupDmgLevel[0] = 2.4;
+   hitGroupType[1] =  Chopping;
+   hitGroupDmgLevel[1] = 2.8;
+   hitGroupType[2] =  Slashing;
+   hitGroupDmgLevel[2] = 1.6;
+   hitDirection[0] = "0"; // Thrust
+   hitDirection[1] = "1 2"; // Overhead
+   hitDirection[2] = "1 2"; // RightToLeftHit
+   hitDirection[3] = "1 2"; // LeftToRightHit
+   WoundMultiplier = 1.4;
+   FractureMultiplier = 0.4;
+   StunMultiplier = 0.05;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = bearaxe;
+   BasePrefireAnimTime = 1.2;
+   BaseFireAnimTime = 1.0;
+   BaseRecoilAnimTime = 1.2;
+};
