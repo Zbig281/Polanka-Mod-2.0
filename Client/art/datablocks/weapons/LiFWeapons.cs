@@ -571,9 +571,9 @@ datablock WeaponData(GrossMesser : BaseMeleeWeapon)
    WeaponType = Weapon1HSword;
    weaponMaterial = Metal;
    hitGroupType[0] = Piercing;
-   hitGroupDmgLevel[0] = 1.6;
+   hitGroupDmgLevel[0] = 1.8;
    hitGroupType[1] =  Slashing;
-   hitGroupDmgLevel[1] = 1.7;
+   hitGroupDmgLevel[1] = 1.9;
    hitGroupType[2] =  Blunt;
    hitGroupDmgLevel[2] = 0.5;
    hitDirection[0] = "0 2"; // Thrust
@@ -934,7 +934,7 @@ datablock WeaponData(Zweihaender : BaseMeleeWeapon)
    id = 25;
    Object_typeID = 576;
    
-   shapefile = "art/models/3d-2d/weapons/2hswords/zweihander.dts";
+   shapefile = "art/models/3d-2d/weapons/2hswords/chieftainsword.dts";
    
    mountPoint = 0;
    offset = "0 0 0";
@@ -944,17 +944,17 @@ datablock WeaponData(Zweihaender : BaseMeleeWeapon)
    WeaponType = Weapon2HSword;
    weaponMaterial = Metal;
    hitGroupType[0] = Piercing;
-   hitGroupDmgLevel[0] = 2.07;
-   hitGroupType[1] =  Slashing;
-   hitGroupDmgLevel[1] = 1.6;
+   hitGroupDmgLevel[0] = 1.8;
+   hitGroupType[1] =  Piercing;
+   hitGroupDmgLevel[1] = 1.4;
    hitGroupType[2] =  Blunt;
    hitGroupDmgLevel[2] = 0.5;
    hitDirection[0] = "0 2"; // Thrust
    hitDirection[1] = "1"; // Overhead
    hitDirection[2] = "1"; // RightToLeftHit
    hitDirection[3] = "1"; // LeftToRightHit
-   WoundMultiplier = 1.1;
-   FractureMultiplier = 0.5;
+   WoundMultiplier = 0.7;
+   FractureMultiplier = 0.3;
    StunMultiplier = 0.0;
    correctMuzzleVector = false;
    className = "WeaponImage";
@@ -1156,13 +1156,13 @@ datablock WeaponData(SledgeHammer : BaseMeleeWeapon)
    attackType = Attack2HWeapon;
    WeaponType = Weapon2HMace;
    weaponMaterial = Wooden;
-   hitGroupType[0] =  Blunt;
-   hitGroupDmgLevel[0] = 1.28;
-   hitGroupType[1] =  Blunt;
-   hitGroupDmgLevel[1] = 2.0;
-   hitGroupType[2] =  Blunt;
+   hitGroupType[0] =  Siege;
+   hitGroupDmgLevel[0] = 1.3;
+   hitGroupType[1] =  Siege;
+   hitGroupDmgLevel[1] = 1.7;
+   hitGroupType[2] =  Siege;
    hitGroupDmgLevel[2] = 0.5;
-   hitGroupType[3] =  Blunt;
+   hitGroupType[3] =  Siege;
    hitGroupDmgLevel[3] = 0.5;
    hitDirection[0] = "0 3"; // Thrust
    hitDirection[1] = "1 2"; // Overhead
@@ -1221,27 +1221,27 @@ datablock WeaponData(PracticeMaul : BaseMeleeWeapon)
    id = 33;
    Object_typeID = 584;
    
-   shapefile = "art/models/3d-2d/weapons/2hmaces/practice_maul_export_01.dts";
+   shapefile = "art/models/3d-2d/weapons/2hmaces/bearaxe.dts";
    
    mountPoint = 0;
    offset = "0 0 0";
    eyeOffset = "0 0 0";
 
    attackType = Attack2HWeapon;
-   WeaponType = Weapon2HMace;
+   WeaponType = Weapon2HAxe;
    weaponMaterial = Wooden;
-   hitGroupType[0] =  Blunt;
-   hitGroupDmgLevel[0] = 1.0;
-   hitGroupType[1] =  Blunt;
-   hitGroupDmgLevel[1] = 0.8;
-   hitGroupType[2] =  Blunt;
-   hitGroupDmgLevel[2] = 0.5;
+   hitGroupType[0] =  Slashing;
+   hitGroupDmgLevel[0] = 2.4;
+   hitGroupType[1] =  Chopping;
+   hitGroupDmgLevel[1] = 2.8;
+   hitGroupType[2] =  Slashing;
+   hitGroupDmgLevel[2] = 1.6;
    hitDirection[0] = "0"; // Thrust
    hitDirection[1] = "1 2"; // Overhead
    hitDirection[2] = "1 2"; // RightToLeftHit
    hitDirection[3] = "1 2"; // LeftToRightHit
-   WoundMultiplier = 0;
-   FractureMultiplier = 0.1;
+   WoundMultiplier = 1.4;
+   FractureMultiplier = 0.4;
    StunMultiplier = 0.05;
    correctMuzzleVector = false;
    className = "WeaponImage";
@@ -2107,17 +2107,17 @@ datablock WeaponData(Hardened_steel_pickaxe : BaseMeleeWeapon)
    eyeOffset = "0 0 0";
 
    attackType = Attack2HSword;
-   WeaponType = WeaponMisc;
-   weaponMaterial = Wooden;
+   WeaponType = Weapon2HSword;
+   weaponMaterial = Metal;
    hitGroupType[0] = Piercing;
-   hitGroupDmgLevel[0] = 1.2;
-   hitGroupType[1] = Blunt;
-   hitGroupDmgLevel[1] = 1.0;
+   hitGroupDmgLevel[0] = 2.2;
+   hitGroupType[1] = Piercing;
+   hitGroupDmgLevel[1] = 1.6;
    hitDirection[0] = "1"; // Thrust
    hitDirection[1] = "0"; // Overhead
    hitDirection[2] = "0"; // RightToLeftHit
    hitDirection[3] = "0"; // LeftToRightHit
-   WoundMultiplier = 0;
+   WoundMultiplier = 0.6;
    FractureMultiplier = 0;
    StunMultiplier = 0;
    correctMuzzleVector = false;
@@ -3672,72 +3672,4 @@ datablock WeaponData(BalancedStaff : BaseMeleeWeapon)
    BasePrefireAnimTime = 1.1;
    BaseFireAnimTime = 1.05;
    BaseRecoilAnimTime = 1.0;
-};
-//bear Axe
-datablock WeaponData(Bearaxe : BaseMeleeWeapon)
-{
-   Object_typeID = 3010;
-   
-   shapefile = "art/models/3d-2d/weapons/Tribe/bearaxe.dts";
-   
-   mountPoint = 0;
-   offset = "0 0 0";
-   eyeOffset = "0 0 0";
-
-   attackType = Attack2HWeapon;
-   WeaponType = Weapon2HAxe;
-   weaponMaterial = Wooden;
-   hitGroupType[0] =  Slashing;
-   hitGroupDmgLevel[0] = 2.8;
-   hitGroupType[1] =  Chopping;
-   hitGroupDmgLevel[1] = 3.0;
-   hitGroupType[2] =  Slashing;
-   hitGroupDmgLevel[2] = 1.8;
-   hitDirection[0] = "0"; // Thrust
-   hitDirection[1] = "1 2"; // Overhead
-   hitDirection[2] = "1 2"; // RightToLeftHit
-   hitDirection[3] = "1 2"; // LeftToRightHit
-   WoundMultiplier = 1.6;
-   FractureMultiplier = 0.5;
-   StunMultiplier = 0.06;
-   correctMuzzleVector = false;
-   className = "WeaponImage";
-   item = PracticeMaulItem;
-   BasePrefireAnimTime = 1.2;
-   BaseFireAnimTime = 1.0;
-   BaseRecoilAnimTime = 1.2;
-};
-//Chieftain sword
-datablock WeaponData(Chieftainsword : BaseMeleeWeapon)
-{
-   Object_typeID = 3011;
-   
-   shapefile = "art/models/3d-2d/weapons/Tribe/chieftainsword.dts";
-   
-   mountPoint = 0;
-   offset = "0 0 0";
-   eyeOffset = "0 0 0";
-
-   attackType = Attack2HSword;
-   WeaponType = Weapon2HSword;
-   weaponMaterial = Metal;
-   hitGroupType[0] = Piercing;
-   hitGroupDmgLevel[0] = 2.55;
-   hitGroupType[1] =  Slashing;
-   hitGroupDmgLevel[1] = 3.62;
-   hitGroupType[2] =  Blunt;
-   hitGroupDmgLevel[2] = 1.5;
-   hitDirection[0] = "0 2"; // Thrust
-   hitDirection[1] = "1"; // Overhead
-   hitDirection[2] = "1"; // RightToLeftHit
-   hitDirection[3] = "1"; // LeftToRightHit
-   WoundMultiplier = 1.5;
-   FractureMultiplier = 0.7;
-   StunMultiplier = 0.0;
-   correctMuzzleVector = false;
-   className = "WeaponImage";
-   item = FlambergeItem;
-   BasePrefireAnimTime = 1.2;
-   BaseFireAnimTime = 1.1;
-   BaseRecoilAnimTime = 1.15;
 };

@@ -211,7 +211,7 @@
 </object>
 <object id="49">
    <!--name = Hardened Steel Pickaxe -->
-   <skillID>33</skillID>
+   <skillID>43</skillID>
    <skillAmount>0</skillAmount>
    <slots>
       <slot>12</slot>
@@ -1618,15 +1618,15 @@
    </skins>
 </object>
 <object id="576">
-   <!--name = Zweihander -->
+   <!--name = ChieftainSword -->
    <skillID>43</skillID>
-   <skillAmount>60</skillAmount>
+   <skillAmount>90</skillAmount>
    <slots>
       <slot>12</slot>
       <slot>13</slot>
    </slots>
    <meshes>
-      <mountMesh>Zweihander_Base</mountMesh>
+      <mountMesh>Weapon_Chieftain_sword</mountMesh>
    </meshes>
    <skins>
       <skin id="60143" name="2947">
@@ -1635,36 +1635,12 @@
             <mountMesh>Zweihander_SkinA</mountMesh>
          </meshes>
       </skin>
-      <skin id="60144" name="2948">
-         <info description="4257" icon="art/2D/equipIcons/Weapons/zweihander_3.png" />
-         <meshes>
-            <mountMesh>Zweihander_SkinB</mountMesh>
-         </meshes>
-      </skin>
-      <skin id="60145" name="2949">
-         <info description="4258" icon="art/2D/equipIcons/Weapons/zweihander_4.png" />
-         <meshes>
-            <mountMesh>Zweihander_SkinC</mountMesh>
-         </meshes>
-      </skin>
-      <skin id="60146" name="2950">
-         <info description="4259" icon="art/2D/equipIcons/Weapons/zweihander_5.png" />
-         <meshes>
-            <mountMesh>Zweihander_SkinD</mountMesh>
-         </meshes>
-      </skin>
-      <skin id="60147" name="2951">
-         <info description="4260" icon="art/2D/equipIcons/Weapons/zweihander_6.png" />
-         <meshes>
-            <mountMesh>Zweihander_SkinE</mountMesh>
-         </meshes>
-      </skin>
    </skins>
 </object>
 <object id="577">
    <!--name = Flamberge -->
    <skillID>43</skillID>
-   <skillAmount>60</skillAmount>
+   <skillAmount>10</skillAmount>
    <slots>
       <slot>12</slot>
       <slot>13</slot>
@@ -1818,13 +1794,16 @@
    </slots>
 </object>
 <object id="584">
-   <!--name = PracticeMaul -->
-   <skillID>44</skillID>
-   <skillAmount>0</skillAmount>
+   <!--name = Bear Axe -->
+   <skillID>45</skillID>
+   <skillAmount>30</skillAmount>
    <slots>
       <slot>12</slot>
       <slot>13</slot>
    </slots>
+   <meshes>
+      <mountMesh>Weapon_Bear_axe</mountMesh>
+   </meshes>
 </object>
 <object id="585">
    <!--name = Glaive -->
@@ -2048,7 +2027,7 @@
       </skin>
       <skin id="60440" name="4974">
          <info description="4975" icon="art/2D/equipIcons/Weapons/JoustingLance_SkinC.png" />
-         <meshes>
+         <meshes>	
             <mountMesh>JoustingLance_SkinC</mountMesh>
          </meshes>
       </skin>
@@ -2064,6 +2043,15 @@
    <!--name = SimpleBow -->
    <skillID>48</skillID>
    <skillAmount>0</skillAmount>
+   <slots>
+      <slot>12</slot>
+      <slot>13</slot>
+   </slots>
+</object>
+<object id="2007">
+   <!--name = blackflamberge-->
+   <skillID>43</skillID>
+   <skillAmount>60</skillAmount>
    <slots>
       <slot>12</slot>
       <slot>13</slot>
@@ -2287,6 +2275,8 @@
    <skillID>38</skillID>
    <skillAmount>60</skillAmount>
    <slots>
+      <slot>10</slot>
+      <slot>11</slot>
       <slot>13</slot>
       <slot>12</slot>
    </slots>
@@ -6461,10 +6451,10 @@
       </skin>
    </skins>
    <armor>
-   <multiplier type="slash"  value="0.25" />
-   <multiplier type="pierce" value="0.27" />
-   <multiplier type="chop"   value="0.26" />
-   <multiplier type="blunt"  value="0.31" />
+   <multiplier type="slash"  value="0.30" />
+   <multiplier type="pierce" value="0.37" />
+   <multiplier type="chop"   value="0.36" />
+   <multiplier type="blunt"  value="0.39" />
    <multiplier type="siege"  value="0.59" />
    </armor>
 </object>
@@ -6510,10 +6500,10 @@
       </skin>
    </skins>
    <armor>
-   <multiplier type="slash"  value="0.25" />
-   <multiplier type="pierce" value="0.27" />
-   <multiplier type="chop"   value="0.26" />
-   <multiplier type="blunt"  value="0.31" />
+   <multiplier type="slash"  value="0.30" />
+   <multiplier type="pierce" value="0.37" />
+   <multiplier type="chop"   value="0.36" />
+   <multiplier type="blunt"  value="0.39" />
    <multiplier type="siege"  value="0.59" />
    </armor>
 </object>
@@ -6557,10 +6547,10 @@
       </skin> 
    </skins>
    <armor>
-   <multiplier type="slash"  value="0.25" />
-   <multiplier type="pierce" value="0.27" />
-   <multiplier type="chop"   value="0.26" />
-   <multiplier type="blunt"  value="0.31" />
+   <multiplier type="slash"  value="0.30" />
+   <multiplier type="pierce" value="0.37" />
+   <multiplier type="chop"   value="0.36" />
+   <multiplier type="blunt"  value="0.39" />
    <multiplier type="siege"  value="0.59" />
    </armor>
 </object>
@@ -6598,10 +6588,10 @@
       </skin>
    </skins>
    <armor>
-   <multiplier type="slash"  value="0.25" />
-   <multiplier type="pierce" value="0.27" />
-   <multiplier type="chop"   value="0.26" />
-   <multiplier type="blunt"  value="0.31" />
+   <multiplier type="slash"  value="0.30" />
+   <multiplier type="pierce" value="0.37" />
+   <multiplier type="chop"   value="0.36" />
+   <multiplier type="blunt"  value="0.39" />
    <multiplier type="siege"  value="0.59" />
    </armor>
 </object>
@@ -6645,10 +6635,10 @@
       </skin>
    </skins>
    <armor>
-   <multiplier type="slash"  value="0.25" />
-   <multiplier type="pierce" value="0.27" />
-   <multiplier type="chop"   value="0.26" />
-   <multiplier type="blunt"  value="0.31" />
+   <multiplier type="slash"  value="0.30" />
+   <multiplier type="pierce" value="0.37" />
+   <multiplier type="chop"   value="0.36" />
+   <multiplier type="blunt"  value="0.39" />
    <multiplier type="siege"  value="0.59" />
    </armor>
 </object>
@@ -6686,10 +6676,10 @@
       </skin>
    </skins>
    <armor>
-   <multiplier type="slash"  value="0.25" />
-   <multiplier type="pierce" value="0.27" />
-   <multiplier type="chop"   value="0.26" />
-   <multiplier type="blunt"  value="0.31" />
+   <multiplier type="slash"  value="0.30" />
+   <multiplier type="pierce" value="0.37" />
+   <multiplier type="chop"   value="0.36" />
+   <multiplier type="blunt"  value="0.39" />
    <multiplier type="siege"  value="0.59" />
    </armor>
 </object>
@@ -9085,29 +9075,5 @@
    <slots>
       <slot>9</slot>
    </slots>
-</object>
-<object id="3010">
-   <!--name = Bear Axe -->
-   <skillID>44</skillID>
-   <skillAmount>60</skillAmount>
-   <slots>
-      <slot>12</slot>
-      <slot>13</slot>
-   </slots>
-   <meshes>
-      <mountMesh>Weapon_Bear_axe</mountMesh>
-   </meshes>
-</object>
-<object id="3011">
-   <!--name = Chieftain Sword -->
-   <skillID>43</skillID>
-   <skillAmount>60</skillAmount>
-   <slots>
-      <slot>12</slot>
-      <slot>13</slot>
-   </slots>
-   <meshes>
-      <mountMesh>Weapon_Chieftain_sword</mountMesh>
-   </meshes>
 </object>
 </equipment_types>

@@ -9485,7 +9485,7 @@
 	<row>
 		<ID>576</ID>
 		<ParentID>57</ParentID>
-		<Name>Zweihaender</Name>
+		<Name>Chieftain Sword</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -9498,7 +9498,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>4500</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage>art\2D\Items\zweihaender.png</FaceImage>
+		<FaceImage>art\2D\Items\chieftainsword.png</FaceImage>
 		<Description></Description>
 	</row>
 	<row>
@@ -9637,7 +9637,7 @@
 	<row>
 		<ID>584</ID>
 		<ParentID>191</ParentID>
-		<Name>Practice Maul</Name>
+		<Name>Bear Axe</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -9650,7 +9650,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>3200</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage>art\2D\Items\practice_maul.png</FaceImage>
+		<FaceImage>art\2D\equipIcons\Tribe\bearaxe.png</FaceImage>
 		<Description></Description>
 	</row>
 	<row>

@@ -523,7 +523,7 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (573,55,'War Pick',0,0,0,0,0,0,0,0,3,1,2500,'',0,0,0,0,0,0,'art\\2D\\Items\\war_pick.png','',5000,NULL,1,1),
 (574,57,'Practice Longsword',0,0,0,0,0,0,0,0,4,1,1900,'',0,0,0,0,0,0,'art\\2D\\Items\\practice_longsword.png','',7900,NULL,1,1),
 (575,57,'Claymore',0,0,0,0,0,0,0,0,4,1,2700,'',0,0,0,0,0,0,'art\\2D\\Items\\Claymore.png','',3000,NULL,1,1),
-(576,57,'Zweihaender',0,0,0,0,0,0,0,0,4,1,4500,'',0,0,0,0,0,0,'art\\2D\\Items\\zweihaender.png','',3000,NULL,1,1),
+(576,57,'Chieftain Sword',0,0,0,0,0,0,0,0,4,1,4500,'',0,0,0,0,0,0,'art\2D\Items\chieftainsword.png','',3000,NULL,1,1),
 (577,57,'Flamberge',0,0,0,0,0,0,0,0,4,1,4700,'',0,0,0,0,0,0,'art\\2D\\Items\\flamberge.png','',3000,NULL,1,1),
 (578,58,'Practice Great Axe',0,0,0,0,0,0,0,0,4,1,3500,'',0,0,0,0,0,0,'art\\2D\\Items\\practice_great_axe.png','',7900,NULL,1,1),
 (579,192,'Pollaxe',0,0,0,0,0,0,0,0,4,1,4600,'',0,0,0,0,0,0,'art\\2D\\Items\\pollaxe.png','',3000,NULL,1,1),
@@ -531,7 +531,7 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (581,58,'Broad Axe',0,0,0,0,0,0,0,0,4,1,5000,'',0,0,0,0,0,0,'art\\2D\\Items\\broad_axe.png','',5000,NULL,1,1),
 (582,191,'Sledge Hammer',0,0,0,0,0,0,0,0,4,1,5000,'',0,0,0,0,0,0,'art\\2D\\Items\\sledge_hammer.png','',5000,NULL,1,1),
 (583,191,'Maul',0,0,0,0,0,0,0,0,4,1,6000,'',0,0,0,0,0,0,'art\\2D\\Items\\Maul.png','Mallet\'s Big Brother',8000,NULL,1,1),
-(584,191,'Practice Maul',0,0,0,0,0,0,0,0,4,1,3200,'',0,0,0,0,0,0,'art\\2D\\Items\\practice_maul.png','',7900,NULL,1,1),
+(584,191,'Bear Axe',0,0,0,0,0,0,0,0,4,1,3200,'',0,0,0,0,0,0,'art\2D\equipIcons\Tribe\bearaxe.png','',7900,NULL,1,1),
 (585,192,'Glaive',0,0,0,0,0,0,0,0,5,1,3300,'',0,0,0,0,0,0,'art\\2D\\Items\\Glaive.png','',3000,NULL,1,1),
 (586,192,'Guisarme',0,0,0,0,0,0,0,0,5,1,3300,'',0,0,0,0,0,0,'art\\2D\\Items\\guisarme.png','',3000,NULL,1,1),
 (587,192,'War Scythe',0,0,0,0,0,0,0,0,5,1,3000,'',0,0,0,0,0,0,'art\\2D\\Items\\war_scythe.png','',3000,NULL,1,1),
@@ -1951,9 +1951,7 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3006,751,'Tribe Mole',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
 (3007,59,'Tribe Mole Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
 (3008,751,'Tribe Witch',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
-(3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
-(3010,191,'Bear Axe',0,0,0,0,0,0,0,0,4,1,3200,'',0,0,0,0,0,0,'art\2D\equipIcons\Tribe\bearaxe.png','',0,NULL,0,0),
-(3011,57,'Chieftain Sword',0,0,0,0,0,0,0,0,4,1,4700,'',0,0,0,0,0,0,'art\2D\equipIcons\Tribe\chieftainsword.png','',0,NULL,0,0);
+(3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0);
 --
 -- Dumping data for table `objects_conversions`
 --
