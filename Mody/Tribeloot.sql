@@ -6,7 +6,7 @@ DECLARE _rnd int DEFAULT 0;
 IF new.ObjectTypeID = (3001,3003,3005,3007,3009) THEN   
    
    Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-		VALUES (new.RootContainerID, 1060, 20, 50, 0, 0);
+		VALUES (new.RootContainerID, 1060, 10, 100, 0, 0);
 
 		set _rnd = FLOOR(RAND()*100);				  
 		if _rnd > 90 then 

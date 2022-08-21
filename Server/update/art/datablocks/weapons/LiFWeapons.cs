@@ -1014,17 +1014,17 @@ datablock WeaponData(Zweihaender : BaseMeleeWeapon)
    WeaponType = Weapon2HSword;
    weaponMaterial = Metal;
    hitGroupType[0] = Piercing;
-   hitGroupDmgLevel[0] = 2.07;
+   hitGroupDmgLevel[0] = 2.10;
    hitGroupType[1] =  Slashing;
-   hitGroupDmgLevel[1] = 1.6;
+   hitGroupDmgLevel[1] = 1.9;
    hitGroupType[2] =  Blunt;
-   hitGroupDmgLevel[2] = 0.5;
+   hitGroupDmgLevel[2] = 1.0;
    hitDirection[0] = "0 2"; // Thrust
    hitDirection[1] = "1"; // Overhead
    hitDirection[2] = "1"; // RightToLeftHit
    hitDirection[3] = "1"; // LeftToRightHit
-   WoundMultiplier = 1.1;
-   FractureMultiplier = 0.5;
+   WoundMultiplier = 1.2;
+   FractureMultiplier = 0.6;
    StunMultiplier = 0.0;
    correctMuzzleVector = false;
    className = "WeaponImage";
@@ -1333,27 +1333,27 @@ datablock WeaponData(PracticeMaul : BaseMeleeWeapon)
    eyeOffset = "0 0 0";
 
    attackType = Attack2HWeapon;
-   WeaponType = Weapon2HMace;
+   WeaponType = Weapon2HAxe;
    weaponMaterial = Wooden;
-   hitGroupType[0] =  Blunt;
-   hitGroupDmgLevel[0] = 1.0;
+   hitGroupType[0] =  Piercing;
+   hitGroupDmgLevel[0] = 1.2;
    hitGroupType[1] =  Blunt;
-   hitGroupDmgLevel[1] = 0.8;
+   hitGroupDmgLevel[1] = 1.7;
    hitGroupType[2] =  Blunt;
-   hitGroupDmgLevel[2] = 0.5;
-   hitDirection[0] = "0"; // Thrust
+   hitGroupDmgLevel[2] = 0.7;
+   hitDirection[0] = "0 3"; // Thrust
    hitDirection[1] = "1 2"; // Overhead
    hitDirection[2] = "1 2"; // RightToLeftHit
    hitDirection[3] = "1 2"; // LeftToRightHit
-   WoundMultiplier = 0;
+   WoundMultiplier = 1;
    FractureMultiplier = 0.1;
    StunMultiplier = 0.05;
    correctMuzzleVector = false;
    className = "WeaponImage";
    item = PracticeMaulItem;
-   BasePrefireAnimTime = 1.2;
-   BaseFireAnimTime = 1.0;
-   BaseRecoilAnimTime = 1.2;
+   BasePrefireAnimTime = 1.3;
+   BaseFireAnimTime = 1.1;
+   BaseRecoilAnimTime = 1.8;
 };
 
 datablock WeaponData(Glaive : BaseMeleeWeapon)
