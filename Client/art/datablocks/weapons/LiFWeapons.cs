@@ -3676,7 +3676,6 @@ datablock WeaponData(BalancedStaff : BaseMeleeWeapon)
 //bear Axe
 datablock WeaponData(Bearaxe : BaseMeleeWeapon)
 {
-   id = 33;
    Object_typeID = 3010;
    
    shapefile = "art/models/3d-2d/weapons/Tribe/bearaxe.dts";
@@ -3711,7 +3710,6 @@ datablock WeaponData(Bearaxe : BaseMeleeWeapon)
 //Chieftain sword
 datablock WeaponData(Chieftainsword : BaseMeleeWeapon)
 {
-   id = 26;
    Object_typeID = 3011;
    
    shapefile = "art/models/3d-2d/weapons/Tribe/chieftainsword.dts";
@@ -3746,7 +3744,6 @@ datablock WeaponData(Chieftainsword : BaseMeleeWeapon)
 //witchsickle
 datablock WeaponData(witchsickle : BaseMeleeWeapon)
 {
-   id = 136;
    Object_typeID = 3012;
    
    shapefile = "art/models/3d-2d/weapons/Tribe/witchsickle.dts";

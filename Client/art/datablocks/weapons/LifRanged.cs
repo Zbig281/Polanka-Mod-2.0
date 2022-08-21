@@ -232,7 +232,6 @@ datablock RangedWeaponData(ShortBow : BaseBow)
 //hunterbow
 datablock RangedWeaponData(hunterbow : BaseBow)
 {
-   id = 52;
    Object_typeID = 3012;
 
    AgilityNeed = 40.0;
