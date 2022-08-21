@@ -36630,7 +36630,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>3200</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage>art\2D\equipIcons\Tribe\bearaxe.png</FaceImage>
+		<FaceImage>art\2D\Items\bearaxe.png</FaceImage>
 		<Description></Description>
 	</row>
 </table>
