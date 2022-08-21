@@ -229,39 +229,6 @@ datablock RangedWeaponData(ShortBow : BaseBow)
    StunMultiplier = "";
    correctMuzzleVector = false;
 };
-//hunterbow
-datablock RangedWeaponData(hunterbow : BaseBow)
-{
-   Object_typeID = 3012;
-
-   AgilityNeed = 40.0;
-   StrengthNeed = 30.0;
-   MaxAccuracy = 0.8;
-   Emax = 2.9;
-   BasePrefireAnimTime = 1.3;
-   BaseRecoilAnimTime = 1.2;
-   allowedAmmoIDs = "656 657 658 659 660 1339 1582";
-   DurabilityPerShot = 40.0;
-   StaminaRate = 20.0;
-
-   shapefile = "art/models/3d-2d/weapons/Tribe/hunterbow.dts";
-
-   mountPoint = 0;
-   offset = "0 0 0";
-   eyeOffset = "0 0 0";
-
-   attackType = AttackBow;
-   WeaponType = WeaponBow;
-
-   hitDirection[0] = ""; // Thrust
-   hitDirection[1] = ""; // Overhead
-   hitDirection[2] = ""; // RightToLeftHit
-   hitDirection[3] = ""; // LeftToRightHit
-   WoundMultiplier = "";
-   FractureMultiplier = "";
-   StunMultiplier = "";
-   correctMuzzleVector = false;
-};
 
 datablock RangedWeaponData(LongBow : BaseBow)
 {

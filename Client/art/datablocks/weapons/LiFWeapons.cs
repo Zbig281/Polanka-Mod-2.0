@@ -3741,35 +3741,3 @@ datablock WeaponData(Chieftainsword : BaseMeleeWeapon)
    BaseFireAnimTime = 1.1;
    BaseRecoilAnimTime = 1.15;
 };
-//witchsickle
-datablock WeaponData(witchsickle : BaseMeleeWeapon)
-{
-   Object_typeID = 3013;
-   
-   shapefile = "art/models/3d-2d/weapons/Tribe/witchsickle.dts";
-   
-   mountPoint = 0;
-   offset = "0 0 0";
-   eyeOffset = "0 0 0";
-
-   attackType = Attack1H;
-   WeaponType = WeaponMisc;
-   weaponMaterial = Metal;
-   hitGroupType[0] = Piercing;
-   hitGroupDmgLevel[0] = 3.4;
-   hitGroupType[1] =  Blunt;
-   hitGroupDmgLevel[1] = 3.2;
-   hitDirection[0] = "1"; // Thrust
-   hitDirection[1] = "0"; // Overhead
-   hitDirection[2] = "0"; // RightToLeftHit
-   hitDirection[3] = "0"; // LeftToRightHit
-   WoundMultiplier = 1.5;
-   FractureMultiplier = 0.7;
-   StunMultiplier = 0;
-   correctMuzzleVector = false;
-   className = "WeaponImage";
-   item = SickleItem;
-   BasePrefireAnimTime = 1.2;
-   BaseFireAnimTime = 1.1;
-   BaseRecoilAnimTime = 1.15;
-};
