@@ -655,6 +655,41 @@ datablock WeaponData(WarAxe : BaseMeleeWeapon)
    BaseFireAnimTime = 1.0;
    BaseRecoilAnimTime = 1.1;
 };
+//Hunter Axe
+datablock WeaponData(WarAxe : BaseMeleeWeapon)
+{
+   id = 16;
+   Object_typeID = 3012;
+   
+   shapefile = "art/models/3d-2d/weapons/Tribe/hunteraxe.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack1H;
+   WeaponType = Weapon1HAxe;
+   weaponMaterial = Metal;
+   hitGroupType[0] =  Blunt;
+   hitGroupDmgLevel[0] = 0.8;
+   hitGroupType[1] =  Chopping;
+   hitGroupDmgLevel[1] = 1.94;
+   hitGroupType[2] =  Blunt;
+   hitGroupDmgLevel[2] = 1.0;
+   hitDirection[0] = "0"; // Thrust
+   hitDirection[1] = "1 2"; // Overhead
+   hitDirection[2] = "1 2"; // RightToLeftHit
+   hitDirection[3] = "1 2"; // LeftToRightHit
+   WoundMultiplier = 2;
+   FractureMultiplier = 0.9;
+   StunMultiplier = 0.1;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = WarAxeItem;
+   BasePrefireAnimTime = 1.0;
+   BaseFireAnimTime = 1.0;
+   BaseRecoilAnimTime = 1.1;
+};
 
 datablock WeaponData(BattleAxe : BaseMeleeWeapon)
 {
@@ -2164,6 +2199,36 @@ datablock WeaponData(Pickaxe : BaseMeleeWeapon)
    className = "WeaponImage";
    item = PickaxeItem;
 };
+//molepickaxe
+datablock WeaponData(Pickaxe : BaseMeleeWeapon)
+{
+   id = 123;
+   Object_typeID = 3014;
+   
+   shapefile = "art/models/3d-2d/weapons/Tribe/molepickaxe.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack2HSword;
+   WeaponType = WeaponMisc;
+   weaponMaterial = Wooden;
+   hitGroupType[0] = Piercing;
+   hitGroupDmgLevel[0] = 1.1;
+   hitGroupType[1] =  Blunt;
+   hitGroupDmgLevel[1] = 1.0;
+   hitDirection[0] = "1"; // Thrust
+   hitDirection[1] = "0"; // Overhead
+   hitDirection[2] = "0"; // RightToLeftHit
+   hitDirection[3] = "0"; // LeftToRightHit
+   WoundMultiplier = 0;
+   FractureMultiplier = 0;
+   StunMultiplier = 0;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = PickaxeItem;
+};
 
 datablock WeaponData(Hardened_steel_pickaxe : BaseMeleeWeapon)
 {
@@ -2524,6 +2589,36 @@ datablock WeaponData(Sickle : BaseMeleeWeapon)
    Object_typeID = 33;
    
    shapefile = "art/models/3d-2d/tools/sickle_export_01.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack1H;
+   WeaponType = WeaponMisc;
+   weaponMaterial = Metal;
+   hitGroupType[0] = Piercing;
+   hitGroupDmgLevel[0] = 1.2;
+   hitGroupType[1] =  Blunt;
+   hitGroupDmgLevel[1] = 1.0;
+   hitDirection[0] = "1"; // Thrust
+   hitDirection[1] = "0"; // Overhead
+   hitDirection[2] = "0"; // RightToLeftHit
+   hitDirection[3] = "0"; // LeftToRightHit
+   WoundMultiplier = 0;
+   FractureMultiplier = 0;
+   StunMultiplier = 0;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = SickleItem;
+};
+//Witch Sickle
+datablock WeaponData(Sickle : BaseMeleeWeapon)
+{
+   id = 136;
+   Object_typeID = 3015;
+   
+   shapefile = "art/models/3d-2d/weapons/Tribe/witchsickle.dts";
    
    mountPoint = 0;
    offset = "0 0 0";

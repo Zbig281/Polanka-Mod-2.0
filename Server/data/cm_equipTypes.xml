@@ -9104,4 +9104,44 @@
       <slot>13</slot>
    </slots>
 </object>
+<object id="3012">
+   <!--name = Hunter Axe -->
+   <skillID>36</skillID>
+   <skillAmount>0</skillAmount>
+   <slots>
+      <slot>10</slot>
+      <slot>11</slot>
+      <slot>12</slot>
+      <slot>13</slot>
+   </slots>
+</object>
+<object id="3013">
+   <!--name = hunterbow -->
+   <skillID>49</skillID>
+   <skillAmount>60</skillAmount>
+   <slots>
+      <slot>12</slot>
+      <slot>13</slot>
+   </slots>
+</object>
+<object id="3014">
+   <!--name = Mole Pickaxe -->
+   <skillID>33</skillID>
+   <skillAmount>0</skillAmount>
+   <slots>
+      <slot>12</slot>
+      <slot>13</slot>
+   </slots>
+</object>
+<object id="3015">
+   <!--name = Witch Sickle -->
+   <skillID>33</skillID>
+   <skillAmount>0</skillAmount>
+   <slots>
+      <slot>10</slot>
+      <slot>11</slot>
+      <slot>12</slot>
+      <slot>13</slot>
+   </slots>
+</object>
 </equipment_types>

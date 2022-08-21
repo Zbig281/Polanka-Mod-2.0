@@ -36652,4 +36652,80 @@
 		<FaceImage>art\2D\Items\chieftainsword.png</FaceImage>
 		<Description></Description>
 	</row>
+	<row>
+		<ID>3012</ID>
+		<ParentID>190</ParentID>
+		<Name>Hunter Axe</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>3</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1300</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\Items\hunteraxe.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3013</ID>
+		<ParentID>196</ParentID>
+		<Name>Hunter Bow</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>3</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>3000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\Items\hunterbow.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3014</ID>
+		<ParentID>10</ParentID>
+		<Name>Mole Pickaxe</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>1</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>0</Length>
+		<MaxStackSize>0</MaxStackSize>
+		<UnitWeight>0</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\Items\molepickaxe.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3015</ID>
+		<ParentID>1031</ParentID>
+		<Name>Witch Sickle</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>1</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>2</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\Items\witchsickle.png</FaceImage>
+		<Description></Description>
+	</row>
 </table>

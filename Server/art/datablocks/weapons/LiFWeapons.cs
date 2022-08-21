@@ -2199,6 +2199,36 @@ datablock WeaponData(Pickaxe : BaseMeleeWeapon)
    className = "WeaponImage";
    item = PickaxeItem;
 };
+//molepickaxe
+datablock WeaponData(Pickaxe : BaseMeleeWeapon)
+{
+   id = 123;
+   Object_typeID = 3014;
+   
+   shapefile = "art/models/3d-2d/weapons/Tribe/molepickaxe.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack2HSword;
+   WeaponType = WeaponMisc;
+   weaponMaterial = Wooden;
+   hitGroupType[0] = Piercing;
+   hitGroupDmgLevel[0] = 1.1;
+   hitGroupType[1] =  Blunt;
+   hitGroupDmgLevel[1] = 1.0;
+   hitDirection[0] = "1"; // Thrust
+   hitDirection[1] = "0"; // Overhead
+   hitDirection[2] = "0"; // RightToLeftHit
+   hitDirection[3] = "0"; // LeftToRightHit
+   WoundMultiplier = 0;
+   FractureMultiplier = 0;
+   StunMultiplier = 0;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = PickaxeItem;
+};
 
 datablock WeaponData(Hardened_steel_pickaxe : BaseMeleeWeapon)
 {
@@ -2559,6 +2589,36 @@ datablock WeaponData(Sickle : BaseMeleeWeapon)
    Object_typeID = 33;
    
    shapefile = "art/models/3d-2d/tools/sickle_export_01.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack1H;
+   WeaponType = WeaponMisc;
+   weaponMaterial = Metal;
+   hitGroupType[0] = Piercing;
+   hitGroupDmgLevel[0] = 1.2;
+   hitGroupType[1] =  Blunt;
+   hitGroupDmgLevel[1] = 1.0;
+   hitDirection[0] = "1"; // Thrust
+   hitDirection[1] = "0"; // Overhead
+   hitDirection[2] = "0"; // RightToLeftHit
+   hitDirection[3] = "0"; // LeftToRightHit
+   WoundMultiplier = 0;
+   FractureMultiplier = 0;
+   StunMultiplier = 0;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = SickleItem;
+};
+//Witch Sickle
+datablock WeaponData(Sickle : BaseMeleeWeapon)
+{
+   id = 136;
+   Object_typeID = 3015;
+   
+   shapefile = "art/models/3d-2d/weapons/Tribe/witchsickle.dts";
    
    mountPoint = 0;
    offset = "0 0 0";
