@@ -36630,7 +36630,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>3200</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage></FaceImage>
+		<FaceImage>art\2D\equipIcons\Tribe\bearaxe.png</FaceImage>
 		<Description></Description>
 	</row>
 	<row>
@@ -36649,7 +36649,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>4700</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage></FaceImage>
+		<FaceImage>art\2D\equipIcons\Tribe\chieftainsword.png</FaceImage>
 		<Description></Description>
 	</row>
 	<row>
@@ -36668,7 +36668,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>2000</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage></FaceImage>
+		<FaceImage>art\2D\equipIcons\Tribe\hunterbow.png</FaceImage>
 		<Description></Description>
 	</row>
 	<row>
@@ -36687,7 +36687,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>1000</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage></FaceImage>
+		<FaceImage>art\2D\equipIcons\Tribe\witchsickle.png</FaceImage>
 		<Description></Description>
 	</row>
 </table>
