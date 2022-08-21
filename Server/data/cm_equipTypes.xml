@@ -9094,6 +9094,9 @@
       <slot>12</slot>
       <slot>13</slot>
    </slots>
+   <meshes>
+      <mountMesh>Weapon_Bear_axe</mountMesh>
+   </meshes>
 </object>
 <object id="3011">
    <!--name = Chieftain Sword -->
@@ -9103,6 +9106,9 @@
       <slot>12</slot>
       <slot>13</slot>
    </slots>
+   <meshes>
+      <mountMesh>Weapon_Chieftain_sword</mountMesh>
+   </meshes>
 </object>
 <object id="3013">
    <!--name = Witch Sickle -->
@@ -9114,6 +9120,9 @@
       <slot>12</slot>
       <slot>13</slot>
    </slots>
+   <meshes>
+      <mountMesh>Witch_Sickle</mountMesh>
+   </meshes>
 </object>
 <object id="3012">
    <!--name = Hunterbow -->
