@@ -1388,7 +1388,7 @@
 				<duration const="10 20"/>
 				<chance>0.005</chance>
 				<ability_skill_mult>300</ability_skill_mult>
-				<regional type="resource" probability="0.01">329</regional>
+				<regional type="resource" probability="0.05">329</regional>
 				<entities>
 					<entity type="tun_side">
 						<ent_reqs>
@@ -1415,7 +1415,7 @@
 				<duration const="10 20"/>
 				<chance>0.005</chance>
 				<ability_skill_mult>200</ability_skill_mult>
-				<regional type="resource" probability="0.01">328</regional>
+				<regional type="resource" probability="0.05">328</regional>
 				<entities>
 					<entity type="tun_side">
 						<ent_reqs>
@@ -1899,7 +1899,7 @@
 				<entities>
 					<entity type="inventory_item">
 						<ent_reqs>
-							<ent_req type="object_type_id">47 48 49 1466</ent_req>
+							<ent_req type="object_type_id">47 48 49 1466 3014</ent_req>
 							<ent_req type="durability">solid corrupted</ent_req>
 						</ent_reqs>
 					</entity>
