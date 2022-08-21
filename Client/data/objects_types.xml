@@ -9485,7 +9485,7 @@
 	<row>
 		<ID>576</ID>
 		<ParentID>57</ParentID>
-		<Name>Chieftain Sword</Name>
+		<Name>Zweihaender</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -9498,7 +9498,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>4500</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage>art\2D\Items\chieftainsword.png</FaceImage>
+		<FaceImage>art\2D\Items\zweihaender.png</FaceImage>
 		<Description></Description>
 	</row>
 	<row>
@@ -9637,7 +9637,7 @@
 	<row>
 		<ID>584</ID>
 		<ParentID>191</ParentID>
-		<Name>Bear Axe</Name>
+		<Name>Practice Maul</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -9650,7 +9650,7 @@
 		<MaxStackSize>1</MaxStackSize>
 		<UnitWeight>3200</UnitWeight>
 		<BackgndImage></BackgndImage>
-		<FaceImage>art\2D\equipIcons\Tribe\bearaxe.png</FaceImage>
+		<FaceImage>art\2D\Items\practice_maul.png</FaceImage>
 		<Description></Description>
 	</row>
 	<row>
@@ -36650,6 +36650,44 @@
 		<UnitWeight>4700</UnitWeight>
 		<BackgndImage></BackgndImage>
 		<FaceImage>art\2D\equipIcons\Tribe\chieftainsword.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3012</ID>
+		<ParentID>196</ParentID>
+		<Name>Hunter Bow</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>3</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>2000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\equipIcons\Tribe\hunterbow.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3013</ID>
+		<ParentID>1031</ParentID>48
+		<Name>Witch Sickle</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>2</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1000</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\equipIcons\Tribe\witchsickle.png</FaceImage>
 		<Description></Description>
 	</row>
 </table>
