@@ -2048,7 +2048,7 @@
       </skin>
       <skin id="60440" name="4974">
          <info description="4975" icon="art/2D/equipIcons/Weapons/JoustingLance_SkinC.png" />
-         <meshes>	
+         <meshes>
             <mountMesh>JoustingLance_SkinC</mountMesh>
          </meshes>
       </skin>
