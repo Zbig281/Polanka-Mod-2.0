@@ -19,7 +19,7 @@ IF new.ObjectTypeID = (3001,3003,3005,3007,3009) THEN
 		set _rnd = FLOOR(RAND()*100);				  
 		if _rnd > 89 then 
       	Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 2011, 60, 1, 0, 0);
+				  VALUES (new.RootContainerID, 2011, 60, 1, 16000, 16000);
 		END IF;
 		
 		set _rnd = FLOOR(RAND()*100);		  
@@ -73,13 +73,13 @@ IF new.ObjectTypeID = (3001,3003,3005,3007,3009) THEN
 		set _rnd = FLOOR(RAND()*100);	
 		if _rnd > 79 then 
       	Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 3351, 100, 1, 0, 0);
+				  VALUES (new.RootContainerID, 658, 100, 10, 0, 0);
 		END IF;			
 
 		set _rnd = FLOOR(RAND()*100);	
-		if _rnd > 94 then 
+		if _rnd > 79 then 
       	Insert INTO items (ContainerID, ObjectTypeID, Quality, Quantity, Durability, CreatedDurability)
-				  VALUES (new.RootContainerID, 3177, 80, 1, 16000, 16000);
+				  VALUES (new.RootContainerID, 1339, 100, 1, 16000, 16000);
 		END IF;
 
 
