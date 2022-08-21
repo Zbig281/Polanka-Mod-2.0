@@ -1951,11 +1951,7 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3006,751,'Tribe Mole',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
 (3007,59,'Tribe Mole Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
 (3008,751,'Tribe Witch',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
-(3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
-(3010,191,'Bear Axe',0,0,0,0,0,0,0,0,4,1,3200,'',0,0,0,0,0,0,'art\2D\equipIcons\Tribe\bearaxe.png','',0,NULL,0,0),
-(3011,57,'Chieftain Sword',0,0,0,0,0,0,0,0,4,1,4700,'',0,0,0,0,0,0,'art\2D\equipIcons\Tribe\chieftainsword.png','',0,NULL,0,0),
-(3012,196,'Hunter Bow',0,0,0,0,0,0,0,0,3,1,2000,'',0,0,0,0,0,0,'art\2D\equipIcons\Tribe\hunterbow.png','',0,NULL,0,0),
-(3013,196,'Witch Sickle',0,0,0,0,0,0,0,0,2,1,1000,'',0,0,0,0,0,0,'art\2D\equipIcons\Tribe\witchsickle.png','',0,NULL,0,0);
+(3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0);
 --
 -- Dumping data for table `objects_conversions`
 --
