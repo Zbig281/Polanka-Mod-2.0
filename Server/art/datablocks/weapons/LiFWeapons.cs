@@ -963,6 +963,41 @@ datablock WeaponData(Zweihaender : BaseMeleeWeapon)
    BaseFireAnimTime = 1.1;
    BaseRecoilAnimTime = 1.15;
 };
+//chieftainsword
+datablock WeaponData(Zweihaender : BaseMeleeWeapon)
+{
+   id = 25;
+   Object_typeID = 3011;
+   
+   shapefile = "art/models/3d-2d/weapons/Tribe/chieftainsword.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack2HSword;
+   WeaponType = Weapon2HSword;
+   weaponMaterial = Metal;
+   hitGroupType[0] = Piercing;
+   hitGroupDmgLevel[0] = 2.07;
+   hitGroupType[1] =  Slashing;
+   hitGroupDmgLevel[1] = 1.6;
+   hitGroupType[2] =  Blunt;
+   hitGroupDmgLevel[2] = 0.5;
+   hitDirection[0] = "0 2"; // Thrust
+   hitDirection[1] = "1"; // Overhead
+   hitDirection[2] = "1"; // RightToLeftHit
+   hitDirection[3] = "1"; // LeftToRightHit
+   WoundMultiplier = 1.1;
+   FractureMultiplier = 0.5;
+   StunMultiplier = 0.0;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = ZweihaenderItem;
+   BasePrefireAnimTime = 1.2;
+   BaseFireAnimTime = 1.1;
+   BaseRecoilAnimTime = 1.15;
+};
 
 datablock WeaponData(Flamberge : BaseMeleeWeapon)
 {

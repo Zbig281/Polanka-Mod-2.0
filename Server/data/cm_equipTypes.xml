@@ -9095,4 +9095,13 @@
       <slot>13</slot>
    </slots>
 </object>
+<object id="3011">
+   <!--name = Chieftain Sword -->
+   <skillID>43</skillID>
+   <skillAmount>60</skillAmount>
+   <slots>
+      <slot>12</slot>
+      <slot>13</slot>
+   </slots>
+</object>
 </equipment_types>
