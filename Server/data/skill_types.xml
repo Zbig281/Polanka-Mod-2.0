@@ -6070,7 +6070,7 @@
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
-							<ent_req type="object_type_id">1070 1083 924 925 926 927 928 929 930 931 932 933 934 935 936 1090 1460</ent_req>
+							<ent_req type="object_type_id">1070 1083 924 925 926 927 928 929 930 931 932 933 934 935 936 1090 1460 3001 3003 3005 3007 3009</ent_req>
 						</ent_reqs>
 					</entity>
 					<entity type="player"/>
