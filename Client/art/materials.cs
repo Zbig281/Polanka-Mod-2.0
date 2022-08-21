@@ -656,7 +656,15 @@ singleton Material(Longbow_DIFFUSE_mat)
     doubleSided = "1";
 };
 
-
+singleton Material(Tribe_Weapon_DIFFUSE_ns_mat)
+{
+   mapTo = "Tribe_Weapon_DIFFUSE_ns";
+   diffuseMap[0] = "art/Textures/Weapons/Zweihander_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/Zweihander_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/Zweihander_SPECULAR.dds";
+   materialTag0 = "LiF";
+   behaveAsParticle = true;
+};
 // Atlas Materials
 
 singleton Material(shops_01_atlas_diff_mat)
