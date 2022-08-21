@@ -1952,7 +1952,7 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3007,59,'Tribe Mole Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
 (3008,751,'Tribe Witch',0,1,0,0,0,0,0,0,0,0,1,'',0,0,0,0,0,0,'','',0,NULL,0,0),
 (3009,59,'Tribe Witch Carcass',1,1,0,0,0,0,0,100000,5,0,1,'art\\images\\universal',0,0,0,0,0,0,'','',0,300,0,0),
-(3010,191,'Bear Axe',0,0,0,0,0,0,0,0,4,1,3200,'',0,0,0,0,0,0,'art\2D\Items\bearaxe.png','',0,NULL,0,0);
+(3010,191,'Bear Axe',0,0,0,0,0,0,0,0,4,1,3200,'',0,0,0,0,0,0,'art\2D\Items\bearaxe.png','',0,NULL,1,1);
 --
 -- Dumping data for table `objects_conversions`
 --
@@ -6813,9 +6813,3 @@ INSERT INTO `skill_type` (`ID`, `Name`, `Description`, `Parent`, `Group`, `Prima
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2018-09-10 14:36:41
-ALTER TABLE `objects_types` ALTER `ID` DROP DEFAULT;
-ALTER TABLE `objects_types`	CHANGE COLUMN `ID` `ID` INT(10) UNSIGNED NOT NULL FIRST;
-
-INSERT INTO `objects_types` VALUES (2420,61,'Bazaar',0,0,1,0,0,0,0,0,0,0,5000,'',0,0,0,0,0,0,'mods\\ExampleMod\\buildings\\construction\\misc\\BazaarHall\\BazaarHall.png','Bazaar tent',0,0,0,0);
