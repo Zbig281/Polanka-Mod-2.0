@@ -36445,7 +36445,7 @@
 	</row>
 	<row>
 		<ID>3001</ID>
-		<ParentID>457</ParentID>
+		<ParentID>59</ParentID>
 		<Name>Tribe Bear Carcass</Name>
 		<IsContainer>1</IsContainer>
 		<IsMovableObject>1</IsMovableObject>
@@ -36483,7 +36483,7 @@
 	</row>
 	<row>
 		<ID>3003</ID>
-		<ParentID>457</ParentID>
+		<ParentID>59</ParentID>
 		<Name>Tribe Chieftain Carcass</Name>
 		<IsContainer>1</IsContainer>
 		<IsMovableObject>1</IsMovableObject>
@@ -36521,7 +36521,7 @@
 	</row>
 	<row>
 		<ID>3005</ID>
-		<ParentID>457</ParentID>
+		<ParentID>59</ParentID>
 		<Name>Tribe Hunter Carcass</Name>
 		<IsContainer>1</IsContainer>
 		<IsMovableObject>1</IsMovableObject>
@@ -36559,7 +36559,7 @@
 	</row>
 	<row>
 		<ID>3007</ID>
-		<ParentID>457</ParentID>
+		<ParentID>59</ParentID>
 		<Name>Tribe Mole Carcass</Name>
 		<IsContainer>1</IsContainer>
 		<IsMovableObject>1</IsMovableObject>
@@ -36597,7 +36597,7 @@
 	</row>
 	<row>
 		<ID>3009</ID>
-		<ParentID>457</ParentID>
+		<ParentID>59</ParentID>
 		<Name>Tribe Witch Carcass</Name>
 		<IsContainer>1</IsContainer>
 		<IsMovableObject>1</IsMovableObject>
