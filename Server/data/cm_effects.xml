@@ -124,7 +124,7 @@
         <parameter type="WILL" applytype="INCREASE" />
         <icon>art/2D/Effects/Harder.png</icon>
     </effect>
-    <effect id="92" name="Skill Raised: Mining">
+    <effect id="22" name="Skill Raised: Mining">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
         <description>2615</description>
         <parameter type="SKILL" skill="2" applytype="INCREASE" />

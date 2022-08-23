@@ -6510,7 +6510,7 @@ INSERT INTO `effects` (`ID`, `Effect_name`, `ResultPreparationID`, `ResultPotion
 (7,'Raise Str (temp)',792,783,19),
 (8,'Raise Agi (temp)',793,784,20),
 (9,'Raise Will (temp)',794,785,21),
-(10,'Skill Raised:Building Maintain',NULL,NULL,22),
+(10,'Skill Raised: Mining',NULL,NULL,22),
 (11,'Raise Con (temp)',796,787,23),
 (12,'Naphtha',348,348,NULL),
 (13,'Damage soft HP',938,945,13),
