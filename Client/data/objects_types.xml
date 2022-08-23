@@ -36448,7 +36448,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Bear Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
+		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
@@ -36486,7 +36486,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Chieftain Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
+		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
@@ -36524,7 +36524,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Hunter Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
+		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
@@ -36562,7 +36562,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Mole Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
+		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
@@ -36600,7 +36600,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Witch Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
+		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
