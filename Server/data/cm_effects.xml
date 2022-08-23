@@ -524,13 +524,13 @@
     </effect>
         <effect id="94" name="Skill Raised: Mining">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="FALSE" RemovedOnDeath="FALSE" RealTime="TRUE" />
-        <description>4911</description>
+        <description>2615</description>
         <parameter type="SKILL" skill="2" applytype="INCREASE" />
         <icon>art/2D/Effects/rob.png</icon>
     </effect>
     <effect id="95" name="Skill Raised: Jewelry">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
-        <description>4912</description>
+        <description>2615</description>
         <parameter type="SKILL" skill="52" applytype="INCREASE" />
         <icon>art/2D/Effects/Skill_Raised_Jewelry.png</icon>
     </effect>
