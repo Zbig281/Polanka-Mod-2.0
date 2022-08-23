@@ -80,11 +80,13 @@
         <parameter type="HARD_STAMINA" applytype="CONSUME" value="0.12"/>
         <icon>art/2D/Effects/Poisoned_Grave_Weight.png</icon>
     </effect>
-    <effect id="15" name="Poisoned: Lungs of Stone">
-        <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="FALSE" RemovedOnDeath="TRUE" />
-        <description>2604</description>
-        <parameter type="SOFT_STAMINA" applytype="CONSUME" value="0.4"/>
-        <icon>art/2D/Effects/Poisoned_Lungs_of_Stone.png</icon>
+    <effect id="15" name="Skill Raised: Warhorse Training">
+        <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
+        <description>2615</description>
+        <parameter type="SKILL" skill="26" applytype="INCREASE" />
+        <parameter type="SKILL" skill="23" applytype="INCREASE" />
+        <parameter type="SKILL" skill="25" applytype="INCREASE" />
+        <icon>art/2D/Effects/Skill_Raised_Warhorse_Training.png</icon>
     </effect>
     <effect id="16" name="Poisoned: Eternal Sleep">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="FALSE" RemovedOnDeath="TRUE" />
@@ -122,11 +124,11 @@
         <parameter type="WILL" applytype="INCREASE" />
         <icon>art/2D/Effects/Harder.png</icon>
     </effect>
-    <effect id="22" name="Clever">
+    <effect id="22" name="Skill Raised: Building Maintain">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
-        <description>2611</description>
-        <parameter type="INT" applytype="INCREASE" />
-        <icon>art/2D/Effects/Clever.png</icon>
+        <description>2615</description>
+        <parameter type="SKILL" skill="7" applytype="INCREASE" />
+        <icon>art/2D/Effects/Craft.png</icon>
     </effect>
     <effect id="23" name="Tougher">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
@@ -150,6 +152,8 @@
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
         <description>2615</description>
         <parameter type="SKILL" skill="4" applytype="INCREASE" />
+        <parameter type="SKILL" skill="5" applytype="INCREASE" />
+        <parameter type="SKILL" skill="3" applytype="INCREASE" />
         <icon>art/2D/Effects/Skill_Raised_Forging.png</icon>
     </effect>
     <effect id="27" name="Skill Raised: Armorsmithing">
@@ -516,22 +520,19 @@
         <parameter type="TITLE" applytype="BIND_TO_EFFECT_LIFETIME" value="4734" />
         <icon>art/2D/Effects/Slave.png</icon>
     </effect>
+    <effect id="92" name="Skill Raised: Mining">
+        <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
+        <description>2615</description>
+        <parameter type="SKILL" skill="2" applytype="INCREASE" />
+        <parameter type="SKILL" skill="31" applytype="INCREASE" />
+        <parameter type="SKILL" skill="52" applytype="INCREASE" />
+        <icon>art/2D/Effects/Skill_Raised_Mining.png</icon>
+    </effect>
     <effect id="93" name="Fatal Damage Cooldown">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
         <description>4910</description>
         <parameter type="LUCK" applytype="INCREASE" />
         <icon>art/2D/Effects/Resurrection.png</icon>
     </effect>
-    <effect id="92" name="Skill Raised: Mining">
-        <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
-        <description>2615</description>
-        <parameter type="SKILL" skill="2" applytype="INCREASE" />
-        <icon>art/2D/Effects/Skill_Raised_Mining.png</icon>
-    </effect>
-    <effect id="115" name="Skill Raised: Jewelry">
-        <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
-        <description>2615</description>
-        <parameter type="SKILL" skill="52" applytype="INCREASE" />
-        <icon>art/2D/Effects/Skill_Raised_Jewelry.png</icon>
-    </effect>
+
 </effects>

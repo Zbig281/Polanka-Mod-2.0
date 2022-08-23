@@ -6510,13 +6510,13 @@ INSERT INTO `effects` (`ID`, `Effect_name`, `ResultPreparationID`, `ResultPotion
 (7,'Raise Str (temp)',792,783,19),
 (8,'Raise Agi (temp)',793,784,20),
 (9,'Raise Will (temp)',794,785,21),
-(10,'Raise Int (temp)',795,786,22),
+(10,'Skill Raised:Building Maintain',NULL,NULL,22),
 (11,'Raise Con (temp)',796,787,23),
 (12,'Naphtha',348,348,NULL),
 (13,'Damage soft HP',938,945,13),
 (14,'Damage hard stamina',939,946,14),
 (15,'Damage hard HP',940,947,12),
-(16,'Damage soft stamina regen',941,948,15),
+(16,'Skill Raised: Warhorse Training',NULL,NULL,15),
 (17,'Lowers maximum soft HP (temp)',942,949,16),
 (18,'Lowers maximum soft stamina (temp)',943,950,17),
 (19,'No Drop',NULL,NULL,NULL),
@@ -6541,7 +6541,7 @@ INSERT INTO `effects` (`ID`, `Effect_name`, `ResultPreparationID`, `ResultPotion
 (38,'No Repair',NULL,NULL,NULL),
 (39,'OnlyPlayerContainer ',NULL,NULL,NULL),
 (40,'OnlyMarketContainer',NULL,NULL,NULL),
-(41,'Skill Raised: Jewelry',NULL,NULL,92);
+(41,'Skill Raised: Mining',NULL,NULL,92);
 
 --
 -- Dumping data for table `recipe_possible_blueprints`
