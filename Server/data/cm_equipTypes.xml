@@ -9144,4 +9144,104 @@
       <slot>13</slot>
    </slots>
 </object>
+<object id="3016">
+   <!--name = Builder's Outfit -->
+   <skillID>19</skillID>
+   <skillAmount>60</skillAmount>
+   <slots>
+      <slot>2</slot>
+   </slots>
+   <extraSlotsBlock>
+      <slot>3</slot>
+      <slot>5</slot>
+      <slot>6</slot>
+   </extraSlotsBlock>
+   <meshes>
+      <mesh>Male_Craft90_All_Cattleman</mesh>
+      <mesh>Female_Craft90_All_Cattleman</mesh>
+      <mesh>Female_Body_v1_torso_block</mesh>
+      <mesh>Male_Body_v1_torso_block</mesh>
+   </meshes>
+   <cutoffs>
+      <cutoff type="torso" action="off" />
+      <cutoff type="hips" action="off" />
+      <cutoff type="shoulders" action="off" />
+      <cutoff type="feet" action="off" />
+   </cutoffs>
+   <armor>
+      <multiplier type="slash" value="0.12" />
+      <multiplier type="pierce" value="0.17" />
+      <multiplier type="chop" value="0.12" />
+      <multiplier type="blunt" value="0.17" />
+      <multiplier type="siege" value="0.19" />
+      <fragility>3.99</fragility>
+   </armor>
+</object>
+<object id="3017">
+   <!--name = Breeder's Outfit -->
+   <skillID>23</skillID>
+   <skillAmount>60</skillAmount>
+   <slots>
+      <slot>2</slot>
+   </slots>
+   <extraSlotsBlock>
+      <slot>3</slot>
+      <slot>5</slot>
+      <slot>6</slot>
+   </extraSlotsBlock>
+   <meshes>
+      <mesh>Male_Craft90_All_Cattleman</mesh>
+      <mesh>Female_Craft90_All_Cattleman</mesh>
+      <mesh>Female_Body_v1_torso_block</mesh>
+      <mesh>Male_Body_v1_torso_block</mesh>
+   </meshes>
+   <cutoffs>
+      <cutoff type="torso" action="off" />
+      <cutoff type="hips" action="off" />
+      <cutoff type="shoulders" action="off" />
+      <cutoff type="feet" action="off" />
+   </cutoffs>
+   <armor>
+      <multiplier type="slash" value="0.12" />
+      <multiplier type="pierce" value="0.17" />
+      <multiplier type="chop" value="0.12" />
+      <multiplier type="blunt" value="0.17" />
+      <multiplier type="siege" value="0.19" />
+      <fragility>3.99</fragility>
+   </armor>
+</object>
+<object id="3018">
+   <!--name = Miner's Outfit --> 
+   <skillID>16</skillID>
+   <skillAmount>60</skillAmount>
+   <slots>
+      <slot>2</slot>
+   </slots>
+   <extraSlotsBlock>
+      <slot>3</slot>
+      <slot>4</slot>
+      <slot>5</slot>
+      <slot>6</slot>
+   </extraSlotsBlock>
+   <meshes>
+      <mesh>Male_Craft90_All_Miner</mesh>
+      <mesh>Female_Craft90_All_Miner</mesh>
+      <mesh>Female_Body_v1_torso_block</mesh>
+      <mesh>Male_Body_v1_torso_block</mesh>
+   </meshes>
+   <cutoffs>
+      <cutoff type="torso" action="off" />
+      <cutoff type="hips" action="off" />
+      <cutoff type="arms" action="cut" />
+      <cutoff type="feet" action="off" />
+   </cutoffs>
+      <armor>
+      <multiplier type="slash" value="0.12" />
+      <multiplier type="pierce" value="0.17" />
+      <multiplier type="chop" value="0.12" />
+      <multiplier type="blunt" value="0.17" />
+      <multiplier type="siege" value="0.19" />
+      <fragility>3.99</fragility>
+   </armor>
+</object>
 </equipment_types>

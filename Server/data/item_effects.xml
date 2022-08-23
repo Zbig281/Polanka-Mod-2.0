@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>303
 <items>
     <item id="303"> <!-- Blacksmith's Outfit -->
         <effect id="21">1 20</effect>
@@ -708,5 +708,10 @@
      <item id="49"> <!-- Hardened steel pickaxe  -->
 <effect id="9">10</effect>
 <effect id="26">2 10</effect>
+    </item>
+    <item id="3018"> <!-- Miner's Outfit -->
+<effect id="26">1 20</effect>
+<effect id="9">5 20</effect>
+<effect id="42">5 20</effect>
     </item>
 </items>
