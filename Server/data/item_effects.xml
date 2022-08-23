@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>303
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <items>
     <item id="303"> <!-- Blacksmith's Outfit -->
         <effect id="21">1 20</effect>
@@ -591,9 +591,6 @@
         <effect id="37">1</effect>
         <effect id="38">1</effect>
     </item>
-        <item id="3014"> <!-- molepickaxe -->
-        <effect id="26">1 25.0</effect>
-    </item>
     <item id="1467"> <!-- Believer's Saw -->
         <effect id="19">1</effect>
         <effect id="37">1</effect>
@@ -608,9 +605,6 @@
         <effect id="19">1</effect>
         <effect id="37">1</effect>
         <effect id="38">1</effect>
-    </item>
-        <item id="3015"> <!-- WitchSickle -->
-        <effect id="26">1 25.0</effect>
     </item>
     <item id="1470"> <!-- Believer's Crucible and Tongs -->
         <effect id="19">1</effect>
@@ -710,8 +704,8 @@
 <effect id="26">2 10</effect>
     </item>
     <item id="3018"> <!-- Miner's Outfit -->
-<effect id="26">1 20</effect>
-<effect id="9">5 20</effect>
-<effect id="42">5 20</effect>
+        <effect id="21">1 20</effect>
+        <effect id="9">5 20</effect>
+        <effect id="42">5 20</effect>
     </item>
 </items>
