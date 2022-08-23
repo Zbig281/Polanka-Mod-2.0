@@ -124,11 +124,13 @@
         <parameter type="WILL" applytype="INCREASE" />
         <icon>art/2D/Effects/Harder.png</icon>
     </effect>
-    <effect id="22" name="Skill Raised: Building Maintain">
+    <effect id="92" name="Skill Raised: Mining">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
         <description>2615</description>
-        <parameter type="SKILL" skill="7" applytype="INCREASE" />
-        <icon>art/2D/Effects/Craft.png</icon>
+        <parameter type="SKILL" skill="2" applytype="INCREASE" />
+        <parameter type="SKILL" skill="31" applytype="INCREASE" />
+        <parameter type="SKILL" skill="52" applytype="INCREASE" />
+        <icon>art/2D/Effects/Skill_Raised_Mining.png</icon>
     </effect>
     <effect id="23" name="Tougher">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
@@ -519,14 +521,6 @@
         <description>4734</description>
         <parameter type="TITLE" applytype="BIND_TO_EFFECT_LIFETIME" value="4734" />
         <icon>art/2D/Effects/Slave.png</icon>
-    </effect>
-    <effect id="92" name="Skill Raised: Mining">
-        <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
-        <description>2615</description>
-        <parameter type="SKILL" skill="2" applytype="INCREASE" />
-        <parameter type="SKILL" skill="31" applytype="INCREASE" />
-        <parameter type="SKILL" skill="52" applytype="INCREASE" />
-        <icon>art/2D/Effects/Skill_Raised_Mining.png</icon>
     </effect>
     <effect id="93" name="Fatal Damage Cooldown">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />

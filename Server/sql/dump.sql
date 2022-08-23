@@ -1958,7 +1958,7 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3013,196,'Hunter Bow',0,0,0,0,0,0,0,0,3,1,3000,'',0,0,0,0,0,0,'art\\2D\\Items\\hunterbow.png','',20000,NULL,1,1),
 (3014,35,'Mole Pickaxe',0,0,0,1,0,0,0,0,2,1,1500,'',0,0,0,0,0,0,'art\\2D\\Items\\molepickaxe.png','',3000,NULL,1,1),
 (3015,1031,'Witch Sickle',0,0,0,1,0,0,0,0,2,1,1000,'',0,0,0,0,0,0,'art\\2D\\Items\\witchsickle.png','',3100,NULL,1,1),
-(3016,225,'Builder\'s Outfit',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\Outfits\\builder.png','',100000,NULL,1,1),
+(3016,225,'Porter\'s Outfit',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\Outfits\\builder.png','',100000,NULL,1,1),
 (3017,225,'Breeder\'s Outfit',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\Outfits\\breeder.png','',100000,NULL,1,1),
 (3018,225,'Miner\'s Outfit',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\Outfits\\miner.png','',100000,NULL,1,1);
 --
@@ -6540,8 +6540,7 @@ INSERT INTO `effects` (`ID`, `Effect_name`, `ResultPreparationID`, `ResultPotion
 (37,'No Barter',NULL,NULL,NULL),
 (38,'No Repair',NULL,NULL,NULL),
 (39,'OnlyPlayerContainer ',NULL,NULL,NULL),
-(40,'OnlyMarketContainer',NULL,NULL,NULL),
-(41,'Skill Raised: Mining',NULL,NULL,92);
+(40,'OnlyMarketContainer',NULL,NULL,NULL);
 
 --
 -- Dumping data for table `recipe_possible_blueprints`

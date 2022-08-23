@@ -707,11 +707,10 @@
         <effect id="9">5 20</effect>
         <effect id="41">5 20</effect>
     </item>
-        <item id="3017"> <!-- Builder's Outfit -->
-        <effect id="9">5 20</effect>
-        <effect id="10">5 20</effect>
+        <item id="3016"> <!-- Porter Outfit -->
+        <effect id="9">5 50</effect>
     </item>
-        <item id="3016"> <!-- Breeder's Outfit -->
+        <item id="3017"> <!-- Breeder's Outfit -->
         <effect id="9">5 20</effect>
         <effect id="16">5 20</effect>
         <effect id="26">5 10</effect>
