@@ -150,6 +150,7 @@
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
         <description>2615</description>
         <parameter type="SKILL" skill="4" applytype="INCREASE" />
+        <parameter type="SKILL" skill="52" applytype="INCREASE" />
         <icon>art/2D/Effects/Skill_Raised_Forging.png</icon>
     </effect>
     <effect id="27" name="Skill Raised: Armorsmithing">
@@ -522,17 +523,10 @@
         <parameter type="LUCK" applytype="INCREASE" />
         <icon>art/2D/Effects/Resurrection.png</icon>
     </effect>
-        <effect id="94" name="Skill Raised: Mining">
-        <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="FALSE" RemovedOnDeath="FALSE" RealTime="TRUE" />
-        <description>2615</description>
-        <parameter type="SKILL" skill="2" applytype="INCREASE" />
-        <icon>art/2D/Effects/rob.png</icon>
-    </effect>
-    <effect id="95" name="Skill Raised: Jewelry">
+    <effect id="92" name="Skill Raised: Mining">
         <flags CanMove="TRUE" CanRun="TRUE" CanJump="TRUE" CanRotate="TRUE" CanRotateHead="TRUE" CanOperate="TRUE" CanBeCanceled="TRUE" RemovedOnDeath="TRUE" />
         <description>2615</description>
-        <parameter type="SKILL" skill="52" applytype="INCREASE" />
-        <icon>art/2D/Effects/Skill_Raised_Jewelry.png</icon>
+        <parameter type="SKILL" skill="2" applytype="INCREASE" />
+        <icon>art/2D/Effects/Skill_Raised_Mining.png</icon>
     </effect>
-
 </effects>
