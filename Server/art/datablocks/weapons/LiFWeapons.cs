@@ -656,7 +656,7 @@ datablock WeaponData(WarAxe : BaseMeleeWeapon)
    BaseRecoilAnimTime = 1.1;
 };
 //Hunter Axe
-datablock WeaponData(WarAxe : BaseMeleeWeapon)
+datablock WeaponData(Hunter_Axe : BaseMeleeWeapon)
 {
    id = 16;
    Object_typeID = 3012;
@@ -685,7 +685,7 @@ datablock WeaponData(WarAxe : BaseMeleeWeapon)
    StunMultiplier = 0.4;
    correctMuzzleVector = false;
    className = "WeaponImage";
-   item = WarAxeItem;
+   item = HunterAxeItem;
    BasePrefireAnimTime = 1.0;
    BaseFireAnimTime = 1.0;
    BaseRecoilAnimTime = 1.1;
@@ -999,7 +999,7 @@ datablock WeaponData(Zweihaender : BaseMeleeWeapon)
    BaseRecoilAnimTime = 1.15;
 };
 //chieftainsword
-datablock WeaponData(Zweihaender : BaseMeleeWeapon)
+datablock WeaponData(Chieftain_Sword : BaseMeleeWeapon)
 {
    id = 25;
    Object_typeID = 3011;
@@ -1028,7 +1028,7 @@ datablock WeaponData(Zweihaender : BaseMeleeWeapon)
    StunMultiplier = 0.0;
    correctMuzzleVector = false;
    className = "WeaponImage";
-   item = ZweihaenderItem;
+   item = chieftainswordItem;
    BasePrefireAnimTime = 1.2;
    BaseFireAnimTime = 1.1;
    BaseRecoilAnimTime = 1.15;
@@ -1320,8 +1320,8 @@ datablock WeaponData(PracticeMaul : BaseMeleeWeapon)
    BaseFireAnimTime = 1.0;
    BaseRecoilAnimTime = 1.2;
 };
-//bear axe
-datablock WeaponData(PracticeMaul : BaseMeleeWeapon)
+//bearaxe
+datablock WeaponData(Bear_Axe : BaseMeleeWeapon)
 {
    id = 33;
    Object_typeID = 3010;
@@ -1352,7 +1352,7 @@ datablock WeaponData(PracticeMaul : BaseMeleeWeapon)
    StunMultiplier = 0.00;
    correctMuzzleVector = false;
    className = "WeaponImage";
-   item = PracticeMaulItem;
+   item = BearaxelItem;
    BasePrefireAnimTime = 1.3;
    BaseFireAnimTime = 1.1;
    BaseRecoilAnimTime = 1.8;
@@ -2202,7 +2202,7 @@ datablock WeaponData(Pickaxe : BaseMeleeWeapon)
    item = PickaxeItem;
 };
 //molepickaxe
-datablock WeaponData(Pickaxe : BaseMeleeWeapon)
+datablock WeaponData(Mole_Pickaxe : BaseMeleeWeapon)
 {
    id = 123;
    Object_typeID = 3014;
@@ -2615,7 +2615,7 @@ datablock WeaponData(Sickle : BaseMeleeWeapon)
    item = SickleItem;
 };
 //Witch Sickle
-datablock WeaponData(Sickle : BaseMeleeWeapon)
+datablock WeaponData(Witch_Sickle : BaseMeleeWeapon)
 {
    id = 136;
    Object_typeID = 3015;
