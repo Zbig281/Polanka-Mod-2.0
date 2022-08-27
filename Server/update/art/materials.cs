@@ -1,4 +1,5 @@
-﻿singleton Material(newMaterial5)
+﻿
+singleton Material(newMaterial5)
 {
    mapTo = "unmapped_mat";
    cubemap = "NewLevelSkyCubemap";
@@ -656,15 +657,7 @@ singleton Material(Longbow_DIFFUSE_mat)
     doubleSided = "1";
 };
 
-singleton Material(Tribe_Weapon_DIFFUSE_ns_mat)
-{
-   mapTo = "Tribe_Weapon_DIFFUSE_ns";
-   diffuseMap[0] = "art/Textures/Tribe/Tribe_Weapon_DIFFUSE.dds";
-   diffuseMap[1] = "art/Textures/Tribe/Tribe_Weapon_NORMALMAP.dds";
-   diffuseMap[2] = "art/Textures/Tribe/Tribe_Weapon_SPECULAR.dds";
-   materialTag0 = "LiF";
-   behaveAsParticle = true;
-};
+
 // Atlas Materials
 
 singleton Material(shops_01_atlas_diff_mat)
@@ -1260,7 +1253,13 @@ singleton Material(Deer_Diffuse_mat)
    diffuseMap[0] = "art/Textures/Animals/Deer/Deer_Male_DIFFUSE.dds";
    diffuseMap[1] = "art/Textures/Animals/Deer/Deer_Male_NORMALMAP.dds";
    diffuseMap[2] = "art/Textures/Animals/Deer/Deer_Male_SPECULAR.dds";
+   diffuseMap[12] = "art/Textures/Animals/Deer/Deer_Male_EMERSIVE.dds";
    normal3DC="1";
+   emission = "1";
+   emissionIntensityFreq = "1";
+   emissionIntensityMin = "2";
+   emissionIntensityMax = "3";
+   emissionScale = "1";
    materialTag0 = "LiF";
    skinned = true;
 };
@@ -1660,7 +1659,7 @@ singleton Material(Boar_Diffuse_mat)
    skinned = true;
    normal3DC="1";
 };
-bear
+
 singleton Material(Boar_D_Diffuse_mat)
 {
    mapTo = "Boar_Male_D_DIFFUSE";
@@ -4912,6 +4911,7 @@ singleton Material(FellingExterior_diff_mat)
    useAnisotropic[0] = "1";
    materialTag0 = "LiF";
    pixelSpecular[0] = "0";
+   normal3DC = "1";
 };
 
 singleton Material(glass_no_alpha_diff_mat)
@@ -7118,6 +7118,10 @@ singleton Material(Padded90_Vik_DIFFUSE_mat)
    normal3DC="1";
    skinned = true;
 };
+
+
+
+
 
 singleton Material(Padded100_Vik_DIFFUSE_mat)
 {
@@ -11518,257 +11522,1318 @@ singleton Material(terrain_zone_enemy_mat)
    emissionScale="0.5";
 };
 
-//------------- wooden cross ---------------->
-
-singleton Material(wooden_cross_JorvikMod_wooden_cross)
+singleton Material(ChristmasTree_mat)
 {
-   mapTo = "JorvikMod_wooden_cross";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_cross_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_cross_nm.dds";
+   mapTo = "ChristmasTree";
+   diffuseMap[0] = "art/Textures/TextureLib/ChristmasTree.dds";
+   diffuseMap[1] = "art/Textures/TextureLib/ChristmasTree_Normal.dds";
+   diffuseMap[2] = "art/Textures/TextureLib/ChristmasTree_specular.dds";
+   diffuseMap[12] = "art/Textures/TextureLib/ChristmasTree_emissive.dds";
+   alphaTest = "1";
+   alphaRef = "50";
+   emission="1";
+   emissionIntensityFreq="0.5";
+   emissionIntensityMin="0.01";
+   emissionIntensityMax="0.2";
+   emissionScale="0.5";
+   doubleSided = "1";
+   materialTag0 = "LiF";
 };
 
-//------------- wooden bridge ---------------->
-
-singleton Material(wooden_bridge_JorvikMod_wooden_bridge_rope)
+singleton Material(ChristmasTree_decorations_mat)
 {
-   mapTo = "JorvikMod_wooden_bridge_rope";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/rope_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/rope_nm.dds";
+   mapTo = "ChristmasTree_decorations";
+   diffuseMap[0] = "art/Textures/TextureLib/ChristmasTree_decorations_dif.dds";
+   diffuseMap[2] = "art/Textures/TextureLib/ChristmasTree_decorations_spe.dds";
+   diffuseMap[12] = "art/Textures/TextureLib/ChristmasTree_decorations_emi6.dds";
+   alphaTest = "1";
+   alphaRef = "50";
+   emission="1";
+   emissionIntensityFreq="0.1";
+   emissionIntensityMin="0.5";
+   emissionIntensityMax="1";
+   emissionScale="0.5";
+   doubleSided = "1";
+   materialTag0 = "LiF";
 };
 
-singleton Material(wooden_bridge_JorvikMod_wooden_bridge_base)
+// --------------------------------------------------------------------
+
+singleton Material(HatCrown_King_Outfit_mat)
 {
-   mapTo = "JorvikMod_wooden_bridge_base";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_bridge_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_bridge_nm.dds";
+   mapTo = "HatCrown_King_Outfit";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Crowns_diffuse.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Crowns_normal.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Crowns_specular.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- wooden bridge construct ---------------->
 
-singleton Material(wooden_bridge_construct_JorvikMod_wooden_bridge_construct)
+singleton Material(Female_King_Outfit_A_mat)
 {
-   mapTo = "JorvikMod_wooden_bridge_construct";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_bridge_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_bridge_nm.dds";
+   mapTo = "Female_King_Outfit_A";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Female_KingA_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Female_KingA_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Female_KingA_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- wooden bridge damaged ---------------->
-
-singleton Material(wooden_bridge_damaged_JorvikMod_wooden_bridge_rope)
+singleton Material(Female_King_Outfit_A_SkinA_mat)
 {
-   mapTo = "JorvikMod_wooden_bridge_rope";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/rope_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/rope_nm.dds";
+   mapTo = "Female_King_Outfit_A_SkinA";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Female_KingA_SkinA_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Female_KingA_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Female_KingA_SkinA_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-singleton Material(wooden_bridge_damaged_JorvikMod_wooden_bridge_damaged)
+singleton Material(Female_King_Outfit_A_SkinB_mat)
 {
-   mapTo = "JorvikMod_wooden_bridge_damaged";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_bridge_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_bridge_nm.dds";
+   mapTo = "Female_King_Outfit_A_SkinB";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Female_KingA_SkinB_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Female_KingA_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Female_KingA_SkinB_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- stone bridge ---------------->
-
-singleton Material(stone_bridge_JorvikMod_stone_bridge_base)
+singleton Material(Female_King_Outfit_B_mat)
 {
-   mapTo = "JorvikMod_stone_bridge_base";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/stone_bridge_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/stone_bridge_nm.dds";
+   mapTo = "Female_King_Outfit_B";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Female_KingB_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Female_KingB_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Female_KingB_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- stone bridge construct ---------------->
-
-singleton Material(stone_bridge_construct_JorvikMod_stone_bridge_construct)
+singleton Material(Female_King_Outfit_B_SkinA_mat)
 {
-   mapTo = "JorvikMod_stone_bridge_construct";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/stone_bridge_construct_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/stone_bridge_construct_nm.dds";
+   mapTo = "Female_King_Outfit_B_SkinA";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Female_KingB_SkinA_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Female_KingB_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Female_KingB_SkinA_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- stone bridge damage ---------------->
-
-singleton Material(stone_bridge_damaged_JorvikMod_stone_bridge_damaged)
+singleton Material(Female_King_Outfit_B_SkinB_mat)
 {
-   mapTo = "JorvikMod_stone_bridge_damaged";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/stone_bridge_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/stone_bridge_nm.dds";
+   mapTo = "Female_King_Outfit_B_SkinB";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Female_KingB_SkinB_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Female_KingB_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Female_KingB_SkinB_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- small wooden shed ---------------->
-
-singleton Material(small_wooden_shed_JorvikMod_small_wooden_shed)
+singleton Material(Male_King_Outfit_A_mat)
 {
-   mapTo = "JorvikMod_small_wooden_shed";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/small_wooden_shed_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/small_wooden_shed_nm.dds";
+   mapTo = "Male_King_Outfit_A";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Male_KingA_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Male_KingA_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Male_KingA_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- metal cage ---------------->
-
-singleton Material(metal_cage_JorvikMod_metal_cage)
+singleton Material(Male_King_Outfit_A_SkinA_mat)
 {
-   mapTo = "JorvikMod_metal_cage";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/metal_cage_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/metal_cage_nm.dds";
-   diffuseMap[2] = "mods/JorvikMod/art/textures/metal_cage_spec.dds";
+   mapTo = "Male_King_Outfit_A_SkinA";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Male_KingA_SkinA_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Male_KingA_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Male_KingA_SkinA_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- wooden pier ---------------->
-
-singleton Material(pier_JorvikMod_pier)
+singleton Material(Male_King_Outfit_A_SkinB_mat)
 {
-   mapTo = "JorvikMod_pier";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_pier_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_pier_nm.dds";
+   mapTo = "Male_King_Outfit_A_SkinB";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Male_KingA_SkinB_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Male_KingA_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Male_KingA_SkinB_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- wooden barricade ---------------->
-
-singleton Material(wooden_barricade_JorvikMod_barricade)
+singleton Material(Male_King_Outfit_B_mat)
 {
-   mapTo = "JorvikMod_barricade";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_barricade_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_barricade_nm.dds";
+   mapTo = "Male_King_Outfit_B";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Male_KingB_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Male_KingB_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Male_KingB_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-singleton Material(wooden_barricade_JorvikMod_rope)
+singleton Material(Male_King_Outfit_B_SkinA_mat)
 {
-   mapTo = "JorvikMod_rope";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/rope_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/rope_nm.dds";
+   mapTo = "Male_King_Outfit_B_SkinA";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Male_KingB_SkinA_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Male_KingB_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Male_KingB_SkinA_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- stone altar ---------------->
-
-singleton Material(stone_altar_JorvikMod_stone_altar)
+singleton Material(Male_King_Outfit_B_SkinB_mat)
 {
-   mapTo = "JorvikMod_stone_altar";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/stone_altar_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/stone_altar_nm.dds";
+   mapTo = "Male_King_Outfit_B_SkinB";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/king/Male_KingB_SkinB_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/king/Male_KingB_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/king/Male_KingB_SkinB_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//------------- wooden house with tower ---------------->
-
-singleton Material(wooden_house_with_tower_JorvikMod_metal)
+singleton Material(tanningtub_diff_mat)
 {
-   mapTo = "JorvikMod_metal";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/metal_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/metal_nm.dds";
+   mapTo = "tanningtub_diff";
+   diffuseMap[0] = "art/Textures/TextureLib/TanningTub_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/TextureLib/TanningTub_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/TextureLib/TanningTub_SPECULAR.dds";
+   materialTag0 = "LiF";
+   normal3DC = "1";
 };
 
-singleton Material(wooden_house_with_tower_JorvikMod_walls)
+
+singleton Material(Male_Tatters_v1_Vik_DIFFUSE_mat)
 {
-   mapTo = "JorvikMod_walls";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_wall_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_wall_nm.dds";
+   mapTo = "Male_Tatters_v1_Vik_DIFFUSE";
+   diffuseMap[0] = "art/Textures/Charactertextures/Customization/male/Male_Tatters_Vik_v1_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Customization/male/Male_Tatters_Vik_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Customization/male/Male_Tatters_Vik_v1_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-singleton Material(wooden_house_with_tower_JorvikMod_roof)
+singleton Material(feMale_Tatters_v1_Vik_DIFFUSE_mat)
 {
-   mapTo = "JorvikMod_roof";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_roof_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_roof_nm.dds";
+   mapTo = "feMale_Tatters_v1_Vik_DIFFUSE";
+   diffuseMap[0] = "art/Textures/Charactertextures/Customization/female/feMale_Tatters_Vik_v1_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Customization/female/feMale_Tatters_Vik_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Customization/female/feMale_Tatters_Vik_v1_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-singleton Material(wooden_house_with_tower_JorvikMod_floor)
+singleton Material(Male_Tatters_v1_eur_DIFFUSE_mat)
 {
-   mapTo = "JorvikMod_floor";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_floor_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_floor_nm.dds";
+   mapTo = "Male_Tatters_v1_eur_DIFFUSE";
+   diffuseMap[0] = "art/Textures/Charactertextures/Customization/male/Male_Tatters_eur_v1_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Customization/male/Male_Tatters_eur_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Customization/male/Male_Tatters_eur_v1_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-singleton Material(wooden_house_with_tower_JorvikMod_beam)
+singleton Material(feMale_Tatters_v1_eur_DIFFUSE_mat)
 {
-   mapTo = "JorvikMod_beam";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/beam_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/beam_nm.dds";
+   mapTo = "feMale_Tatters_v1_eur_DIFFUSE";
+   diffuseMap[0] = "art/Textures/Charactertextures/Customization/female/feMale_Tatters_eur_v1_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Customization/female/feMale_Tatters_eur_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Customization/female/feMale_Tatters_eur_v1_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-//---------------------- wooden church ---------------------->
-
-singleton Material(wooden_church_JorvikMod_walls)
+singleton Material(Male_Tatters_v1_mon_DIFFUSE_mat)
 {
-   mapTo = "JorvikMod_walls";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_wall_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_wall_nm.dds";
-   
+   mapTo = "Male_Tatters_v1_mon_DIFFUSE";
+   diffuseMap[0] = "art/Textures/Charactertextures/Customization/male/Male_Tatters_mon_v1_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Customization/male/Male_Tatters_mon_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Customization/male/Male_Tatters_mon_v1_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-singleton Material(wooden_church_JorvikMod_floor)
+singleton Material(feMale_Tatters_v1_mon_DIFFUSE_mat)
 {
-   mapTo = "JorvikMod_floor";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_floor_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_floor_nm.dds";
-   
+   mapTo = "feMale_Tatters_v1_mon_DIFFUSE";
+   diffuseMap[0] = "art/Textures/Charactertextures/Customization/female/feMale_Tatters_mon_v1_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Customization/female/feMale_Tatters_mon_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Customization/female/feMale_Tatters_mon_v1_SPECULAR.dds";
+   normal3DC = "1";
+   skinned = true;
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "130";
+   materialTag0 = "LiF";
 };
 
-singleton Material(wooden_church_JorvikMod_beam)
+singleton Material(Surcoat_armor_Pink_DIFFUSE_mat)
 {
-   mapTo = "JorvikMod_beam";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/beam_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/beam_nm.dds";
-   
+   mapTo = "Surcoat_armor_Pink_DIFFUSE";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/Surcoat/Surcoat_armorA_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/Surcoat/Surcoat_armor_DIFFUSE.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/Surcoat/Surcoat_armorA_SPECULAR.dds";
+alphaTest = "1";
+   alphaRef = "100";
+   useAnisotropic[0] = "1";
+   isTabard = true;
+   skinned = true;
+   doubleSided = "1";
+   heraldicCustomizationData = Surcoat_armor_Heraldry;
+   normal3DC="1";
+   heraldyOffset = "0 0 2 1";
 };
 
-singleton Material(wooden_church_JorvikMod_roof)
+singleton Material(Surcoat_armor_Red_DIFFUSE_mat)
 {
-   mapTo = "JorvikMod_roof";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_roof_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_roof_nm.dds";
-   
+   mapTo = "Surcoat_armor_Red_DIFFUSE";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/Surcoat/Surcoat_armorB_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/Surcoat/Surcoat_armor_DIFFUSE.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/Surcoat/Surcoat_armorB_SPECULAR.dds";
+alphaTest = "1";
+   alphaRef = "100";
+   useAnisotropic[0] = "1";
+   isTabard = true;
+   skinned = true;
+   doubleSided = "1";
+   heraldicCustomizationData = Surcoat_armor_Heraldry;
+   normal3DC="1";
+   heraldyOffset = "0 0 2 1";
 };
 
-singleton Material(wooden_church_JorvikMod_metal)
+singleton Material(Surcoat_armor_Blue_DIFFUSE_mat)
 {
-   mapTo = "JorvikMod_metal";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/metal_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/metal_nm.dds";
+   mapTo = "Surcoat_armor_Blue_DIFFUSE";
+   diffuseMap[0] = "art/Textures/Charactertextures/Outfits/Surcoat/Surcoat_armorC_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Charactertextures/Outfits/Surcoat/Surcoat_armor_DIFFUSE.dds";
+   diffuseMap[2] = "art/Textures/Charactertextures/Outfits/Surcoat/Surcoat_armorC_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "100";
+   useAnisotropic[0] = "1";
+   isTabard = true;
+   skinned = true;
+   doubleSided = "1";
+   heraldicCustomizationData = Surcoat_armor_Heraldry;
+   normal3DC="1";
+   heraldyOffset = "0 0 2 1";
 };
 
-//------------- wooden pier T ---------------->
 
-singleton Material(pier_T_JorvikMod_pier)
+// ------------------Crunch------------------------
+
+singleton Material(BlueWall_B_M1_mat)
 {
-   mapTo = "JorvikMod_pier";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_pier_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_pier_nm.dds";
+   mapTo = "BlueWall_B_M1";
+   diffuseColor[2] = "White";
+   diffuseMap[0] = "art/textures/TextureLib/BlueWall_B_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/BlueWall_B_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/BlueWall_B_SPECULAR.dds";
+   accuScale[0] = "2.59844";
+   emissive[0] = "1";
+   alphaRef = "0";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(BlueWall_A_M1_mat)
+{
+   mapTo = "BlueWall_A_M1";
+   diffuseMap[0] = "art/textures/TextureLib/BlueWall_A_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/BlueWall_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/BlueWall_A_SPECULAR.dds";
+   accuScale[0] = "1.62969";
+   emissive[0] = "1";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(ChurchGlass_diff_mat)
+{
+   mapTo = "ChurchGlass_diff";
+   diffuseMap[0] = "art/textures/TextureLib/ChurchGlass_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/ChurchGlass_SPECULAR.dds";
+   diffuseMap[12] = "art/textures/TextureLib/ChurchGlass_EMISSIVE.dds";
+   emission="1";
+   emissionIntensityFreq="0.9";
+   emissionIntensityMin="0.3";
+   emissionIntensityMax="0.5";
+   emissionScale="3.0";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(Church_DoorA_M2_mat)
+{
+   mapTo = "Church_DoorA_M2";
+   diffuseMap[0] = "art/textures/TextureLib/Church_DoorA_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Church_DoorA_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Church_DoorA_SPECULAR.dds";
+   materialTag0 = "LiF";
+   doubleSided = "1";
+       normal3DC = "1";
+};
+
+singleton Material(Fence_inside_diff_mat)
+{
+   mapTo = "Fence_inside_diff";
+   diffuseMap[0] = "art/textures/TextureLib/Fence_inside_diff.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Fence_inside_nm.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Fence_inside_spec.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(RedArc_M1_mat)
+{
+   mapTo = "RedArc_M1";
+   diffuseMap[0] = "art/textures/TextureLib/RedArc_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/RedArc_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/RedArc_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(Wall_PlasterA_M1_mat)
+{
+   mapTo = "Wall_PlasterA_M1";
+   diffuseMap[0] = "art/textures/TextureLib/Church_WallA_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Church_WallA_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Church_WallA_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(RedEntranceA_mat)
+{
+   mapTo = "RedEntranceA";
+   diffuseMap[0] = "art/textures/TextureLib/RedEntranceA_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/RedEntranceA_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/RedEntranceA_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(Svefni1_mat)
+{
+   mapTo = "Svefni1";
+   diffuseMap[0] = "art/textures/TextureLib/Svefni_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Svefni_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Svefni_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(Church_Roof_B_M1_mat)
+{
+   mapTo = "Church_Roof_B_M1";
+   diffuseMap[0] = "art/textures/TextureLib/Roof_RoundTilesA_02_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Roof_RoundTilesA_01_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Roof_RoundTilesA_01_SPECULAR.dds";
+   materialTag0 = "LiF";
+      alphaTest = "1";
+   alphaRef = "26";
+       normal3DC = "1";
+};
+
+singleton Material(planks_02_inside_diff_mat)
+{
+    mapTo = "planks_02_inside_diff";
+    diffuseMap[0] = "art/textures/textureLib/planks_02_inside_diff.dds";
+    diffuseMap[1] = "art/textures/textureLib/planks_02_inside_nm.dds";
+    useAnisotropic[0] = "1";
+    materialTag0 = "LiF";
+    //doubleSided = "1";
+	    normal3DC = "1";
+};
+
+singleton Material(EmbossWall_mat)
+{
+   mapTo = "EmbossWall";
+   diffuseMap[0] = "art/textures/TextureLib/Church_EmbossWall_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Church_EmbossWall_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Church_EmbossWall_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(Church_Bricks_M1_mat)
+{
+   mapTo = "Church_Bricks_M1";
+   diffuseMap[0] = "art/textures/TextureLib/Church_Bricks_A_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Church_Bricks_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Church_Bricks_A_SPECULAR.dds";
+   materialTag0 = "LiF";
+      alphaTest = "1";
+   alphaRef = "1";
+       normal3DC = "1";
+};
+
+singleton Material(Church_floor_M2_mat)
+{
+   mapTo = "Church_floor_M2";
+   diffuseMap[0] = "art/textures/TextureLib/CastleConstructions_FloorWood_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/CastleConstructions_FloorWood_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/CastleConstructions_FloorWood_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(Church_Roof_A_M1_mat)
+{
+   mapTo = "Church_Roof_A_M1";
+   diffuseMap[0] = "art/textures/TextureLib/Roof_RoundTilesA_01_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Roof_RoundTilesA_01_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Roof_RoundTilesA_01_SPECULAR.dds";
+   materialTag0 = "LiF";
+      alphaTest = "1";
+   alphaRef = "26";
+       normal3DC = "1";
+};
+
+singleton Material(Church_RoofRed_M1_mat)
+{
+   mapTo = "Church_RoofRed_M1";
+   diffuseMap[0] = "art/textures/TextureLib/roof_planks_01_diff.dds";
+   diffuseMap[1] = "art/textures/TextureLib/roof_planks_01_nm.dds";
+   materialTag0 = "LiF";
+      alphaTest = "1";
+   alphaRef = "26";
+       normal3DC = "1";
+};
+
+singleton Material(Altar_Stone2_Colored_mat)
+{
+   mapTo = "Altar_Stone2_Colored";
+   diffuseMap[0] = "art/textures/TextureLib/Altar_Stones_Part2_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Altar_Stones_Part2_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Altar_Stones_Part2_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(altar_statues_pack2_mat)
+{
+   mapTo = "altar_statues_pack2";
+   diffuseMap[0] = "art/textures/TextureLib/Altar_Statues_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Altar_Statues_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Altar_Statues_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(OakTree_diff_mat)
+{
+   mapTo = "OakTree_diff";
+   diffuseMap[0] = "art/textures/TextureLib/OakTree_Diffuse.dds";
+   opacityMap[0] = "art/textures/TextureLib/OakTree_Opacity.dds";
+   specularPower[0] = "46";
+   specularStrength[0] = "0";
+   pixelSpecular[0] = "1";
+   accuScale[0] = "0.03125";
+   accuSpecular[0] = "0.6";
+   parallaxScale[0] = "0.444444";
+   scrollSpeed[0] = "1";
+   alphaTest = "1";
+   alphaRef = "107";
+   doubleSided = "1";
+   materialTag0 = "LiF";
+};
+
+singleton Material(OakBark_diff_mat)
+{
+   mapTo = "OakBark_diff";
+   diffuseMap[0] = "art/textures/TextureLib/OakBark_Diffuse.dds";
+   diffuseMap[1] = "art/textures/TextureLib/OakBark_Normal.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(LeavesA_M1_mat)
+{
+   mapTo = "LeavesA_M1";
+   diffuseMap[0] = "art/textures/TextureLib/Decal_ScatteredLeaves2_1k_d.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Decal_ScatteredLeaves2_1k_n.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Decal_ScatteredLeaves2_1k_t.dds";
+   alphaTest = "1";
+   alphaRef = "40";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(FloorDecal_diff_mat)
+{
+   mapTo = "FloorDecal_diff";
+   diffuseMap[0] = "art/textures/TextureLib/FloorDecal_DIFFUSE.dds";
+   opacityMap[0] = "art/textures/TextureLib/FloorDecal_OPACITY.dds";
+   alphaTest = "1";
+   alphaRef = "131";
+   specularStrength[0] = "0";
+   pixelSpecular[0] = "1";
+   vertLit[0] = "1";
+   glow[0] = "0";
+   emissive[0] = "1";
+   translucentBlendOp = "None";
+   materialTag0 = "LiF";
+};
+
+singleton Material(ChurchTree_mat)
+{
+   mapTo = "ChurchTree";
+   diffuseMap[0] = "art/textures/TextureLib/ChurchTree_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/ChurchTree_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/ChurchTree_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(Church70_diff_mat)
+{
+   mapTo = "Church70_diff";
+   diffuseMap[0] = "art/textures/TextureLib/Church70_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/Church70_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/Church70_SPECULAR.dds";
+   materialTag0 = "LiF";
+       normal3DC = "1";
+};
+
+singleton Material(RedColumn_mat)
+{
+   mapTo = "RedColumn";
+   diffuseMap[0] = "art/textures/TextureLib/RedColumn_DIFFUSE.dds";
+   diffuseMap[1] = "art/textures/TextureLib/RedColumn_NORMALMAP.dds";
+   diffuseMap[2] = "art/textures/TextureLib/RedColumn_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "131";
+   materialTag0 = "LiF";
+   doubleSided = "1";
+
+
+};
+
+singleton Material(ChurchGlass_diff_black_mat)
+{
+   mapTo = "ChurchGlass_diff_black";
+   diffuseMap[0] = "art/textures/TextureLib/ChurchGlass_DIFFUSE_black.dds";
+   diffuseMap[1] = "art/textures/TextureLib/ChurchGlass_SPECULAR_black.dds";
+   diffuseMap[12] = "art/textures/TextureLib/ChurchGlass_EMISSIVE_black.dds";
+   emission="1";
+   emissionIntensityFreq="0.9";
+   emissionIntensityMin="0.3";
+   emissionIntensityMax="0.5";
+   emissionScale="3.0";
+   materialTag0 = "LiF";
+};
+
+singleton Material(Altar_Stone2_Colored_black_mat)
+{
+   mapTo = "Altar_Stone2_Colored_black";
+   diffuseMap[0] = "art/textures/TextureLib/Altar_Stones_Part2_DIFFUSE_black.dds";
+   normalMap[0] = "art/textures/TextureLib/Altar_Stones_Part2_NORMALMAP.dds";
+   specularMap[0] = "art/textures/TextureLib/Altar_Stones_SPECULAR_black.dds";
+   materialTag0 = "LiF";
+   normal3DC = "1";
+};
+
+singleton Material(Altar_Stone_Colored_black_mat)
+{
+    mapTo = "Altar_Stone_Colored_black";
+    diffuseMap[0] = "art/Textures/TextureLib/Altar_Stones_colored_DIFFUSE_black.dds";
+    diffuseMap[1] = "art/Textures/TextureLib/Altar_Stones_colored_NORMALMAP_black.dds";
+    diffuseMap[2] = "art/Textures/TextureLib/Altar_Stones_colored_SPECULAR_black.dds";
+    materialTag0 = "LiF";
+    //doubleSided = "1";
+    normal3DC = "1";
+};
+
+singleton Material(Altar_Statue_Jode_colored_black_mat)
+{
+    mapTo = "Altar_Statue_Jode_colored_black";
+    diffuseMap[0] = "art/Textures/TextureLib/Altar_Statue_JodeHolza_colored_DIFFUSE_black.dds";
+    diffuseMap[1] = "art/Textures/TextureLib/Altar_Statue_JodeHolza_colored_NORMALMAP_black.dds";
+    diffuseMap[2] = "art/Textures/TextureLib/Altar_Statue_JodeHolza_colored_SPECULAR_black.dds";
+    materialTag0 = "LiF";
+    //doubleSided = "1";
+    normal3DC = "1";
+};
+
+// ----------------------- Tower siege-------------------
+singleton Material(SiegeTowerTier1_SiegeTowerWood2)
+{
+   mapTo = "TowerWood";
+   diffuseMap[0] = "art/Textures/TextureLib/TowerWood.dds";
    translucentBlendOp = "None";
 };
 
-singleton Material(pier_T_construct_JorvikMod_pier)
+singleton Material(SiegeTowerTier1_SiegeTowerWood1)
 {
-   mapTo = "JorvikMod_pier";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_pier_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_pier_nm.dds";
+   mapTo = "SiegeTowerWood1";
+   diffuseColor[0] = "0.64 0.64 0.64 1";
    translucentBlendOp = "None";
 };
 
-//------------- wooden pier L ---------------->
-
-singleton Material(pier_L_JorvikMod_pier)
+singleton Material(SiegeTowerTier1_TowerWood)
 {
-   mapTo = "JorvikMod_pier";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_pier_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_pier_nm.dds";
+   mapTo = "TowerWood";
+   diffuseMap[0] = "art/Textures/TextureLib/TowerWood.dds";
    translucentBlendOp = "None";
 };
 
-singleton Material(pier_L_construct_JorvikMod_pier)
+singleton Material(SiegeTowerTier1_material_001)
 {
-   mapTo = "JorvikMod_pier";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/wooden_pier_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/wooden_pier_nm.dds";
+   mapTo = "material_001";
+   diffuseColor[0] = "0.643137 0.698039 0.733333 1";
+   specular[0] = "0.5 0.5 0.5 1";
+   specularPower[0] = "50";
    translucentBlendOp = "None";
 };
 
-//------------- stone_tomb_with_cross ---------------->
-
-singleton Material(stone_tomb_with_cross_JorvikMod_stone_tomb)
+singleton Material(SiegeTowerTier1_material_0_001)
 {
-   mapTo = "JorvikMod_stone_tomb";
-   diffuseMap[0] = "mods/JorvikMod/art/textures/stone_tomb_with_cross_diff.dds";
-   diffuseMap[1] = "mods/JorvikMod/art/textures/stone_tomb_with_cross_nm.dds";
+   mapTo = "material_0_001";
+   specular[0] = "0.5 0.5 0.5 1";
+   specularPower[0] = "50";
+   translucentBlendOp = "None";
+};
+
+singleton Material(SiegeTowerTier1_TowerWood_001)
+{
+   mapTo = "TowerWood_001";
+   diffuseColor[0] = "0.64 0.64 0.64 1";
+   specular[0] = "0.5 0.5 0.5 1";
+   specularPower[0] = "50";
+   translucentBlendOp = "None";
+};
+
+singleton Material(SiegeTowerTier3_TowerWood_0)
+{
+   mapTo = "TowerWood_0";
+   diffuseColor[0] = "0.64 0.64 0.64 1";
+   specular[0] = "0.5 0.5 0.5 1";
+   specularPower[0] = "50";
+   translucentBlendOp = "None";
+};
+
+// ----------------- human dommy --------------------------------
+
+singleton Material(Wood_Head_mat)
+{
+   mapTo = "Wood_Head";
+   diffuseMap[0] = "art/textures/textureLib/planks_02_diff.dds";
+   diffuseMap[1] = "art/textures/textureLib/planks_02_nm.dds";
+   materialTag0 = "LiF";
+   doubleSided = "1";
+};
+
+singleton Material(Maul_pack2_diff_nobehave_mat)
+{
+   mapTo = "Maul_pack2_diff_nobehave";
+   diffuseMap[0] = "art/Textures/Weapons/Maul_Pack2_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/Maul_Pack2_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/Maul_Pack2_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(Shield_SteelRoundREG_no_customization_mat)
+{
+   mapTo = "Shield_SteelRoundREG_no_customization";
+   diffuseMap[0] = "art/Textures/Shields/Shield_SteelRoundREG_A_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_SteelRoundREG_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_SteelRoundREG_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Padded90_Vik_no_skin_mat)
+{
+   mapTo = "Padded90_Vik_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Padded/Padded_90_Vik_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Padded/Padded_90_Vik_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Padded/Padded_90_Vik_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(Plate60_Eur_no_skin_mat)
+{
+   mapTo = "Plate60_Eur_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Plate/Plate_60_Eur_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Plate/Plate_60_Eur_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Plate/Plate_60_Eur_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(NordicSword_DIFFUSE_nobehave_mat)
+{
+    mapTo = "NordicSword_DIFFUSE_nobehave";
+    diffuseMap[0] = "art/Textures/Weapons/NordicSword_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/NordicSword_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/NordicSword_SPECULAR.dds";
+    normal3DC = "1";
+};
+
+singleton Material(Plate100_Eur_no_skin_mat)
+{
+   mapTo = "Plate100_Eur_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Plate/Plate_100_Eur_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Plate/Plate_90_Eur_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Plate/Plate_100_Eur_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(Flamberge_pack2_diff_nobehave_mat)
+{
+    mapTo = "Flamberge_pack2_diff_nobehave";
+    diffuseMap[0] = "art/Textures/Weapons/Flamberge_Pack2_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/Flamberge_Pack2_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/Flamberge_Pack2_SPECULAR.dds";
+    normal3DC = "1";
+};
+
+singleton Material(Scale60_Mon_no_skin_mat)
+{
+   mapTo = "Scale60_Mon_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Scale/Scale_60_Mon_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Scale/Scale_60_Mon_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Scale/Scale_60_Mon_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(BoarSpear_diff_nobehave_mat)
+{
+    mapTo = "BoarSpear_diff_nobehave";
+    diffuseMap[0] = "art/Textures/Weapons/BoarSpear_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/BoarSpear_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/BoarSpear_SPECULAR.dds";
+    normal3DC = "1";
+};
+
+singleton Material(Chain60_Vik_no_skin_mat)
+{
+   mapTo = "Chain60_Vik_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Chainmail/Chain_60_Vik_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Chainmail/Chain_60_Vik_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Chainmail/Chain_60_Vik_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(Helmet_Eur_no_skin_mat)
+{
+   mapTo = "Helmet_Eur_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Helmet0_Eur_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Helmet0_Eur_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Helmet0_Eur_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(Chain90_Vik_no_skin_mat)
+{
+   mapTo = "Chain90_Vik_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Chainmail/Chain_90_Vik_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Chainmail/Chain_90_Vik_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Chainmail/Chain_90_Vik_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+   doubleSided = "1";
+};
+
+singleton Material(Broad_Axe_pack2_mat)
+{
+   mapTo = "Broad_Axe_pack2";
+   diffuseMap[0] = "art/Textures/Weapons/BroadAxe_Pack2_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/BroadAxe_Pack2_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/BroadAxe_Pack2_SPECULAR.dds";
+   normal3DC="1";
+};
+
+singleton Material(Leather90_Eur_no_skin_mat)
+{
+   mapTo = "Leather90_Eur_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Leather/Leather_90_Eur_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Leather/Leather_90_Eur_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Leather/Leather_90_Eur_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(HeavyCrossbow_no_skin_mat)
+{
+   mapTo = "HeavyCrossbow_no_skin";
+   diffuseMap[0] = "art/Textures/Weapons/HeavyCrossbow_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/HeavyCrossbow_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/HeavyCrossbow_SPECULAR.dds";
+   normal3DC="1";
+};
+
+singleton Material(Leather100_Eur_no_skin_mat)
+{
+   mapTo = "Leather100_Eur_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Leather/Leather_100_Eur_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Leather/Leather_90_Eur_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Leather/Leather_90_Eur_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(Grossmesser_diff_nobehave_mat)
+{
+   mapTo = "Grossmesser_diff_nobehave";
+   diffuseMap[0] = "art/Textures/Weapons/GrossMesser_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/GrossMesser_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/GrossMesser_SPECULAR.dds";
+   normal3DC="1";
+};
+
+singleton Material(Scale90_Mon_no_skin_mat)
+{
+   mapTo = "Scale90_Mon_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Scale/Scale_90_Mon_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Scale/Scale_90_Mon_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Scale/Scale_90_Mon_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+   doubleSided = "1";
+};
+
+singleton Material(Glaive_Pack2_mat)
+{
+   mapTo = "Glaive_Pack2";
+   diffuseMap[0] = "art/Textures/Weapons/Glaive_Pack2_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/Glaive_Pack2_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/Glaive_Pack2_SPECULAR.dds";
+   normal3DC="1";
+};
+
+singleton Material(Plate90_Eur_no_skin_mat)
+{
+   mapTo = "Plate90_Eur_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Plate/Plate_90_Eur_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Plate/Plate_90_Eur_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Plate/Plate_90_Eur_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+};
+
+singleton Material(knight_sword_nobehave_mat)
+{
+   mapTo = "knight_sword_nobehave";
+   diffuseMap[0] = "art/Textures/Weapons/KnightSword_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/KnightSword_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/KnightSword_SPECULAR.dds";
+   normal3DC="1";
+};
+
+singleton Material(Normal_Horse_base_white_no_skin_mat)
+{
+   mapTo = "Normal_Horse_base_white_no_skin";
+   diffuseMap[0] = "art/Textures/Animals/Horse_DIFFUSE_WHITE_01.dds";
+   diffuseMap[1] = "art/Textures/Animals/Horse_NORMALMAP_01.dds";
+   diffuseMap[2] = "art/Textures/Animals/Horse_SPECULAR_01.dds";
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "80";
+   materialTag0 = "LiF";
+};
+
+singleton Material(Lance_pack1_nobehave_mat)
+{
+    mapTo = "Lance_pack1_nobehave";
+    diffuseMap[0] = "art/Textures/Weapons/Lance_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/Lance_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/Lance_SPECULAR.dds";
+    normal3DC = "1";
+};
+
+singleton Material(Padded60_Vik_no_skin_mat)
+{
+   mapTo = "Padded60_Vik_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Padded/Padded_60_Vik_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Padded/Padded_60_Vik_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Padded/Padded_60_Vik_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+   doubleSided = "1";
+};
+
+singleton Material(Normal_Horse_base_no_skin_mat)
+{
+   mapTo = "Normal_Horse_base_no_skin";
+   diffuseMap[0] = "art/Textures/Animals/Horse_DIFFUSE_BROWN_01.dds";
+   diffuseMap[1] = "art/Textures/Animals/Horse_NORMALMAP_01.dds";
+   diffuseMap[2] = "art/Textures/Animals/Horse_SPECULAR_01.dds";
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "80";
+   materialTag0 = "LiF";
+};
+
+singleton Material(Padded100_Vik_no_skin_mat)
+{
+   mapTo = "Padded100_Vik_no_skin";
+   diffuseMap[0] = "art/Textures/CharacterTextures/Armors/Padded/Padded_100_Vik_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/CharacterTextures/Armors/Padded/Padded_90_Vik_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/CharacterTextures/Armors/Padded/Padded_90_Vik_SPECULAR.dds";
+   alphaTest = "1";
+   alphaRef = "33";
+   normal3DC="1";
+   doubleSided = "1";
+};
+
+singleton Material(Horse_DIFFUSE_BLACK_01_no_skin_mat)
+{
+   mapTo = "Horse_DIFFUSE_BLACK_01_no_skin";
+   diffuseMap[0] = "art/Textures/Animals/Horse_DIFFUSE_BLACK_01.dds";
+   diffuseMap[1] = "art/Textures/Animals/Horse_NORMALMAP_01.dds";
+   diffuseMap[2] = "art/Textures/Animals/Horse_SPECULAR_01.dds";
+   doubleSided = "1";
+   alphaTest = "1";
+   alphaRef = "127";
+   materialTag0 = "LiF";
+};
+
+singleton Material(Heavy_Horse_base_no_skin_mat)
+{
+   mapTo = "Heavy_Horse_base_no_skin";
+   diffuseMap[0] = "art/Textures/Animals/Heavy_Horse1_DIFFUSE_01.dds";
+   diffuseMap[1] = "art/Textures/Animals/HeavyHorse1_NORMALMAP_01.dds";
+   diffuseMap[2] = "art/Textures/Animals/Heavy_Horse1_SPECULAR_01.dds";
+   materialTag0 = "LiF";
+};
+
+singleton Material(JoustingLance_DIFFUSE_nobehave_mat)
+{
+    mapTo = "JoustingLance_DIFFUSE_nobehave";
+    diffuseMap[0] = "art/Textures/Weapons/JoustingLance_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/JoustingLance_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/JoustingLance_SPECULAR.dds";
+    normal3DC = "1";
+};
+
+singleton Material(Heavy_Horse2_DIFFUSE_01_no_skin_mat)
+{
+   mapTo = "Heavy_Horse2_DIFFUSE_01_no_skin";
+   diffuseMap[0] = "art/Textures/Animals/Heavy_Horse2_DIFFUSE_01.dds";
+   diffuseMap[1] = "art/Textures/Animals/HeavyHorse2_NORMALMAP_01.dds";
+   diffuseMap[2] = "art/Textures/Animals/Heavy_Horse2_SPECULAR_01.dds";
+   materialTag0 = "LiF";
+};
+
+singleton Material(Heavy_Horse3_DIFFUSE_01_no_skin_mat)
+{
+   mapTo = "Heavy_Horse3_DIFFUSE_01_no_skin";
+   diffuseMap[0] = "art/Textures/Animals/Heavy_Horse3_DIFFUSE_01.dds";
+   diffuseMap[1] = "art/Textures/Animals/HeavyHorse3_NORMALMAP_01.dds";
+   diffuseMap[2] = "art/Textures/Animals/Heavy_Horse3_SPECULAR_01.dds";
+   materialTag0 = "LiF";
+};
+
+singleton Material(Bardiche_pack1_ns_mat)
+{
+    mapTo = "Bardiche_pack1_ns";
+    diffuseMap[0] = "art/Textures/Weapons/Bardiche_Pack1_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/Bardiche_Pack1_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/Bardiche_Pack1_SPECULAR.dds";
+    normal3DC = "1";
+};
+
+singleton Material(Shield_WoodenRound_ns2_mat)
+{
+   mapTo = "Shield_WoodenRound_ns2";
+   diffuseMap[0] = "art/Textures/Shields/Shield_WoodenRound_A_DIFFUSE3.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_WoodenRound_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_WoodenRound_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(scimitar_pack1_ns_mat)
+{
+    mapTo = "scimitar_pack1_ns";
+    diffuseMap[0] = "art/Textures/Weapons/Scimitar_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/Scimitar_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/Scimitar_SPECULAR.dds";
+    normal3DC = "1";
+};
+
+singleton Material(Shield_WoodenRound_ns_mat)
+{
+   mapTo = "Shield_WoodenRound_ns";
+   diffuseMap[0] = "art/Textures/Shields/Shield_WoodenRound_A_DIFFUSE1.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_WoodenRound_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_WoodenRound_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Broad_Axe_pack1_ns_mat)
+{
+   mapTo = "Broad_Axe_pack1_ns";
+   diffuseMap[0] = "art/Textures/Weapons/BroadAxe_Pack1_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/BroadAxe_Pack1_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/BroadAxe_Pack1_SPECULAR.dds";
+   normal3DC="1";
+};
+
+singleton Material(Shield_Kite_ns_mat)
+{
+   mapTo = "Shield_Kite_ns";
+   diffuseMap[0] = "art/Textures/Shields/Shield_Kite_A_DIFFUSE1.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_Kite_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_Kite_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(BoarSpear_diff_ns_mat)
+{
+    mapTo = "BoarSpear_diff_ns";
+    diffuseMap[0] = "art/Textures/Weapons/BoarSpear_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/BoarSpear_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/BoarSpear_SPECULAR.dds";
+    normal3DC = "1";
+};
+
+singleton Material(Shield_HeaterB_ns_mat)
+{
+   mapTo = "Shield_HeaterB_ns";
+   diffuseMap[0] = "art/Textures/Shields/Shield_HeaterB_A_DIFFUSE1.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_HeaterB_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_HeaterB_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Claymore_DIFFUSE_ns_mat)
+{
+    mapTo = "Claymore_DIFFUSE_ns";
+    diffuseMap[0] = "art/Textures/Weapons/Claymore_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/Claymore_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/Claymore_SPECULAR.dds";
+    normal3DC = "1";
+};
+
+singleton Material(Shield_HeaterA_ns_mat)
+{
+   mapTo = "Shield_HeaterA_ns";
+   diffuseMap[0] = "art/Textures/Shields/Shield_HeaterA_A_DIFFUSE1.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_HeaterA_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_HeaterA_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Flamberge_pack1_diff_ns_mat)
+{
+    mapTo = "Flamberge_pack1_diff_ns";
+    diffuseMap[0] = "art/Textures/Weapons/Flamberge_DIFFUSE.dds";
+    diffuseMap[1] = "art/Textures/Weapons/Flamberge_NORMALMAP.dds";
+    diffuseMap[2] = "art/Textures/Weapons/Flamberge_SPECULAR.dds";
+    materialTag0 = "LiF";
+    normal3DC = "1";
+};
+
+singleton Material(Shield_HeaterREG_ns_mat)
+{
+   mapTo = "Shield_HeaterREG_ns";
+   diffuseMap[0] = "art/Textures/Shields/Shield_HeaterREG_A_DIFFUSE1.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_HeaterREG_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_HeaterREG_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Shield_KiteREG_ns_mat)
+{
+   mapTo = "Shield_KiteREG_ns";
+   diffuseMap[0] = "art/Textures/Shields/Shield_KiteREG_A_DIFFUSE1.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_KiteREG_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_KiteREG_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Shield_SteelRound_ns_mat)
+{
+   mapTo = "Shield_SteelRound_ns";
+   diffuseMap[0] = "art/Textures/Shields/Shield_SteelRound_A_DIFFUSE1.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_SteelRound_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_SteelRound_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Maul_diff_ns_mat)
+{
+   mapTo = "Maul_diff_ns";
+   diffuseMap[0] = "art/Textures/Weapons/Maul_Pack1_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/Maul_Pack1_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/Maul_Pack1_SPECULAR.dds";
+   materialTag0 = "LiF";
+};
+
+singleton Material(Shield_WoodenRoundREG_A_ns_mat)
+{
+   mapTo = "Shield_WoodenRoundREG_A_ns";
+   diffuseMap[0] = "art/Textures/Shields/Shield_WoodenRoundREG_A_DIFFUSE1.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_WoodenRoundREG_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_WoodenRoundREG_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Shield_Tower_ns_mat)
+{
+   mapTo = "Shield_Tower_ns";
+   diffuseMap[0] = "art/Textures/Shields/Shield_Tower_A_DIFFUSE1.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_Tower_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_Tower_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(knight_sword_ns_mat)
+{
+   mapTo = "knight_sword_ns";
+   diffuseMap[0] = "art/Textures/Weapons/KnightSword_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Weapons/KnightSword_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Weapons/KnightSword_SPECULAR.dds";
+   normal3DC="1";
+};
+
+singleton Material(Shield_HeaterB_ns1_mat)
+{
+   mapTo = "Shield_HeaterB_ns1";
+   diffuseMap[0] = "art/Textures/Shields/Shield_HeaterB_A_DIFFUSE2.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_HeaterB_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_HeaterB_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Shield_HeaterA_ns1_mat)
+{
+   mapTo = "Shield_HeaterA_ns1";
+   diffuseMap[0] = "art/Textures/Shields/Shield_HeaterA_A_DIFFUSE2.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_HeaterA_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_HeaterA_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Shield_HeaterREG_ns1_mat)
+{
+   mapTo = "Shield_HeaterREG_ns1";
+   diffuseMap[0] = "art/Textures/Shields/Shield_HeaterREG_A_DIFFUSE2.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_HeaterREG_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_HeaterREG_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(Shield_WoodenRound_ns1_mat)
+{
+   mapTo = "Shield_WoodenRound_ns1";
+   diffuseMap[0] = "art/Textures/Shields/Shield_WoodenRound_A_DIFFUSE2.dds";
+   diffuseMap[1] = "art/Textures/Shields/Shield_WoodenRound_A_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Shields/Shield_WoodenRound_A_SPECULAR.dds";
+   normal3DC = "1";
+};
+
+singleton Material(wandfackel_medieval_tourch)
+{
+   mapTo = "medieval_tourch";
+   diffuseMap[0] = "art/Textures/TextureLib/Medieval_tourch_color.dds";
+   specular[0] = "0.414 0.414 0.414 1";
+   specularPower[0] = "24";
+   translucentBlendOp = "None";
+};
+
+singleton Material(Bear_Skin_mat)
+{
+   mapTo = "Bear_Skin";
+   diffuseMap[0] = "art/Textures/TextureLib/Bear_Skin.dds";
+};
+
+singleton Material(karte_map)
+{
+   mapTo = "map";
+   diffuseMap[0] = "art/Textures/TextureLib/Map_color2.dds";
+   specular[0] = "0.504 0.504 0.504 1";
+   specularPower[0] = "39";
    translucentBlendOp = "None";
 };
 //------------- Miner outfit ---------------->
@@ -11778,12 +12843,9 @@ singleton material(miner_diff_mat)
     .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Diffuse.dds";
     .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Normal.dds";
     .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Specular.dds";
-    .doubleSided = 1;
-    .alphaTest = 1;
-    .alphaRef = 110;
-    .mipLODBias = -1.2;
-    .skinned = 1;
-    .normal3DC = 1;
+   normal3DC="1";
+   skinned = true;
+   doubleSided = "1";
 };
 singleton material(Male_Craft_Miner_SkinA_DIFFUSE)
 {
@@ -11791,12 +12853,9 @@ singleton material(Male_Craft_Miner_SkinA_DIFFUSE)
     .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Male_Craft_Miner_SkinA_DIFFUSE.dds";
     .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Normal.dds";
     .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Male_Craft_Miner_SkinA_SPECULAR.dds";
-    .doubleSided = 1;
-    .alphaTest = 1;
-    .alphaRef = 110;
-    .mipLODBias = -1.2;
-    .skinned = 1;
-    .normal3DC = 1;
+   normal3DC="1";
+   skinned = true;
+   doubleSided = "1";
 };
 singleton material(miner_female_diff_mat)
 {
@@ -11804,12 +12863,9 @@ singleton material(miner_female_diff_mat)
     .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Diffuse.dds";
     .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Normal.dds";
     .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Specular.dds";
-    .skinned = 1;
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .alphaTest = 1;
-    .alphaRef = 110;
-    .mipLODBias = -1.2;
+   normal3DC="1";
+   skinned = true;
+   doubleSided = "1";
 };
 singleton material(Female_Craft_Miner_SkinA_DIFFUSE)
 {
@@ -11817,169 +12873,9 @@ singleton material(Female_Craft_Miner_SkinA_DIFFUSE)
     .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Female_Craft_Miner_SkinA_DIFFUSE.dds";
     .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Normal.dds";
     .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Female_Craft_Miner_SkinA_SPECULAR.dds";
-    .skinned = 1;
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .alphaTest = 1;
-    .alphaRef = 110;
-    .mipLODBias = -1.2;
-};
-//------------- King outfit ---------------->
-singleton material(Male_King_Outfit_A)
-{
-    .mapTo = "Male_King_Outfit_A";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Female_King_Outfit_A)
-{
-    .mapTo = "Female_King_Outfit_A";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Male_King_Outfit_A_SkinA)
-{
-    .mapTo = "Male_King_Outfit_A_SkinA";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SkinA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SkinA_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Female_King_Outfit_A_SkinA)
-{
-    .mapTo = "Female_King_Outfit_A_SkinA";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SkinA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SkinA_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Male_King_Outfit_A_SkinB)
-{
-    .mapTo = "Male_King_Outfit_A_SkinB";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SkinB_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SkinB_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Female_King_Outfit_A_SkinB)
-{
-    .mapTo = "Female_King_Outfit_A_SkinB";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SkinB_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SkinB_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Male_King_Outfit_B)
-{
-    .mapTo = "Male_King_Outfit_B";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Female_King_Outfit_B)
-{
-    .mapTo = "Female_King_Outfit_B";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Male_King_Outfit_B_SkinA)
-{
-    .mapTo = "Male_King_Outfit_B_SkinA";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SkinA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SkinA_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Female_King_Outfit_B_SkinA)
-{
-    .mapTo = "Female_King_Outfit_B_SkinA";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SkinA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SkinA_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Male_King_Outfit_B_SkinB)
-{
-    .mapTo = "Male_King_Outfit_B_SkinB";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SkinB_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SkinB_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(Female_King_Outfit_B_SkinB)
-{
-    .mapTo = "Female_King_Outfit_B_SkinB";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SkinB_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_NORMALMAP.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SkinB_SPECULAR.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
-};
-singleton material(HatCrown_King_Outfit)
-{
-    .mapTo = "HatCrown_King_Outfit";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Crowns_diffuse.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Crowns_normal.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Crowns_specular.dds";
-    .normal3DC = 1;
-    .doubleSided = 1;
-    .skinned = 1;
-    .alphaTest = 1;
-    .alphaRef = 100;
+   normal3DC="1";
+   skinned = true;
+   doubleSided = "1";
 };
 //------------- Porter's Outfit ---------------->
 singleton material(cattleman_diff_mat)
@@ -11988,12 +12884,9 @@ singleton material(cattleman_diff_mat)
     .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Diffuse.dds";
     .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Normal.dds";
     .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Specular.dds";
-    .doubleSided = 1;
-    .alphaTest = 1;
-    .alphaRef = 110;
-    .mipLODBias = -1.2;
-    .skinned = 1;
-    .normal3DC = 1;
+   normal3DC="1";
+   skinned = true;
+   doubleSided = "1";
 };
 singleton material(Male_Craft_Cattleman_SkinA_DIFFUSE)
 {
@@ -12001,12 +12894,9 @@ singleton material(Male_Craft_Cattleman_SkinA_DIFFUSE)
     .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Male_Craft_Cattleman_SkinA_DIFFUSE.dds";
     .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Normal.dds";
     .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Male_Craft_Cattleman_SkinA_SPECULAR.dds";
-    .doubleSided = 1;
-    .alphaTest = 1;
-    .alphaRef = 110;
-    .mipLODBias = -1.2;
-    .skinned = 1;
-    .normal3DC = 1;
+   normal3DC="1";
+   skinned = true;
+   doubleSided = "1";
 };
 singleton material(cattleman_female_diff_mat)
 {
@@ -12014,12 +12904,9 @@ singleton material(cattleman_female_diff_mat)
     .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Female_diffuse.dds";
     .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Female_Normal.dds";
     .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Female_Specular.dds";
-    .doubleSided = 1;
-    .alphaTest = 1;
-    .alphaRef = 110;
-    .mipLODBias = -1.2;
-    .skinned = 1;
-    .normal3DC = 1;
+   normal3DC="1";
+   skinned = true;
+   doubleSided = "1";
 };
 singleton material(Female_Cattleman_SkinA_DIFFUSE)
 {
@@ -12027,15 +12914,20 @@ singleton material(Female_Cattleman_SkinA_DIFFUSE)
     .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Female_Craft_Cattleman_SkinA_DIFFUSE.dds";
     .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Female_Craft_Cattleman_SkinA_NORMAL.dds";
     .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Female_Craft_Cattleman_SkinA_SPECULAR.dds";
-    .doubleSided = 1;
-    .alphaTest = 1;
-    .alphaRef = 110;
-    .mipLODBias = -1.2;
-    .skinned = 1;
-    .normal3DC = 1;
+   normal3DC="1";
+   skinned = true;
+   doubleSided = "1";
 };
-//------------- 's Outfit ---------------->
 
+singleton Material(Tribe_Weapon_DIFFUSE_ns_mat)
+{
+   mapTo = "Tribe_Weapon_DIFFUSE_ns";
+   diffuseMap[0] = "art/Textures/Tribe/Tribe_Weapon_DIFFUSE.dds";
+   diffuseMap[1] = "art/Textures/Tribe/Tribe_Weapon_NORMALMAP.dds";
+   diffuseMap[2] = "art/Textures/Tribe/Tribe_Weapon_SPECULAR.dds";
+   materialTag0 = "LiF";
+   behaveAsParticle = true;
+};
 
 
 
