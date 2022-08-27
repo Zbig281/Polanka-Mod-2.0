@@ -1660,7 +1660,7 @@ singleton Material(Boar_Diffuse_mat)
    skinned = true;
    normal3DC="1";
 };
-
+bear
 singleton Material(Boar_D_Diffuse_mat)
 {
    mapTo = "Boar_Male_D_DIFFUSE";
@@ -11771,5 +11771,273 @@ singleton Material(stone_tomb_with_cross_JorvikMod_stone_tomb)
    diffuseMap[1] = "mods/JorvikMod/art/textures/stone_tomb_with_cross_nm.dds";
    translucentBlendOp = "None";
 };
+//------------- Miner outfit ---------------->
+singleton material(miner_diff_mat)
+{
+    .mapTo = "miner_diff";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Diffuse.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Normal.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Specular.dds";
+    .doubleSided = 1;
+    .alphaTest = 1;
+    .alphaRef = 110;
+    .mipLODBias = -1.2;
+    .skinned = 1;
+    .normal3DC = 1;
+};
+singleton material(Male_Craft_Miner_SkinA_DIFFUSE)
+{
+    .mapTo = "Male_Craft_Miner_SkinA_DIFFUSE";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Male_Craft_Miner_SkinA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Normal.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Male_Craft_Miner_SkinA_SPECULAR.dds";
+    .doubleSided = 1;
+    .alphaTest = 1;
+    .alphaRef = 110;
+    .mipLODBias = -1.2;
+    .skinned = 1;
+    .normal3DC = 1;
+};
+singleton material(miner_female_diff_mat)
+{
+    .mapTo = "miner_female_diff";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Diffuse.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Normal.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Specular.dds";
+    .skinned = 1;
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .alphaTest = 1;
+    .alphaRef = 110;
+    .mipLODBias = -1.2;
+};
+singleton material(Female_Craft_Miner_SkinA_DIFFUSE)
+{
+    .mapTo = "Female_Craft_Miner_SkinA_DIFFUSE";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Female_Craft_Miner_SkinA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Normal.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Female_Craft_Miner_SkinA_SPECULAR.dds";
+    .skinned = 1;
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .alphaTest = 1;
+    .alphaRef = 110;
+    .mipLODBias = -1.2;
+};
+//------------- King outfit ---------------->
+singleton material(Male_King_Outfit_A)
+{
+    .mapTo = "Male_King_Outfit_A";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Female_King_Outfit_A)
+{
+    .mapTo = "Female_King_Outfit_A";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Male_King_Outfit_A_SkinA)
+{
+    .mapTo = "Male_King_Outfit_A_SkinA";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SkinA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SkinA_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Female_King_Outfit_A_SkinA)
+{
+    .mapTo = "Female_King_Outfit_A_SkinA";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SkinA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SkinA_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Male_King_Outfit_A_SkinB)
+{
+    .mapTo = "Male_King_Outfit_A_SkinB";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SkinB_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingA_SkinB_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Female_King_Outfit_A_SkinB)
+{
+    .mapTo = "Female_King_Outfit_A_SkinB";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SkinB_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingA_SkinB_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Male_King_Outfit_B)
+{
+    .mapTo = "Male_King_Outfit_B";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Female_King_Outfit_B)
+{
+    .mapTo = "Female_King_Outfit_B";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Male_King_Outfit_B_SkinA)
+{
+    .mapTo = "Male_King_Outfit_B_SkinA";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SkinA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SkinA_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Female_King_Outfit_B_SkinA)
+{
+    .mapTo = "Female_King_Outfit_B_SkinA";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SkinA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SkinA_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Male_King_Outfit_B_SkinB)
+{
+    .mapTo = "Male_King_Outfit_B_SkinB";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SkinB_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Male_KingB_SkinB_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(Female_King_Outfit_B_SkinB)
+{
+    .mapTo = "Female_King_Outfit_B_SkinB";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SkinB_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_NORMALMAP.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Female_KingB_SkinB_SPECULAR.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+singleton material(HatCrown_King_Outfit)
+{
+    .mapTo = "HatCrown_King_Outfit";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/king/Crowns_diffuse.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/king/Crowns_normal.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/king/Crowns_specular.dds";
+    .normal3DC = 1;
+    .doubleSided = 1;
+    .skinned = 1;
+    .alphaTest = 1;
+    .alphaRef = 100;
+};
+//------------- Porter's Outfit ---------------->
+singleton material(cattleman_diff_mat)
+{
+    .mapTo = "cattleman_diff";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Diffuse.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Normal.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Specular.dds";
+    .doubleSided = 1;
+    .alphaTest = 1;
+    .alphaRef = 110;
+    .mipLODBias = -1.2;
+    .skinned = 1;
+    .normal3DC = 1;
+};
+singleton material(Male_Craft_Cattleman_SkinA_DIFFUSE)
+{
+    .mapTo = "Male_Craft_Cattleman_SkinA_DIFFUSE";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Male_Craft_Cattleman_SkinA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Normal.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Male_Craft_Cattleman_SkinA_SPECULAR.dds";
+    .doubleSided = 1;
+    .alphaTest = 1;
+    .alphaRef = 110;
+    .mipLODBias = -1.2;
+    .skinned = 1;
+    .normal3DC = 1;
+};
+singleton material(cattleman_female_diff_mat)
+{
+    .mapTo = "cattleman_female_diff";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Female_diffuse.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Female_Normal.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Female_Specular.dds";
+    .doubleSided = 1;
+    .alphaTest = 1;
+    .alphaRef = 110;
+    .mipLODBias = -1.2;
+    .skinned = 1;
+    .normal3DC = 1;
+};
+singleton material(Female_Cattleman_SkinA_DIFFUSE)
+{
+    .mapTo = "Female_Cattleman_SkinA_DIFFUSE";
+    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Female_Craft_Cattleman_SkinA_DIFFUSE.dds";
+    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Female_Craft_Cattleman_SkinA_NORMAL.dds";
+    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Female_Craft_Cattleman_SkinA_SPECULAR.dds";
+    .doubleSided = 1;
+    .alphaTest = 1;
+    .alphaRef = 110;
+    .mipLODBias = -1.2;
+    .skinned = 1;
+    .normal3DC = 1;
+};
+//------------- 's Outfit ---------------->
+
+
+
+
 exec("art/female_materials.cs");
 exec("art/materials_environment.cs");
