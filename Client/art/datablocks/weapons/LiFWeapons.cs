@@ -656,7 +656,7 @@ datablock WeaponData(WarAxe : BaseMeleeWeapon)
    BaseRecoilAnimTime = 1.1;
 };
 //Hunter Axe
-datablock WeaponData(WarAxe : BaseMeleeWeapon)
+datablock WeaponData(HunterAxe : BaseMeleeWeapon)
 {
    id = 16;
    Object_typeID = 3012;
@@ -999,7 +999,7 @@ datablock WeaponData(Zweihaender : BaseMeleeWeapon)
    BaseRecoilAnimTime = 1.15;
 };
 //chieftainsword
-datablock WeaponData(Zweihaender : BaseMeleeWeapon)
+datablock WeaponData(ChieftainSword : BaseMeleeWeapon)
 {
    id = 25;
    Object_typeID = 3011;
@@ -1321,7 +1321,7 @@ datablock WeaponData(PracticeMaul : BaseMeleeWeapon)
    BaseRecoilAnimTime = 1.2;
 };
 //bear axe
-datablock WeaponData(PracticeMaul : BaseMeleeWeapon)
+datablock WeaponData(Bear_axe : BaseMeleeWeapon)
 {
    id = 33;
    Object_typeID = 3010;
@@ -2202,7 +2202,7 @@ datablock WeaponData(Pickaxe : BaseMeleeWeapon)
    item = PickaxeItem;
 };
 //molepickaxe
-datablock WeaponData(Pickaxe : BaseMeleeWeapon)
+datablock WeaponData(Molepickaxe : BaseMeleeWeapon)
 {
    id = 123;
    Object_typeID = 3014;
@@ -2615,7 +2615,7 @@ datablock WeaponData(Sickle : BaseMeleeWeapon)
    item = SickleItem;
 };
 //Witch Sickle
-datablock WeaponData(Sickle : BaseMeleeWeapon)
+datablock WeaponData(Witchsickle : BaseMeleeWeapon)
 {
    id = 136;
    Object_typeID = 3015;
