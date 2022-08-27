@@ -705,7 +705,7 @@
     <item id="3018"> <!-- Miner's Outfit -->
         <effect id="21">5 20</effect>
         <effect id="9">5 20</effect>
-        <effect id="10">5 20</effect>
+        <effect id="27">5 20</effect>
     </item>
         <item id="3016"> <!-- Porter Outfit -->
         <effect id="9">5 50</effect>

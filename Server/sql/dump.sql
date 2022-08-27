@@ -6532,7 +6532,8 @@ INSERT INTO `effects` (`ID`, `Effect_name`, `ResultPreparationID`, `ResultPotion
 (37,'No Barter',NULL,NULL,NULL),
 (38,'No Repair',NULL,NULL,NULL),
 (39,'OnlyPlayerContainer ',NULL,NULL,NULL),
-(40,'OnlyMarketContainer',NULL,NULL,NULL);
+(40,'OnlyMarketContainer',NULL,NULL,NULL),
+(41,'Skill Raised: Armorsmithing',NULL,NULL,27);
 
 --
 -- Dumping data for table `recipe_possible_blueprints`
