@@ -1957,10 +1957,7 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3012,190,'Hunter Axe',0,0,0,0,0,0,0,0,3,1,1300,'',0,0,0,0,0,0,'art\\2D\\Items\\hunteraxe.png','',3000,NULL,1,1),
 (3013,196,'Hunter Bow',0,0,0,0,0,0,0,0,3,1,3000,'',0,0,0,0,0,0,'art\\2D\\Items\\hunterbow.png','',20000,NULL,1,1),
 (3014,35,'Mole Pickaxe',0,0,0,1,0,0,0,0,2,1,1500,'',0,0,0,0,0,0,'art\\2D\\Items\\molepickaxe.png','',3000,NULL,1,1),
-(3015,1031,'Witch Sickle',0,0,0,1,0,0,0,0,2,1,1000,'',0,0,0,0,0,0,'art\\2D\\Items\\witchsickle.png','',3100,NULL,1,1),
-(3016,225,'Porter\'s Outfit',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\Items\\builder.png','',100000,NULL,1,1),
-(3017,225,'Breeder\'s Outfit',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\Items\\breeder.png','',100000,NULL,1,1),
-(3018,225,'Miner\'s Outfit',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\Items\\miner.png','',100000,NULL,1,1);
+(3015,1031,'Witch Sickle',0,0,0,1,0,0,0,0,2,1,1000,'',0,0,0,0,0,0,'art\\2D\\Items\\witchsickle.png','',3100,NULL,1,1);
 --
 -- Dumping data for table `objects_conversions`
 --

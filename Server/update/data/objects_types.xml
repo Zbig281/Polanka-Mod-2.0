@@ -36448,7 +36448,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Bear Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>0</IsMovableObject>
+		<IsMovableObject>1</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
@@ -36486,7 +36486,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Chieftain Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>0</IsMovableObject>
+		<IsMovableObject>1</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
@@ -36524,7 +36524,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Hunter Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>0</IsMovableObject>
+		<IsMovableObject>1</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
@@ -36562,7 +36562,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Mole Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>0</IsMovableObject>
+		<IsMovableObject>1</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
@@ -36600,7 +36600,7 @@
 		<ParentID>59</ParentID>
 		<Name>Tribe Witch Carcass</Name>
 		<IsContainer>1</IsContainer>
-		<IsMovableObject>0</IsMovableObject>
+		<IsMovableObject>1</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
 		<IsTool>0</IsTool>
 		<IsDevice>0</IsDevice>
@@ -36726,63 +36726,6 @@
 		<UnitWeight>1000</UnitWeight>
 		<BackgndImage></BackgndImage>
 		<FaceImage>art\2D\Items\witchsickle.png</FaceImage>
-		<Description></Description>
-	</row>
-	<row>
-		<ID>3016</ID>
-		<ParentID>225</ParentID>
-		<Name>Porter's Outfit</Name>
-		<IsContainer>0</IsContainer>
-		<IsMovableObject>0</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
-		<IsTool>0</IsTool>
-		<IsDevice>0</IsDevice>
-		<IsDoor>0</IsDoor>
-		<IsPremium>0</IsPremium>
-		<MaxContSize>0</MaxContSize>
-		<Length>4</Length>
-		<MaxStackSize>1</MaxStackSize>
-		<UnitWeight>1200</UnitWeight>
-		<BackgndImage></BackgndImage>
-		<FaceImage>art\2D\equipIcons\Outfits\builder.png</FaceImage>
-		<Description></Description>
-	</row>
-	<row>
-		<ID>3017</ID>
-		<ParentID>225</ParentID>
-		<Name>Breeder's Outfit</Name>
-		<IsContainer>0</IsContainer>
-		<IsMovableObject>0</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
-		<IsTool>0</IsTool>
-		<IsDevice>0</IsDevice>
-		<IsDoor>0</IsDoor>
-		<IsPremium>0</IsPremium>
-		<MaxContSize>0</MaxContSize>
-		<Length>4</Length>
-		<MaxStackSize>1</MaxStackSize>
-		<UnitWeight>1200</UnitWeight>
-		<BackgndImage></BackgndImage>
-		<FaceImage>art\2D\equipIcons\Outfits\breeder.png</FaceImage>
-		<Description></Description>
-	</row>
-	<row>
-		<ID>3018</ID>
-		<ParentID>225</ParentID>
-		<Name>Miner's Outfit</Name>
-		<IsContainer>0</IsContainer>
-		<IsMovableObject>0</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
-		<IsTool>0</IsTool>
-		<IsDevice>0</IsDevice>
-		<IsDoor>0</IsDoor>
-		<IsPremium>0</IsPremium>
-		<MaxContSize>0</MaxContSize>
-		<Length>4</Length>
-		<MaxStackSize>1</MaxStackSize>
-		<UnitWeight>1200</UnitWeight>
-		<BackgndImage></BackgndImage>
-		<FaceImage>art\2D\equipIcons\Outfits\miner.png</FaceImage>
 		<Description></Description>
 	</row>
 </table>

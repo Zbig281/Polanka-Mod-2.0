@@ -271,13 +271,13 @@ datablock RangedWeaponData(LongBow : BaseBow)
 
    AgilityNeed = 50.0;
    StrengthNeed = 40.0;
-   MaxAccuracy = 0.7;
+   MaxAccuracy = 0.5;
    Emax = 3.7;
    BasePrefireAnimTime = 1.7;
    BaseRecoilAnimTime = 1.3;
    allowedAmmoIDs = "656 657 658 659 660 1339 1582";
    DurabilityPerShot = 20.0;
-   StaminaRate = 28;
+   StaminaRate = 30;
 
    shapefile = "art/models/3d-2d/weapons/Tribe/hunterbow.dts";
 

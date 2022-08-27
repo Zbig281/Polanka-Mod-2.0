@@ -264,7 +264,7 @@ datablock RangedWeaponData(LongBow : BaseBow)
    correctMuzzleVector = false;
 };
 //Hunterbow
-datablock RangedWeaponData(Hunter_Bow : BaseBow)
+datablock RangedWeaponData(LongBow : BaseBow)
 {
    id = 51;
    Object_typeID = 3013;

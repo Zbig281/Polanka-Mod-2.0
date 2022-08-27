@@ -591,9 +591,6 @@
         <effect id="37">1</effect>
         <effect id="38">1</effect>
     </item>
-        <item id="3014"> <!-- molepickaxe -->
-        <effect id="26">1 25.0</effect>
-    </item>
     <item id="1467"> <!-- Believer's Saw -->
         <effect id="19">1</effect>
         <effect id="37">1</effect>
@@ -608,9 +605,6 @@
         <effect id="19">1</effect>
         <effect id="37">1</effect>
         <effect id="38">1</effect>
-    </item>
-        <item id="3015"> <!-- WitchSickle -->
-        <effect id="26">1 25.0</effect>
     </item>
     <item id="1470"> <!-- Believer's Crucible and Tongs -->
         <effect id="19">1</effect>
