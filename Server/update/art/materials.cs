@@ -12836,89 +12836,7 @@ singleton Material(karte_map)
    specularPower[0] = "39";
    translucentBlendOp = "None";
 };
-//------------- Miner outfit ---------------->
-singleton material(miner_diff_mat)
-{
-    .mapTo = "miner_diff";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Diffuse.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Normal.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Specular.dds";
-   normal3DC="1";
-   skinned = true;
-   doubleSided = "1";
-};
-singleton material(Male_Craft_Miner_SkinA_DIFFUSE)
-{
-    .mapTo = "Male_Craft_Miner_SkinA_DIFFUSE";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Male_Craft_Miner_SkinA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Male_Normal.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Male_Craft_Miner_SkinA_SPECULAR.dds";
-   normal3DC="1";
-   skinned = true;
-   doubleSided = "1";
-};
-singleton material(miner_female_diff_mat)
-{
-    .mapTo = "miner_female_diff";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Diffuse.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Normal.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Specular.dds";
-   normal3DC="1";
-   skinned = true;
-   doubleSided = "1";
-};
-singleton material(Female_Craft_Miner_SkinA_DIFFUSE)
-{
-    .mapTo = "Female_Craft_Miner_SkinA_DIFFUSE";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/miner/Female_Craft_Miner_SkinA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/miner/Miner_Female_Normal.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/miner/Female_Craft_Miner_SkinA_SPECULAR.dds";
-   normal3DC="1";
-   skinned = true;
-   doubleSided = "1";
-};
-//------------- Porter's Outfit ---------------->
-singleton material(cattleman_diff_mat)
-{
-    .mapTo = "cattleman_diff";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Diffuse.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Normal.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Specular.dds";
-   normal3DC="1";
-   skinned = true;
-   doubleSided = "1";
-};
-singleton material(Male_Craft_Cattleman_SkinA_DIFFUSE)
-{
-    .mapTo = "Male_Craft_Cattleman_SkinA_DIFFUSE";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Male_Craft_Cattleman_SkinA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Male_Normal.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Male_Craft_Cattleman_SkinA_SPECULAR.dds";
-   normal3DC="1";
-   skinned = true;
-   doubleSided = "1";
-};
-singleton material(cattleman_female_diff_mat)
-{
-    .mapTo = "cattleman_female_diff";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Female_diffuse.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Female_Normal.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Cattleman_Female_Specular.dds";
-   normal3DC="1";
-   skinned = true;
-   doubleSided = "1";
-};
-singleton material(Female_Cattleman_SkinA_DIFFUSE)
-{
-    .mapTo = "Female_Cattleman_SkinA_DIFFUSE";
-    .diffuseMap[0] = "art/Textures/CharacterTextures/Outfits/cattleman/Female_Craft_Cattleman_SkinA_DIFFUSE.dds";
-    .diffuseMap[1] = "art/Textures/CharacterTextures/Outfits/cattleman/Female_Craft_Cattleman_SkinA_NORMAL.dds";
-    .diffuseMap[2] = "art/Textures/CharacterTextures/Outfits/cattleman/Female_Craft_Cattleman_SkinA_SPECULAR.dds";
-   normal3DC="1";
-   skinned = true;
-   doubleSided = "1";
-};
-
+//------------- Tribe weapon ---------------->
 singleton Material(Tribe_Weapon_DIFFUSE_ns_mat)
 {
    mapTo = "Tribe_Weapon_DIFFUSE_ns";
@@ -12928,6 +12846,7 @@ singleton Material(Tribe_Weapon_DIFFUSE_ns_mat)
    materialTag0 = "LiF";
    behaveAsParticle = true;
 };
+
 
 
 
