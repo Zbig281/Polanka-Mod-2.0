@@ -36747,23 +36747,4 @@
 		<FaceImage>art\2D\Objects\trader_cart.png</FaceImage>
 		<Description></Description>
 	</row>
-	<row>
-		<ID>3017</ID>
-		<ParentID>77</ParentID>
-		<Name>Wood Cart (harnessed)</Name>
-		<IsContainer>1</IsContainer>
-		<IsMovableObject>1</IsMovableObject>
-		<IsUnmovableobject>0</IsUnmovableobject>
-		<IsTool>0</IsTool>
-		<IsDevice>0</IsDevice>
-		<IsDoor>0</IsDoor>
-		<IsPremium>0</IsPremium>
-		<MaxContSize>3000000</MaxContSize>
-		<Length>7</Length>
-		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>10000</UnitWeight>
-		<BackgndImage>art\images\universal</BackgndImage>
-		<FaceImage>art\2D\Objects\trader_cart.png</FaceImage>
-		<Description></Description>
-	</row>
 </table>
