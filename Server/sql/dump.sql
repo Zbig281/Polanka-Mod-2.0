@@ -3070,7 +3070,12 @@ INSERT INTO `recipe` (`ID`, `Name`, `Description`, `StartingToolsID`, `SkillType
 (1097,'Wooden Pier T','Object from Jorvik MOD pack',32,18,60,2411,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_T.png'),
 (1098,'Wooden Pier L','Object from Jorvik MOD pack',32,18,60,2412,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_L.png'),
 (1099,'Stone tomb with cross','Object from Jorvik MOD pack',32,19,60,2413,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_tomb_with_cross.png'),
-(1100,'Wood Cart','',36,8,90,3016,30,1,0,0,'art\\2D\\Recipes\\horse_cart.png');
+(1100,'Wood Cart','',36,8,90,3016,30,1,0,0,'art\\2D\\Recipes\\horse_cart.png'),
+(3001,'Tribe Bear Sack','',36,8,500,3001,0,1,0,0,''),
+(3003,'Tribe Chieftain Sack','',36,8,500,3003,0,1,0,0,''),
+(3005,'Tribe Hunter Sack','',36,8,500,3005,0,1,0,0,''),
+(3007,'Tribe Mole Sack','',36,8,500,3007,0,1,0,0,''),
+(3009,'Tribe Witch Sack','',36,8,500,3009,0,1,0,0,'');
 --
 -- Dumping data for table `recipe_requirement`
 --

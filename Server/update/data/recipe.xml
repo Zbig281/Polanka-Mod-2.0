@@ -13987,4 +13987,74 @@
 		<IsBlueprint>0</IsBlueprint>
 		<ImagePath>art\2D\Recipes\horse_cart.png</ImagePath>
 	</row>
+	<row>
+		<ID>3001</ID>
+		<Name>Tribe Bear Sack</Name>
+		<Description></Description>
+		<StartingToolsID>36</StartingToolsID>
+		<SkillTypeID>8</SkillTypeID>
+		<SkillLvl>500</SkillLvl>
+		<ResultObjectTypeID>3001</ResultObjectTypeID>
+		<SkillDepends>0</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath></ImagePath>
+	</row>
+	<row>
+		<ID>3003</ID>
+		<Name>Tribe Chieftain Sack</Name>
+		<Description></Description>
+		<StartingToolsID>36</StartingToolsID>
+		<SkillTypeID>8</SkillTypeID>
+		<SkillLvl>500</SkillLvl>
+		<ResultObjectTypeID>3003</ResultObjectTypeID>
+		<SkillDepends>0</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath></ImagePath>
+	</row>
+	<row>
+		<ID>3005</ID>
+		<Name>Tribe Hunter Sack</Name>
+		<Description></Description>
+		<StartingToolsID>36</StartingToolsID>
+		<SkillTypeID>8</SkillTypeID>
+		<SkillLvl>500</SkillLvl>
+		<ResultObjectTypeID>3005</ResultObjectTypeID>
+		<SkillDepends>0</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath></ImagePath>
+	</row>
+	<row>
+		<ID>3007</ID>
+		<Name>Tribe Mole Sack</Name>
+		<Description></Description>
+		<StartingToolsID>36</StartingToolsID>
+		<SkillTypeID>8</SkillTypeID>
+		<SkillLvl>500</SkillLvl>
+		<ResultObjectTypeID>3007</ResultObjectTypeID>
+		<SkillDepends>0</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath></ImagePath>
+	</row>
+	<row>
+		<ID>3009</ID>
+		<Name>Tribe Witch Sack</Name>
+		<Description></Description>
+		<StartingToolsID>36</StartingToolsID>
+		<SkillTypeID>8</SkillTypeID>
+		<SkillLvl>500</SkillLvl>
+		<ResultObjectTypeID>3009</ResultObjectTypeID>
+		<SkillDepends>0</SkillDepends>
+		<Quantity>1</Quantity>
+		<Autorepeat>0</Autorepeat>
+		<IsBlueprint>0</IsBlueprint>
+		<ImagePath></ImagePath>
+	</row>
 </table>
