@@ -86,7 +86,7 @@ datablock AttachedShapeData(HarnessedHorseCart)
 	shapeFile = "art/models/3d/mobiles/transportation/horsecart/horsecart.dts";
 };
 
-datablock AttachedShapeData(HarnessedHorseCart)
+datablock AttachedShapeData(HarnessedHorseWoodCart)
 {
 	id = 785;
 	objectTypeId = 3017;
