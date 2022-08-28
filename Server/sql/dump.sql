@@ -1958,7 +1958,13 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3013,196,'Hunter Bow',0,0,0,0,0,0,0,0,3,1,3000,'',0,0,0,0,0,0,'art\\2D\\Items\\hunterbow.png','',20000,NULL,1,1),
 (3014,35,'Mole Pickaxe',0,0,0,1,0,0,0,0,2,1,1500,'',0,0,0,0,0,0,'art\\2D\\Items\\molepickaxe.png','',3000,NULL,1,1),
 (3015,1031,'Witch Sickle',0,0,0,1,0,0,0,0,2,1,1000,'',0,0,0,0,0,0,'art\\2D\\Items\\witchsickle.png','',3100,NULL,1,1),
-(3016,77,'Wood Cart',1,1,0,0,0,0,0,3000000,7,0,10000,'art\\images\\universal',0,0,0,0,0,0,'art\\2D\\Objects\\trader_cart.png','',135600,30,0,0);
+(3016,77,'Wood Cart',1,1,0,0,0,0,0,3000000,7,0,10000,'art\\images\\universal',0,0,0,0,0,0,'art\\2D\\Objects\\trader_cart.png','',135600,30,0,0),
+(3017,225,'King Outfit A',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_A.png','',100000,NULL,1,1),
+(3018,225,'King Outfit A SkinA',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_A_SkinA.png','',100000,NULL,1,1),
+(3019,225,'King Outfit A SkinB',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_A_SkinB.png','',100000,NULL,1,1),
+(3020,225,'King Outfit B',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B.png','',100000,NULL,1,1),
+(0321,225,'King Outfit B SkinA',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B_SkinA.png','',100000,NULL,1,1),
+(3022,225,'King Outfit B SkinB',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B_SkinB.png','',100000,NULL,1,1);
 --
 -- Dumping data for table `objects_conversions`
 --
