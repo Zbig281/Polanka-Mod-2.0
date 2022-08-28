@@ -36742,7 +36742,7 @@
 		<MaxContSize>3000000</MaxContSize>
 		<Length>7</Length>
 		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>100000</UnitWeight>
+		<UnitWeight>10000</UnitWeight>
 		<BackgndImage>art\images\universal</BackgndImage>
 		<FaceImage>art\2D\Objects\trader_cart.png</FaceImage>
 		<Description></Description>
@@ -36761,7 +36761,7 @@
 		<MaxContSize>3000000</MaxContSize>
 		<Length>7</Length>
 		<MaxStackSize>0</MaxStackSize>
-		<UnitWeight>100000</UnitWeight>
+		<UnitWeight>10000</UnitWeight>
 		<BackgndImage>art\images\universal</BackgndImage>
 		<FaceImage>art\2D\Objects\trader_cart.png</FaceImage>
 		<Description></Description>

@@ -86,14 +86,6 @@ datablock AttachedShapeData(HarnessedHorseCart)
 	shapeFile = "art/models/3d/mobiles/transportation/horsecart/horsecart.dts";
 };
 
-datablock AttachedShapeData(HarnessedHorseCart)
-{
-	id = 694;
-	objectTypeId = 3017;
-	
-	shapeFile = "art/models/3d/mobiles/transportation/horsecart/horsecart.dts";
-};
-
 datablock AttachedShapeData(HarnessedHorseCartNoTent)
 {
 	id = 701;
@@ -102,4 +94,11 @@ datablock AttachedShapeData(HarnessedHorseCartNoTent)
 	shapeFile = "art/models/3d/mobiles/transportation/horsecart/horsecartnotent.dts";
 };
 
+datablock AttachedShapeData(HarnessedHorseCart)
+{
+	id = 694;
+	objectTypeId = 3016;
+	
+	shapeFile = "art/models/3d/mobiles/transportation/woodcart/woodhorsecart.dts";
+};
 //-------------------------------------------------------------------------------------

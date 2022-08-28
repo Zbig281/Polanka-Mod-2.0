@@ -27252,7 +27252,7 @@
             <state type="Complete">
                 <shapes>
                     <shape>
-                        <shapeName>art/models/3d/mobiles/transportation/horsecart/horsecart_passive.dts</shapeName>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/woodcart_passive.dts</shapeName>
                         <offset x="0" y="0" z="0" />
                         <rot x="0" y="0" z="1" angle="0" />
                         <scale x="1" y="1" z="1" />
@@ -27272,7 +27272,7 @@
             <state type="Damaged">
                 <shapes>
                     <shape>
-                        <shapeName>art/models/3d/mobiles/transportation/horsecart/horsecart_passive.dts</shapeName>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/woodcart_passive.dts</shapeName>
                         <offset x="0" y="1.6" z="0" />
                         <rot x="0" y="0" z="1" angle="0" />
                         <scale x="1" y="1" z="1" />
@@ -27290,7 +27290,7 @@
             <state type="Complete">
                 <shapes>
                     <shape>
-                        <shapeName>art/models/3d/mobiles/transportation/horsecart/horsecart.dts</shapeName>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/woodhorsecart.dts</shapeName>
                         <offset x="0" y="0" z="0" />
                         <rot x="0" y="0" z="1" angle="0" />
                         <scale x="1" y="1" z="1" />
@@ -27310,7 +27310,7 @@
             <state type="Working">
                 <shapes>
                     <shape>
-                        <shapeName>art/models/3d/mobiles/transportation/horsecart/horsecart.dts</shapeName>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/woodhorsecart.dts</shapeName>
                         <offset x="0" y="0" z="0" />
                         <rot x="0" y="0" z="1" angle="0" />
                         <scale x="1" y="1" z="1" />
@@ -27320,7 +27320,7 @@
             <state type="Damaged">
                 <shapes>
                     <shape>
-                        <shapeName>art/models/3d/mobiles/transportation/horsecart/horsecart.dts</shapeName>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/woodhorsecart.dts</shapeName>
                         <offset x="0" y="1.6" z="0" />
                         <rot x="0" y="0" z="1" angle="0" />
                         <scale x="1" y="1" z="1" />
