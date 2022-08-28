@@ -36740,7 +36740,7 @@
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>3000000</MaxContSize>
-		<Length>10</Length>
+		<Length>7</Length>
 		<MaxStackSize>0</MaxStackSize>
 		<UnitWeight>100000</UnitWeight>
 		<BackgndImage>art\images\universal</BackgndImage>
@@ -36759,7 +36759,7 @@
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>3000000</MaxContSize>
-		<Length>10</Length>
+		<Length>7</Length>
 		<MaxStackSize>0</MaxStackSize>
 		<UnitWeight>100000</UnitWeight>
 		<BackgndImage>art\images\universal</BackgndImage>
