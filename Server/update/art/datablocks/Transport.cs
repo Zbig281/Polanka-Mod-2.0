@@ -88,7 +88,7 @@ datablock AttachedShapeData(HarnessedHorseCart)
 
 datablock AttachedShapeData(HarnessedHorseCart)
 {
-	id = 694;
+	id = 785;
 	objectTypeId = 3017;
 	
 	shapeFile = "art/models/3d/mobiles/transportation/woodcart/woodhorsecart.dts";
