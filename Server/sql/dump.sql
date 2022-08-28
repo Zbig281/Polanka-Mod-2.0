@@ -1963,7 +1963,7 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3018,225,'King Outfit A SkinA',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_A_SkinA.png','',100000,NULL,1,1),
 (3019,225,'King Outfit A SkinB',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_A_SkinB.png','',100000,NULL,1,1),
 (3020,225,'King Outfit B',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B.png','',100000,NULL,1,1),
-(0321,225,'King Outfit B SkinA',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B_SkinA.png','',100000,NULL,1,1),
+(3021,225,'King Outfit B SkinA',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B_SkinA.png','',100000,NULL,1,1),
 (3022,225,'King Outfit B SkinB',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B_SkinB.png','',100000,NULL,1,1);
 --
 -- Dumping data for table `objects_conversions`
