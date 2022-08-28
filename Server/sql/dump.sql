@@ -1957,7 +1957,9 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3012,190,'Hunter Axe',0,0,0,0,0,0,0,0,3,1,1300,'',0,0,0,0,0,0,'art\\2D\\Items\\hunteraxe.png','',3000,NULL,1,1),
 (3013,196,'Hunter Bow',0,0,0,0,0,0,0,0,3,1,3000,'',0,0,0,0,0,0,'art\\2D\\Items\\hunterbow.png','',20000,NULL,1,1),
 (3014,35,'Mole Pickaxe',0,0,0,1,0,0,0,0,2,1,1500,'',0,0,0,0,0,0,'art\\2D\\Items\\molepickaxe.png','',3000,NULL,1,1),
-(3015,1031,'Witch Sickle',0,0,0,1,0,0,0,0,2,1,1000,'',0,0,0,0,0,0,'art\\2D\\Items\\witchsickle.png','',3100,NULL,1,1);
+(3015,1031,'Witch Sickle',0,0,0,1,0,0,0,0,2,1,1000,'',0,0,0,0,0,0,'art\\2D\\Items\\witchsickle.png','',3100,NULL,1,1),
+(3016,77,'Wood Cart',1,1,0,0,0,0,0,500000,10,0,100000,'art\\images\\universal',0,0,0,0,0,0,'art\\2D\\Objects\\trader_cart.png','',135600,30,0,0),
+(3017,77,'Wood Cart (harnessed)',1,1,0,0,0,0,0,500000,10,0,100000,'art\\images\\universal',0,0,0,0,0,0,'art\\2D\\Objects\\trader_cart.png','',100,30,0,0);
 --
 -- Dumping data for table `objects_conversions`
 --
@@ -3062,7 +3064,8 @@ INSERT INTO `recipe` (`ID`, `Name`, `Description`, `StartingToolsID`, `SkillType
 (1096,'Wooden Church','Object from Jorvik MOD pack',32,19,60,2410,35,1,0,0,'art\\2D\\Recipes\\mods\JorvikMod\\art\\2D\\recipes\\wooden_church.png'),
 (1097,'Wooden Pier T','Object from Jorvik MOD pack',32,18,60,2411,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_T.png'),
 (1098,'Wooden Pier L','Object from Jorvik MOD pack',32,18,60,2412,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\pier_L.png'),
-(1099,'Stone tomb with cross','Object from Jorvik MOD pack',32,19,60,2413,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_tomb_with_cross.png');
+(1099,'Stone tomb with cross','Object from Jorvik MOD pack',32,19,60,2413,10,1,0,0,'mods\JorvikMod\\art\\2D\\recipes\\stone_tomb_with_cross.png'),
+(1100,'Wood Cart','',36,8,90,3016,30,1,0,0,'art\\2D\\Recipes\\horse_cart.png');
 --
 -- Dumping data for table `recipe_requirement`
 --
@@ -6486,7 +6489,12 @@ INSERT INTO `recipe_requirement` (`ID`, `RecipeID`, `MaterialObjectTypeID`, `Qua
 (4304,1098,32,0,10,50,0),
 (4305,1098,281,0,10,80,0),
 (4306,1099,269,0,30,50,0),
-(4307,1099,528,0,20,20,0);
+(4307,1099,528,0,20,20,0),
+(4308,1100,235,0,20,30,0),
+(4309,1100,255,0,10,4,0),
+(4310,1100,1131,0,10,20,0),
+(4311,1100,36,0,10,40,0),
+(4312,1100,262,0,10,10,0);
 --
 -- Dumping data for table `effects`
 --

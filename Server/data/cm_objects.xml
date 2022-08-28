@@ -27243,4 +27243,90 @@
             </state>
         </states>
     </object>
+    <object id="3016" isUnflattenAllowed="1" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1">
+        <!--name = Wood Cart-->
+        <lockedCells>
+            <cell x="0" y="0" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/woodcart_passive.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/horsecart_passive.dts</shapeName>
+                        <offset x="0" y="1.6" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
+    <object id="3017" isUnflattenAllowed="0" rotationStep="1" defaultState="Complete" StreamingGroup="1" noRuins="1">
+        <!--name = wood horse cart (harnessed)-->
+        <lockedCells>
+            <cell x="0" y="0" />
+        </lockedCells>
+        <states>
+            <state type="Complete">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/woodhorsecart.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Incomplete">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/construction/misc/site/site.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Working">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/woodhorsecart.dts</shapeName>
+                        <offset x="0" y="0" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+            <state type="Damaged">
+                <shapes>
+                    <shape>
+                        <shapeName>art/models/3d/mobiles/transportation/woodcart/woodhorsecart.dts</shapeName>
+                        <offset x="0" y="1.6" z="0" />
+                        <rot x="0" y="0" z="1" angle="0" />
+                        <scale x="1" y="1" z="1" />
+                    </shape>
+                </shapes>
+            </state>
+        </states>
+    </object>
 </object_types>
