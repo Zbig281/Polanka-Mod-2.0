@@ -36739,7 +36739,7 @@
 		<IsDevice>0</IsDevice>
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
-		<MaxContSize>500000</MaxContSize>
+		<MaxContSize>3000000</MaxContSize>
 		<Length>10</Length>
 		<MaxStackSize>0</MaxStackSize>
 		<UnitWeight>100000</UnitWeight>
@@ -36758,7 +36758,7 @@
 		<IsDevice>0</IsDevice>
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
-		<MaxContSize>500000</MaxContSize>
+		<MaxContSize>3000000</MaxContSize>
 		<Length>10</Length>
 		<MaxStackSize>0</MaxStackSize>
 		<UnitWeight>100000</UnitWeight>
