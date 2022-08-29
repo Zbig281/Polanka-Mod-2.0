@@ -10444,7 +10444,7 @@
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>0</MaxContSize>
-		<Length>2</Length>
+		<Length>1</Length>
 		<MaxStackSize>0</MaxStackSize>
 		<UnitWeight>5</UnitWeight>
 		<BackgndImage></BackgndImage>
@@ -10957,7 +10957,7 @@
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>0</MaxContSize>
-		<Length>2</Length>
+		<Length>1</Length>
 		<MaxStackSize>0</MaxStackSize>
 		<UnitWeight>5</UnitWeight>
 		<BackgndImage></BackgndImage>
