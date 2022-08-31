@@ -656,9 +656,9 @@ datablock WeaponData(WarAxe : BaseMeleeWeapon)
    BaseRecoilAnimTime = 1.1;
 };
 //Hunter Axe
-datablock WeaponData(WarAxe : BaseMeleeWeapon)
+datablock WeaponData(BattleAxe : BaseMeleeWeapon)
 {
-   id = 16;
+   id = 17;
    Object_typeID = 3012;
    
    shapefile = "art/models/3d-2d/weapons/Tribe/hunteraxe.dts";
@@ -682,7 +682,7 @@ datablock WeaponData(WarAxe : BaseMeleeWeapon)
    hitDirection[3] = "1 2"; // LeftToRightHit
    WoundMultiplier = 2.1;
    FractureMultiplier = 2.1;
-   StunMultiplier = 0.4;
+   StunMultiplier = 0.6;
    correctMuzzleVector = false;
    className = "WeaponImage";
    item = WarAxeItem;
@@ -1321,9 +1321,9 @@ datablock WeaponData(PracticeMaul : BaseMeleeWeapon)
    BaseRecoilAnimTime = 1.2;
 };
 //bear axe
-datablock WeaponData(PracticeMaul : BaseMeleeWeapon)
+datablock WeaponData(BroadAxe : BaseMeleeWeapon)
 {
-   id = 33;
+   id = 30;
    Object_typeID = 3010;
    
    shapefile = "art/models/3d-2d/weapons/Tribe/bearaxe.dts";
