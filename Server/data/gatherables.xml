@@ -9,161 +9,161 @@
         <maximumQuality>100</maximumQuality>
         <abilityId>326</abilityId>
         <description>taproot</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>1</type>
         <shape>art/models/3d/environment/groundcover/forestgrasses/blueberry01.stbin</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>668</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>100</maximumQuality>
         <abilityId>326</abilityId>
         <description>berries</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>2</type>
         <shape>art/models/3d/environment/mushrooms/mushrooma.dts</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>360</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>100</maximumQuality>
         <abilityId>326</abilityId>
         <description>mushroom</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>3</type>
         <shape>art/models/3d/environment/mushrooms/mushroomb.dts</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>360</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>100</maximumQuality>
         <abilityId>326</abilityId>
         <description>mushroom</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>4</type>
         <shape>art/models/3d/environment/mushrooms/mushroomc.dts</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>360</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>100</maximumQuality>
         <abilityId>326</abilityId>
         <description>mushroom</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>5</type>
         <shape>art/models/3d/environment/mushrooms/mushroomd.dts</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>360</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>100</maximumQuality>
         <abilityId>326</abilityId>
         <description>mushroom</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>6</type>
         <shape>art/models/3d/environment/cropsspeedtree/wheatwild01.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>352</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>wheat</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>7</type>
         <shape>art/models/3d/environment/cropsspeedtree/peawild01.stbin</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>354</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>peas</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>8</type>
         <shape>art/models/3d/environment/cropsspeedtree/cabbagewild01.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>355</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>cabbage</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>9</type>
         <shape>art/models/3d/environment/cropsspeedtree/onionwild01.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>356</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>onion</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>10</type>
         <shape>art/models/3d/environment/cropsspeedtree/carrotwild01.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>358</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>carrot</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>11</type>
         <shape>art/models/3d/environment/cropsspeedtree/flaxwild01.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>1030</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>flax</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>12</type>
         <shape>art/models/3d/environment/cropsspeedtree/grapewild01.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>359</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>20</maximumQuality>
         <abilityId>334</abilityId>
         <description>grape</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>13</type>
         <shape>art/models/3d/environment/cropsspeedtree/potatowild01.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>1027</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>potato</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>14</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/plantfiber01.stbin</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.05</decreaseSoilChance>
         <objectTypeId>471</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>100</maximumQuality>
         <abilityId>325</abilityId>
         <description>fiber</description>
-        <quantity>10</quantity>
+        <quantity>15</quantity>
     </gatherable>
     <gatherable>
         <type>15</type>
@@ -174,7 +174,7 @@
         <maximumQuality>100</maximumQuality>
         <abilityId>325</abilityId>
         <description>flint</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>16</type>
@@ -185,7 +185,7 @@
         <maximumQuality>60</maximumQuality>
         <abilityId>325</abilityId>
         <description>slingammo</description>
-        <quantity>10</quantity>
+        <quantity>15</quantity>
     </gatherable>
     <gatherable>
         <type>17</type>
@@ -196,7 +196,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>18</type>
@@ -207,7 +207,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>19</type>
@@ -218,7 +218,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>20</type>
@@ -229,7 +229,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>21</type>
@@ -240,7 +240,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>22</type>
@@ -251,7 +251,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>23</type>
@@ -262,40 +262,40 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>24</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/common.stbin</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.05</decreaseSoilChance>
         <objectTypeId>691</objectTypeId>
         <minimalQuality>0</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>25</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/common.stbin</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.05</decreaseSoilChance>
         <objectTypeId>692</objectTypeId>
         <minimalQuality>0</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>26</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/common.stbin</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.05</decreaseSoilChance>
         <objectTypeId>693</objectTypeId>
         <minimalQuality>0</minimalQuality>
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>27</type>
@@ -306,7 +306,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>28</type>
@@ -317,7 +317,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>29</type>
@@ -328,7 +328,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>30</type>
@@ -339,7 +339,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>31</type>
@@ -350,7 +350,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>32</type>
@@ -361,7 +361,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>33</type>
@@ -372,7 +372,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>34</type>
@@ -383,7 +383,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>35</type>
@@ -394,7 +394,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>36</type>
@@ -405,7 +405,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>37</type>
@@ -416,7 +416,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>38</type>
@@ -427,7 +427,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>39</type>
@@ -438,7 +438,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>40</type>
@@ -449,7 +449,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>41</type>
@@ -460,7 +460,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>42</type>
@@ -471,7 +471,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>43</type>
@@ -482,7 +482,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>44</type>
@@ -493,7 +493,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>45</type>
@@ -504,7 +504,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>46</type>
@@ -515,7 +515,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>47</type>
@@ -526,7 +526,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>48</type>
@@ -537,7 +537,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>49</type>
@@ -548,7 +548,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>50</type>
@@ -559,7 +559,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>51</type>
@@ -570,7 +570,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>52</type>
@@ -581,7 +581,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>53</type>
@@ -592,7 +592,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>54</type>
@@ -603,7 +603,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>55</type>
@@ -614,7 +614,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>56</type>
@@ -625,7 +625,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>57</type>
@@ -636,7 +636,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>58</type>
@@ -647,7 +647,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>59</type>
@@ -658,7 +658,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>60</type>
@@ -669,7 +669,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>61</type>
@@ -680,7 +680,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>62</type>
@@ -691,7 +691,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>63</type>
@@ -702,7 +702,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>64</type>
@@ -713,7 +713,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>65</type>
@@ -724,7 +724,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>66</type>
@@ -735,7 +735,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>67</type>
@@ -746,7 +746,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>68</type>
@@ -757,7 +757,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>69</type>
@@ -768,7 +768,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>70</type>
@@ -779,7 +779,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>71</type>
@@ -790,7 +790,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>72</type>
@@ -801,7 +801,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>73</type>
@@ -812,7 +812,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>74</type>
@@ -823,7 +823,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>75</type>
@@ -834,7 +834,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>76</type>
@@ -845,7 +845,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>77</type>
@@ -856,7 +856,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>78</type>
@@ -867,7 +867,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>79</type>
@@ -878,7 +878,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>80</type>
@@ -889,7 +889,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>81</type>
@@ -900,7 +900,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>commonHerb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>82</type>
@@ -911,738 +911,738 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>83</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>684</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>84</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>685</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>85</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>686</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>86</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>687</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>87</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>688</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>88</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>689</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>89</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>690</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>90</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>691</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>91</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>692</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>92</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>693</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>93</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>694</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>94</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>695</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>95</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>696</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>96</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>697</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>97</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>698</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>98</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>699</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>99</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>700</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>100</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>701</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>101</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>702</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>102</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>703</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>103</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>704</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>104</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>705</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>105</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>706</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>106</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>707</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>107</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>708</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>108</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>709</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>109</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>710</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>110</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>711</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>111</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>712</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>112</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>713</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>113</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>714</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>114</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>715</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>115</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>716</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>116</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>717</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>117</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>718</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>118</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>719</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>119</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>720</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>120</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>721</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>121</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>722</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>122</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>723</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>123</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>724</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>124</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>725</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>125</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>726</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>126</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>727</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>127</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>728</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>128</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>729</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>129</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>730</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>130</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>731</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>131</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>732</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>132</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>733</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>133</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>734</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>134</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>735</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>135</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>736</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>136</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>737</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>137</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>738</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>138</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>739</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>139</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>740</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>140</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>741</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>141</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>742</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>142</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>743</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>143</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>744</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>144</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>745</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>145</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>746</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>146</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>747</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>147</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>748</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>148</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/fresh.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>750</objectTypeId>
         <minimalQuality>30</minimalQuality>
         <maximumQuality>60</maximumQuality>
         <abilityId>46</abilityId>
         <description>freshherb</description>
-        <quantity>4</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>149</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>684</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1653,7 +1653,7 @@
     <gatherable>
         <type>150</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>685</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1664,7 +1664,7 @@
     <gatherable>
         <type>151</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>686</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1675,7 +1675,7 @@
     <gatherable>
         <type>152</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>687</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1686,7 +1686,7 @@
     <gatherable>
         <type>153</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>688</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1697,7 +1697,7 @@
     <gatherable>
         <type>154</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>689</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1708,7 +1708,7 @@
     <gatherable>
         <type>155</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05/</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>690</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1719,7 +1719,7 @@
     <gatherable>
         <type>156</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>691</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1730,7 +1730,7 @@
     <gatherable>
         <type>157</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>692</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1741,7 +1741,7 @@
     <gatherable>
         <type>158</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>693</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1752,7 +1752,7 @@
     <gatherable>
         <type>159</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>694</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1763,7 +1763,7 @@
     <gatherable>
         <type>160</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>695</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1774,7 +1774,7 @@
     <gatherable>
         <type>161</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>696</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1785,7 +1785,7 @@
     <gatherable>
         <type>162</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>697</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1796,7 +1796,7 @@
     <gatherable>
         <type>163</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>698</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1807,7 +1807,7 @@
     <gatherable>
         <type>164</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>699</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1818,7 +1818,7 @@
     <gatherable>
         <type>165</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>700</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1829,7 +1829,7 @@
     <gatherable>
         <type>166</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>701</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1840,7 +1840,7 @@
     <gatherable>
         <type>167</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>702</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1851,7 +1851,7 @@
     <gatherable>
         <type>168</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>703</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1862,7 +1862,7 @@
     <gatherable>
         <type>169</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>704</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1873,7 +1873,7 @@
     <gatherable>
         <type>170</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>705</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1884,7 +1884,7 @@
     <gatherable>
         <type>171</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>706</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1895,7 +1895,7 @@
     <gatherable>
         <type>172</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>707</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1906,7 +1906,7 @@
     <gatherable>
         <type>173</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>708</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1917,7 +1917,7 @@
     <gatherable>
         <type>174</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>709</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1928,7 +1928,7 @@
     <gatherable>
         <type>175</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>710</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1939,7 +1939,7 @@
     <gatherable>
         <type>176</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>711</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1950,7 +1950,7 @@
     <gatherable>
         <type>177</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>712</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1961,7 +1961,7 @@
     <gatherable>
         <type>178</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>713</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1972,7 +1972,7 @@
     <gatherable>
         <type>179</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>714</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1983,7 +1983,7 @@
     <gatherable>
         <type>180</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>715</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -1994,7 +1994,7 @@
     <gatherable>
         <type>181</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>716</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2005,7 +2005,7 @@
     <gatherable>
         <type>182</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>717</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2016,7 +2016,7 @@
     <gatherable>
         <type>183</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>718</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2027,7 +2027,7 @@
     <gatherable>
         <type>184</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>719</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2038,7 +2038,7 @@
     <gatherable>
         <type>185</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>720</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2049,7 +2049,7 @@
     <gatherable>
         <type>186</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>721</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2060,7 +2060,7 @@
     <gatherable>
         <type>187</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>722</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2071,7 +2071,7 @@
     <gatherable>
         <type>188</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>723</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2082,7 +2082,7 @@
     <gatherable>
         <type>189</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>724</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2093,7 +2093,7 @@
     <gatherable>
         <type>190</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>725</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2104,7 +2104,7 @@
     <gatherable>
         <type>191</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>726</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2115,7 +2115,7 @@
     <gatherable>
         <type>192</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>727</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2126,7 +2126,7 @@
     <gatherable>
         <type>193</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>728</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2137,7 +2137,7 @@
     <gatherable>
         <type>194</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>729</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2148,7 +2148,7 @@
     <gatherable>
         <type>195</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>730</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2159,7 +2159,7 @@
     <gatherable>
         <type>196</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>731</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2170,7 +2170,7 @@
     <gatherable>
         <type>197</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>732</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2181,7 +2181,7 @@
     <gatherable>
         <type>198</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>733</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2192,7 +2192,7 @@
     <gatherable>
         <type>199</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>734</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2203,7 +2203,7 @@
     <gatherable>
         <type>200</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>735</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2214,7 +2214,7 @@
     <gatherable>
         <type>201</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>736</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2225,7 +2225,7 @@
     <gatherable>
         <type>202</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>737</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2236,7 +2236,7 @@
     <gatherable>
         <type>203</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>738</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2247,7 +2247,7 @@
     <gatherable>
         <type>204</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>739</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2258,7 +2258,7 @@
     <gatherable>
         <type>205</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>740</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2269,7 +2269,7 @@
     <gatherable>
         <type>206</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>741</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2280,7 +2280,7 @@
     <gatherable>
         <type>207</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>742</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2291,7 +2291,7 @@
     <gatherable>
         <type>208</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>743</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2302,7 +2302,7 @@
     <gatherable>
         <type>209</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>744</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2313,7 +2313,7 @@
     <gatherable>
         <type>210</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>745</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2324,7 +2324,7 @@
     <gatherable>
         <type>211</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>746</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2335,7 +2335,7 @@
     <gatherable>
         <type>212</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>747</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2346,7 +2346,7 @@
     <gatherable>
         <type>213</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>748</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2357,7 +2357,7 @@
     <gatherable>
         <type>214</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/pristine.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.2</decreaseSoilChance>
         <objectTypeId>750</objectTypeId>
         <minimalQuality>60</minimalQuality>
         <maximumQuality>100</maximumQuality>
@@ -2368,51 +2368,51 @@
     <gatherable>
         <type>215</type>
         <shape>art/models/3d/environment/brushwood_pile/brushwoodpilea.dts</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.05</decreaseSoilChance>
         <objectTypeId>237</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>25</maximumQuality>
         <abilityId>325</abilityId>
         <description>branch</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>216</type>
         <shape>art/models/3d/environment/brushwood_pile/brushwoodpileb.dts</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.05</decreaseSoilChance>
         <objectTypeId>237</objectTypeId>
         <minimalQuality>25</minimalQuality>
         <maximumQuality>50</maximumQuality>
         <abilityId>325</abilityId>
         <description>branch</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>217</type>
         <shape>art/models/3d/environment/brushwood_pile/brushwoodpilec.dts</shape>
-        <decreaseSoilChance>0.0decreaseSoilChance>
+        <decreaseSoilChance>0.05</decreaseSoilChance>
         <objectTypeId>237</objectTypeId>
         <minimalQuality>50</minimalQuality>
         <maximumQuality>75</maximumQuality>
         <abilityId>325</abilityId>
         <description>branch</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>218</type>
         <shape>art/models/3d/environment/brushwood_pile/brushwoodpiled.dts</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.05</decreaseSoilChance>
         <objectTypeId>237</objectTypeId>
         <minimalQuality>75</minimalQuality>
         <maximumQuality>100</maximumQuality>
         <abilityId>325</abilityId>
         <description>branch</description>
-        <quantity>5</quantity>
+        <quantity>3</quantity>
     </gatherable>
     <gatherable>
         <type>219</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/common.stbin</shape>
-        <decreaseSoilChance>0.0</decreaseSoilChance>
+        <decreaseSoilChance>0.05</decreaseSoilChance>
         <objectTypeId>0</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>100</maximumQuality>

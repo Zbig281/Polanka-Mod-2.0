@@ -721,9 +721,11 @@
         <effect id="38">10</effect>
     </item>
     <item id="3014"> <!-- Mole Pickaxe  -->
+        <effect id="26">0 10</effect>
         <effect id="38">10</effect>
     </item>
     <item id="3015"> <!-- Witch Sickle  -->
         <effect id="38">10</effect>
+        <effect id="26">0 10</effect>
     </item>
 </items>
