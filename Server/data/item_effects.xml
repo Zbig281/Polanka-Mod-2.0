@@ -699,8 +699,7 @@
         <effect id="37">1</effect>
     </item>
     <item id="1376"> <!-- Tabard -->
-        <effect id="19">1</effect>
-        <effect id="37">1</effect>   
+        <effect id="19">1</effect>  
     </item>
     <item id="299"> <!-- Simple Clothes -->
 <effect id="9">5 20</effect>
@@ -708,5 +707,23 @@
      <item id="49"> <!-- Hardened steel pickaxe  -->
 <effect id="9">10</effect>
 <effect id="26">2 10</effect>
+    </item>
+    <item id="3010"> <!-- Bear Axe  -->
+        <effect id="38">10</effect>
+    </item>
+    <item id="3011"> <!-- Chieftain Sword  -->
+        <effect id="38">10</effect>
+    </item>
+    <item id="3012"> <!-- Hunter Axe  -->
+        <effect id="38">10</effect>
+    </item>
+    <item id="3013"> <!-- Hunter Bow  -->
+        <effect id="38">10</effect>
+    </item>
+    <item id="3014"> <!-- Mole Pickaxe  -->
+        <effect id="38">10</effect>
+    </item>
+    <item id="3015"> <!-- Witch Sickle  -->
+        <effect id="38">10</effect>
     </item>
 </items>
