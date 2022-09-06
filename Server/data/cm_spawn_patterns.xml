@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <spawn_patterns cluster_size = "32" initial_spawn_rating = "50">
-	<pattern probability = "6" substances = "1 7 25 26" >
+	<pattern probability = "5" substances = "1 7 25 26" >
 		<family name = "TribeBData" count = "1 1" quality = "100" /> 
         <family name = "TribeCData" count = "1 1" quality = "100" />
         <family name = "TribeHData" count = "1 1" quality = "100" />

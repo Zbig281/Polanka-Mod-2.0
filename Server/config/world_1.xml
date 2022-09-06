@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <config>
-	<ID>2</ID> <!--  Number of server instance. Must be unique across one server and one DB engine -->
+	<ID>4</ID> <!--  Number of server instance. Must be unique across one server and one DB engine -->
 	<name>Polanka 2.0 Test</name> <!-- No more than 63 symbols! -->
-	<password>polanka281</password> <!--  will be required for new clients to join if not blank (no more than 32 symbols) -->
-	<adminPassword>polanka281</adminPassword> <!-- GM password (no more than 32 symbols). If empty, GM Mode disabled -->
+	<password>pola281</password> <!--  will be required for new clients to join if not blank (no more than 32 symbols) -->
+	<adminPassword>pola281</adminPassword> <!-- GM password (no more than 32 symbols). If empty, GM Mode disabled -->
 	<mode>Sandbox</mode> <!--  Not Working -->
 	<isPrivate>0</isPrivate> <!-- =1 Will not be listed in servers browser -->
 	<isActive>1</isActive> <!-- Must be 1! (for internal use) -->
@@ -19,7 +19,7 @@
 	<dayCycle>4</dayCycle> <!-- Real life hours per in game day. Affects speed of crops and trees growth (range: 0.1 - 24) -->
 	<animalsCount>100</animalsCount> <!--  WARNING! Big numbers might result a heavy server load. We'd recommend 50 or 100, but you can always experiment on your own hardware ;) Amount of animal spawn points and may result in a maximum of spawned animals at once. (range: 0 - 100) -->
 	<maxPlayers>64</maxPlayers> <!--  Maximum amount of SIMULTANEOUS players on one server (range: 1 - 64) -->
-	<port>29000</port> <!--  better have that port and +1 +2 port numbers opened and routed if needed. For instance, if you set that number for 26000, you will need to have 26001 and 26002 to be opened also. -->
+	<port>31000</port> <!--  better have that port and +1 +2 port numbers opened and routed if needed. For instance, if you set that number for 26000, you will need to have 26001 and 26002 to be opened also. -->
 	<objectDecayRate>1</objectDecayRate> <!-- Decay rate multiplayer for objects outside of the claim area. 0 by default - decay disabled (range: 0 - 10) -->
 	<movableMaxDropHeightMeters>5</movableMaxDropHeightMeters> <!-- Allows you to restrict ability of players to hang logs, furniture and other movable objects in the air (range: 0 - 1000) -->
 	<randomEventChanceWalk>0.03</randomEventChanceWalk> <!-- Chance of occurrence of random event while player is traveling in a Peaceful stance around the world. 0 removes any random events while walking (range: 0 - 10) -->
