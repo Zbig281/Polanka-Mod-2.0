@@ -36628,7 +36628,7 @@
 		<MaxContSize>0</MaxContSize>
 		<Length>4</Length>
 		<MaxStackSize>1</MaxStackSize>
-		<UnitWeight>3200</UnitWeight>
+		<UnitWeight>5000</UnitWeight>
 		<BackgndImage></BackgndImage>
 		<FaceImage>art\2D\Items\bearaxe.png</FaceImage>
 		<Description></Description>
