@@ -276,8 +276,11 @@
             <ability>108</ability> <!-- Special Look in Inventory -->
             <ability>109</ability> <!-- Special Get Water -->	
             <ability>110</ability> <!-- Drop from Inventory -->
+            <ability>144</ability> <!-- Special Open/Close Door -->
+			<ability>145</ability> <!-- Claim as Your Home -->
 			<ability>146</ability> <!-- Prayer for Homecoming -->
 		    <ability>179</ability> <!-- Gather Ammo for Sling -->
+            <ability>212</ability> <!-- Special Open/Close the Gate -->
 			<ability>224</ability> <!-- Special Get on -->
 			<ability>226</ability> <!-- Special Get Off -->
             <ability>268</ability> <!-- Special Light the Fire -->
@@ -289,6 +292,9 @@
         </allowed>
 		<restricted>
             <ability>8</ability>   <!-- Pour on the Ground -->
+            <ability>97</ability> <!-- Drop Object -->
+            <ability>170</ability> <!-- Create a Snare -->
+            <ability>173</ability> <!-- Create a Trap -->
         </restricted>
     </land>
 </lands>

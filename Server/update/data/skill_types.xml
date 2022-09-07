@@ -5577,7 +5577,7 @@
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
-							<ent_req type="object_type_id" parent="1">1722 1715 1716 1717 1718 1719 1720 1734 1735 1892 1893 1894 1895 1896 1897 1898 2005</ent_req>
+							<ent_req type="object_type_id" parent="1">1722 1715 1716 1717 1718 1719 1720 1734 1735 1892 1893 1894 1895 1896 1897 1898 2005 2410</ent_req>
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="claim" usage_type="use"/>
 						</ent_reqs>
@@ -5713,7 +5713,7 @@
 						<ent_reqs>
 							<ent_req type="complex_object_type">movable</ent_req>
 							<ent_req type="state">complete damaged</ent_req>
-							<ent_req type="not_object_type_id">77 1070 1071 1079 1080 1083 1090 1448 1449 1457 2003</ent_req>
+							<ent_req type="not_object_type_id">77 1070 1071 1079 1080 1083 1090 1448 1449 1457 2003 2403</ent_req>
 							<ent_req type="claim" usage_type="use">
 								<land type="realm" jh_allowed_worlds="everywhere"/>
 								<land type="outpost" jh_allowed_worlds="everywhere"/>
@@ -6012,7 +6012,7 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="state">complete working</ent_req>
-							<ent_req type="object_type_id">127 128 131 132 134 139 140 146 147 148 186 187 188 189 455 516 518 519 520 521 1055 1085 1086 1087 1088 1089 1109 1077 1665</ent_req>
+							<ent_req type="object_type_id">127 128 131 132 134 139 140 146 147 148 186 187 188 189 455 516 518 519 520 521 1055 1085 1086 1087 1088 1089 1109 1077 1665 2404 2409 2410</ent_req>
 							<ent_req type="claim" usage_type="use">
 								<land type="realm" jh_allowed_worlds="everywhere"/>
 								<land type="outpost" jh_allowed_worlds="everywhere"/>
@@ -6032,7 +6032,7 @@
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
-							<ent_req type="object_type_id">139 140 142 145 146 1055 147 518 519 521 148 1084 1085 1086 1087 1088 1089 1355</ent_req>
+							<ent_req type="object_type_id">139 140 142 145 146 1055 147 518 519 521 148 1084 1085 1086 1087 1088 1089 1355 2409</ent_req>
 							<ent_req type="claim" usage_type="use"/>
 						</ent_reqs>
 					</entity>
@@ -7675,7 +7675,7 @@
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
-							<ent_req type="object_type_id" parent="1">74 96 107 109 111 114 115 116 117 118 122 123 131 132 133 134 135 136 137 138 139 140 141 143 144 145 146 147 148 174 175 176 177 453 455 472 503 504 507 508 509 512 513 514 515 516 517 518 519 520 521 682 1055 1077 1084 1085 1086 1087 1088 1089 1092 1093 1097 1098 1109 1110 1121 1342 1343 1353 1357 1359 1394 1410 1411 1412 1413 1499 1701</ent_req>
+							<ent_req type="object_type_id" parent="1">74 96 107 109 111 114 115 116 117 118 122 123 131 132 133 134 135 136 137 138 139 140 141 143 144 145 146 147 148 174 175 176 177 453 455 472 503 504 507 508 509 512 513 514 515 516 517 518 519 520 521 682 1055 1077 1084 1085 1086 1087 1088 1089 1092 1093 1097 1098 1109 1110 1121 1342 1343 1353 1357 1359 1394 1410 1411 1412 1413 1499 1701 2404 2409 2410</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
