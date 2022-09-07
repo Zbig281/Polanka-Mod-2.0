@@ -1352,7 +1352,7 @@ datablock WeaponData(BroadAxe : BaseMeleeWeapon)
    StunMultiplier = 0.00;
    correctMuzzleVector = false;
    className = "WeaponImage";
-   item = PracticeMaulItem;
+   item = BroadAxeItem;
    BasePrefireAnimTime = 1.3;
    BaseFireAnimTime = 1.1;
    BaseRecoilAnimTime = 1.8;

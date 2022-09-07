@@ -15,4 +15,4 @@ $LiFxAutoload::TTMod = 0;
 // LiFx mods
 $LiFxAutoload::LiFx::main = 0; // Has to be set 2 if you use any of our mods
 $LiFxAutoload::LiFx::onlineAlignment = 0;
-$LiFxAutoload::LiFxTribemod = 2;
+$LiFxAutoload::LiFxTribemod = 0;

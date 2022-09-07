@@ -14,7 +14,7 @@ $LiFx::offlineRaidProtectionActive = true;
 *
 * raidProtection::timeToProtection- ime delay from last member of a claim disconnecting to when protection is applied.
 */
-$LiFx::raidProtection::timeToProtection = 25;
+$LiFx::raidProtection::timeToProtection = 60;
 
 /*****************************
 *Live Alignment
@@ -22,5 +22,5 @@ $LiFx::raidProtection::timeToProtection = 25;
 * AlignmentUpdateDelta - How much alignments will the online player get?
 * AlignmentUpdateMinutes - How many minutes should it go between updates
 */
-$LiFx::AlignmentUpdateDelta = 1000;
-$LiFx::AlignmentUpdateMinutes = 1;
+$LiFx::AlignmentUpdateDelta = 5;
+$LiFx::AlignmentUpdateMinutes = 60;
