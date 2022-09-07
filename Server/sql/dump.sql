@@ -1961,9 +1961,9 @@ INSERT INTO `objects_types` (`ID`, `ParentID`, `Name`, `IsContainer`, `IsMovable
 (3016,77,'Wood Cart',1,1,0,0,0,0,0,3000000,7,0,10000,'art\\images\\universal',0,0,0,0,0,0,'art\\2D\\Objects\\trader_cart.png','',135600,30,0,0),
 (3017,225,'Król Niebieski',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_A.png','',100000,NULL,1,1),
 (3018,225,'Król Czerwony',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_A_SkinA.png','',100000,NULL,1,1),
-(3019,225,'Król Bandytow',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_A_SkinB.png','',100000,NULL,1,1),
+(3019,225,'Król Bandytów',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_A_SkinB.png','',100000,NULL,1,1),
 (3020,225,'Król Wyspy',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B.png','',100000,NULL,1,1),
-(3021,225,'Król żółty',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B_SkinA.png','',100000,NULL,1,1),
+(3021,225,'Król Żółty',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B_SkinA.png','',100000,NULL,1,1),
 (3022,225,'Król Areny',0,0,0,0,0,0,0,0,4,1,1200,'',0,0,0,0,0,0,'art\\2D\\equipIcons\\King\\Male_King_B_SkinB.png','',100000,NULL,1,1);
 --
 -- Dumping data for table `objects_conversions`

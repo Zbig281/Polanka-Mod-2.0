@@ -36788,7 +36788,7 @@
 	<row>
 		<ID>3019</ID>
 		<ParentID>225</ParentID>
-		<Name>Król Bandytow</Name>
+		<Name>Król Bandytów</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -36826,7 +36826,7 @@
 	<row>
 		<ID>3021</ID>
 		<ParentID>225</ParentID>
-		<Name>Król żółty</Name>
+		<Name>Król Żółty</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
