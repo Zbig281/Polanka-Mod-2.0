@@ -655,41 +655,6 @@ datablock WeaponData(WarAxe : BaseMeleeWeapon)
    BaseFireAnimTime = 1.0;
    BaseRecoilAnimTime = 1.1;
 };
-
-datablock WeaponData(BattleAxe : BaseMeleeWeapon)
-{
-   id = 17;
-   Object_typeID = 568;
-   
-   shapefile = "art/models/3d-2d/weapons/1haxes/battleaxe.dts";
-   
-   mountPoint = 0;
-   offset = "0 0 0";
-   eyeOffset = "0 0 0";
-
-   attackType = Attack1H;
-   WeaponType = Weapon1HAxe;
-   weaponMaterial = Metal;
-   hitGroupType[0] =  Blunt;
-   hitGroupDmgLevel[0] = 0.8;
-   hitGroupType[1] =  Chopping;
-   hitGroupDmgLevel[1] = 2.09;
-   hitGroupType[2] =  Blunt;
-   hitGroupDmgLevel[2] = 1.0;
-   hitDirection[0] = "0 2"; // Thrust
-   hitDirection[1] = "1 2"; // Overhead
-   hitDirection[2] = "1 2"; // RightToLeftHit
-   hitDirection[3] = "1 2"; // LeftToRightHit
-   WoundMultiplier = 1.8;
-   FractureMultiplier = 0.9;
-   StunMultiplier = 0.05;
-   correctMuzzleVector = false;
-   className = "WeaponImage";
-   item = BattleAxeItem;
-   BasePrefireAnimTime = 1.0;
-   BaseFireAnimTime = 1.0;
-   BaseRecoilAnimTime = 1.1;
-};
 //Hunter Axe
 datablock WeaponData(BattleAxe : BaseMeleeWeapon)
 {
@@ -718,6 +683,41 @@ datablock WeaponData(BattleAxe : BaseMeleeWeapon)
    WoundMultiplier = 2.1;
    FractureMultiplier = 2.1;
    StunMultiplier = 0.6;
+   correctMuzzleVector = false;
+   className = "WeaponImage";
+   item = WarAxeItem;
+   BasePrefireAnimTime = 1.0;
+   BaseFireAnimTime = 1.0;
+   BaseRecoilAnimTime = 1.1;
+};
+
+datablock WeaponData(BattleAxe : BaseMeleeWeapon)
+{
+   id = 17;
+   Object_typeID = 568;
+   
+   shapefile = "art/models/3d-2d/weapons/1haxes/battleaxe.dts";
+   
+   mountPoint = 0;
+   offset = "0 0 0";
+   eyeOffset = "0 0 0";
+
+   attackType = Attack1H;
+   WeaponType = Weapon1HAxe;
+   weaponMaterial = Metal;
+   hitGroupType[0] =  Blunt;
+   hitGroupDmgLevel[0] = 0.8;
+   hitGroupType[1] =  Chopping;
+   hitGroupDmgLevel[1] = 2.09;
+   hitGroupType[2] =  Blunt;
+   hitGroupDmgLevel[2] = 1.0;
+   hitDirection[0] = "0 2"; // Thrust
+   hitDirection[1] = "1 2"; // Overhead
+   hitDirection[2] = "1 2"; // RightToLeftHit
+   hitDirection[3] = "1 2"; // LeftToRightHit
+   WoundMultiplier = 1.8;
+   FractureMultiplier = 0.9;
+   StunMultiplier = 0.05;
    correctMuzzleVector = false;
    className = "WeaponImage";
    item = BattleAxeItem;
@@ -1352,7 +1352,7 @@ datablock WeaponData(BroadAxe : BaseMeleeWeapon)
    StunMultiplier = 0.00;
    correctMuzzleVector = false;
    className = "WeaponImage";
-   item = BroadAxeItem;
+   item = PracticeMaulItem;
    BasePrefireAnimTime = 1.3;
    BaseFireAnimTime = 1.1;
    BaseRecoilAnimTime = 1.8;
