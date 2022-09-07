@@ -47,3 +47,4 @@ exec("TTmod/init.cs");
 exec("Tradepost/init.cs");
 exec("ServerRestart/Restart.cs");
 exec("BasilMod/pack/pack.cs");
+exec("BasilMod/RestZone/RestZone.cs");

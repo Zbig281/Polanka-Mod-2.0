@@ -720,7 +720,7 @@ datablock WeaponData(BattleAxe : BaseMeleeWeapon)
    StunMultiplier = 0.6;
    correctMuzzleVector = false;
    className = "WeaponImage";
-   item = WarAxeItem;
+   item = BattleAxeItem;
    BasePrefireAnimTime = 1.0;
    BaseFireAnimTime = 1.0;
    BaseRecoilAnimTime = 1.1;
