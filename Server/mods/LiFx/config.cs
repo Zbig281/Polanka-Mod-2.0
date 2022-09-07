@@ -7,7 +7,7 @@ if (!isObject(LiFx))
 
 // Scripts
 $LiFx::liveAlignmentActive = true;
-$LiFx::offlineRaidProtectionActive = true;
+$LiFx::offlineRaidProtectionActive = false;
 
 /*****************************
 *PVP Raid Protection

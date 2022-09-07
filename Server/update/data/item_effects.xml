@@ -609,9 +609,6 @@
         <effect id="37">1</effect>
         <effect id="38">1</effect>
     </item>
-        <item id="3015"> <!-- WitchSickle -->
-        <effect id="26">1 25.0</effect>
-    </item>
     <item id="1470"> <!-- Believer's Crucible and Tongs -->
         <effect id="19">1</effect>
         <effect id="37">1</effect>
@@ -705,21 +702,23 @@
 <effect id="26">2 10</effect>
     </item>
     <item id="3010"> <!-- Bear Axe  -->
-        <effect id="38">10</effect>
+        <effect id="38">1</effect>
     </item>
     <item id="3011"> <!-- Chieftain Sword  -->
-        <effect id="38">10</effect>
+        <effect id="38">1</effect>
     </item>
     <item id="3012"> <!-- Hunter Axe  -->
-        <effect id="38">10</effect>
+        <effect id="38">1</effect>
     </item>
     <item id="3013"> <!-- Hunter Bow  -->
-        <effect id="38">10</effect>
+        <effect id="38">1</effect>
     </item>
     <item id="3014"> <!-- Mole Pickaxe  -->
-        <effect id="38">10</effect>
+        <effect id="26">5 20</effect>
+        <effect id="38">1</effect>
     </item>
     <item id="3015"> <!-- Witch Sickle  -->
-        <effect id="38">10</effect>
+        <effect id="26">5 20</effect>
+        <effect id="38">1</effect>
     </item>
 </items>
