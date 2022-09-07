@@ -28,15 +28,15 @@
     </item>
     <item id="488"> <!-- Gold and Silver Amulet -->
         <effect id="26">3 15.0</effect>
-        <effect id="11">20</effect>
+        <effect id="11">10 20</effect>
     </item>
     <item id="489"> <!-- Silver Jeweled Necklace -->
         <effect id="26">4 20.0</effect>
-        <effect id="11">25</effect>
+        <effect id="11">10 25</effect>
     </item>
     <item id="490"> <!-- Gold Jeweled Necklace -->
         <effect id="26">5 25.0</effect>
-         <effect id="11">30</effect>
+         <effect id="11">10 30</effect>
     </item>
     <item id="491"> <!-- Exceptional Gold and Silver Amulet -->
         <effect id="26">6 30.0</effect>
@@ -591,6 +591,9 @@
         <effect id="37">1</effect>
         <effect id="38">1</effect>
     </item>
+        <item id="3014"> <!-- molepickaxe -->
+        <effect id="26">1 25.0</effect>
+    </item>
     <item id="1467"> <!-- Believer's Saw -->
         <effect id="19">1</effect>
         <effect id="37">1</effect>
@@ -683,18 +686,13 @@
         <effect id="19">1</effect>
         <effect id="37">1</effect>
     </item>
-    <item id="1651"> <!-- Banner -->
-        <effect id="19">1</effect>
-        <effect id="37">1</effect>
-    </item>
     <item id="2006"> <!-- Amulet from Illa-Newydd -->
         <effect id="26">3 15</effect>
         <effect id="19">1</effect>
         <effect id="37">1</effect>
     </item>
     <item id="1376"> <!-- Tabard -->
-        <effect id="19">1</effect>
-        <effect id="37">1</effect>   
+        <effect id="19">1</effect>  
     </item>
     <item id="299"> <!-- Simple Clothes -->
 <effect id="9">5 20</effect>
@@ -702,5 +700,48 @@
      <item id="49"> <!-- Hardened steel pickaxe  -->
 <effect id="9">10</effect>
 <effect id="26">2 10</effect>
+    </item>
+    <item id="3010"> <!-- Bear Axe  -->
+        <effect id="38">1</effect>
+    </item>
+    <item id="3011"> <!-- Chieftain Sword  -->
+        <effect id="38">1</effect>
+    </item>
+    <item id="3012"> <!-- Hunter Axe  -->
+        <effect id="38">1</effect>
+    </item>
+    <item id="3013"> <!-- Hunter Bow  -->
+        <effect id="38">1</effect>
+    </item>
+    <item id="3014"> <!-- Mole Pickaxe  -->
+        <effect id="26">5 20</effect>
+        <effect id="38">1</effect>
+    </item>
+    <item id="3015"> <!-- Witch Sickle  -->
+        <effect id="26">5 20</effect>
+        <effect id="38">1</effect>
+    </item>
+    <item id="3017"> <!-- Król Niebieski  -->
+        <effect id="19">1</effect> 
+    </item>
+    <item id="3018"> <!-- Król Czerwony  -->
+        <effect id="19">1</effect> 
+    </item>
+    <item id="3019"> <!-- Król Bandytów  -->
+        <effect id="19">1</effect> 
+    </item>
+    <item id="3020"> <!-- Król Wyspy  -->
+        <effect id="19">1</effect> 
+    </item>
+    <item id="3021"> <!-- Król Żółty  -->
+        <effect id="19">1</effect> 
+    </item>
+    <item id="3022"> <!-- Król Areny  -->
+        <effect id="19">1</effect> 
+    </item>
+    <item id="621"> <!-- Believer's Fishing Pole -->
+        <effect id="19">1</effect>
+        <effect id="37">1</effect>
+        <effect id="38">1</effect>
     </item>
 </items>

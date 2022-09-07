@@ -9144,4 +9144,232 @@
       <slot>13</slot>
    </slots>
 </object>
+
+
+
+
+
+
+
+<object id="3017">
+   <!--name = King Outfit A -->
+   <skillID>62</skillID>
+   <skillAmount>0</skillAmount>
+   <slots>
+      <slot>2</slot>
+   </slots>
+   <extraSlotsBlock>
+      <slot>1</slot>
+      <slot>3</slot>
+      <slot>5</slot>
+   </extraSlotsBlock>
+   <meshes>
+      <mesh>HatCrown01_Male_King_Outfit_A</mesh>
+	  <mesh>Hat_Male_King_Outfit_A</mesh>
+	  <mesh>Male_King_Outfit_A</mesh>
+      <mesh>HatCrown01_Female_King_Outfit_A</mesh>
+	  <mesh>Hat_Female_King_Outfit_A</mesh>
+	  <mesh>Female_King_Outfit_A</mesh>
+	  <mesh>Female_Body_v1_torso_block</mesh>	  
+   </meshes>
+   <cutoffs>
+      <cutoff type="torso" action="off" />
+      <cutoff type="hips" action="off" />
+      <cutoff type="shoulders" action="off" />
+      <cutoff type="hair" action="off" />
+	  <cutoff type="forearms" action="off" />
+   </cutoffs>
+   <armor>
+      <multiplier type="slash" value="0.12" />
+      <multiplier type="pierce" value="0.17" />
+      <multiplier type="chop" value="0.12" />
+      <multiplier type="blunt" value="0.17" />
+      <multiplier type="siege" value="0.19" />
+   </armor>
+</object>
+
+<object id="3018">
+   <!--name = King Outfit A SkinA -->
+   <skillID>62</skillID>
+   <skillAmount>0</skillAmount>
+   <slots>
+      <slot>2</slot>
+   </slots>
+   <extraSlotsBlock>
+      <slot>1</slot>
+      <slot>3</slot>
+      <slot>5</slot>
+   </extraSlotsBlock>
+   <meshes>
+      <mesh>HatCrown03_Male_King_Outfit_A</mesh>
+	  <mesh>Hat_Male_King_Outfit_A_SkinA</mesh>
+	  <mesh>Male_King_Outfit_A_SkinA</mesh>
+      <mesh>HatCrown03_Female_King_Outfit_A</mesh>
+	  <mesh>Hat_Female_King_Outfit_A_SkinA</mesh>
+	  <mesh>Female_King_Outfit_A_SkinA</mesh>
+	  <mesh>Female_Body_v1_torso_block</mesh>
+   </meshes>
+   <cutoffs>
+      <cutoff type="torso" action="off" />
+      <cutoff type="hips" action="off" />
+      <cutoff type="shoulders" action="off" />
+      <cutoff type="hair" action="off" />
+	  <cutoff type="forearms" action="off" />
+   </cutoffs>
+   <armor>
+      <multiplier type="slash" value="0.12" />
+      <multiplier type="pierce" value="0.17" />
+      <multiplier type="chop" value="0.12" />
+      <multiplier type="blunt" value="0.17" />
+      <multiplier type="siege" value="0.19" />
+   </armor>
+</object>
+
+<object id="3019">
+   <!--name = King Outfit A SkinB -->
+   <skillID>62</skillID>
+   <skillAmount>0</skillAmount>
+   <slots>
+      <slot>2</slot>
+   </slots>
+   <extraSlotsBlock>
+      <slot>1</slot>
+      <slot>3</slot>
+      <slot>5</slot>
+   </extraSlotsBlock>
+   <meshes>
+      <mesh>HatCrown05_Male_King_Outfit_A</mesh>
+	  <mesh>Hat_Male_King_Outfit_A_SkinB</mesh>
+	  <mesh>Male_King_Outfit_A_SkinB</mesh>
+      <mesh>HatCrown05_Female_King_Outfit_A</mesh>
+	  <mesh>Hat_Female_King_Outfit_A_SkinB</mesh>
+	  <mesh>Female_King_Outfit_A_SkinB</mesh>
+	  <mesh>Female_Body_v1_torso_block</mesh>
+   </meshes>
+   <cutoffs>
+      <cutoff type="torso" action="off" />
+      <cutoff type="hips" action="off" />
+      <cutoff type="shoulders" action="off" />
+      <cutoff type="hair" action="off" />
+	  <cutoff type="forearms" action="off" />
+   </cutoffs>
+   <armor>
+      <multiplier type="slash" value="0.12" />
+      <multiplier type="pierce" value="0.17" />
+      <multiplier type="chop" value="0.12" />
+      <multiplier type="blunt" value="0.17" />
+      <multiplier type="siege" value="0.19" />
+   </armor>
+</object>
+
+<object id="3020">
+   <!--name = King Outfit B -->
+   <skillID>62</skillID>
+   <skillAmount>0</skillAmount>
+   <slots>
+      <slot>2</slot>
+   </slots>
+   <extraSlotsBlock>
+      <slot>1</slot>
+      <slot>3</slot>
+      <slot>5</slot>
+   </extraSlotsBlock>
+   <meshes>
+      <mesh>HatCrown02_Male_King_Outfit_B</mesh>
+	  <mesh>Hat_Male_King_Outfit_B</mesh>
+	  <mesh>Male_King_Outfit_B</mesh>
+      <mesh>HatCrown02_Female_King_Outfit_B</mesh>
+	  <mesh>Hat_Female_King_Outfit_B</mesh>
+	  <mesh>Female_King_Outfit_B</mesh>
+	  <mesh>Female_Body_v1_torso_block</mesh>
+   </meshes>
+   <cutoffs>
+      <cutoff type="torso" action="off" />
+      <cutoff type="hips" action="off" />
+      <cutoff type="shoulders" action="off" />
+      <cutoff type="hair" action="off" />
+	  <cutoff type="forearms" action="off" />
+   </cutoffs>
+   <armor>
+      <multiplier type="slash" value="0.12" />
+      <multiplier type="pierce" value="0.17" />
+      <multiplier type="chop" value="0.12" />
+      <multiplier type="blunt" value="0.17" />
+      <multiplier type="siege" value="0.19" />
+   </armor>
+</object>
+
+<object id="3021">
+   <!--name = King Outfit B SkinA -->
+   <skillID>62</skillID>
+   <skillAmount>0</skillAmount>
+   <slots>
+      <slot>2</slot>
+   </slots>
+   <extraSlotsBlock>
+      <slot>1</slot>
+      <slot>3</slot>
+      <slot>5</slot>
+   </extraSlotsBlock>
+   <meshes>
+      <mesh>HatCrown04_Male_King_Outfit_B</mesh>
+	  <mesh>Hat_Male_King_Outfit_B_SkinA</mesh>
+	  <mesh>Male_King_Outfit_B_SkinA</mesh>
+      <mesh>HatCrown04_Female_King_Outfit_B</mesh>
+	  <mesh>Hat_Female_King_Outfit_B_SkinA</mesh>
+	  <mesh>Female_King_Outfit_B_SkinA</mesh>
+	  <mesh>Female_Body_v1_torso_block</mesh>
+   </meshes>
+   <cutoffs>
+      <cutoff type="torso" action="off" />
+      <cutoff type="hips" action="off" />
+      <cutoff type="shoulders" action="off" />
+      <cutoff type="hair" action="off" />
+	  <cutoff type="forearms" action="off" />
+   </cutoffs>
+   <armor>
+      <multiplier type="slash" value="0.12" />
+      <multiplier type="pierce" value="0.17" />
+      <multiplier type="chop" value="0.12" />
+      <multiplier type="blunt" value="0.17" />
+      <multiplier type="siege" value="0.19" />
+   </armor>
+</object>
+
+<object id="3022">
+   <!--name = King Outfit B SkinB -->
+   <skillID>62</skillID>
+   <skillAmount>0</skillAmount>
+   <slots>
+      <slot>2</slot>
+   </slots>
+   <extraSlotsBlock>
+      <slot>1</slot>
+      <slot>3</slot>
+      <slot>5</slot>
+   </extraSlotsBlock>
+   <meshes>
+      <mesh>HatCrown05_Male_King_Outfit_B</mesh>
+	  <mesh>Hat_Male_King_Outfit_B_SkinB</mesh>
+	  <mesh>Male_King_Outfit_B_SkinB</mesh>
+      <mesh>HatCrown05_Female_King_Outfit_B</mesh>
+	  <mesh>Hat_Female_King_Outfit_B_SkinB</mesh>
+	  <mesh>Female_King_Outfit_B_SkinB</mesh>
+	  <mesh>Female_Body_v1_torso_block</mesh>
+   </meshes>
+   <cutoffs>
+      <cutoff type="torso" action="off" />
+      <cutoff type="hips" action="off" />
+      <cutoff type="shoulders" action="off" />
+      <cutoff type="hair" action="off" />
+	  <cutoff type="forearms" action="off" />
+   </cutoffs>
+   <armor>
+      <multiplier type="slash" value="0.12" />
+      <multiplier type="pierce" value="0.17" />
+      <multiplier type="chop" value="0.12" />
+      <multiplier type="blunt" value="0.17" />
+      <multiplier type="siege" value="0.19" />
+   </armor>
+</object>
 </equipment_types>

@@ -10444,7 +10444,7 @@
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>0</MaxContSize>
-		<Length>2</Length>
+		<Length>1</Length>
 		<MaxStackSize>0</MaxStackSize>
 		<UnitWeight>5</UnitWeight>
 		<BackgndImage></BackgndImage>
@@ -10957,7 +10957,7 @@
 		<IsDoor>0</IsDoor>
 		<IsPremium>0</IsPremium>
 		<MaxContSize>0</MaxContSize>
-		<Length>2</Length>
+		<Length>1</Length>
 		<MaxStackSize>0</MaxStackSize>
 		<UnitWeight>5</UnitWeight>
 		<BackgndImage></BackgndImage>
@@ -36628,7 +36628,7 @@
 		<MaxContSize>0</MaxContSize>
 		<Length>4</Length>
 		<MaxStackSize>1</MaxStackSize>
-		<UnitWeight>3200</UnitWeight>
+		<UnitWeight>5000</UnitWeight>
 		<BackgndImage></BackgndImage>
 		<FaceImage>art\2D\Items\bearaxe.png</FaceImage>
 		<Description></Description>
@@ -36726,6 +36726,139 @@
 		<UnitWeight>1000</UnitWeight>
 		<BackgndImage></BackgndImage>
 		<FaceImage>art\2D\Items\witchsickle.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3016</ID>
+		<ParentID>77</ParentID>
+		<Name>Wood Cart</Name>
+		<IsContainer>1</IsContainer>
+		<IsMovableObject>1</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>3000000</MaxContSize>
+		<Length>7</Length>
+		<MaxStackSize>0</MaxStackSize>
+		<UnitWeight>10000</UnitWeight>
+		<BackgndImage>art\images\universal</BackgndImage>
+		<FaceImage>art\2D\Objects\trader_cart.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3017</ID>
+		<ParentID>225</ParentID>
+		<Name>Król Niebieski</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>4</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1200</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\equipIcons\King\Male_King_A.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3018</ID>
+		<ParentID>225</ParentID>
+		<Name>Król Czerwony</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>4</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1200</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\equipIcons\King\Male_King_A_SkinA.png</FaceImage>
+		<Description></Description>
+	</row>		
+	<row>
+		<ID>3019</ID>
+		<ParentID>225</ParentID>
+		<Name>Król Bandytów</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>4</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1200</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\equipIcons\King\Male_King_A_SkinB.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3020</ID>
+		<ParentID>225</ParentID>
+		<Name>Król Wyspy</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>4</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1200</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\equipIcons\King\Male_King_B.png</FaceImage>
+		<Description></Description>
+	</row>	
+	<row>
+		<ID>3021</ID>
+		<ParentID>225</ParentID>
+		<Name>Król Żółty</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>4</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1200</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\equipIcons\King\Male_King_B_SkinA.png</FaceImage>
+		<Description></Description>
+	</row>
+	<row>
+		<ID>3022</ID>
+		<ParentID>225</ParentID>
+		<Name>Król Areny</Name>
+		<IsContainer>0</IsContainer>
+		<IsMovableObject>0</IsMovableObject>
+		<IsUnmovableobject>0</IsUnmovableobject>
+		<IsTool>0</IsTool>
+		<IsDevice>0</IsDevice>
+		<IsDoor>0</IsDoor>
+		<IsPremium>0</IsPremium>
+		<MaxContSize>0</MaxContSize>
+		<Length>4</Length>
+		<MaxStackSize>1</MaxStackSize>
+		<UnitWeight>1200</UnitWeight>
+		<BackgndImage></BackgndImage>
+		<FaceImage>art\2D\equipIcons\King\Male_King_B_SkinB.png</FaceImage>
 		<Description></Description>
 	</row>
 </table>
