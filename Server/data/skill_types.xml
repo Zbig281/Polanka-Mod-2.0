@@ -6406,7 +6406,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Open/Close the Gate" type="Special" id="212">
-				<duration const="">0</duration>
+				<duration const="">2</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<enable_movement>1</enable_movement>
 				<entities>
