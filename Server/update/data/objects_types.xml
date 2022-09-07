@@ -36750,7 +36750,7 @@
 	<row>
 		<ID>3017</ID>
 		<ParentID>225</ParentID>
-		<Name>King Outfit A</Name>
+		<Name>Król Niebieski</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -36769,7 +36769,7 @@
 	<row>
 		<ID>3018</ID>
 		<ParentID>225</ParentID>
-		<Name>King Outfit A SkinA</Name>
+		<Name>Król Czerwony</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -36788,7 +36788,7 @@
 	<row>
 		<ID>3019</ID>
 		<ParentID>225</ParentID>
-		<Name>King Outfit A SkinB</Name>
+		<Name>Król Bandytow</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -36807,7 +36807,7 @@
 	<row>
 		<ID>3020</ID>
 		<ParentID>225</ParentID>
-		<Name>King Outfit B</Name>
+		<Name>Król Wyspy</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -36826,7 +36826,7 @@
 	<row>
 		<ID>3021</ID>
 		<ParentID>225</ParentID>
-		<Name>King Outfit B SkinA</Name>
+		<Name>Król żółty</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
@@ -36845,7 +36845,7 @@
 	<row>
 		<ID>3022</ID>
 		<ParentID>225</ParentID>
-		<Name>King Outfit B SkinB</Name>
+		<Name>Król Areny</Name>
 		<IsContainer>0</IsContainer>
 		<IsMovableObject>0</IsMovableObject>
 		<IsUnmovableobject>0</IsUnmovableobject>
