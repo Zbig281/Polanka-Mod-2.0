@@ -1,5 +1,5 @@
 // FeudalTools Server-ID
-$FTTP::ServerID = 8240;;
+$FTTP::ServerID = 8240;
 // Customization
 $FTTP::TradeMessageText = "Press CTRL+T to start trading at this tradepost.";
 $FTTP::TradeMessageTime = 9999;
