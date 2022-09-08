@@ -3001,7 +3001,7 @@ datablock WeaponData(Primitive_Fishing_Pole : BaseMeleeWeapon)
    WeaponType = WeaponMisc;
    weaponMaterial = Wooden;
    hitGroupType[0] =  Blunt;
-   hitGroupDmgLevel[0] = 0.7;
+   hitGroupDmgLevel[0] = 0.0;
    hitDirection[0] = "0"; // Thrust
    hitDirection[1] = "0"; // Overhead
    hitDirection[2] = "0"; // RightToLeftHit
