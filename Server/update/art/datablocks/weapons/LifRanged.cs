@@ -263,10 +263,10 @@ datablock RangedWeaponData(LongBow : BaseBow)
    StunMultiplier = "";
    correctMuzzleVector = false;
 };
-//Hunterbow
-datablock RangedWeaponData(LongBow : BaseBow)
+
+datablock RangedWeaponData(NativeHunterArrow : BaseBow)
 {
-   id = 51;
+   id = 628;
    Object_typeID = 3013;
 
    AgilityNeed = 50.0;
