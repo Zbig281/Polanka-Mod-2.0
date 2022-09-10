@@ -7,7 +7,7 @@
 	<mode>Sandbox</mode> <!--  Not Working -->
 	<isPrivate>0</isPrivate> <!-- =1 Will not be listed in servers browser -->
 	<isActive>1</isActive> <!-- Must be 1! (for internal use) -->
-	<skillsStatsMult>100</skillsStatsMult> <!--  =1 is vanilla MMO skills progression setting (range: 0.1 - 100) -->
+	<skillsStatsMult>20</skillsStatsMult> <!--  =1 is vanilla MMO skills progression setting (range: 0.1 - 100) -->
 	<skillcap>
 		<group id="1" value="1700" /> <!-- Crafting skills group skillcap. 600 is vanilla MMO skill cap (range: 200 - 3000) -->
 		<group id="2" value="460" /> <!-- Combat skills group skillcap. 600 is vanilla MMO skill cap (range: 200 - 3000) -->
