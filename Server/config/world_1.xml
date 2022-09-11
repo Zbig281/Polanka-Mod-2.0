@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <config>
 	<ID>4</ID> <!--  Number of server instance. Must be unique across one server and one DB engine -->
-	<name>[PL]Polanka 2.0t</name> <!-- No more than 63 symbols! -->
+	<name>[PL/EU]Polanka2|RpPvPvE|Knool|New Weapon|New Cart Horse!</name> <!-- No more than 63 symbols! -->
 	<password></password> <!--  will be required for new clients to join if not blank (no more than 32 symbols) -->
 	<adminPassword>kinga281</adminPassword> <!-- GM password (no more than 32 symbols). If empty, GM Mode disabled -->
 	<mode>Sandbox</mode> <!--  Not Working -->
