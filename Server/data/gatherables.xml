@@ -20,7 +20,7 @@
         <maximumQuality>100</maximumQuality>
         <abilityId>326</abilityId>
         <description>berries</description>
-        <quantity>3</quantity>
+        <quantity>1</quantity>
     </gatherable>
     <gatherable>
         <type>2</type>
@@ -75,7 +75,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>wheat</description>
-        <quantity>3</quantity>
+        <quantity>1</quantity>
     </gatherable>
     <gatherable>
         <type>7</type>
@@ -86,7 +86,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>peas</description>
-        <quantity>3</quantity>
+        <quantity>1</quantity>
     </gatherable>
     <gatherable>
         <type>8</type>
@@ -97,7 +97,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>cabbage</description>
-        <quantity>3</quantity>
+        <quantity>1</quantity>
     </gatherable>
     <gatherable>
         <type>9</type>
@@ -108,7 +108,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>onion</description>
-        <quantity>3</quantity>
+        <quantity>1</quantity>
     </gatherable>
     <gatherable>
         <type>10</type>
@@ -119,7 +119,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>carrot</description>
-        <quantity>3</quantity>
+        <quantity>1</quantity>
     </gatherable>
     <gatherable>
         <type>11</type>
@@ -130,7 +130,7 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>flax</description>
-        <quantity>3</quantity>
+        <quantity>1</quantity>
     </gatherable>
     <gatherable>
         <type>12</type>
@@ -141,7 +141,7 @@
         <maximumQuality>20</maximumQuality>
         <abilityId>334</abilityId>
         <description>grape</description>
-        <quantity>3</quantity>
+        <quantity>1</quantity>
     </gatherable>
     <gatherable>
         <type>13</type>
@@ -152,18 +152,18 @@
         <maximumQuality>30</maximumQuality>
         <abilityId>334</abilityId>
         <description>potato</description>
-        <quantity>3</quantity>
+        <quantity>1</quantity>
     </gatherable>
     <gatherable>
         <type>14</type>
         <shape>art/models/3d/environment/groundcover/swampgrasses/plantfiber01.stbin</shape>
-        <decreaseSoilChance>0.05</decreaseSoilChance>
+        <decreaseSoilChance>0.1</decreaseSoilChance>
         <objectTypeId>471</objectTypeId>
         <minimalQuality>1</minimalQuality>
         <maximumQuality>100</maximumQuality>
         <abilityId>325</abilityId>
         <description>fiber</description>
-        <quantity>15</quantity>
+        <quantity>30</quantity>
     </gatherable>
     <gatherable>
         <type>15</type>
@@ -174,7 +174,7 @@
         <maximumQuality>100</maximumQuality>
         <abilityId>325</abilityId>
         <description>flint</description>
-        <quantity>3</quantity>
+        <quantity>5</quantity>
     </gatherable>
     <gatherable>
         <type>16</type>
@@ -185,7 +185,7 @@
         <maximumQuality>60</maximumQuality>
         <abilityId>325</abilityId>
         <description>slingammo</description>
-        <quantity>15</quantity>
+        <quantity>40</quantity>
     </gatherable>
     <gatherable>
         <type>17</type>
@@ -2374,7 +2374,7 @@
         <maximumQuality>25</maximumQuality>
         <abilityId>325</abilityId>
         <description>branch</description>
-        <quantity>3</quantity>
+        <quantity>10</quantity>
     </gatherable>
     <gatherable>
         <type>216</type>
@@ -2385,7 +2385,7 @@
         <maximumQuality>50</maximumQuality>
         <abilityId>325</abilityId>
         <description>branch</description>
-        <quantity>3</quantity>
+        <quantity>10</quantity>
     </gatherable>
     <gatherable>
         <type>217</type>
@@ -2396,7 +2396,7 @@
         <maximumQuality>75</maximumQuality>
         <abilityId>325</abilityId>
         <description>branch</description>
-        <quantity>3</quantity>
+        <quantity>10</quantity>
     </gatherable>
     <gatherable>
         <type>218</type>
@@ -2407,7 +2407,7 @@
         <maximumQuality>100</maximumQuality>
         <abilityId>325</abilityId>
         <description>branch</description>
-        <quantity>3</quantity>
+        <quantity>10</quantity>
     </gatherable>
     <gatherable>
         <type>219</type>
