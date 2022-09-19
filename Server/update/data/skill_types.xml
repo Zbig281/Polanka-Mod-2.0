@@ -6601,7 +6601,7 @@
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
-							<ent_req type="object_type_id">1461 1497</ent_req>
+							<ent_req type="object_type_id">1461 1497 3016</ent_req>
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="claim" usage_type="use">
 								<land type="realm" jh_allowed_worlds="everywhere"/>
@@ -6720,7 +6720,7 @@
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
-							<ent_req type="object_type_id">1461 1497</ent_req>
+							<ent_req type="object_type_id">1461 1497 3016</ent_req>
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="claim" usage_type="use">
 								<land type="realm" jh_allowed_worlds="everywhere"/>
@@ -6749,7 +6749,7 @@
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
-							<ent_req type="object_type_id">1461 1497</ent_req>
+							<ent_req type="object_type_id">1461 1497 3016</ent_req>
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="claim" usage_type="use">
 								<land type="realm" jh_allowed_worlds="everywhere"/>
@@ -7659,7 +7659,7 @@
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
-							<ent_req type="object_type_id" parent="1">74 96 107 109 111 114 115 116 117 118 122 123 131 132 133 134 135 136 137 138 139 140 141 143 144 145 146 147 148 174 175 176 177 453 455 472 503 504 507 508 509 512 513 514 515 516 517 518 519 520 521 682 1055 1077 1084 1085 1086 1087 1088 1089 1092 1093 1097 1098 1109 1110 1121 1342 1343 1353 1357 1359 1394 1410 1411 1412 1413 1499 53 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 97 98 99 100 101 103 104 105 106 109 115 116 118 119 120 121 123 167 168 169 472 522 523 1152 1323 1333 1334 1394 1405 1406 1407 1445 1446 1461 1497 1657 1658 1659 1660 1661 1701 1723 1724 1725 1726 1727 1728 1729 1730 1731 1732</ent_req>
+							<ent_req type="object_type_id" parent="1">74 96 107 109 111 114 115 116 117 118 122 123 131 132 133 134 135 136 137 138 139 140 141 143 144 145 146 147 148 174 175 176 177 453 455 472 503 504 507 508 509 512 513 514 515 516 517 518 519 520 521 682 1055 1077 1084 1085 1086 1087 1088 1089 1092 1093 1097 1098 1109 1110 1121 1342 1343 1353 1357 1359 1394 1410 1411 1412 1413 1499 53 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 97 98 99 100 101 103 104 105 106 109 115 116 118 119 120 121 123 167 168 169 472 522 523 1152 1323 1333 1334 1394 1405 1406 1407 1445 1446 1461 1497 1657 1658 1659 1660 1661 1701 1723 1724 1725 1726 1727 1728 1729 1730 1731 1732 3016</ent_req>
 							<ent_req type="claim" usage_type="destroy"/>
 						</ent_reqs>
 					</entity>
