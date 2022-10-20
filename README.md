@@ -1,6 +1,4 @@
 # Polanka mod v2.0
-<<<<<<< HEAD
-
 
 Knool
 Knool Weapon, Tools
