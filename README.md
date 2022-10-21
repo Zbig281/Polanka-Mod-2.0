@@ -14,7 +14,7 @@ ServerRestart/Restart.cs
 
 in check_server.cmd you have to change the server ID as it is entered in config / world_1.xml for example.
 - world_1.xml
-<ID>1</ID>, <ID>2</ID>, <ID>3</ID>
+ID>1/ID, ID>2</ID, ID>3</ID
 
 - check_server.cmd
 WorldID %1 , WorldID %2 , WorldID %3
