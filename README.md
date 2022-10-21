@@ -11,6 +11,9 @@ For the Knole trigger to drop their items, you need MariaDB v10.
 
 Auto restart with in-game information about the restart and the countdown time.
 ServerRestart/Restart.cs
+- how add? 
+- In in Rcon on the online map from feudal.tools https://i.imgur.com/H61reft.png
+- Stop restart "CancelRestart();"
 
 in check_server.cmd you have to change the server ID as it is entered in config / world_1.xml for example.
 - world_1.xml
